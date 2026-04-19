@@ -2,109 +2,123 @@ const PROGRAMS = [
   {
     id: 'he_glute',
     name: 'Heavy Express — Glute Bridge + Hamstring + Quad',
-    subtitle: 'Hands-free · Barbell + ankle straps · Peak strength · ~24 min',
+    subtitle: 'Hands-free · Barbell + ankle straps · Peak strength · ~20 min',
     created: '2026-04-19',
-    anchor: 'Barbell Lying Glute Bridge — foundation of the session',
+    anchor: 'Barbell Lying Glute Bridge — never cut, always has warmup set',
     blocks: [
       {
         name: 'Block 1 — Barbell · Floor',
-        type: 'Warmup',
+        type: 'Warmup · Smart Flex OFF',
         exercises: [
-          { name: 'Barbell Lying Glute Bridge', sets: '1 warmup', detail: '8 reps · Smart Flex off, manual load' },
+          { name: 'Barbell Lying Glute Bridge', sets: '1 warmup', detail: '8 reps · light, increase manually' },
         ],
       },
       {
         name: 'Block 2 — Barbell · Floor',
-        type: 'Working sets · 4 reps · manual load progression',
+        type: 'Working sets · 4 reps · manual load only',
         exercises: [
-          { name: 'Barbell Lying Glute Bridge', sets: '4', detail: '4/4 reps · increase weight each set' },
+          { name: 'Barbell Lying Glute Bridge', sets: '3', detail: '4 reps · start 100 lbs+, increase each set · Smart Flex OFF' },
         ],
       },
       {
         name: 'Block 3 — Ankle Straps · Standing',
-        type: 'Warmup',
+        type: 'Warmup · Smart Flex OFF',
         exercises: [
-          { name: 'Standing Single Leg Hamstring Curl', sets: '1 warmup', detail: '8/8 reps' },
+          { name: 'Standing Single Leg Hamstring Curl', sets: '1 warmup', detail: '8/side · light, just activate' },
         ],
       },
       {
         name: 'Block 4 — Prone Bench · Ankle Straps',
-        type: 'Working sets · Smart Flex · 5 reps',
+        type: 'Working sets · Smart Flex ON · 5 reps',
         exercises: [
-          { name: 'Prone Bench Hamstring Curl', sets: 'warmup + 4', detail: '5/5 reps' },
+          { name: 'Prone Bench Hamstring Curl', sets: 'warmup + 4', detail: '5 reps · start 25 lbs, push toward 30+' },
         ],
       },
       {
         name: 'Block 5 — Ankle Straps · Standing',
-        type: 'Warmup',
+        type: 'Working sets · Smart Flex ON · 6 reps/side',
         exercises: [
-          { name: 'Standing Leg Extension', sets: '1 warmup', detail: '6/6 reps' },
-        ],
-      },
-      {
-        name: 'Block 6 — Ankle Straps · Standing',
-        type: 'Working sets · Smart Flex · 6 reps/side',
-        exercises: [
-          { name: 'Standing Leg Extension', sets: '3', detail: '6/6 reps · Smart Flex' },
+          { name: 'Standing Leg Extension', sets: 'warmup + 3', detail: '6/side · monitor right knee at 80–90°' },
         ],
       },
     ],
-    tiers: [],
+    tiers: [
+      { tier: 1, when: 'Low energy', adjustment: 'Cut Block 5 (Leg Extension)' },
+      { tier: 2, when: 'Moderate', adjustment: 'As written' },
+      { tier: 3, when: 'Strong', adjustment: 'Add sets to Glute Bridge or Hamstring Curl' },
+    ],
     cutOrder: [
-      'Block 6 — Standing Leg Extension (working)',
-      'Block 4 — Prone Bench Hamstring Curl',
+      'Block 5 — Standing Leg Extension (entire block)',
+      'Block 4 — reduce from 4 to 2 working sets',
+      'Block 2 — never cut (anchor)',
     ],
     notes: [
-      'Glute bridge: Smart Flex undershoots — increase manually each set',
-      'Right knee: mild twinge at 80–90° on leg extension — hold weight steady, do not push through pain',
-      'Dry ≠ low effort for strength sessions — sweat not a measure of output here',
+      'Two attachment setups: barbell first, then ankle straps — no mid-session swaps back',
+      'Glute Bridge: Smart Flex undershoots — set manually, start at 100 lbs working weight',
+      'Smart Flex must be enabled manually on Tonal screen — not settable via API',
+      'Right knee: mild twinge at 80–90° on leg extension noted Apr 19 — hold weight steady if it recurs',
+      'No drop sets under any circumstances',
     ],
   },
   {
     id: 'he_hip',
     name: 'Heavy Express — Hip Thrust + Hamstring',
-    subtitle: 'Hands-free · Barbell + ankle straps · Peak strength · ~18 min',
+    subtitle: 'Hands-free · Barbell + ankle straps · Peak strength · ~18 min · Replaced by Glute Bridge version',
     created: '2026-04-18',
-    anchor: 'Barbell Hip Thrust — replaced by Glute Bridge if bench slides',
+    anchor: 'Barbell Hip Thrust — never cut, always has warmup set',
     blocks: [
       {
         name: 'Block 1 — Barbell · Bench',
-        type: 'Warmup',
+        type: 'Warmup · Smart Flex OFF',
         exercises: [
-          { name: 'Barbell Hip Thrust', sets: '1 warmup', detail: '8 reps · 40 lbs' },
+          { name: 'Barbell Hip Thrust', sets: '1 warmup', detail: '8 reps · light, just activate' },
         ],
       },
       {
         name: 'Block 2 — Barbell · Bench',
-        type: 'Working sets · 4 reps · load progression',
+        type: 'Working sets · Smart Flex ON · 4 reps',
         exercises: [
-          { name: 'Barbell Hip Thrust', sets: '3', detail: '4 reps · increase weight each set' },
+          { name: 'Barbell Hip Thrust', sets: '3', detail: '4 reps · increase weight each set · enable Smart Flex manually' },
         ],
       },
       {
         name: 'Block 3 — Ankle Straps · Standing',
-        type: 'Working sets · 4 reps/side',
+        type: 'Working sets · Smart Flex ON · 4 reps/side',
         exercises: [
-          { name: 'Standing Single Leg Hamstring Curl', sets: '3', detail: '4/side · increase weight each set' },
+          { name: 'Standing Single Leg Hamstring Curl', sets: '3', detail: '4/side · Smart Flex · increase each set' },
         ],
       },
       {
         name: 'Block 4 — Ankle Straps · Standing',
-        type: 'Working sets · 5 reps/side',
+        type: 'Working sets · Smart Flex ON · 5 reps/side',
         exercises: [
-          { name: 'Standing Hip Abduction', sets: '3', detail: '5/side · Smart Flex' },
+          { name: 'Standing Hip Abduction', sets: '3', detail: '5/side · Smart Flex · enable manually' },
+        ],
+      },
+      {
+        name: 'Block 5 — Ankle Straps · Standing',
+        type: 'Working sets · Smart Flex ON · 8–10 reps/side',
+        exercises: [
+          { name: 'Standing Donkey Kick', sets: '3', detail: '8–10/side · straight sets only — no drop sets' },
         ],
       },
     ],
-    tiers: [],
+    tiers: [
+      { tier: 1, when: 'Low energy', adjustment: 'Cut Block 5 (Donkey Kick)' },
+      { tier: 2, when: 'Moderate', adjustment: 'As written' },
+      { tier: 3, when: 'Strong', adjustment: 'Add sets to Hip Abduction' },
+    ],
     cutOrder: [
+      'Block 5 — Standing Donkey Kick',
       'Block 4 — Standing Hip Abduction',
       'Block 3 — Standing SL Hamstring Curl',
+      'Block 2 — never cut (anchor)',
     ],
     notes: [
-      'Bench slides without wall anchor — swap to Barbell Lying Glute Bridge if no anchor available',
+      'Replaced by Heavy Express — Glute Bridge + Hamstring + Quad for all future sessions',
+      'Bench slides without wall anchor — practice independently until resolved',
       'Drop sets removed from all movements — tested Apr 18, not repeating',
-      'Low calorie output (60 kcal) is normal for heavy strength work — not a sign of low effort',
+      'Low calorie output is normal for heavy strength work — not a sign of low effort',
     ],
   },
   {
@@ -116,28 +130,28 @@ const PROGRAMS = [
     blocks: [
       {
         name: 'Block 1 — Pilates Straps · Lying',
-        type: 'Warmup',
+        type: 'Warmup · Smart Flex OFF',
         exercises: [
-          { name: 'Feet in Straps Frog Press', sets: '2', detail: '30s work / 30s rest · Level 5' },
-          { name: 'Side Lying Hip Abduction', sets: '3', detail: '60s · Off-Tonal, bodyweight' },
+          { name: 'Feet in Straps Frog Press', sets: '2', detail: '30s work / 30s rest · Level 5 · Smart Flex OFF' },
+          { name: 'Side Lying Hip Abduction', sets: '3', detail: '60s · Off-Tonal, bodyweight · Smart Flex OFF' },
         ],
       },
       {
         name: 'Block 2 — Ankle Straps · Standing',
-        type: 'Working sets · Smart Flex · 8 reps/side',
+        type: 'Working sets · Smart Flex ON · 8 reps/side',
         exercises: [
-          { name: 'Standing Hip Abduction', sets: 'warmup + 3', detail: '8/side' },
-          { name: 'Standing Donkey Kick', sets: '3', detail: '8/side' },
-          { name: 'Standing Diagonal Glute Kickback', sets: '3', detail: '8/side' },
-          { name: 'Standing Straight Leg Glute Kickback', sets: '3', detail: '8/side' },
+          { name: 'Standing Hip Abduction', sets: 'warmup + 3', detail: '8/side · Smart Flex ON' },
+          { name: 'Standing Donkey Kick', sets: '3', detail: '8/side · Smart Flex ON' },
+          { name: 'Standing Diagonal Glute Kickback', sets: '3', detail: '8/side · Smart Flex ON' },
+          { name: 'Standing Straight Leg Glute Kickback', sets: '3', detail: '8/side · Smart Flex ON' },
         ],
       },
       {
         name: 'Block 3 — Barbell · Bench + Floor',
-        type: 'Peak effort · Smart Flex + Burnout',
+        type: 'Peak effort · Smart Flex ON + Burnout',
         exercises: [
-          { name: 'Barbell Hip Thrust', sets: 'warmup + 2 + Burnout', detail: '6 reps' },
-          { name: 'Barbell Lying Glute Bridge', sets: '2 + Burnout', detail: '8 reps' },
+          { name: 'Barbell Hip Thrust', sets: 'warmup + 2 + Burnout', detail: '6 reps · Smart Flex ON + Burnout' },
+          { name: 'Barbell Lying Glute Bridge', sets: '2 + Burnout', detail: '8 reps · Smart Flex ON + Burnout' },
         ],
       },
     ],
@@ -166,44 +180,44 @@ const PROGRAMS = [
     blocks: [
       {
         name: 'Block 1 — Ankle Straps · Standing',
-        type: 'Warmup',
+        type: 'Warmup · Smart Flex OFF',
         exercises: [
-          { name: 'Standing Single Leg Hamstring Curl', sets: '1 warmup', detail: '8/side · light' },
+          { name: 'Standing Single Leg Hamstring Curl', sets: '1 warmup', detail: '8/side · light · Smart Flex OFF' },
         ],
       },
       {
         name: 'Block 2 — Prone Bench · Bilateral',
-        type: 'Peak load · Smart Flex · 5 reps',
+        type: 'Peak load · Smart Flex ON · 5 reps',
         exercises: [
-          { name: 'Prone Bench Hamstring Curl', sets: 'warmup + 4', detail: '5 reps' },
+          { name: 'Prone Bench Hamstring Curl', sets: 'warmup + 4', detail: '5 reps · Smart Flex ON' },
         ],
       },
       {
         name: 'Block 3 — Prone Bench · Unilateral',
-        type: 'Smart Flex · 5 reps/side',
+        type: 'Smart Flex ON · 5 reps/side',
         exercises: [
-          { name: 'Prone Bench Single Leg Hamstring Curl', sets: '3', detail: '5/side' },
+          { name: 'Prone Bench Single Leg Hamstring Curl', sets: '3', detail: '5/side · Smart Flex ON' },
         ],
       },
       {
         name: 'Block 4 — Ankle Straps · Standing',
-        type: 'Quads · Smart Flex · 6 reps/side',
+        type: 'Quads · Smart Flex ON · 6 reps/side',
         exercises: [
-          { name: 'Standing Leg Extension', sets: 'warmup + 3', detail: '6/side' },
+          { name: 'Standing Leg Extension', sets: 'warmup + 3', detail: '6/side · Smart Flex ON' },
         ],
       },
       {
         name: 'Block 5 — Standing Bicycle → Cable Knee Drive',
-        type: 'Timer · 60s · Hip flexor + core stability',
+        type: 'Timer · 60s · Hip flexor + core stability · Smart Flex OFF',
         exercises: [
-          { name: 'Cable Knee Drive', sets: '3', detail: '60s · ankle strap on low cable, face away' },
+          { name: 'Cable Knee Drive', sets: '3', detail: '60s · ankle strap on low cable, face away · Smart Flex OFF' },
         ],
       },
       {
         name: 'Block 6 — Clamshell → Cable Hip Adduction',
-        type: 'Timer · 60s · Adductor + pelvic stability',
+        type: 'Timer · 60s · Adductor + pelvic stability · Smart Flex OFF',
         exercises: [
-          { name: 'Cable Hip Adduction', sets: '3', detail: '60s · stand sideways, pull across body' },
+          { name: 'Cable Hip Adduction', sets: '3', detail: '60s · stand sideways, pull across body · Smart Flex OFF' },
         ],
       },
     ],
