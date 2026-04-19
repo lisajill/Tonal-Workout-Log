@@ -37,12 +37,69 @@ export default function Overview({ sessions }) {
         </p>
       </div>
 
-      {/* Hero stats */}
+      {/* Hero stats — this training block */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         <Stat label="Sessions" value={sessions.length} />
         <Stat label="Days active" value={daySpan} />
-        <Stat label="Total volume" value={`${(totalVol / 1000).toFixed(1)}k lbs`} />
+        <Stat label="Volume this block" value={`${(totalVol / 1000).toFixed(1)}k lbs`} />
         <Stat label="Avg rating" value={`${avgRating} / 5`} />
+      </div>
+
+      {/* Lifetime stats */}
+      <div className="card">
+        <h2 className="label mb-4">Lifetime Stats <span className="normal-case font-normal text-zinc-600 ml-1">— as of Apr 18, 2026</span></h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
+          <MiniLifeStat label="Total workouts"   value="185" />
+          <MiniLifeStat label="Lifetime volume"  value="479,938 lbs" />
+          <MiniLifeStat label="Total time"       value="67 hrs" />
+          <MiniLifeStat label="Best streak"      value="19 sessions" />
+          <MiniLifeStat label="Movements used"   value="199" />
+        </div>
+      </div>
+
+      {/* Goals */}
+      <div className="card">
+        <h2 className="label mb-4">Goals</h2>
+        <div className="space-y-2">
+          <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Zepbound (GLP-1)" />
+          <Goal icon="🐴" text="Return to riding at Saddleview — target mid-May 2026" />
+          <Goal icon="🤲" text="Hand recovery gate: May 4 Dr. Aglio appointment — reassess upper body reintroduction" />
+          <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
+          <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
+        </div>
+      </div>
+
+      {/* Training context */}
+      <div className="card">
+        <h2 className="label mb-4">Training Context</h2>
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm text-zinc-400">
+          <ContextItem label="Current constraint"   value="Hands-free lower body only — both hands post-op" />
+          <ContextItem label="Right hand"           value="Light grip available, ~week 7 post-op at Apr 18" />
+          <ContextItem label="Left hand"            value="No grip — cleared of infection ~Apr 14" />
+          <ContextItem label="Medication"           value="Zepbound (GLP-1) — shot day affects energy and output" />
+          <ContextItem label="Life stage"           value="Perimenopause, 49 — training adapted accordingly" />
+          <ContextItem label="Next milestone"       value="May 4 — Dr. Aglio, upper body reassessment" />
+        </div>
+      </div>
+
+      {/* Session rating scale */}
+      <div className="card">
+        <h2 className="label mb-4">Session Rating Scale</h2>
+        <div className="space-y-1.5">
+          {[
+            { score: 5, text: 'Best session energy, everything clicked' },
+            { score: 4, text: 'Strong, felt good throughout' },
+            { score: 3, text: 'Solid, normal session' },
+            { score: 2, text: 'Below par, got it done' },
+            { score: 1, text: 'Struggled through, considered stopping' },
+          ].map(({ score, text }) => (
+            <div key={score} className="flex items-center gap-3 text-sm">
+              <span className="w-5 text-right font-bold text-accent tabular-nums">{score}</span>
+              <span className="text-zinc-500">—</span>
+              <span className="text-zinc-400">{text}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Injury history */}
@@ -148,6 +205,33 @@ function Stat({ label, value }) {
     <div className="card text-center">
       <p className="label">{label}</p>
       <p className="mt-2 text-2xl font-bold text-zinc-100 tabular-nums">{value}</p>
+    </div>
+  )
+}
+
+function MiniLifeStat({ label, value }) {
+  return (
+    <div className="rounded-lg bg-surface-2 px-3 py-2.5 text-center">
+      <p className="label">{label}</p>
+      <p className="mt-1.5 text-base font-bold text-zinc-100 tabular-nums">{value}</p>
+    </div>
+  )
+}
+
+function Goal({ icon, text }) {
+  return (
+    <div className="flex items-start gap-3 rounded-lg bg-surface-2 px-3 py-2.5 text-sm text-zinc-300">
+      <span className="text-base leading-snug shrink-0">{icon}</span>
+      <span>{text}</span>
+    </div>
+  )
+}
+
+function ContextItem({ label, value }) {
+  return (
+    <div className="rounded-lg bg-surface-2 px-3 py-2.5">
+      <p className="label mb-0.5">{label}</p>
+      <p className="text-zinc-300 text-sm">{value}</p>
     </div>
   )
 }
