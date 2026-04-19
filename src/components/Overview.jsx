@@ -62,7 +62,7 @@ export default function Overview({ sessions }) {
         <h2 className="label mb-4">Goals</h2>
         <div className="space-y-2">
           <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Zepbound (GLP-1)" />
-          <Goal icon="🐴" text="Return to riding at Saddleview — target mid-May 2026" />
+          <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
           <Goal icon="🤲" text="Hand recovery gate: May 4 Dr. Aglio appointment — reassess upper body reintroduction" />
           <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
           <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
