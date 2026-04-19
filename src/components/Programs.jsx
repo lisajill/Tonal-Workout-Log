@@ -248,13 +248,17 @@ export default function Programs() {
 
 function ProgramCard({ program: p }) {
   return (
-    <div className="card space-y-5">
-      {/* Header */}
-      <div>
-        <h2 className="text-lg font-semibold text-zinc-100">{p.name}</h2>
-        <p className="text-xs text-zinc-500 mt-0.5">{p.subtitle}</p>
-        <p className="text-xs text-zinc-600 mt-1">Created {p.created}</p>
-      </div>
+    <details className="card group" open>
+      <summary className="flex items-start justify-between cursor-pointer list-none gap-4">
+        <div>
+          <h2 className="text-lg font-semibold text-zinc-100">{p.name}</h2>
+          <p className="text-xs text-zinc-500 mt-0.5">{p.subtitle}</p>
+          <p className="text-xs text-zinc-600 mt-1">Created {p.created}</p>
+        </div>
+        <span className="text-zinc-600 group-open:rotate-180 transition-transform shrink-0 mt-1">▾</span>
+      </summary>
+
+      <div className="space-y-5 mt-5">
 
       {/* Anchor movement */}
       <div className="rounded-lg bg-accent/10 border border-accent/20 px-4 py-2.5 text-sm text-accent">
@@ -331,6 +335,8 @@ function ProgramCard({ program: p }) {
           ))}
         </ul>
       </div>
-    </div>
+
+      </div>{/* end collapsible content */}
+    </details>
   )
 }
