@@ -168,6 +168,19 @@ export default function Overview({ sessions }) {
           ))}
         </div>
       </details>
+
+      {/* Footnote */}
+      <p className="text-xs text-zinc-700 text-center pt-2">
+        Session data pulled via{' '}
+        <a
+          href="https://github.com/dlwiest/ts-tonal-mcp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-zinc-300 underline underline-offset-2 transition-colors"
+        >
+          Tonal MCP
+        </a>
+      </p>
     </div>
   )
 }
