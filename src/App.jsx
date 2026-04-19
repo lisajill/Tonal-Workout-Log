@@ -8,6 +8,7 @@ import Charts from './components/Charts.jsx'
 import BodyMaps from './components/BodyMaps.jsx'
 import Programs from './components/Programs.jsx'
 import MuscleMatrix from './components/MuscleMatrix.jsx'
+import StrengthScores from './components/StrengthScores.jsx'
 import sessions from './data/sessions.json'
 
 const TABS = [
@@ -19,7 +20,8 @@ const TABS = [
   { id: 'matrix',   label: 'Muscle Matrix' },
   { id: 'heatmap',  label: 'Muscle Readiness' },
   { id: 'charts',   label: 'Charts' },
-  { id: 'programs', label: 'Custom Workouts' },
+  { id: 'programs',  label: 'Custom Workouts'  },
+  { id: 'strength',  label: 'Strength Scores'  },
 ]
 
 const VALID_TABS = new Set(TABS.map(t => t.id))
@@ -75,6 +77,7 @@ export default function App() {
         {tab === 'heatmap'   && <MuscleHeatmap  sessions={sessions} />}
         {tab === 'charts'    && <Charts        sessions={sessions} />}
         {tab === 'programs'  && <Programs />}
+        {tab === 'strength'  && <StrengthScores />}
       </main>
     </div>
   )
