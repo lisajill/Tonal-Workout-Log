@@ -52,7 +52,7 @@ export default function App() {
       <main className="px-6 py-6 max-w-5xl mx-auto">
         {tab === 'overview'  && <Overview      sessions={sessions} />}
         {tab === 'log'       && <SessionLog    sessions={sessions} onSelectSession={openSession} />}
-        {tab === 'sessions'  && <SessionDetail sessions={sessions} initialDate={activeSession} />}
+        {tab === 'sessions'  && <SessionDetail key={activeSession} sessions={sessions} initialDate={activeSession} />}
         {tab === 'prs'       && <PRTracker     sessions={sessions} />}
         {tab === 'bodymaps'  && <BodyMaps      sessions={sessions} />}
         {tab === 'heatmap'   && <MuscleHeatmap sessions={sessions} />}
