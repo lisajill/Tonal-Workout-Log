@@ -50,7 +50,7 @@ export default function BodyMaps({ sessions }) {
               {/* Body map */}
               {s.bodymap ? (
                 <div className="flex justify-center">
-                <div className="overflow-hidden rounded-lg bg-surface-2" style={{ aspectRatio: '1206/1510', width: '50%' }}>
+                <div className="overflow-hidden rounded-lg bg-surface-2" style={{ aspectRatio: '1206/1510', width: '75%' }}>
                   <img
                     src={s.bodymap}
                     alt={`Body map ${s.date}`}
@@ -60,7 +60,7 @@ export default function BodyMaps({ sessions }) {
                 </div>
               ) : (
                 <div className="flex justify-center">
-                <div className="flex items-center justify-center rounded-lg bg-surface-2 text-zinc-600 text-xs" style={{ aspectRatio: '1206/1510', width: '50%' }}>
+                <div className="flex items-center justify-center rounded-lg bg-surface-2 text-zinc-600 text-xs" style={{ aspectRatio: '1206/1510', width: '75%' }}>
                   No image
                 </div>
                 </div>
