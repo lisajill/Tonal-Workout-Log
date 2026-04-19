@@ -172,8 +172,9 @@ function RatingBadge({ value }) {
   const color = value >= 4.5 ? 'text-emerald-400' : value >= 3.5 ? 'text-accent' : 'text-yellow-400'
   return (
     <div className="text-right shrink-0">
+      <p className="text-[10px] font-medium uppercase tracking-wider text-zinc-500 mb-0.5">Session Rating</p>
       <p className={`text-3xl font-bold tabular-nums ${color}`}>{value}</p>
-      <p className="text-xs text-zinc-500">/ 5</p>
+      <p className="text-xs text-zinc-500">out of 5</p>
     </div>
   )
 }
