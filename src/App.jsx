@@ -6,6 +6,8 @@ import PRTracker from './components/PRTracker.jsx'
 import MuscleHeatmap from './components/MuscleHeatmap.jsx'
 import Charts from './components/Charts.jsx'
 import BodyMaps from './components/BodyMaps.jsx'
+import Programs from './components/Programs.jsx'
+import MuscleMatrix from './components/MuscleMatrix.jsx'
 import sessions from './data/sessions.json'
 
 const TABS = [
@@ -14,8 +16,10 @@ const TABS = [
   { id: 'sessions', label: 'Sessions' },
   { id: 'prs',      label: 'PRs' },
   { id: 'bodymaps', label: 'Body Maps' },
+  { id: 'matrix',   label: 'Muscle Matrix' },
   { id: 'heatmap',  label: 'Muscle Readiness' },
   { id: 'charts',   label: 'Charts' },
+  { id: 'programs', label: 'Programs' },
 ]
 
 export default function App() {
@@ -54,8 +58,10 @@ export default function App() {
         {tab === 'log'       && <SessionLog    sessions={sessions} onSelectSession={openSession} />}
         {tab === 'sessions'  && <SessionDetail key={activeSession} sessions={sessions} initialDate={activeSession} />}
         {tab === 'prs'       && <PRTracker     sessions={sessions} />}
-        {tab === 'bodymaps'  && <BodyMaps      sessions={sessions} />}
-        {tab === 'heatmap'   && <MuscleHeatmap sessions={sessions} />}
+        {tab === 'bodymaps'  && <BodyMaps       sessions={sessions} />}
+        {tab === 'matrix'    && <MuscleMatrix   sessions={sessions} />}
+        {tab === 'heatmap'   && <MuscleHeatmap  sessions={sessions} />}
+        {tab === 'programs'  && <Programs />}
         {tab === 'charts'    && <Charts        sessions={sessions} />}
       </main>
     </div>

@@ -102,16 +102,23 @@ export default function Overview({ sessions }) {
         </div>
       </div>
 
-      {/* Injury history */}
-      <div className="card space-y-3 text-sm">
-        <h2 className="label">Injury &amp; Return History</h2>
-        <ol className="space-y-2 border-l border-surface-3 pl-4">
-          <TimelineItem date="Oct 2025"      text="Training stopped — cellulitis progressed to tenosynovitis. Tenosynovitis required surgery." />
-          <TimelineItem date="During PT"     text="Physical therapy irritated the trigger fingers on both small fingers." />
-          <TimelineItem date="Feb 26, 2026"  text="A1 pulley release surgery — small finger, right hand." />
-          <TimelineItem date="Mar 26, 2026"  text="A1 pulley release surgery — small finger, left hand." />
-          <TimelineItem date="Apr 4, 2026"   text="First session back. Hands-free lower body only — no grip load." highlight />
-        </ol>
+      {/* Recovery arc */}
+      <div className="card">
+        <h2 className="label mb-5">Recovery Arc</h2>
+        <div className="relative">
+          {/* Track */}
+          <div className="absolute left-3 top-0 bottom-0 w-px bg-surface-3" />
+          <div className="space-y-4">
+            <ArcEvent date="Oct 2025"     color="bg-red-500"     text="Training stopped — cellulitis → tenosynovitis surgery" />
+            <ArcEvent date="Nov–Jan"      color="bg-orange-500"  text="Physical therapy irritated trigger fingers on both small fingers" />
+            <ArcEvent date="Feb 26, 2026" color="bg-orange-400"  text="A1 pulley release — small finger, right hand" />
+            <ArcEvent date="Mar 26, 2026" color="bg-yellow-500"  text="A1 pulley release — small finger, left hand" />
+            <ArcEvent date="Apr 4, 2026"  color="bg-accent"      text="First session back — hands-free lower body, 5,553 lbs, rated 4/5" active />
+            <ArcEvent date="Apr 5"        color="bg-accent"      text="Session 2 — sore legs, first hamstring PRs" active />
+            <ArcEvent date="Apr 18"       color="bg-accent"      text="Session 3 — shot day, hip thrust PR at 56 lbs, 4.5/5" active shot />
+            <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Session 4 — glute bridge 120 lbs, PRs on nearly every set, 5/5" active />
+          </div>
+        </div>
       </div>
 
       {/* Narrative */}
@@ -295,12 +302,16 @@ function buildRecap(s) {
   }
 }
 
-function TimelineItem({ date, text, highlight }) {
+function ArcEvent({ date, color, text, active, shot }) {
   return (
-    <li className="relative">
-      <span className={`font-medium tabular-nums ${highlight ? 'text-accent' : 'text-zinc-400'}`}>{date}</span>
-      <span className="text-zinc-500"> — </span>
-      <span className={highlight ? 'text-zinc-200' : 'text-zinc-400'}>{text}</span>
-    </li>
+    <div className="relative flex items-start gap-4 pl-8">
+      <span className={`absolute left-0 top-1 h-6 w-6 rounded-full ${color} flex items-center justify-center shrink-0 ${active ? 'ring-2 ring-offset-2 ring-offset-surface-1 ring-current' : ''}`}>
+        {shot ? <span className="text-xs">💉</span> : null}
+      </span>
+      <div>
+        <p className={`text-xs font-semibold tabular-nums ${active ? 'text-zinc-200' : 'text-zinc-500'}`}>{date}</p>
+        <p className={`text-sm mt-0.5 ${active ? 'text-zinc-300' : 'text-zinc-500'}`}>{text}</p>
+      </div>
+    </div>
   )
 }

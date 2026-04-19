@@ -115,6 +115,7 @@
   },
   {
     "date": "2026-04-18",
+    "shot_day": true,
     "bodymap": "/BodyMapApril18.png",
     "workout": "Heavy Express — Hip Thrust + Hamstring",
     "energy_level": 1,

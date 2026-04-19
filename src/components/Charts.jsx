@@ -19,31 +19,49 @@ function shortDate(d) {
   return `${parseInt(m)}/${parseInt(day)}`
 }
 
-// Custom label rendered at each line chart data point
-function DotLabel({ x, y, value, formatter, offset = -14 }) {
-  if (value == null) return null
-  return (
-    <text x={x} y={y + offset} textAnchor="middle" {...LABEL_STYLE}>
-      {formatter ? formatter(value) : value}
-    </text>
-  )
+// Vertical reference line for shot days
+function ShotDayLines({ data }) {
+  return data
+    .filter(d => d.shot_day)
+    .map(d => (
+      <ReferenceLine
+        key={d.date}
+        x={d.date}
+        stroke="#f59e0b"
+        strokeDasharray="4 2"
+        label={{ value: '💉', position: 'top', fontSize: 12 }}
+      />
+    ))
 }
 
 export default function Charts({ sessions }) {
   const data = sessions.map(s => ({
     date: shortDate(s.date),
+    shot_day: s.shot_day ?? false,
     volume: s.total_volume,
+    vol_per_min: s.total_volume && s.duration ? Math.round(s.total_volume / s.duration) : null,
     avg_hr: s.avg_hr,
     max_hr: s.max_hr,
     rating: s.subjective_rating,
     duration: s.duration,
     tut: s.time_under_tension,
+    calories: s.calories,
+    kj: s.total_work_kj,
   }))
 
   const avgRating = (sessions.reduce((s, r) => s + r.subjective_rating, 0) / sessions.length).toFixed(1)
+  const shotDates = data.filter(d => d.shot_day).map(d => d.date)
 
   return (
     <div className="space-y-5">
+      {/* Shot day legend if any */}
+      {shotDates.length > 0 && (
+        <div className="flex items-center gap-2 text-xs text-amber-400">
+          <span>💉</span>
+          <span>GLP-1 shot day marked on all charts — {shotDates.join(', ')}</span>
+        </div>
+      )}
+
       <ChartCard title="Volume Over Time" subtitle="Total lbs lifted per session">
         <ResponsiveContainer width="100%" height={240}>
           <BarChart data={data} margin={{ top: 24, right: 16, bottom: 0, left: 0 }} barCategoryGap="30%">
@@ -51,13 +69,24 @@ export default function Charts({ sessions }) {
             <XAxis dataKey="date" tick={AXIS_TICK} />
             <YAxis tick={AXIS_TICK} tickFormatter={v => `${(v / 1000).toFixed(1)}k`} />
             <Tooltip {...TOOLTIP_STYLE} formatter={v => [`${v.toLocaleString()} lbs`, 'Volume']} />
+            {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
             <Bar dataKey="volume" fill="#6366f1" radius={[4, 4, 0, 0]} activeBar={{ fill: '#6366f1', opacity: 0.8 }}>
-              <LabelList
-                dataKey="volume"
-                position="top"
-                style={LABEL_STYLE}
-                formatter={v => `${(v / 1000).toFixed(1)}k`}
-              />
+              <LabelList dataKey="volume" position="top" style={LABEL_STYLE} formatter={v => `${(v / 1000).toFixed(1)}k`} />
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </ChartCard>
+
+      <ChartCard title="Volume per Minute" subtitle="Lbs lifted per minute on the machine — training density">
+        <ResponsiveContainer width="100%" height={240}>
+          <BarChart data={data} margin={{ top: 24, right: 16, bottom: 0, left: 0 }} barCategoryGap="30%">
+            <CartesianGrid {...GRID} />
+            <XAxis dataKey="date" tick={AXIS_TICK} />
+            <YAxis tick={AXIS_TICK} unit=" lbs/m" />
+            <Tooltip {...TOOLTIP_STYLE} formatter={v => [`${v} lbs/min`, 'Density']} />
+            {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
+            <Bar dataKey="vol_per_min" fill="#a78bfa" radius={[4, 4, 0, 0]} activeBar={{ fill: '#a78bfa', opacity: 0.8 }}>
+              <LabelList dataKey="vol_per_min" position="top" style={LABEL_STYLE} formatter={v => `${v}`} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>
@@ -71,6 +100,7 @@ export default function Charts({ sessions }) {
             <YAxis tick={AXIS_TICK} domain={['auto', 'auto']} />
             <Tooltip {...TOOLTIP_STYLE} formatter={(v, name) => [`${v} bpm`, name === 'avg_hr' ? 'Avg HR' : 'Max HR']} />
             <Legend formatter={v => v === 'avg_hr' ? 'Avg HR' : 'Max HR'} wrapperStyle={{ fontSize: 11, color: '#71717a' }} />
+            {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
             <Line type="monotone" dataKey="avg_hr" stroke="#6366f1" strokeWidth={2} dot={{ r: 4 }}>
               <LabelList dataKey="avg_hr" position="top" style={LABEL_STYLE} formatter={v => `${v}`} />
             </Line>
@@ -81,6 +111,25 @@ export default function Charts({ sessions }) {
         </ResponsiveContainer>
       </ChartCard>
 
+      <ChartCard title="Calories &amp; Work" subtitle="Energy expenditure per session">
+        <ResponsiveContainer width="100%" height={240}>
+          <BarChart data={data} margin={{ top: 24, right: 16, bottom: 0, left: 0 }} barCategoryGap="25%" barGap={4}>
+            <CartesianGrid {...GRID} />
+            <XAxis dataKey="date" tick={AXIS_TICK} />
+            <YAxis tick={AXIS_TICK} />
+            <Tooltip {...TOOLTIP_STYLE} formatter={(v, name) => [name === 'calories' ? `${v} kcal` : `${v} kJ`, name === 'calories' ? 'Calories' : 'Total Work']} />
+            <Legend formatter={v => v === 'calories' ? 'Calories (kcal)' : 'Total Work (kJ)'} wrapperStyle={{ fontSize: 11, color: '#71717a' }} />
+            {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
+            <Bar dataKey="calories" fill="#f43f5e" radius={[4, 4, 0, 0]} activeBar={{ fill: '#f43f5e', opacity: 0.8 }}>
+              <LabelList dataKey="calories" position="top" style={LABEL_STYLE} formatter={v => `${v}`} />
+            </Bar>
+            <Bar dataKey="kj" fill="#fb923c" radius={[4, 4, 0, 0]} activeBar={{ fill: '#fb923c', opacity: 0.8 }}>
+              <LabelList dataKey="kj" position="top" style={LABEL_STYLE} formatter={v => `${v}kJ`} />
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </ChartCard>
+
       <ChartCard title="Session Rating" subtitle="Subjective feel out of 5">
         <ResponsiveContainer width="100%" height={240}>
           <LineChart data={data} margin={{ top: 24, right: 16, bottom: 0, left: 0 }}>
@@ -88,12 +137,9 @@ export default function Charts({ sessions }) {
             <XAxis dataKey="date" tick={AXIS_TICK} />
             <YAxis tick={AXIS_TICK} domain={[0, 5]} ticks={[0, 1, 2, 3, 4, 5]} />
             <Tooltip {...TOOLTIP_STYLE} formatter={v => [`${v} / 5`, 'Rating']} />
-            <ReferenceLine
-              y={parseFloat(avgRating)}
-              stroke="#52525b"
-              strokeDasharray="4 2"
-              label={{ value: `avg ${avgRating}`, fill: '#71717a', fontSize: 11, position: 'insideTopRight' }}
-            />
+            <ReferenceLine y={parseFloat(avgRating)} stroke="#52525b" strokeDasharray="4 2"
+              label={{ value: `avg ${avgRating}`, fill: '#71717a', fontSize: 11, position: 'insideTopRight' }} />
+            {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
             <Line type="monotone" dataKey="rating" stroke="#22d3ee" strokeWidth={2} dot={{ r: 4 }}>
               <LabelList dataKey="rating" position="top" style={LABEL_STYLE} formatter={v => `${v}`} />
             </Line>
@@ -109,6 +155,7 @@ export default function Charts({ sessions }) {
             <YAxis tick={AXIS_TICK} unit=" min" />
             <Tooltip {...TOOLTIP_STYLE} formatter={(v, name) => [`${v} min`, name === 'duration' ? 'Total Duration' : 'Time Under Tension']} />
             <Legend formatter={v => v === 'duration' ? 'Total Duration' : 'Time Under Tension'} wrapperStyle={{ fontSize: 11, color: '#71717a' }} />
+            {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
             <Bar dataKey="duration" fill="#22d3ee" radius={[4, 4, 0, 0]} activeBar={{ fill: '#22d3ee', opacity: 0.8 }}>
               <LabelList dataKey="duration" position="top" style={LABEL_STYLE} formatter={v => `${v}m`} />
             </Bar>
