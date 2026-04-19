@@ -46,12 +46,12 @@ export default function Charts({ sessions }) {
     <div className="space-y-5">
       <ChartCard title="Volume Over Time" subtitle="Total lbs lifted per session">
         <ResponsiveContainer width="100%" height={240}>
-          <BarChart data={data} margin={{ top: 24, right: 16, bottom: 0, left: 0 }}>
+          <BarChart data={data} margin={{ top: 24, right: 16, bottom: 0, left: 0 }} barCategoryGap="30%">
             <CartesianGrid {...GRID} />
             <XAxis dataKey="date" tick={AXIS_TICK} />
             <YAxis tick={AXIS_TICK} tickFormatter={v => `${(v / 1000).toFixed(1)}k`} />
             <Tooltip {...TOOLTIP_STYLE} formatter={v => [`${v.toLocaleString()} lbs`, 'Volume']} />
-            <Bar dataKey="volume" fill="#6366f1" radius={[4, 4, 0, 0]}>
+            <Bar dataKey="volume" fill="#6366f1" radius={[4, 4, 0, 0]} activeBar={{ fill: '#6366f1', opacity: 0.8 }}>
               <LabelList
                 dataKey="volume"
                 position="top"
@@ -109,10 +109,10 @@ export default function Charts({ sessions }) {
             <YAxis tick={AXIS_TICK} unit=" min" />
             <Tooltip {...TOOLTIP_STYLE} formatter={(v, name) => [`${v} min`, name === 'duration' ? 'Total Duration' : 'Time Under Tension']} />
             <Legend formatter={v => v === 'duration' ? 'Total Duration' : 'Time Under Tension'} wrapperStyle={{ fontSize: 11, color: '#71717a' }} />
-            <Bar dataKey="duration" fill="#22d3ee" radius={[4, 4, 0, 0]}>
+            <Bar dataKey="duration" fill="#22d3ee" radius={[4, 4, 0, 0]} activeBar={{ fill: '#22d3ee', opacity: 0.8 }}>
               <LabelList dataKey="duration" position="top" style={LABEL_STYLE} formatter={v => `${v}m`} />
             </Bar>
-            <Bar dataKey="tut" fill="#0891b2" radius={[4, 4, 0, 0]}>
+            <Bar dataKey="tut" fill="#0891b2" radius={[4, 4, 0, 0]} activeBar={{ fill: '#0891b2', opacity: 0.8 }}>
               <LabelList dataKey="tut" position="top" style={LABEL_STYLE} formatter={v => `${v}m`} />
             </Bar>
           </BarChart>
