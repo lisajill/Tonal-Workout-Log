@@ -63,7 +63,7 @@ export default function Overview({ sessions }) {
         <div className="space-y-2">
           <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Zepbound (GLP-1)" />
           <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
-          <Goal icon="🤲" text="Hand recovery gate: May 4 Dr. Aglio appointment — reassess upper body reintroduction" />
+          <Goal icon="🤲" text="Reassess upper body reintroduction once hands are cleared" />
           <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
           <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
         </div>
@@ -78,7 +78,7 @@ export default function Overview({ sessions }) {
           <ContextItem label="Left hand"            value="No grip — cleared of infection ~Apr 14" />
           <ContextItem label="Medication"           value="Zepbound (GLP-1) — shot day affects energy and output" />
           <ContextItem label="Life stage"           value="Perimenopause, 49 — training adapted accordingly" />
-          <ContextItem label="Next milestone"       value="May 4 — Dr. Aglio, upper body reassessment" />
+          <ContextItem label="Next milestone"       value="Upper body reassessment when hands are cleared" />
         </div>
       </div>
 
