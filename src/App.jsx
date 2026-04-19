@@ -22,13 +22,25 @@ const TABS = [
   { id: 'programs', label: 'Programs' },
 ]
 
+const VALID_TABS = new Set(TABS.map(t => t.id))
+
+function getInitialTab() {
+  const hash = window.location.hash.slice(1)
+  return VALID_TABS.has(hash) ? hash : 'overview'
+}
+
 export default function App() {
-  const [tab, setTab] = useState('overview')
+  const [tab, setTab] = useState(getInitialTab)
   const [activeSession, setActiveSession] = useState(null)
+
+  function setTabAndHash(id) {
+    window.location.hash = id
+    setTab(id)
+  }
 
   function openSession(date) {
     setActiveSession(date)
-    setTab('sessions')
+    setTabAndHash('sessions')
   }
 
   return (
@@ -41,7 +53,7 @@ export default function App() {
         {TABS.map((t) => (
           <button
             key={t.id}
-            onClick={() => setTab(t.id)}
+            onClick={() => setTabAndHash(t.id)}
             className={`px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors ${
               tab === t.id
                 ? 'border-b-2 border-accent text-accent'
