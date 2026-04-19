@@ -77,7 +77,7 @@ export default function Overview({ sessions }) {
           <ContextItem label="Right hand"           value="Light grip available, ~week 7 post-op at Apr 18" />
           <ContextItem label="Left hand"            value="No grip — cleared of infection ~Apr 14" />
           <ContextItem label="Medication"           value="Zepbound (GLP-1) — shot day affects energy and output" />
-          <ContextItem label="Life stage"           value="Perimenopause, 49 — training adapted accordingly" />
+          <ContextItem label="Life stage"           value="Perimenopause — training adapted accordingly" />
           <ContextItem label="Next milestone"       value="Upper body reassessment when hands are cleared" />
         </div>
       </div>
