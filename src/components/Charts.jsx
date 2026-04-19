@@ -8,6 +8,7 @@ const TOOLTIP_STYLE = {
   contentStyle: { background: '#18181b', border: '1px solid #303036', borderRadius: 8, fontSize: 12 },
   labelStyle: { color: '#a1a1aa', marginBottom: 4 },
   itemStyle: { color: '#e4e4e7' },
+  cursor: false,
 }
 
 const AXIS_TICK = { fill: '#71717a', fontSize: 11 }
