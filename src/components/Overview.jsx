@@ -47,10 +47,10 @@ export default function Overview({ sessions }) {
 
       {/* Lifetime stats */}
       <div className="card">
-        <h2 className="label mb-4">Lifetime Stats <span className="normal-case font-normal text-zinc-600 ml-1">— as of Apr 18, 2026</span></h2>
+        <h2 className="label mb-4">Lifetime Stats <span className="normal-case font-normal text-zinc-600 ml-1">— as of Apr 19, 2026</span></h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
-          <MiniLifeStat label="Total workouts"   value="185" />
-          <MiniLifeStat label="Lifetime volume"  value="479,938 lbs" />
+          <MiniLifeStat label="Total workouts"   value="186" />
+          <MiniLifeStat label="Lifetime volume"  value="484,829 lbs" />
           <MiniLifeStat label="Total time"       value="67 hrs" />
           <MiniLifeStat label="Best streak"      value="19 sessions" />
           <MiniLifeStat label="Movements used"   value="199" />
