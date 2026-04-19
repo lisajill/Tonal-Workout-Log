@@ -1,5 +1,113 @@
 const PROGRAMS = [
   {
+    id: 'he_glute',
+    name: 'Heavy Express — Glute Bridge + Hamstring + Quad',
+    subtitle: 'Hands-free · Barbell + ankle straps · Peak strength · ~24 min',
+    created: '2026-04-19',
+    anchor: 'Barbell Lying Glute Bridge — foundation of the session',
+    blocks: [
+      {
+        name: 'Block 1 — Barbell · Floor',
+        type: 'Warmup',
+        exercises: [
+          { name: 'Barbell Lying Glute Bridge', sets: '1 warmup', detail: '8 reps · Smart Flex off, manual load' },
+        ],
+      },
+      {
+        name: 'Block 2 — Barbell · Floor',
+        type: 'Working sets · 4 reps · manual load progression',
+        exercises: [
+          { name: 'Barbell Lying Glute Bridge', sets: '4', detail: '4/4 reps · increase weight each set' },
+        ],
+      },
+      {
+        name: 'Block 3 — Ankle Straps · Standing',
+        type: 'Warmup',
+        exercises: [
+          { name: 'Standing Single Leg Hamstring Curl', sets: '1 warmup', detail: '8/8 reps' },
+        ],
+      },
+      {
+        name: 'Block 4 — Prone Bench · Ankle Straps',
+        type: 'Working sets · Smart Flex · 5 reps',
+        exercises: [
+          { name: 'Prone Bench Hamstring Curl', sets: 'warmup + 4', detail: '5/5 reps' },
+        ],
+      },
+      {
+        name: 'Block 5 — Ankle Straps · Standing',
+        type: 'Warmup',
+        exercises: [
+          { name: 'Standing Leg Extension', sets: '1 warmup', detail: '6/6 reps' },
+        ],
+      },
+      {
+        name: 'Block 6 — Ankle Straps · Standing',
+        type: 'Working sets · Smart Flex · 6 reps/side',
+        exercises: [
+          { name: 'Standing Leg Extension', sets: '3', detail: '6/6 reps · Smart Flex' },
+        ],
+      },
+    ],
+    tiers: [],
+    cutOrder: [
+      'Block 6 — Standing Leg Extension (working)',
+      'Block 4 — Prone Bench Hamstring Curl',
+    ],
+    notes: [
+      'Glute bridge: Smart Flex undershoots — increase manually each set',
+      'Right knee: mild twinge at 80–90° on leg extension — hold weight steady, do not push through pain',
+      'Dry ≠ low effort for strength sessions — sweat not a measure of output here',
+    ],
+  },
+  {
+    id: 'he_hip',
+    name: 'Heavy Express — Hip Thrust + Hamstring',
+    subtitle: 'Hands-free · Barbell + ankle straps · Peak strength · ~18 min',
+    created: '2026-04-18',
+    anchor: 'Barbell Hip Thrust — replaced by Glute Bridge if bench slides',
+    blocks: [
+      {
+        name: 'Block 1 — Barbell · Bench',
+        type: 'Warmup',
+        exercises: [
+          { name: 'Barbell Hip Thrust', sets: '1 warmup', detail: '8 reps · 40 lbs' },
+        ],
+      },
+      {
+        name: 'Block 2 — Barbell · Bench',
+        type: 'Working sets · 4 reps · load progression',
+        exercises: [
+          { name: 'Barbell Hip Thrust', sets: '3', detail: '4 reps · increase weight each set' },
+        ],
+      },
+      {
+        name: 'Block 3 — Ankle Straps · Standing',
+        type: 'Working sets · 4 reps/side',
+        exercises: [
+          { name: 'Standing Single Leg Hamstring Curl', sets: '3', detail: '4/side · increase weight each set' },
+        ],
+      },
+      {
+        name: 'Block 4 — Ankle Straps · Standing',
+        type: 'Working sets · 5 reps/side',
+        exercises: [
+          { name: 'Standing Hip Abduction', sets: '3', detail: '5/side · Smart Flex' },
+        ],
+      },
+    ],
+    tiers: [],
+    cutOrder: [
+      'Block 4 — Standing Hip Abduction',
+      'Block 3 — Standing SL Hamstring Curl',
+    ],
+    notes: [
+      'Bench slides without wall anchor — swap to Barbell Lying Glute Bridge if no anchor available',
+      'Drop sets removed from all movements — tested Apr 18, not repeating',
+      'Low calorie output (60 kcal) is normal for heavy strength work — not a sign of low effort',
+    ],
+  },
+  {
     id: 'hfla',
     name: 'Hands Free Lower Body',
     subtitle: 'No hands · No weight bearing · Perimenopause-aware · Strength focus',
