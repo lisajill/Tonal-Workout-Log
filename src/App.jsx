@@ -19,7 +19,6 @@ const TABS = [
   { id: 'matrix',   label: 'Muscle Matrix' },
   { id: 'heatmap',  label: 'Muscle Readiness' },
   { id: 'charts',   label: 'Charts' },
-  { id: 'programs', label: 'Programs' },
 ]
 
 export default function App() {
@@ -61,7 +60,6 @@ export default function App() {
         {tab === 'bodymaps'  && <BodyMaps       sessions={sessions} />}
         {tab === 'matrix'    && <MuscleMatrix   sessions={sessions} />}
         {tab === 'heatmap'   && <MuscleHeatmap  sessions={sessions} />}
-        {tab === 'programs'  && <Programs />}
         {tab === 'charts'    && <Charts        sessions={sessions} />}
       </main>
     </div>

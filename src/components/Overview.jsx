@@ -57,139 +57,104 @@ export default function Overview({ sessions }) {
         </div>
       </div>
 
-      {/* Goals */}
-      <div className="card">
-        <h2 className="label mb-4">Goals</h2>
-        <div className="space-y-2">
-          <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Compounded Tirzepatide (GLP-1)" />
-          <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
-          <Goal icon="🤲" text="Reassess upper body reintroduction once hands are cleared" />
-          <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
-          <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
-        </div>
-      </div>
-
-      {/* Training context */}
-      <div className="card">
-        <h2 className="label mb-4">Training Context</h2>
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm text-zinc-400">
-          <ContextItem label="Current constraint"   value="Hands-free lower body only — both hands post-op" />
-          <ContextItem label="Right hand"           value="Light grip available, ~week 7 post-op at Apr 18" />
-          <ContextItem label="Left hand"            value="No grip — cleared of infection ~Apr 14" />
-          <ContextItem label="Medication"           value="Compounded Tirzepatide (GLP-1) — shot day affects energy and output" />
-          <ContextItem label="Life stage"           value="Perimenopause — training adapted accordingly" />
-          <ContextItem label="Next milestone"       value="Upper body reassessment when hands are cleared" />
-        </div>
-      </div>
-
-      {/* Session rating scale */}
-      <div className="card">
-        <h2 className="label mb-4">Session Rating Scale</h2>
-        <div className="space-y-1.5">
-          {[
-            { score: 5, text: 'Best session energy, everything clicked' },
-            { score: 4, text: 'Strong, felt good throughout' },
-            { score: 3, text: 'Solid, normal session' },
-            { score: 2, text: 'Below par, got it done' },
-            { score: 1, text: 'Struggled through, considered stopping' },
-          ].map(({ score, text }) => (
-            <div key={score} className="flex items-center gap-3 text-sm">
-              <span className="w-5 text-right font-bold text-accent tabular-nums">{score}</span>
-              <span className="text-zinc-500">—</span>
-              <span className="text-zinc-400">{text}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Recovery arc */}
-      <div className="card">
-        <h2 className="label mb-5">Recovery Arc</h2>
-        <div className="relative">
-          {/* Track */}
-          <div className="absolute left-3 top-0 bottom-0 w-px bg-surface-3" />
-          <div className="space-y-4">
-            <ArcEvent date="Oct 2025"     color="bg-red-500"     text="Training stopped — cellulitis → tenosynovitis surgery" />
-            <ArcEvent date="Nov–Jan"      color="bg-orange-500"  text="Physical therapy irritated trigger fingers on both small fingers" />
-            <ArcEvent date="Feb 26, 2026" color="bg-orange-400"  text="A1 pulley release — small finger, right hand" />
-            <ArcEvent date="Mar 26, 2026" color="bg-yellow-500"  text="A1 pulley release — small finger, left hand" />
-            <ArcEvent date="Apr 4, 2026"  color="bg-accent"      text="First session back — hands-free lower body, 5,553 lbs, rated 4/5" active />
-            <ArcEvent date="Apr 5"        color="bg-accent"      text="Session 2 — sore legs, first hamstring PRs" active />
-            <ArcEvent date="Apr 18"       color="bg-accent"      text="Session 3 — shot day, hip thrust PR at 56 lbs, 4.5/5" active shot />
-            <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Session 4 — glute bridge 120 lbs, PRs on nearly every set, 5/5" active />
-          </div>
-        </div>
-      </div>
-
-      {/* Narrative */}
-      <div className="card space-y-4 leading-relaxed text-zinc-300 text-sm">
-        <h2 className="label mb-2">Progress Story</h2>
-
-        <p>
-          You logged your first Tonal session on <strong className="text-zinc-100">{first.date}</strong> — a
-          {' '}<em>{first.workout}</em> in the recovery phase, a gentle re-entry at {first.total_volume?.toLocaleString()} lbs total
-          volume and an average heart rate of {first.avg_hr} bpm.
-          That session ended with glutes and hamstrings nearly depleted (1% and 13% readiness respectively),
-          while quads held up at 74% — a clear signal of where the work landed.
-        </p>
-
-        <p>
-          The very next day you came back for <em>Hands Free Lower Body + Core B</em>, training on already-sore legs.
-          Volume dropped to {sorted[1]?.total_volume?.toLocaleString()} lbs — appropriate for day-two fatigue —
-          and you rated it {sorted[1]?.subjective_rating}/5: a good session for the circumstances.
-          This is when the hamstring and leg extension work began: you hit strength PRs on the prone bench curl,
-          single-leg curl, and leg extension in the same session.
-        </p>
-
-        <p>
-          After a 13-day gap you returned on April 18 — shot day (GLP-1), tired, full — and still
-          delivered a <strong className="text-zinc-100">4.5/5</strong> session. You were fully recovered going in
-          (100% readiness across glutes, hamstrings, and quads), held that energy for just 18 minutes,
-          and set a barbell hip thrust PR at <strong className="text-zinc-100">56 lbs</strong>.
-          The density of that session tells the story: {sorted[2]?.total_volume?.toLocaleString()} lbs moved in {sorted[2]?.duration} minutes.
-        </p>
-
-        <p>
-          The most recent session — <strong className="text-zinc-100">April 19</strong> — is the strongest on record.
-          Running on poor sleep and four days off, you hit PRs on nearly every set: glute bridge climbed
-          to <strong className="text-zinc-100">120 lbs</strong> (up from 35 lbs in session one — a{' '}
-          <strong className="text-zinc-100">{Math.round(((120 - 35) / 35) * 100)}% increase</strong>),
-          prone bench hamstring curl reached 28 lbs, and leg extension hit 29 lbs.
-          Total volume was {last.total_volume?.toLocaleString()} lbs — second highest despite the shorter duration,
-          and a perfect 5/5 rating.
-        </p>
-
-      </div>
-
-      {/* Notable PRs */}
-      {bestPRs.length > 0 && (
+      {/* Goals + Context side by side */}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="card">
-          <h2 className="label mb-4">Notable PRs</h2>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {bestPRs.map(pr => (
-              <div key={pr.key} className="flex items-center justify-between rounded-lg bg-surface-2 px-4 py-3">
-                <div>
-                  <p className="text-sm font-medium text-zinc-100">{MOVEMENT_LABELS[pr.key] ?? pr.key}</p>
-                  <p className="text-xs text-zinc-500 mt-0.5">Set {pr.date}</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-lg font-bold text-accent tabular-nums">{pr.weight} lbs</p>
-                  {pr.growth != null && (
-                    <p className="text-xs text-emerald-400">+{pr.growth}% from first</p>
-                  )}
-                </div>
-              </div>
-            ))}
+          <h2 className="label mb-3">Goals</h2>
+          <div className="space-y-2">
+            <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Compounded Tirzepatide (GLP-1)" />
+            <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
+            <Goal icon="🤲" text="Reassess upper body reintroduction once hands are cleared" />
+            <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
+            <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
           </div>
         </div>
-      )}
+        <div className="card">
+          <h2 className="label mb-3">Training Context</h2>
+          <div className="space-y-2">
+            <ContextItem label="Current constraint" value="Hands-free lower body only — both hands post-op" />
+            <ContextItem label="Right hand"         value="Light grip available, ~week 7 post-op at Apr 18" />
+            <ContextItem label="Left hand"          value="No grip — cleared of infection ~Apr 14" />
+            <ContextItem label="Medication"         value="Compounded Tirzepatide (GLP-1) — shot day affects energy and output" />
+            <ContextItem label="Life stage"         value="Perimenopause — training adapted accordingly" />
+            <ContextItem label="Next milestone"     value="Upper body reassessment when hands are cleared" />
+          </div>
+        </div>
+      </div>
 
-      {/* Per-session recaps */}
-      <div className="card">
-        <h2 className="label mb-4">Session Recaps</h2>
-        <div className="space-y-4">
-          {recaps.map((r, i) => (
-            <div key={r.date} className="flex gap-4 items-start">
+      {/* Recovery arc + Notable PRs side by side */}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="card">
+          <h2 className="label mb-4">Recovery Arc</h2>
+          <div className="relative">
+            <div className="absolute left-3 top-0 bottom-0 w-px bg-surface-3" />
+            <div className="space-y-3">
+              <ArcEvent date="Oct 2025"     color="bg-red-500"     text="Training stopped — cellulitis → tenosynovitis surgery" />
+              <ArcEvent date="Nov–Jan"      color="bg-orange-500"  text="PT irritated trigger fingers on both small fingers" />
+              <ArcEvent date="Feb 26, 2026" color="bg-orange-400"  text="A1 pulley release — small finger, right hand" />
+              <ArcEvent date="Mar 26, 2026" color="bg-yellow-500"  text="A1 pulley release — small finger, left hand" />
+              <ArcEvent date="Apr 4, 2026"  color="bg-accent"      text="First session back — 5,553 lbs · 4/5" active />
+              <ArcEvent date="Apr 5"        color="bg-accent"      text="Session 2 — sore legs, first hamstring PRs" active />
+              <ArcEvent date="Apr 18"       color="bg-accent"      text="Session 3 — shot day, hip thrust PR 56 lbs · 4.5/5" active shot />
+              <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Session 4 — glute bridge 120 lbs, PRs everywhere · 5/5" active />
+            </div>
+          </div>
+        </div>
+
+        {bestPRs.length > 0 && (
+          <div className="card">
+            <h2 className="label mb-4">Notable PRs</h2>
+            <div className="space-y-2">
+              {bestPRs.map(pr => (
+                <div key={pr.key} className="flex items-center justify-between rounded-lg bg-surface-2 px-3 py-2">
+                  <div>
+                    <p className="text-sm font-medium text-zinc-100">{MOVEMENT_LABELS[pr.key] ?? pr.key}</p>
+                    <p className="text-xs text-zinc-500 mt-0.5">Set {pr.date}</p>
+                  </div>
+                  <div className="text-right shrink-0 pl-4">
+                    <p className="text-base font-bold text-accent tabular-nums">{pr.weight} lbs</p>
+                    {pr.growth != null && <p className="text-xs text-emerald-400">+{pr.growth}%</p>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Collapsible: Progress Story + Recaps */}
+      <details className="card group">
+        <summary className="label cursor-pointer list-none flex items-center justify-between">
+          Progress Story &amp; Session Recaps
+          <span className="text-zinc-600 group-open:rotate-180 transition-transform">▾</span>
+        </summary>
+        <div className="mt-4 space-y-4 leading-relaxed text-zinc-300 text-sm">
+          <p>
+            You logged your first Tonal session on <strong className="text-zinc-100">{first.date}</strong> — a
+            {' '}<em>{first.workout}</em> in the recovery phase, a gentle re-entry at {first.total_volume?.toLocaleString()} lbs total
+            volume and an average heart rate of {first.avg_hr} bpm.
+            That session ended with glutes and hamstrings nearly depleted (1% and 13% readiness respectively),
+            while quads held up at 74% — a clear signal of where the work landed.
+          </p>
+          <p>
+            The very next day you came back for <em>Hands Free Lower Body + Core B</em>, training on already-sore legs.
+            Volume dropped to {sorted[1]?.total_volume?.toLocaleString()} lbs — appropriate for day-two fatigue —
+            and you rated it {sorted[1]?.subjective_rating}/5. First hamstring PRs: prone bench curl, SL curl, and leg extension in the same session.
+          </p>
+          <p>
+            After a 13-day gap you returned on April 18 — shot day (GLP-1), tired, full — and still delivered a{' '}
+            <strong className="text-zinc-100">4.5/5</strong>. Fully recovered going in (100% readiness), {sorted[2]?.total_volume?.toLocaleString()} lbs in {sorted[2]?.duration} minutes, hip thrust PR at 56 lbs.
+          </p>
+          <p>
+            April 19 is the strongest session on record. Poor sleep, four days off — glute bridge climbed to{' '}
+            <strong className="text-zinc-100">120 lbs</strong> ({Math.round(((120 - 35) / 35) * 100)}% up from session one),
+            PRs on nearly every set, perfect 5/5.
+          </p>
+        </div>
+        <div className="mt-5 space-y-3 border-t border-surface-3 pt-4">
+          <p className="label">Session Recaps</p>
+          {recaps.map(r => (
+            <div key={r.date} className="flex gap-3 items-start">
               <div className="w-1 self-stretch rounded-full bg-accent/30 shrink-0" />
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 flex-wrap">
@@ -197,12 +162,12 @@ export default function Overview({ sessions }) {
                   <span className="text-sm font-medium text-zinc-100">{r.workout}</span>
                   <span className="text-xs text-zinc-500">{r.duration} min · {r.volume?.toLocaleString()} lbs · {r.rating}/5</span>
                 </div>
-                <p className="text-sm text-zinc-400 mt-1">{r.narrative}</p>
+                <p className="text-sm text-zinc-400 mt-0.5">{r.narrative}</p>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </details>
     </div>
   )
 }
