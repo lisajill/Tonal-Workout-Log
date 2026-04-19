@@ -74,7 +74,7 @@ export default function SessionLog({ sessions, onSelectSession }) {
 
 function RatingPips({ value }) {
   return (
-    <span className="flex items-center justify-center gap-0.5">
+    <span className="relative group/rating inline-flex items-center justify-center gap-0.5 cursor-default">
       {Array.from({ length: 5 }).map((_, i) => (
         <span key={i} className={`text-sm ${
           i < Math.floor(value) ? 'text-accent'
@@ -82,6 +82,9 @@ function RatingPips({ value }) {
           : 'text-surface-3'
         }`}>●</span>
       ))}
+      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 z-10 whitespace-nowrap rounded-md bg-surface-3 border border-surface-3 px-2 py-1 text-xs text-zinc-200 shadow-lg opacity-0 group-hover/rating:opacity-100 transition-opacity">
+        Session rating: {value} / 5
+      </span>
     </span>
   )
 }
