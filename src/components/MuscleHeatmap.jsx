@@ -74,13 +74,15 @@ export default function MuscleHeatmap({ sessions }) {
 
 function Cell({ icon, bg, text, tip }) {
   return (
-    <div
-      title={tip}
-      className={`${bg} rounded-lg flex flex-col items-center justify-center py-2 gap-0.5 cursor-default`}
-    >
-      <span className="text-lg leading-none">{icon === '—' ? '' : icon}</span>
-      <span className={`text-[10px] font-medium ${text}`}>
-        {tip === 'No data' ? '—' : tip.split(' — ')[0]}
+    <div className="relative group/cell">
+      <div className={`${bg} rounded-lg flex flex-col items-center justify-center py-2 gap-0.5 cursor-default`}>
+        <span className="text-lg leading-none">{icon === '—' ? '' : icon}</span>
+        <span className={`text-[10px] font-medium ${text}`}>
+          {tip === 'No data' ? '—' : tip.split(' — ')[0]}
+        </span>
+      </div>
+      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 z-10 whitespace-nowrap rounded-md bg-surface-3 border border-surface-3 px-2 py-1 text-xs text-zinc-200 shadow-lg opacity-0 group-hover/cell:opacity-100 transition-opacity">
+        {tip}
       </span>
     </div>
   )

@@ -35,7 +35,14 @@ export default function MuscleMatrix({ sessions }) {
             {sorted.map(s => (
               <th key={s.date} className="label pb-2 px-2 text-center whitespace-nowrap">
                 {shortDate(s.date)}
-                {s.shot_day && <span className="block text-amber-400 normal-case font-normal">💉</span>}
+                {s.shot_day && (
+                  <span className="relative group/shot inline-block">
+                    <span className="block text-amber-400 normal-case font-normal cursor-default">💉</span>
+                    <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 z-10 whitespace-nowrap rounded-md bg-surface-3 border border-surface-3 px-2 py-1 text-xs text-zinc-200 shadow-lg opacity-0 group-hover/shot:opacity-100 transition-opacity">
+                      GLP-1 shot day
+                    </span>
+                  </span>
+                )}
               </th>
             ))}
             <th className="label pb-2 pl-4 text-center">Total sessions</th>
@@ -82,13 +89,22 @@ export default function MuscleMatrix({ sessions }) {
 }
 
 function Cell({ level }) {
-  if (level === 'high') return (
-    <span className="inline-flex h-6 w-6 items-center justify-center rounded bg-accent text-white font-bold text-[10px]">H</span>
+  const tip = level === 'high' ? 'High volume' : level === 'low' ? 'Low volume' : 'Not targeted'
+  const style =
+    level === 'high' ? 'bg-accent text-white' :
+    level === 'low'  ? 'bg-accent/25 text-accent' :
+                       'bg-surface-2 text-zinc-700'
+  const label = level === 'high' ? 'H' : level === 'low' ? 'L' : '—'
+  return (
+    <span className="relative group/cell inline-flex">
+      <span className={`inline-flex h-6 w-6 items-center justify-center rounded font-bold text-[10px] cursor-default ${style}`}>
+        {label}
+      </span>
+      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 z-10 whitespace-nowrap rounded-md bg-surface-3 border border-surface-3 px-2 py-1 text-xs text-zinc-200 shadow-lg opacity-0 group-hover/cell:opacity-100 transition-opacity">
+        {tip}
+      </span>
+    </span>
   )
-  if (level === 'low') return (
-    <span className="inline-flex h-6 w-6 items-center justify-center rounded bg-accent/25 text-accent font-bold text-[10px]">L</span>
-  )
-  return <span className="inline-flex h-6 w-6 items-center justify-center rounded bg-surface-2 text-zinc-700 text-[10px]">—</span>
 }
 
 function LegendItem({ color, label }) {
