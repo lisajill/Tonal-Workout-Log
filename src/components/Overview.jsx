@@ -61,7 +61,7 @@ export default function Overview({ sessions }) {
       <div className="card">
         <h2 className="label mb-4">Goals</h2>
         <div className="space-y-2">
-          <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Zepbound (GLP-1)" />
+          <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Compounded Tirzepatide (GLP-1)" />
           <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
           <Goal icon="🤲" text="Reassess upper body reintroduction once hands are cleared" />
           <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
@@ -76,7 +76,7 @@ export default function Overview({ sessions }) {
           <ContextItem label="Current constraint"   value="Hands-free lower body only — both hands post-op" />
           <ContextItem label="Right hand"           value="Light grip available, ~week 7 post-op at Apr 18" />
           <ContextItem label="Left hand"            value="No grip — cleared of infection ~Apr 14" />
-          <ContextItem label="Medication"           value="Zepbound (GLP-1) — shot day affects energy and output" />
+          <ContextItem label="Medication"           value="Compounded Tirzepatide (GLP-1) — shot day affects energy and output" />
           <ContextItem label="Life stage"           value="Perimenopause — training adapted accordingly" />
           <ContextItem label="Next milestone"       value="Upper body reassessment when hands are cleared" />
         </div>
@@ -135,7 +135,7 @@ export default function Overview({ sessions }) {
         </p>
 
         <p>
-          After a 13-day gap you returned on April 18 — shot day (Zepbound), tired, full — and still
+          After a 13-day gap you returned on April 18 — shot day (GLP-1), tired, full — and still
           delivered a <strong className="text-zinc-100">4.5/5</strong> session. You were fully recovered going in
           (100% readiness across glutes, hamstrings, and quads), held that energy for just 18 minutes,
           and set a barbell hip thrust PR at <strong className="text-zinc-100">56 lbs</strong>.
