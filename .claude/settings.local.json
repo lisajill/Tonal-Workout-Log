@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(npx create-vite@latest . --template react)",
+      "Read(//Users/moment/Sites/**)",
+      "Bash(npx create-vite@latest Workout-Tracker --template react)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(cp \"/Users/moment/Documents/Obsidian Vault/Images/BodyMapApril4.png\" /Users/moment/Sites/Workout-Tracker/public/BodyMapApril4.png)",
+      "Bash(cp \"/Users/moment/Documents/Obsidian Vault/Images/BodyMapApril5.png\" /Users/moment/Sites/Workout-Tracker/public/BodyMapApril5.png)",
+      "Bash(cp \"/Users/moment/Documents/Obsidian Vault/Images/BodyMapApril18.png\" /Users/moment/Sites/Workout-Tracker/public/BodyMapApril18.png)",
+      "Bash(cp \"/Users/moment/Documents/Obsidian Vault/Images/BodyMapApril19.png\" /Users/moment/Sites/Workout-Tracker/public/BodyMapApril19.png)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}

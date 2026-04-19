@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-0 text-zinc-100 antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-1 rounded-xl border border-surface-3 p-5;
+  }
+  .label {
+    @apply text-xs font-medium uppercase tracking-widest text-zinc-500;
+  }
+}
