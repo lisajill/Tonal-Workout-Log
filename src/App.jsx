@@ -19,7 +19,7 @@ const TABS = [
   { id: 'matrix',   label: 'Muscle Matrix' },
   { id: 'heatmap',  label: 'Muscle Readiness' },
   { id: 'charts',   label: 'Charts' },
-  { id: 'programs', label: 'Programs' },
+  { id: 'programs', label: 'Custom Workouts' },
 ]
 
 const VALID_TABS = new Set(TABS.map(t => t.id))
