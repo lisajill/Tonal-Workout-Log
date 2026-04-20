@@ -7,6 +7,7 @@ const COLS = [
   { key: 'workout',          label: 'Workout',        align: 'left' },
   { key: 'duration',         label: 'Duration (min)', align: 'right' },
   { key: 'total_volume',     label: 'Volume (lbs)',   align: 'right' },
+  { key: 'total_reps',       label: 'Reps',           align: 'right' },
   { key: 'subjective_rating',label: 'Rating',         align: 'center' },
   { key: 'sweat',            label: 'Sweat',          align: 'left' },
   { key: 'energy_level',     label: 'Energy',         align: 'right' },
@@ -60,6 +61,7 @@ export default function SessionLog({ sessions, onSelectSession }) {
               <td className="py-3 pr-6 font-medium text-zinc-100 max-w-[220px] group-hover:text-accent transition-colors">{s.workout}</td>
               <td className="py-3 pr-6 tabular-nums text-zinc-300 text-right">{s.duration}</td>
               <td className="py-3 pr-6 tabular-nums text-zinc-300 text-right">{s.total_volume?.toLocaleString() ?? '—'}</td>
+              <td className="py-3 pr-6 tabular-nums text-zinc-300 text-right">{s.total_reps ?? '—'}</td>
               <td className="py-3 pr-6 text-center"><RatingPips value={s.subjective_rating} /></td>
               <td className="py-3 pr-6 text-zinc-300">{SWEAT[s.sweat] ?? s.sweat}</td>
               <td className="py-3 pr-6 tabular-nums text-zinc-300 text-right">{s.energy_level}</td>

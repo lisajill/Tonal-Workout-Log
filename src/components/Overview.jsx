@@ -18,9 +18,11 @@ export default function Overview({ sessions }) {
   const first    = sorted[0]
   const last     = sorted[sorted.length - 1]
   const daySpan  = daysBetween(first.date, last.date)
-  const totalVol = sessions.reduce((s, x) => s + (x.total_volume ?? 0), 0)
+  const totalVol  = sessions.reduce((s, x) => s + (x.total_volume ?? 0), 0)
+  const totalReps = sessions.reduce((s, x) => s + (x.total_reps ?? 0), 0)
+  const avgTUT    = (sessions.reduce((s, x) => s + (x.time_under_tension ?? 0), 0) / sessions.length).toFixed(1)
   const avgRating = (sessions.reduce((s, x) => s + x.subjective_rating, 0) / sessions.length).toFixed(1)
-  const prCount  = countPRs(sessions)
+  const prCount   = countPRs(sessions)
   const recaps   = sessions.map(buildRecap)
   const bestPRs  = findNotablePRs(sessions)
 
@@ -38,10 +40,12 @@ export default function Overview({ sessions }) {
       </div>
 
       {/* Hero stats — this training block */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
         <Stat label="Sessions" value={sessions.length} />
         <Stat label="Days active" value={daySpan} />
-        <Stat label="Volume this block" value={`${(totalVol / 1000).toFixed(1)}k lbs`} />
+        <Stat label="Volume" value={`${(totalVol / 1000).toFixed(1)}k lbs`} />
+        <Stat label="Total reps" value={totalReps.toLocaleString()} />
+        <Stat label="Avg TUT" value={`${avgTUT}m`} />
         <Stat label="Avg rating" value={`${avgRating} / 5`} />
       </div>
 
@@ -173,12 +177,12 @@ export default function Overview({ sessions }) {
       <p className="text-xs text-zinc-700 text-center pt-2">
         Session data pulled via{' '}
         <a
-          href="https://github.com/dlwiest/ts-tonal-mcp"
+          href="https://github.com/dlwiest/ts-tonal-client"
           target="_blank"
           rel="noopener noreferrer"
           className="text-zinc-500 hover:text-zinc-300 underline underline-offset-2 transition-colors"
         >
-          Tonal MCP
+          ts-tonal-client
         </a>
       </p>
     </div>

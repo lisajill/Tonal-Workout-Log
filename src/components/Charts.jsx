@@ -41,6 +41,7 @@ export default function Charts({ sessions }) {
     shot_day: s.shot_day ?? false,
     volume: s.total_volume,
     vol_per_min: s.total_volume && s.duration ? Math.round(s.total_volume / s.duration) : null,
+    reps: s.total_reps,
     avg_hr: s.avg_hr,
     max_hr: s.max_hr,
     rating: s.subjective_rating,
@@ -145,6 +146,21 @@ export default function Charts({ sessions }) {
               <LabelList dataKey="rating" position="top" style={LABEL_STYLE} formatter={v => `${v}`} />
             </Line>
           </LineChart>
+        </ResponsiveContainer>
+      </ChartCard>
+
+      <ChartCard title="Total Reps" subtitle="Repetitions completed per session">
+        <ResponsiveContainer width="100%" height={240}>
+          <BarChart data={data} margin={{ top: 24, right: 16, bottom: 0, left: 0 }} barCategoryGap="30%">
+            <CartesianGrid {...GRID} />
+            <XAxis dataKey="date" tick={AXIS_TICK} />
+            <YAxis tick={AXIS_TICK} />
+            <Tooltip {...TOOLTIP_STYLE} formatter={v => [`${v.toLocaleString()} reps`, 'Total Reps']} />
+            {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
+            <Bar dataKey="reps" fill="#34d399" radius={[4, 4, 0, 0]} activeBar={{ fill: '#34d399', opacity: 0.8 }}>
+              <LabelList dataKey="reps" position="top" style={LABEL_STYLE} formatter={v => v?.toLocaleString()} />
+            </Bar>
+          </BarChart>
         </ResponsiveContainer>
       </ChartCard>
 

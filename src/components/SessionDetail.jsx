@@ -62,13 +62,15 @@ export default function SessionDetail({ sessions, initialDate }) {
         </div>
 
         {/* Key stats */}
-        <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-6">
+        <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4">
           <MiniStat label="Duration"  value={`${session.duration}m`} />
           <MiniStat label="Volume"    value={`${session.total_volume?.toLocaleString() ?? '—'} lbs`} />
+          <MiniStat label="Reps"      value={session.total_reps ?? '—'} />
+          <MiniStat label="TUT"       value={session.time_under_tension ? `${session.time_under_tension}m` : '—'} />
           <MiniStat label="Avg HR"    value={session.avg_hr ? `${session.avg_hr} bpm` : '—'} />
           <MiniStat label="Max HR"    value={session.max_hr ? `${session.max_hr} bpm` : '—'} />
           <MiniStat label="Calories"  value={session.calories ? `${session.calories} kcal` : '—'} />
-          <MiniStat label="Sweat"     value={SWEAT[session.sweat] ?? session.sweat} />
+          <MiniStat label="Work"      value={session.total_work_kj ? `${session.total_work_kj} kJ` : '—'} />
         </div>
 
         {/* Body map */}

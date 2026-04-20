@@ -9,8 +9,8 @@
     "sweat": "untracked",
     "duration": 46.9,
     "total_volume": 5553,
-    "total_reps": null,
-    "time_under_tension": 43.5,
+    "total_reps": 432,
+    "time_under_tension": 26.18,
     "total_work_kj": 9,
     "calories": 156,
     "avg_hr": 101,
@@ -42,19 +42,58 @@
       "triceps": null
     },
     "prs": {
-      "barbell_hip_thrust": { "weight": null, "date": null },
-      "barbell_lying_glute_bridge": { "weight": 35, "date": "2026-04-04" },
-      "prone_bench_hamstring_curl": { "weight": null, "date": null },
-      "prone_bench_sl_hamstring_curl": { "weight": null, "date": null },
-      "standing_sl_hamstring_curl": { "weight": null, "date": null },
-      "standing_leg_extension": { "weight": null, "date": null },
-      "standing_hip_abduction": { "weight": null, "date": null },
-      "standing_donkey_kick": { "weight": null, "date": null },
-      "standing_diagonal_glute_kickback": { "weight": 7, "date": "2026-04-04" },
-      "standing_straight_leg_glute_kickback": { "weight": 8, "date": "2026-04-04" }
+      "barbell_hip_thrust": {
+        "weight": null,
+        "date": null
+      },
+      "barbell_lying_glute_bridge": {
+        "weight": 35,
+        "date": "2026-04-04"
+      },
+      "prone_bench_hamstring_curl": {
+        "weight": null,
+        "date": null
+      },
+      "prone_bench_sl_hamstring_curl": {
+        "weight": null,
+        "date": null
+      },
+      "standing_sl_hamstring_curl": {
+        "weight": null,
+        "date": null
+      },
+      "standing_leg_extension": {
+        "weight": null,
+        "date": null
+      },
+      "standing_hip_abduction": {
+        "weight": null,
+        "date": null
+      },
+      "standing_donkey_kick": {
+        "weight": null,
+        "date": null
+      },
+      "standing_diagonal_glute_kickback": {
+        "weight": 7,
+        "date": "2026-04-04"
+      },
+      "standing_straight_leg_glute_kickback": {
+        "weight": 8,
+        "date": "2026-04-04"
+      }
     },
-    "muscles_high_volume": ["hip_flexors", "glutes", "hamstrings", "quads"],
-    "muscles_low_volume": ["lats", "calves"]
+    "muscles_high_volume": [
+      "hip_flexors",
+      "glutes",
+      "hamstrings",
+      "quads"
+    ],
+    "muscles_low_volume": [
+      "lats",
+      "calves"
+    ],
+    "tonal_activity_id": "aeb1248b-83ca-41cc-8af5-594c630a0626"
   },
   {
     "date": "2026-04-05",
@@ -67,7 +106,7 @@
     "duration": 38,
     "total_volume": 2751,
     "total_reps": 119,
-    "time_under_tension": 28.4,
+    "time_under_tension": 17.1,
     "total_work_kj": 6,
     "calories": 137,
     "avg_hr": 92,
@@ -99,19 +138,58 @@
       "triceps": 100
     },
     "prs": {
-      "barbell_hip_thrust": { "weight": null, "date": null },
-      "barbell_lying_glute_bridge": { "weight": null, "date": null },
-      "prone_bench_hamstring_curl": { "weight": 20, "date": "2026-04-05" },
-      "prone_bench_sl_hamstring_curl": { "weight": 20, "date": "2026-04-05" },
-      "standing_sl_hamstring_curl": { "weight": 11, "date": "2026-04-05" },
-      "standing_leg_extension": { "weight": 27, "date": "2026-04-05" },
-      "standing_hip_abduction": { "weight": null, "date": null },
-      "standing_donkey_kick": { "weight": null, "date": null },
-      "standing_diagonal_glute_kickback": { "weight": null, "date": null },
-      "standing_straight_leg_glute_kickback": { "weight": null, "date": null }
+      "barbell_hip_thrust": {
+        "weight": null,
+        "date": null
+      },
+      "barbell_lying_glute_bridge": {
+        "weight": null,
+        "date": null
+      },
+      "prone_bench_hamstring_curl": {
+        "weight": 20,
+        "date": "2026-04-05"
+      },
+      "prone_bench_sl_hamstring_curl": {
+        "weight": 20,
+        "date": "2026-04-05"
+      },
+      "standing_sl_hamstring_curl": {
+        "weight": 11,
+        "date": "2026-04-05"
+      },
+      "standing_leg_extension": {
+        "weight": 27,
+        "date": "2026-04-05"
+      },
+      "standing_hip_abduction": {
+        "weight": null,
+        "date": null
+      },
+      "standing_donkey_kick": {
+        "weight": null,
+        "date": null
+      },
+      "standing_diagonal_glute_kickback": {
+        "weight": null,
+        "date": null
+      },
+      "standing_straight_leg_glute_kickback": {
+        "weight": null,
+        "date": null
+      }
     },
-    "muscles_high_volume": ["glutes", "hamstrings", "quads"],
-    "muscles_low_volume": ["hip_flexors", "lats", "calves"]
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings",
+      "quads"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "lats",
+      "calves"
+    ],
+    "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0"
   },
   {
     "date": "2026-04-18",
@@ -122,7 +200,7 @@
     "phase": "recovery",
     "subjective_rating": 4.5,
     "sweat": "heavy",
-    "duration": 18,
+    "duration": 18.27,
     "total_volume": 3036,
     "total_reps": 149,
     "time_under_tension": 9,
@@ -157,19 +235,58 @@
       "triceps": null
     },
     "prs": {
-      "barbell_hip_thrust": { "weight": 56, "date": "2026-04-18" },
-      "barbell_lying_glute_bridge": { "weight": null, "date": null },
-      "prone_bench_hamstring_curl": { "weight": null, "date": null },
-      "prone_bench_sl_hamstring_curl": { "weight": null, "date": null },
-      "standing_sl_hamstring_curl": { "weight": 25, "date": "2026-04-18" },
-      "standing_leg_extension": { "weight": null, "date": null },
-      "standing_hip_abduction": { "weight": 14, "date": "2026-04-18" },
-      "standing_donkey_kick": { "weight": 20, "date": "2026-04-18" },
-      "standing_diagonal_glute_kickback": { "weight": null, "date": null },
-      "standing_straight_leg_glute_kickback": { "weight": null, "date": null }
+      "barbell_hip_thrust": {
+        "weight": 56,
+        "date": "2026-04-18"
+      },
+      "barbell_lying_glute_bridge": {
+        "weight": null,
+        "date": null
+      },
+      "prone_bench_hamstring_curl": {
+        "weight": null,
+        "date": null
+      },
+      "prone_bench_sl_hamstring_curl": {
+        "weight": null,
+        "date": null
+      },
+      "standing_sl_hamstring_curl": {
+        "weight": 25,
+        "date": "2026-04-18"
+      },
+      "standing_leg_extension": {
+        "weight": null,
+        "date": null
+      },
+      "standing_hip_abduction": {
+        "weight": 14,
+        "date": "2026-04-18"
+      },
+      "standing_donkey_kick": {
+        "weight": 20,
+        "date": "2026-04-18"
+      },
+      "standing_diagonal_glute_kickback": {
+        "weight": null,
+        "date": null
+      },
+      "standing_straight_leg_glute_kickback": {
+        "weight": null,
+        "date": null
+      }
     },
-    "muscles_high_volume": ["glutes", "hamstrings", "lower_back"],
-    "muscles_low_volume": ["hip_flexors", "lats", "calves"]
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings",
+      "lower_back"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "lats",
+      "calves"
+    ],
+    "tonal_activity_id": "f8a42e03-03bf-4bdd-8229-d00978f3bc55"
   },
   {
     "date": "2026-04-19",
@@ -181,8 +298,8 @@
     "sweat": "dry",
     "duration": 23.72,
     "total_volume": 4891,
-    "total_reps": null,
-    "time_under_tension": 8.27,
+    "total_reps": 116,
+    "time_under_tension": 8.45,
     "total_work_kj": 8,
     "calories": 54,
     "avg_hr": 98,
@@ -214,18 +331,56 @@
       "triceps": 100
     },
     "prs": {
-      "barbell_hip_thrust": { "weight": null, "date": null },
-      "barbell_lying_glute_bridge": { "weight": 120, "date": "2026-04-19" },
-      "prone_bench_hamstring_curl": { "weight": 28, "date": "2026-04-19" },
-      "prone_bench_sl_hamstring_curl": { "weight": null, "date": null },
-      "standing_sl_hamstring_curl": { "weight": null, "date": null },
-      "standing_leg_extension": { "weight": 29, "date": "2026-04-19" },
-      "standing_hip_abduction": { "weight": null, "date": null },
-      "standing_donkey_kick": { "weight": null, "date": null },
-      "standing_diagonal_glute_kickback": { "weight": null, "date": null },
-      "standing_straight_leg_glute_kickback": { "weight": null, "date": null }
+      "barbell_hip_thrust": {
+        "weight": null,
+        "date": null
+      },
+      "barbell_lying_glute_bridge": {
+        "weight": 120,
+        "date": "2026-04-19"
+      },
+      "prone_bench_hamstring_curl": {
+        "weight": 28,
+        "date": "2026-04-19"
+      },
+      "prone_bench_sl_hamstring_curl": {
+        "weight": null,
+        "date": null
+      },
+      "standing_sl_hamstring_curl": {
+        "weight": null,
+        "date": null
+      },
+      "standing_leg_extension": {
+        "weight": 29,
+        "date": "2026-04-19"
+      },
+      "standing_hip_abduction": {
+        "weight": null,
+        "date": null
+      },
+      "standing_donkey_kick": {
+        "weight": null,
+        "date": null
+      },
+      "standing_diagonal_glute_kickback": {
+        "weight": null,
+        "date": null
+      },
+      "standing_straight_leg_glute_kickback": {
+        "weight": null,
+        "date": null
+      }
     },
-    "muscles_high_volume": ["glutes", "hamstrings", "quads"],
-    "muscles_low_volume": ["hip_flexors", "calves"]
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings",
+      "quads"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "calves"
+    ],
+    "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421"
   }
 ]

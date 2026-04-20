@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fetch": "tsx scripts/fetch-sessions.ts"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -14,12 +15,16 @@
     "recharts": "^2.13.0"
   },
   "devDependencies": {
+    "@dlwiest/ts-tonal-client": "^0.2.1",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
+    "dotenv": "^17.4.2",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
     "vite": "^6.0.1"
   }
 }
