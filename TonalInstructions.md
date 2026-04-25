@@ -143,7 +143,13 @@ Block 8: Isolation C — working sets (3×4, flex: true)
 
 1. **Before workout:** Call `getMuscleReadiness()`. Write to Obsidian session note frontmatter at:
    `Health & Wellness/Tonal/Sessions/YYYY-MM-DD Workout Name.md`
-2. **After workout:** Run `npm run fetch` to pull API data (volume, reps, TUT, kJ) into sessions.json. Manually fill in: `energy_level`, `subjective_rating`, `sweat`, `avg_hr`, `max_hr`, `calories`, `post_readiness`, `prs`, `muscles_high_volume`, `muscles_low_volume`.
+2. **After workout:** Run `npm run fetch` to pull API data (volume, reps, TUT, kJ) into sessions.json. Manually fill in: `energy_level`, `subjective_rating`, `sweat`, `avg_hr`, `max_hr`, `calories`, `post_readiness`, `prs`, `muscles_high_volume`, `muscles_low_volume`, `functional_strength`, `movement_quality`, `movement_quality_delta`, `strength_overall/upper/core/lower`.
+   - **post_readiness**: capture from the Tonal app's Muscle Readiness screen immediately after. If only categories are visible (not exact %), use: Fresh ≈ 100, Recovering ≈ 50, Fatigued ≈ 15.
+   - **sweat scale**: use text labels — `dry`, `light`, `moderate`, `heavy`. Never use numbers.
+   - **FS/MQ**: from Goal Progress screen (Focus Area + Interests tabs).
+   - **Strength scores**: from the Strength Score screen (Overall + region breakdown).
+   - **TUT and density**: these metrics are lower when proper rest is taken between sets. Do not compare density across sessions without noting whether structured rest was used. Structured rest (2 min post-compound, 90s between isolations) is correct protocol — lower density is not lower effort.
+   - **Multiple sessions same day**: each gets its own sessions.json entry keyed by `tonal_activity_id`. Order chronologically (first session first). Free Lift sessions appear as separate API activities.
 
 ### Session Note Frontmatter Template
 
@@ -152,10 +158,12 @@ Block 8: Isolation C — working sets (3×4, flex: true)
 date: YYYY-MM-DD
 workout: "Workout Name"
 tonal_workout_id: <uuid>
+tonal_activity_id: <uuid>
+shot_day: false
 phase: active | recovery
 energy_level: null
 subjective_rating: null
-sweat: null
+sweat: null        # dry | light | moderate | heavy
 duration: null
 total_volume: null
 total_reps: null
@@ -164,6 +172,10 @@ total_work_kj: null
 calories: null
 avg_hr: null
 max_hr: null
+strength_overall: null
+strength_upper: null
+strength_core: null
+strength_lower: null
 pre_readiness:
   glutes: <value>
   hamstrings: <value>
@@ -178,7 +190,16 @@ pre_readiness:
   triceps: <value>
 post_readiness:
   glutes: null
-  # ... etc
+  hamstrings: null
+  quads: null
+  calves: null
+  abs: null
+  obliques: null
+  back: null
+  chest: null
+  shoulders: null
+  biceps: null
+  triceps: null
 functional_strength: null
 movement_quality: null
 movement_quality_delta: null

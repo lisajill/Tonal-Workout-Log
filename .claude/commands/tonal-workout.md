@@ -78,4 +78,14 @@ Build the sets array following the structure in TonalInstructions.md. Include th
 Report back:
 - Workout created (title + ID)
 - Obsidian note written (path)
-- Remind user to fill in post-workout fields after the session and run `npm run fetch`
+
+Remind the user to capture the following immediately after the session (before leaving the app):
+
+1. **Muscle Readiness screen** — screenshot or note values. Capture before navigating away — this is post_readiness. If only categories shown: Fresh ≈ 100, Recovering ≈ 50, Fatigued ≈ 15.
+2. **Body map screenshot** — Targeted Muscles screen after the workout.
+3. **Goal Progress** — Focus Area tab (Functional Strength) + Interests tab (Movement Quality). Note the score and delta.
+4. **Strength Score screen** — Overall + Upper/Core/Lower breakdown.
+5. **HR + calories** — from the activity summary (avg HR, max HR, calories).
+6. **Manual fields** — energy_level (1–5), subjective_rating (0–5), sweat (dry/light/moderate/heavy), PRs set this session.
+
+Then run `npm run fetch` to pull volume/reps/TUT/kJ from the API into sessions.json.
