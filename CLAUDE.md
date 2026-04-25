@@ -23,11 +23,15 @@ No test suite. No linter configured.
 3. `App.jsx` passes the full sessions array as a prop to every tab component. Components are pure consumers.
 
 **`sessions.json` schema** — key fields per entry:
-- `tonal_activity_id` — Tonal API ID; primary merge key
+- `tonal_activity_id` — Tonal API ID; primary merge key. Multiple sessions on the same date are ordered chronologically and each has a unique ID.
 - `total_volume`, `total_reps`, `time_under_tension`, `total_work_kj`, `duration` — populated by fetch script
-- `pre_readiness` / `post_readiness` — muscle readiness maps (0–100); `pre_readiness` must be captured before the workout via `getMuscleReadiness()` — cannot be retrieved after
+- `pre_readiness` / `post_readiness` — muscle readiness maps (0–100); `pre_readiness` must be captured before the workout via `getMuscleReadiness()` — cannot be retrieved after. Post categories from app screenshot: Fresh ≈ 100, Recovering ≈ 50, Fatigued ≈ 15.
 - `prs` — map of `movement_key → { weight, date }`; drives PRTracker and Notable PRs
-- `calories`, `avg_hr`, `max_hr`, `energy_level`, `subjective_rating`, `sweat` — manual entry only (Tonal API does not expose these for machine workouts)
+- `calories`, `avg_hr`, `max_hr`, `energy_level`, `subjective_rating` — manual entry only (Tonal API does not expose these for machine workouts)
+- `sweat` — text label: `dry` / `light` / `moderate` / `heavy`. Never a number.
+- `shot_day` — boolean, true on GLP-1 injection days
+- `functional_strength`, `movement_quality`, `movement_quality_delta` — from Tonal Goal Progress screen (manual entry)
+- `strength_overall`, `strength_upper`, `strength_core`, `strength_lower` — from Tonal Strength Score screen (manual entry). Not stored in sessions.json — tracked in `StrengthScores.jsx` HISTORY array and Obsidian frontmatter.
 
 **Tailwind design tokens** (defined in `tailwind.config.js`):
 - `bg-surface-{0–3}` — dark background layers (0 = darkest)
@@ -36,7 +40,9 @@ No test suite. No linter configured.
 
 **`Programs.jsx`** — static component; custom workout designs are hardcoded JSX, not derived from `sessions.json`. Edit directly to add/update workout templates.
 
-**`Overview.jsx`** — contains hardcoded narrative text (`SESSION_NARRATIVES`, Recovery Arc events, Lifetime Stats). These must be manually updated when new sessions are added.
+**`Overview.jsx`** — contains hardcoded narrative text (`SESSION_NARRATIVES` keyed by `tonal_activity_id`, Recovery Arc events). Must be manually updated when new sessions are added. Lifetime Stats pulled live from `src/data/lifetime-stats.json`.
+
+**`StrengthScores.jsx`** — `HISTORY` array is hardcoded with Tonal Strength Score snapshots (overall/upper/core/lower). Add a new entry after each session using values from the Strength Score screen in the Tonal app. Goals Progress chart (FS/MQ) is derived live from `sessions.json`.
 
 ## Tonal Workout Building
 

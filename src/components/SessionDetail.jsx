@@ -7,7 +7,7 @@ const MUSCLE_LABELS = {
   shoulders: 'Shoulders', biceps: 'Biceps', triceps: 'Triceps',
 }
 
-const SWEAT = { dry: 'Dry', untracked: '—', light: 'Light', moderate: 'Moderate', heavy: 'Heavy' }
+const SWEAT = { dry: 'Dry', untracked: '—', light: 'Light', moderate: 'Moderate', heavy: 'Heavy', null: '—' }
 
 function readinessEmoji(val) {
   if (val == null) return { icon: '—', color: 'text-zinc-600', bg: 'bg-surface-2' }
@@ -84,6 +84,7 @@ export default function SessionDetail({ sessions, initialDate }) {
           <MiniStat label="Max HR"    value={session.max_hr ? `${session.max_hr} bpm` : '—'} />
           <MiniStat label="Calories"  value={session.calories ? `${session.calories} kcal` : '—'} />
           <MiniStat label="Work"      value={session.total_work_kj ? `${session.total_work_kj} kJ` : '—'} />
+          <MiniStat label="Sweat"     value={SWEAT[session.sweat] ?? session.sweat ?? '—'} />
         </div>
 
         {/* Body map */}

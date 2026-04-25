@@ -35,9 +35,10 @@ export default function Overview({ sessions }) {
         <p className="text-sm text-zinc-300 leading-relaxed">
           Across <strong className="text-zinc-100">{sessions.length} sessions</strong> you've set{' '}
           <strong className="text-zinc-100">{prCount} personal records</strong> in{' '}
-          {Object.keys(MOVEMENT_LABELS).length} tracked movements. The pattern so far: recovery-phase
-          groundwork in week one, followed by heavier express sessions that are shorter, denser, and rated higher.
-          Your strongest sessions have come despite external stressors — a good sign.
+          {Object.keys(MOVEMENT_LABELS).length} tracked movements. Two recovery sessions built the baseline,
+          then three heavy express sessions drove rapid strength gains — including a two-session day on Apr 25
+          that confirmed the bench fix and pushed hip thrust to 65 lbs (+86% from session one's 35 lb glute bridge baseline).
+          Your best sessions have come on shot days and after poor sleep. External stressors are not stopping you.
         </p>
       </div>
 
@@ -139,7 +140,9 @@ export default function Overview({ sessions }) {
         <div className="mt-4 space-y-4 leading-relaxed text-zinc-300 text-sm">
           <p>
             You logged your first Tonal session on <strong className="text-zinc-100">{first.date}</strong> — a
-            {' '}<em>{first.workout}</em> in the recovery phase, a gentle re-entry at {first.total_volume?.toLocaleString()} lbs total
+            {' '}<em>{first.workout}</em> in the recovery phase. This was a return after a significant break: cellulitis
+            leading to tenosynovitis surgery in Oct 2025, two A1 pulley releases (Feb and Mar 2026), and months of
+            hands-free-only constraint. Re-entry at {first.total_volume?.toLocaleString()} lbs total
             volume and an average heart rate of {first.avg_hr} bpm.
             That session ended with glutes and hamstrings nearly depleted (1% and 13% readiness respectively),
             while quads held up at 74% — a clear signal of where the work landed.
@@ -150,7 +153,8 @@ export default function Overview({ sessions }) {
             and you rated it {sorted[1]?.subjective_rating}/5. First hamstring PRs: prone bench curl, SL curl, and leg extension in the same session.
           </p>
           <p>
-            After a 13-day gap you returned on April 18 — shot day (GLP-1), tired, full — and still delivered a{' '}
+            After a 13-day gap — caused by a post-op infection at the left surgical site, cleared around Apr 14 — you returned on April 18.
+            Shot day (GLP-1), tired, full — and still delivered a{' '}
             <strong className="text-zinc-100">4.5/5</strong>. Fully recovered going in (100% readiness), {sorted[2]?.total_volume?.toLocaleString()} lbs in {sorted[2]?.duration} minutes, hip thrust PR at 56 lbs.
           </p>
           <p>

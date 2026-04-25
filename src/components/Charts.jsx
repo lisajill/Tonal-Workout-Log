@@ -20,21 +20,6 @@ function shortDate(d) {
   return `${parseInt(m)}/${parseInt(day)}`
 }
 
-// Vertical reference line for shot days
-function ShotDayLines({ data }) {
-  return data
-    .filter(d => d.shot_day)
-    .map(d => (
-      <ReferenceLine
-        key={d.date}
-        x={d.date}
-        stroke="#f59e0b"
-        strokeDasharray="4 2"
-        label={{ value: '💉', position: 'top', fontSize: 12 }}
-      />
-    ))
-}
-
 export default function Charts({ sessions }) {
   const dateSeen = {}
   const data = sessions.map(s => {
@@ -57,7 +42,14 @@ export default function Charts({ sessions }) {
   }})
 
   const avgRating = (sessions.reduce((s, r) => s + r.subjective_rating, 0) / sessions.length).toFixed(1)
-  const shotDates = data.filter(d => d.shot_day).map(d => d.date)
+  const seenShot = new Set()
+  const shotDates = data.filter(d => {
+    if (!d.shot_day) return false
+    const base = d.date.replace('+', '')
+    if (seenShot.has(base)) return false
+    seenShot.add(base)
+    return true
+  }).map(d => d.date)
 
   return (
     <div className="space-y-5">
