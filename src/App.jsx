@@ -11,18 +11,40 @@ import MuscleMatrix from './components/MuscleMatrix.jsx'
 import StrengthScores from './components/StrengthScores.jsx'
 import sessions from './data/sessions.json'
 
-const TABS = [
-  { id: 'overview', label: 'Overview' },
-  { id: 'log',      label: 'Session Log' },
-  { id: 'sessions', label: 'Sessions' },
-  { id: 'prs',      label: 'PRs' },
-  { id: 'bodymaps', label: 'Body Maps' },
-  { id: 'matrix',   label: 'Muscle Matrix' },
-  { id: 'heatmap',  label: 'Muscle Readiness' },
-  { id: 'charts',   label: 'Charts' },
-  { id: 'programs',  label: 'Custom Workouts'  },
-  { id: 'strength',  label: 'Strength Scores'  },
+const TAB_GROUPS = [
+  {
+    label: 'Summary',
+    tabs: [
+      { id: 'overview',  label: 'Overview' },
+      { id: 'strength',  label: 'Strength Scores' },
+    ],
+  },
+  {
+    label: 'Sessions',
+    tabs: [
+      { id: 'log',      label: 'Session Log' },
+      { id: 'sessions', label: 'Detail' },
+      { id: 'bodymaps', label: 'Body Maps' },
+    ],
+  },
+  {
+    label: 'Analysis',
+    tabs: [
+      { id: 'charts',  label: 'Charts' },
+      { id: 'prs',     label: 'PRs' },
+      { id: 'matrix',  label: 'Muscle Matrix' },
+      { id: 'heatmap', label: 'Readiness' },
+    ],
+  },
+  {
+    label: 'Training',
+    tabs: [
+      { id: 'programs', label: 'Custom Workouts' },
+    ],
+  },
 ]
+
+const TABS = TAB_GROUPS.flatMap(g => g.tabs)
 
 const VALID_TABS = new Set(TABS.map(t => t.id))
 
@@ -51,20 +73,32 @@ export default function App() {
         <h1 className="text-lg font-semibold tracking-tight text-zinc-100">Tonal Tracker</h1>
       </header>
 
-      <nav className="flex gap-1 border-b border-surface-3 px-6 overflow-x-auto">
-        {TABS.map((t) => (
-          <button
-            key={t.id}
-            onClick={() => setTabAndHash(t.id)}
-            className={`px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors ${
-              tab === t.id
-                ? 'border-b-2 border-accent text-accent'
-                : 'text-zinc-400 hover:text-zinc-200'
-            }`}
-          >
-            {t.label}
-          </button>
-        ))}
+      <nav className="border-b border-surface-3 px-4 py-2">
+        <div className="flex flex-wrap items-center gap-x-1 gap-y-1">
+          {TAB_GROUPS.map((group, gi) => (
+            <div key={group.label} className="flex items-center gap-x-1">
+              {gi > 0 && (
+                <span className="hidden sm:block w-px h-4 bg-surface-3 mx-1" />
+              )}
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-600 px-2 hidden sm:block">
+                {group.label}
+              </span>
+              {group.tabs.map(t => (
+                <button
+                  key={t.id}
+                  onClick={() => setTabAndHash(t.id)}
+                  className={`px-3 py-1.5 rounded-md text-xs font-medium whitespace-nowrap transition-colors ${
+                    tab === t.id
+                      ? 'bg-accent/15 text-accent'
+                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-surface-2'
+                  }`}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          ))}
+        </div>
       </nav>
 
       <main className="px-6 py-6 max-w-5xl mx-auto">
