@@ -1,3 +1,4 @@
+import sessions from '../data/sessions.json'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
   Legend, ResponsiveContainer, LabelList,
@@ -18,6 +19,8 @@ const COLORS = {
   upper:   '#22d3ee',
   lower:   '#a78bfa',
   core:    '#f43f5e',
+  fs:      '#10b981',
+  mq:      '#f59e0b',
 }
 
 const HISTORY = [
@@ -47,6 +50,17 @@ const REGIONS = [
   { key: 'core',    label: 'Core'    },
   { key: 'lower',   label: 'Lower'   },
 ]
+
+const goalsData = sessions
+  .filter(s => s.functional_strength != null || s.movement_quality != null)
+  .map(s => ({
+    date: s.date,
+    label: s.date.slice(5).replace('-', '/'),
+    fs: s.functional_strength ?? null,
+    mq: s.movement_quality ?? null,
+  }))
+
+const latestGoals = goalsData[goalsData.length - 1]
 
 export default function StrengthScores() {
   const first = HISTORY[0]
@@ -110,6 +124,45 @@ export default function StrengthScores() {
           </LineChart>
         </ResponsiveContainer>
       </div>
+
+      {/* Goals Progress */}
+      {goalsData.length > 0 && (
+        <div className="card">
+          <div className="mb-4">
+            <h2 className="label">Goals Progress</h2>
+            <p className="text-zinc-500 text-xs mt-0.5">Functional Strength and Movement Quality per session</p>
+          </div>
+          <div className="grid grid-cols-2 gap-3 mb-5">
+            {latestGoals?.fs != null && (
+              <div className="rounded-lg bg-surface-2 px-4 py-3">
+                <p className="label mb-1">Functional Strength</p>
+                <p className="text-2xl font-bold" style={{ color: COLORS.fs }}>{latestGoals.fs}</p>
+                <p className="text-xs text-zinc-500 mt-0.5">Target 100–133</p>
+              </div>
+            )}
+            {latestGoals?.mq != null && (
+              <div className="rounded-lg bg-surface-2 px-4 py-3">
+                <p className="label mb-1">Movement Quality</p>
+                <p className="text-2xl font-bold" style={{ color: COLORS.mq }}>{latestGoals.mq}</p>
+                <p className="text-xs text-zinc-500 mt-0.5">Target 59–79</p>
+              </div>
+            )}
+          </div>
+          {goalsData.length > 1 && (
+            <ResponsiveContainer width="100%" height={220}>
+              <LineChart data={goalsData} margin={{ top: 16, right: 16, bottom: 0, left: 0 }}>
+                <CartesianGrid {...GRID} />
+                <XAxis dataKey="label" tick={AXIS_TICK} />
+                <YAxis tick={AXIS_TICK} domain={[0, 'auto']} />
+                <Tooltip {...TOOLTIP_STYLE} />
+                <Legend wrapperStyle={{ fontSize: 11, color: '#71717a' }} />
+                <Line type="monotone" dataKey="fs" name="Functional Strength" stroke={COLORS.fs} strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 5 }} />
+                <Line type="monotone" dataKey="mq" name="Movement Quality" stroke={COLORS.mq} strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 5 }} />
+              </LineChart>
+            </ResponsiveContainer>
+          )}
+        </div>
+      )}
 
       {/* Historical table */}
       <div className="card">

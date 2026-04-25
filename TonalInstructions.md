@@ -179,6 +179,9 @@ pre_readiness:
 post_readiness:
   glutes: null
   # ... etc
+functional_strength: null
+movement_quality: null
+movement_quality_delta: null
 prs: {}
 muscles_high_volume: []
 muscles_low_volume: []
