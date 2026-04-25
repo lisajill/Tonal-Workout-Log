@@ -386,79 +386,6 @@
   {
     "date": "2026-04-25",
     "shot_day": true,
-    "workout": "Free Lift — Barbell Hip Thrust",
-    "bodymap": "/BodyMapApril25b.png",
-    "energy_level": 4,
-    "phase": "active",
-    "subjective_rating": 5,
-    "sweat": "2",
-    "calories": null,
-    "avg_hr": 94,
-    "max_hr": 114,
-    "pre_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "prs": {
-      "barbell_hip_thrust": {
-        "weight": 65,
-        "date": "2026-04-25"
-      }
-    },
-    "muscles_high_volume": [
-      "glutes"
-    ],
-    "muscles_low_volume": [
-      "hip_flexors",
-      "lower_back"
-    ],
-    "functional_strength": 126,
-    "movement_quality": 53,
-    "post_readiness": {
-      "glutes": 15,
-      "hamstrings": 50,
-      "quads": 100,
-      "calves": 100,
-      "abs": 100,
-      "obliques": 100,
-      "back": 100,
-      "chest": 100,
-      "shoulders": 100,
-      "biceps": 100,
-      "triceps": 100
-    },
-    "duration": 9.12,
-    "total_volume": 1246,
-    "total_reps": 21,
-    "time_under_tension": 1.72,
-    "total_work_kj": 1,
-    "tonal_activity_id": "084ab93a-fe9c-49f3-b773-78451edea6d6"
-  },
-  {
-    "date": "2026-04-25",
-    "shot_day": true,
     "bodymap": "/BodyMapApril25.png",
     "workout": "Heavy Express — Floor Bridge + Ankle Straps",
     "energy_level": 4,
@@ -531,5 +458,65 @@
     "time_under_tension": 7.42,
     "total_work_kj": 5,
     "tonal_activity_id": "03fb2420-f725-4b1e-9ef7-2654636330cb"
+  },
+  {
+    "date": "2026-04-25",
+    "shot_day": true,
+    "workout": "Free Lift — Barbell Hip Thrust",
+    "bodymap": "/BodyMapApril25b.png",
+    "energy_level": 4,
+    "phase": "active",
+    "subjective_rating": 5,
+    "sweat": "2",
+    "calories": null,
+    "avg_hr": 94,
+    "max_hr": 114,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": 15,
+      "hamstrings": 50,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": 65,
+        "date": "2026-04-25"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "lower_back"
+    ],
+    "functional_strength": 126,
+    "movement_quality": 53,
+    "duration": 9.12,
+    "total_volume": 1246,
+    "total_reps": 21,
+    "time_under_tension": 1.72,
+    "total_work_kj": 1,
+    "tonal_activity_id": "084ab93a-fe9c-49f3-b773-78451edea6d6"
   }
 ]

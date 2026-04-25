@@ -36,8 +36,13 @@ function ShotDayLines({ data }) {
 }
 
 export default function Charts({ sessions }) {
-  const data = sessions.map(s => ({
-    date: shortDate(s.date),
+  const dateSeen = {}
+  const data = sessions.map(s => {
+    const base = shortDate(s.date)
+    dateSeen[base] = (dateSeen[base] ?? 0) + 1
+    const label = dateSeen[base] > 1 ? `${base}+` : base
+    return {
+    date: label,
     shot_day: s.shot_day ?? false,
     volume: s.total_volume,
     vol_per_min: s.total_volume && s.duration ? Math.round(s.total_volume / s.duration) : null,
@@ -49,7 +54,7 @@ export default function Charts({ sessions }) {
     tut: s.time_under_tension,
     calories: s.calories,
     kj: s.total_work_kj,
-  }))
+  }})
 
   const avgRating = (sessions.reduce((s, r) => s + r.subjective_rating, 0) / sessions.length).toFixed(1)
   const shotDates = data.filter(d => d.shot_day).map(d => d.date)

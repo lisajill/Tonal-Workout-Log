@@ -51,14 +51,21 @@ const REGIONS = [
   { key: 'lower',   label: 'Lower'   },
 ]
 
-const goalsData = sessions
-  .filter(s => s.functional_strength != null || s.movement_quality != null)
-  .map(s => ({
-    date: s.date,
-    label: s.date.slice(5).replace('-', '/'),
-    fs: s.functional_strength ?? null,
-    mq: s.movement_quality ?? null,
-  }))
+const goalsData = (() => {
+  const seen = {}
+  return sessions
+    .filter(s => s.functional_strength != null || s.movement_quality != null)
+    .map(s => {
+      const base = s.date.slice(5).replace('-', '/')
+      seen[base] = (seen[base] ?? 0) + 1
+      return {
+        date: s.date,
+        label: seen[base] > 1 ? `${base}+` : base,
+        fs: s.functional_strength ?? null,
+        mq: s.movement_quality ?? null,
+      }
+    })
+})()
 
 const latestGoals = goalsData[goalsData.length - 1]
 
