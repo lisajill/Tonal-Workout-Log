@@ -73,23 +73,20 @@ export default function App() {
         <h1 className="text-lg font-semibold tracking-tight text-zinc-100">Tonal Tracker</h1>
       </header>
 
-      <nav className="border-b border-surface-3 px-4">
+      <nav className="bg-surface-1 border-b border-surface-3 px-4">
         {[TAB_GROUPS.slice(0, 2), TAB_GROUPS.slice(2)].map((rowGroups, ri) => (
-          <div key={ri} className={`flex items-center gap-x-0.5 overflow-x-auto ${ri === 0 ? 'pt-2 pb-0.5' : 'pb-2'}`}>
+          <div key={ri} className="flex items-center gap-x-0.5 overflow-x-auto">
             {rowGroups.map((group, gi) => (
               <div key={group.label} className="flex items-center shrink-0">
-                {gi > 0 && <span className="w-px h-3.5 bg-surface-3 mx-2 shrink-0" />}
-                <span className="text-[9px] font-bold uppercase tracking-widest text-zinc-700 pr-1.5 shrink-0 select-none">
-                  {group.label}
-                </span>
+                {gi > 0 && <span className="w-px h-3 bg-zinc-700 mx-2.5 shrink-0" />}
                 {group.tabs.map(t => (
                   <button
                     key={t.id}
                     onClick={() => setTabAndHash(t.id)}
-                    className={`px-2.5 py-1 rounded text-xs font-medium whitespace-nowrap transition-colors ${
+                    className={`px-3 py-2.5 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
                       tab === t.id
-                        ? 'bg-accent/20 text-accent'
-                        : 'text-zinc-500 hover:text-zinc-200 hover:bg-surface-2'
+                        ? 'border-accent text-zinc-100'
+                        : 'border-transparent text-zinc-500 hover:text-zinc-300'
                     }`}
                   >
                     {t.label}
