@@ -72,7 +72,7 @@
 
 | Movement | ID | Muscles | Accessories | Notes |
 |---|---|---|---|---|
-| Barbell Lying Glute Bridge | `b686f885-427c-4e64-9aa3-4b485c82678e` | Glutes, Hamstrings | Roller, Mat | Floor version — barbell rests on hips, hands-free ✓ |
+| Barbell Lying Glute Bridge | `b686f885-427c-4e64-9aa3-4b485c82678e` | Glutes, Hamstrings | Roller, Mat | Floor version — barbell rests on hips, hands-free ✓. **Smart Flex overshoots** — proposed 132 lbs on Apr 25 (unbudgeable). Working range was 100–120 lbs. Always start warmup manually at ~75 lbs and adjust before Smart Flex takes over. |
 | Barbell Hip Thrust | `d44826e1-f6b3-4bed-9d6f-8456d9cde3ec` | Glutes, Hamstrings | Bench, Roller | **Bench slides** — requires wall anchor. Avoid until resolved. |
 | Resisted Glute Bridge | `93457225-18db-41bc-974e-e874fb4d07d1` | Glutes, Abs, Hamstrings | Mat | Uses **handles** — NOT hands-free. Exclude. |
 
