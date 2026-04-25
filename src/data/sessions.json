@@ -382,5 +382,57 @@
       "calves"
     ],
     "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421"
+  },
+  {
+    "date": "2026-04-25",
+    "shot_day": true,
+    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
+    "energy_level": 4,
+    "phase": "active",
+    "subjective_rating": 4,
+    "sweat": "3",
+    "calories": 85,
+    "avg_hr": 94,
+    "max_hr": 134,
+    "pre_readiness": {
+      "glutes": 99,
+      "hamstrings": 99,
+      "quads": 97,
+      "calves": 98,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {
+      "barbell_lying_glute_bridge": { "weight": null, "date": null },
+      "standing_donkey_kick": { "weight": 30, "date": "2026-04-25" },
+      "standing_sl_hamstring_curl": { "weight": 27, "date": "2026-04-25" },
+      "standing_hip_abduction": { "weight": 16, "date": "2026-04-25" }
+    },
+    "muscles_high_volume": ["glutes"],
+    "muscles_low_volume": ["hamstrings", "back", "quads", "hip_flexors", "calves"],
+    "duration": 31.38,
+    "total_volume": 3762,
+    "total_reps": 92,
+    "time_under_tension": 7.42,
+    "total_work_kj": 5,
+    "tonal_activity_id": "03fb2420-f725-4b1e-9ef7-2654636330cb"
   }
 ]
