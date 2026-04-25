@@ -1,5 +1,88 @@
 const PROGRAMS = [
   {
+    id: 'he_floor_bridge',
+    name: 'Heavy Express — Floor Bridge + Ankle Straps',
+    subtitle: 'Hands-free · Barbell + ankle straps · Peak strength · ~20 min',
+    created: '2026-04-25',
+    anchor: 'Barbell Lying Glute Bridge — never cut, always has warmup set',
+    blocks: [
+      {
+        name: 'Block 1 — Barbell · Floor',
+        type: 'Warmup · Smart Flex OFF',
+        exercises: [
+          { name: 'Barbell Lying Glute Bridge', sets: '1 warmup', detail: '5 reps · light, let Tonal calibrate' },
+        ],
+      },
+      {
+        name: 'Block 2 — Barbell · Floor',
+        type: 'Working sets · Smart Flex ON · 5 reps',
+        exercises: [
+          { name: 'Barbell Lying Glute Bridge', sets: '3', detail: '5 reps · push heavy · Smart Flex ON' },
+        ],
+      },
+      {
+        name: 'Block 3 — Rest',
+        type: '2 min',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '120s' },
+        ],
+      },
+      {
+        name: 'Block 4 — Ankle Straps · Standing',
+        type: 'Working sets · Smart Flex ON · 4 reps/side',
+        exercises: [
+          { name: 'Standing Donkey Kick', sets: '3', detail: '4/side · hip extension · Smart Flex ON' },
+        ],
+      },
+      {
+        name: 'Block 5 — Rest',
+        type: '90 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '90s' },
+        ],
+      },
+      {
+        name: 'Block 6 — Ankle Straps · Standing',
+        type: 'Working sets · Smart Flex ON · 4 reps/side',
+        exercises: [
+          { name: 'Standing SL Hamstring Curl', sets: '3', detail: '4/side · unilateral knee flexion · Smart Flex ON' },
+        ],
+      },
+      {
+        name: 'Block 7 — Rest',
+        type: '90 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '90s' },
+        ],
+      },
+      {
+        name: 'Block 8 — Ankle Straps · Standing',
+        type: 'Working sets · Smart Flex ON · 4 reps/side',
+        exercises: [
+          { name: 'Standing Hip Abduction', sets: '3', detail: '4/side · lateral stability · Smart Flex ON' },
+        ],
+      },
+    ],
+    tiers: [
+      { tier: 1, when: 'Low energy / shot day', adjustment: 'Cut Block 8 (Hip Abduction)' },
+      { tier: 2, when: 'Moderate', adjustment: 'As written' },
+      { tier: 3, when: 'Strong', adjustment: 'Add reps or sets to Glute Bridge' },
+    ],
+    cutOrder: [
+      'Block 8 — Standing Hip Abduction',
+      'Block 6 — Standing SL Hamstring Curl',
+      'Block 4 — Standing Donkey Kick',
+      'Block 2 — never cut (anchor)',
+    ],
+    notes: [
+      'Tonal workout ID: 1368223f-b72f-42ba-8f4b-a829314c0c4a',
+      'Glute Bridge: Smart Flex may undershoot — increase manually if needed',
+      'Patterns covered: hip extension (compound), hip extension (unilateral), knee flexion (unilateral), hip abduction',
+      'No duplicate movement patterns — full lower body in ~20 min',
+      'No drop sets under any circumstances',
+    ],
+  },
+  {
     id: 'he_glute',
     name: 'Heavy Express — Glute Bridge + Hamstring + Quad',
     subtitle: 'Hands-free · Barbell + ankle straps · Peak strength · ~20 min',
