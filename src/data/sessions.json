@@ -387,6 +387,7 @@
     "date": "2026-04-25",
     "shot_day": true,
     "workout": "Free Lift — Barbell Hip Thrust",
+    "bodymap": "/BodyMapApril25b.png",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": 5,
@@ -426,9 +427,12 @@
         "date": "2026-04-25"
       }
     },
-    "muscles_high_volume": [],
-    "muscles_low_volume": [
+    "muscles_high_volume": [
       "glutes"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "lower_back"
     ],
     "duration": 9.12,
     "total_volume": 1246,
