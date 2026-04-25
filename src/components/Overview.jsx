@@ -103,6 +103,8 @@ export default function Overview({ sessions }) {
               <ArcEvent date="Apr 5"        color="bg-accent"      text="Session 2 — sore legs, first hamstring PRs" active />
               <ArcEvent date="Apr 18"       color="bg-accent"      text="Session 3 — shot day, hip thrust PR 56 lbs · 4.5/5" active shot />
               <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Session 4 — glute bridge 120 lbs, PRs everywhere · 5/5" active />
+              <ArcEvent date="Apr 25"       color="bg-emerald-400" text="Session 5 — shot day, floor bridge + ankle straps, 3 PRs · 4/5" active shot />
+              <ArcEvent date="Apr 25"       color="bg-emerald-400" text="Session 6 (bonus) — Free Lift hip thrust 65 lbs, bench fix confirmed · 5/5" active />
             </div>
           </div>
         </div>
@@ -152,15 +154,21 @@ export default function Overview({ sessions }) {
             <strong className="text-zinc-100">4.5/5</strong>. Fully recovered going in (100% readiness), {sorted[2]?.total_volume?.toLocaleString()} lbs in {sorted[2]?.duration} minutes, hip thrust PR at 56 lbs.
           </p>
           <p>
-            April 19 is the strongest session on record. Poor sleep, four days off — glute bridge climbed to{' '}
+            April 19 is the best single session on record. Poor sleep, four days off — glute bridge climbed to{' '}
             <strong className="text-zinc-100">120 lbs</strong> ({Math.round(((120 - 35) / 35) * 100)}% up from session one),
             PRs on nearly every set, perfect 5/5.
+          </p>
+          <p>
+            April 25 — another shot day — brought two sessions. The main workout hit PRs on donkey kick (+50%), SL hamstring curl,
+            and hip abduction. Smart Flex proposed 132 lbs on the glute bridge and it was unbudgeable; worked down to 100–112 lbs with a volume PR on set 3.
+            Then immediately after: a Free Lift hip thrust to solve the bench-slide problem. Yoga mat under the bench fixed it.
+            Hit <strong className="text-zinc-100">65 lbs</strong> for a Strength, Power, and Volume PR in the same set — rated 5/5.
           </p>
         </div>
         <div className="mt-5 space-y-3 border-t border-surface-3 pt-4">
           <p className="label">Session Recaps</p>
           {recaps.map(r => (
-            <div key={r.date} className="flex gap-3 items-start">
+            <div key={r.id} className="flex gap-3 items-start">
               <div className="w-1 self-stretch rounded-full bg-accent/30 shrink-0" />
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 flex-wrap">
@@ -269,20 +277,23 @@ function findNotablePRs(sessions) {
 }
 
 const SESSION_NARRATIVES = {
-  '2026-04-04': 'First tracked session. Tonal MCP connected mid-session. Legs were toast by the end — glutes and hamstrings at near-zero readiness post. Set early baselines on glute bridge and kickbacks.',
-  '2026-04-05': 'Came back on sore legs the next day. Appropriately lighter volume. First time on the hamstring curl machine — hit PRs immediately on prone curl, SL curl, and leg extension.',
-  '2026-04-18': 'Shot day. Tired and full. Trained anyway and rated it 4.5/5. Went heavy on hip thrusts, set a 56 lb PR. Hip abduction and donkey kick PRs too. Short, dense, effective.',
-  '2026-04-19': 'Best session yet. Poor sleep, four days off — didn\'t matter. PRs on almost every set. Glute bridge hit 120 lbs. Volume second-highest in just 24 minutes. First perfect 5/5.',
+  'aeb1248b-83ca-41cc-8af5-594c630a0626': 'First tracked session. Tonal MCP connected mid-session. Legs were toast by the end — glutes and hamstrings at near-zero readiness post. Set early baselines on glute bridge and kickbacks.',
+  '00341bc1-7c4d-4713-9f63-8bce102fa9b0': 'Came back on sore legs the next day. Appropriately lighter volume. First time on the hamstring curl machine — hit PRs immediately on prone curl, SL curl, and leg extension.',
+  'f8a42e03-03bf-4bdd-8229-d00978f3bc55': 'Shot day. Tired and full. Trained anyway and rated it 4.5/5. Went heavy on hip thrusts, set a 56 lb PR. Hip abduction and donkey kick PRs too. Short, dense, effective.',
+  'e6b7b607-d8c0-49ec-8614-09ad03577421': 'Best single session yet. Poor sleep, four days off — didn\'t matter. PRs on almost every set. Glute bridge hit 120 lbs. Volume second-highest in just 24 minutes. First perfect 5/5.',
+  '03fb2420-f725-4b1e-9ef7-2654636330cb': 'Shot day energy 4/5. Smart Flex proposed 132 lbs on glute bridge — unbudgeable. Worked down to 100–112 lbs, still got a volume PR. Hit PRs on donkey kick (+50%), SL hamstring curl, and hip abduction.',
+  '084ab93a-fe9c-49f3-b773-78451edea6d6': 'Bonus session immediately post-workout to test the bench slide fix. Yoga mat under bench + weight plates behind legs — held through 65 lbs. Strength, Power, and Volume PR in one set. Rated 5/5.',
 }
 
 function buildRecap(s) {
   return {
+    id: s.tonal_activity_id ?? `${s.date}::${s.workout}`,
     date: s.date,
     workout: s.workout,
     duration: s.duration,
     volume: s.total_volume,
     rating: s.subjective_rating,
-    narrative: SESSION_NARRATIVES[s.date] ?? '',
+    narrative: SESSION_NARRATIVES[s.tonal_activity_id] ?? '',
   }
 }
 
