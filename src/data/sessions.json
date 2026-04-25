@@ -408,17 +408,17 @@
       "triceps": 100
     },
     "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
+      "glutes": 29,
+      "hamstrings": 52,
+      "quads": 96,
+      "calves": 100,
+      "abs": 93,
+      "obliques": 98,
+      "back": 85,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
     },
     "prs": {
       "barbell_lying_glute_bridge": { "weight": null, "date": null },
