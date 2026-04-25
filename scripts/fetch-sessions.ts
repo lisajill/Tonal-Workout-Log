@@ -4,6 +4,7 @@ import { resolve } from 'path'
 import TonalClient from '@dlwiest/ts-tonal-client'
 
 const SESSIONS_PATH = resolve(import.meta.dirname, '../src/data/sessions.json')
+const LIFETIME_PATH = resolve(import.meta.dirname, '../src/data/lifetime-stats.json')
 
 interface SessionEntry {
   date: string
@@ -56,6 +57,27 @@ async function main() {
   console.log('Authenticating with Tonal...')
   const client = await TonalClient.create({ username, password })
   console.log('Authenticated.')
+
+  console.log('Fetching lifetime stats...')
+  const stats = await client.getUserStatistics()
+  const lifetimeStats = {
+    totalWorkouts: stats.workouts.total,
+    totalVolumeLbs: stats.volume.total,
+    totalDurationMinutes: Math.round(stats.workouts.totalDuration / 60),
+    totalTimeUnderTensionMinutes: Math.round(stats.workouts.totalTimeUnderTension / 60),
+    maxVolumeInWorkout: stats.volume.maxVolumeInWorkout,
+    maxVolumeInWeek: stats.volume.maxVolumeInAWeek,
+    avgVolumePerWorkout: stats.volume.avgVolumePerWorkout,
+    avgVolumePerWeek: stats.volume.avgVolumePerWeek,
+    avgWorkoutDurationMinutes: Math.round(stats.workouts.avgWorkoutDuration / 60),
+    maxWorkoutsPerWeek: stats.workouts.maxWorkoutsPerWeek,
+    avgWorkoutsPerWeek: stats.workouts.avgWorkoutsPerWeek,
+    totalMovements: stats.movements.total,
+    totalCustomWorkouts: stats.workouts.totalCustomWorkouts,
+    totalFreeliftWorkouts: stats.workouts.totalFreeliftWorkouts,
+  }
+  writeFileSync(LIFETIME_PATH, JSON.stringify(lifetimeStats, null, 2))
+  console.log(`Wrote lifetime stats (${stats.workouts.total} workouts, ${stats.volume.total.toLocaleString()} lbs).`)
 
   console.log('Fetching activity summaries...')
   const allActivities = await client.getActivitySummaries()

@@ -1,3 +1,5 @@
+import lifetime from '../data/lifetime-stats.json'
+
 const MOVEMENT_LABELS = {
   barbell_hip_thrust:                   'Barbell Hip Thrust',
   barbell_lying_glute_bridge:           'Barbell Lying Glute Bridge',
@@ -51,13 +53,13 @@ export default function Overview({ sessions }) {
 
       {/* Lifetime stats */}
       <div className="card">
-        <h2 className="label mb-4">Lifetime Stats <span className="normal-case font-normal text-zinc-600 ml-1">— as of Apr 19, 2026</span></h2>
+        <h2 className="label mb-4">Lifetime Stats</h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
-          <MiniLifeStat label="Total workouts"   value="186" />
-          <MiniLifeStat label="Lifetime volume"  value="484,829 lbs" />
-          <MiniLifeStat label="Total time"       value="67 hrs" />
-          <MiniLifeStat label="Best streak"      value="19 sessions" />
-          <MiniLifeStat label="Movements used"   value="199" />
+          <MiniLifeStat label="Total workouts"  value={lifetime.totalWorkouts} />
+          <MiniLifeStat label="Lifetime volume" value={`${lifetime.totalVolumeLbs.toLocaleString()} lbs`} />
+          <MiniLifeStat label="Total time"      value={`${Math.round(lifetime.totalDurationMinutes / 60)} hrs`} />
+          <MiniLifeStat label="Avg per session" value={`${lifetime.avgVolumePerWorkout.toLocaleString()} lbs`} />
+          <MiniLifeStat label="Movements used"  value={lifetime.totalMovements} />
         </div>
       </div>
 
