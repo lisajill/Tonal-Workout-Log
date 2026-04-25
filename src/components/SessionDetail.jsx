@@ -18,10 +18,17 @@ function readinessEmoji(val) {
   return          { icon: '✨', color: 'text-emerald-400', bg: 'bg-emerald-950/40' }
 }
 
+function sessionKey(s) {
+  return s.tonal_activity_id ?? `${s.date}::${s.workout}`
+}
+
 export default function SessionDetail({ sessions, initialDate }) {
   const sorted = [...sessions].sort((a, b) => b.date.localeCompare(a.date))
-  const [selected, setSelected] = useState(initialDate ?? sorted[0]?.date)
-  const session = sorted.find(s => s.date === selected)
+  const initialKey = initialDate
+    ? sessionKey(sorted.find(s => s.date === initialDate) ?? sorted[0])
+    : sessionKey(sorted[0])
+  const [selected, setSelected] = useState(initialKey)
+  const session = sorted.find(s => sessionKey(s) === selected)
 
   if (!session) return <div className="card text-zinc-500 text-sm">No sessions.</div>
 
@@ -32,23 +39,29 @@ export default function SessionDetail({ sessions, initialDate }) {
   const sessionPRs = Object.entries(session.prs ?? {})
     .filter(([, pr]) => pr.weight != null)
 
+  const dateCounts = sorted.reduce((acc, s) => { acc[s.date] = (acc[s.date] ?? 0) + 1; return acc }, {})
+
   return (
     <div className="space-y-5">
       {/* Session picker */}
       <div className="flex flex-wrap gap-2">
-        {sorted.map(s => (
-          <button
-            key={s.date}
-            onClick={() => setSelected(s.date)}
-            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-              s.date === selected
-                ? 'bg-accent text-white'
-                : 'bg-surface-2 text-zinc-400 hover:text-zinc-200'
-            }`}
-          >
-            {s.date}
-          </button>
-        ))}
+        {sorted.map(s => {
+          const key = sessionKey(s)
+          const showName = dateCounts[s.date] > 1
+          return (
+            <button
+              key={key}
+              onClick={() => setSelected(key)}
+              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                key === selected
+                  ? 'bg-accent text-white'
+                  : 'bg-surface-2 text-zinc-400 hover:text-zinc-200'
+              }`}
+            >
+              {s.date}{showName ? ` · ${s.workout.split('—')[1]?.trim() ?? s.workout}` : ''}
+            </button>
+          )
+        })}
       </div>
 
       {/* Header */}
