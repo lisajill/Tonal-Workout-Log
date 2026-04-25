@@ -281,7 +281,7 @@ const SESSION_NARRATIVES = {
   '00341bc1-7c4d-4713-9f63-8bce102fa9b0': 'Came back on sore legs the next day. Appropriately lighter volume. First time on the hamstring curl machine — hit PRs immediately on prone curl, SL curl, and leg extension.',
   'f8a42e03-03bf-4bdd-8229-d00978f3bc55': 'Shot day. Tired and full. Trained anyway and rated it 4.5/5. Went heavy on hip thrusts, set a 56 lb PR. Hip abduction and donkey kick PRs too. Short, dense, effective.',
   'e6b7b607-d8c0-49ec-8614-09ad03577421': 'Best single session yet. Poor sleep, four days off — didn\'t matter. PRs on almost every set. Glute bridge hit 120 lbs. Volume second-highest in just 24 minutes. First perfect 5/5.',
-  '03fb2420-f725-4b1e-9ef7-2654636330cb': 'Shot day energy 4/5. Smart Flex proposed 132 lbs on glute bridge — unbudgeable. Worked down to 100–112 lbs, still got a volume PR. Hit PRs on donkey kick (+50%), SL hamstring curl, and hip abduction.',
+  '03fb2420-f725-4b1e-9ef7-2654636330cb': 'Shot day energy 4/5. First session with proper rest breaks (2 min post-compound, 90s between isolations) — lower density than Apr 19 but correct execution. Smart Flex proposed 132 lbs on glute bridge — unbudgeable. Worked down to 100–112 lbs, still got a volume PR. Hit PRs on donkey kick (+50%), SL hamstring curl, and hip abduction.',
   '084ab93a-fe9c-49f3-b773-78451edea6d6': 'Bonus session immediately post-workout to test the bench slide fix. Yoga mat under bench + weight plates behind legs — held through 65 lbs. Strength, Power, and Volume PR in one set. Rated 5/5.',
 }
 
