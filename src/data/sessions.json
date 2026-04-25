@@ -386,6 +386,7 @@
   {
     "date": "2026-04-25",
     "shot_day": true,
+    "bodymap": "/BodyMapApril25.png",
     "workout": "Heavy Express — Floor Bridge + Ankle Straps",
     "energy_level": 4,
     "phase": "active",
@@ -421,13 +422,33 @@
       "triceps": 100
     },
     "prs": {
-      "barbell_lying_glute_bridge": { "weight": null, "date": null },
-      "standing_donkey_kick": { "weight": 30, "date": "2026-04-25" },
-      "standing_sl_hamstring_curl": { "weight": 27, "date": "2026-04-25" },
-      "standing_hip_abduction": { "weight": 16, "date": "2026-04-25" }
+      "barbell_lying_glute_bridge": {
+        "weight": null,
+        "date": null
+      },
+      "standing_donkey_kick": {
+        "weight": 30,
+        "date": "2026-04-25"
+      },
+      "standing_sl_hamstring_curl": {
+        "weight": 27,
+        "date": "2026-04-25"
+      },
+      "standing_hip_abduction": {
+        "weight": 16,
+        "date": "2026-04-25"
+      }
     },
-    "muscles_high_volume": ["glutes"],
-    "muscles_low_volume": ["hamstrings", "back", "quads", "hip_flexors", "calves"],
+    "muscles_high_volume": [
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "hamstrings",
+      "back",
+      "quads",
+      "hip_flexors",
+      "calves"
+    ],
     "functional_strength": 100,
     "movement_quality": 53,
     "movement_quality_delta": 6,
