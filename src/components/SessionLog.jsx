@@ -53,7 +53,7 @@ export default function SessionLog({ sessions, onSelectSession }) {
         <tbody>
           {sorted.map((s) => (
             <tr
-              key={s.date}
+              key={s.tonal_activity_id ?? `${s.date}::${s.workout}`}
               onClick={() => onSelectSession?.(s.date)}
               className="border-b border-surface-3/40 hover:bg-surface-2 transition-colors cursor-pointer group"
             >

@@ -9,6 +9,7 @@ import BodyMaps from './components/BodyMaps.jsx'
 import Programs from './components/Programs.jsx'
 import MuscleMatrix from './components/MuscleMatrix.jsx'
 import StrengthScores from './components/StrengthScores.jsx'
+import Zone2Tracker from './components/Zone2Tracker.jsx'
 import sessions from './data/sessions.json'
 
 const TAB_GROUPS = [
@@ -42,6 +43,12 @@ const TAB_GROUPS = [
       { id: 'programs', label: 'Custom Workouts' },
     ],
   },
+  {
+    label: 'Cardio',
+    tabs: [
+      { id: 'zone2', label: 'Zone 2' },
+    ],
+  },
 ]
 
 const TABS = TAB_GROUPS.flatMap(g => g.tabs)
@@ -56,6 +63,7 @@ function getInitialTab() {
 export default function App() {
   const [tab, setTab] = useState(getInitialTab)
   const [activeSession, setActiveSession] = useState(null)
+  const [openGroup, setOpenGroup] = useState(null)
 
   function setTabAndHash(id) {
     window.location.hash = id
@@ -67,35 +75,58 @@ export default function App() {
     setTabAndHash('sessions')
   }
 
+  function selectTab(id) {
+    setTabAndHash(id)
+    setOpenGroup(null)
+  }
+
   return (
     <div className="min-h-screen bg-surface-0">
       <header className="border-b border-surface-3 px-6 py-4">
-        <h1 className="text-lg font-semibold tracking-tight text-zinc-100">Tonal Tracker</h1>
+        <h1 className="text-lg font-semibold tracking-tight text-zinc-100">Training Tracker</h1>
       </header>
 
-      <nav className="bg-surface-1 border-b border-surface-3 px-4">
-        {[TAB_GROUPS.slice(0, 2), TAB_GROUPS.slice(2)].map((rowGroups, ri) => (
-          <div key={ri} className="flex items-center gap-x-0.5 overflow-x-auto">
-            {rowGroups.map((group, gi) => (
-              <div key={group.label} className="flex items-center shrink-0">
-                {gi > 0 && <span className="w-px h-3 bg-zinc-700 mx-2.5 shrink-0" />}
-                {group.tabs.map(t => (
-                  <button
-                    key={t.id}
-                    onClick={() => setTabAndHash(t.id)}
-                    className={`px-3 py-2.5 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
-                      tab === t.id
-                        ? 'border-accent text-zinc-100'
-                        : 'border-transparent text-zinc-500 hover:text-zinc-300'
-                    }`}
-                  >
-                    {t.label}
-                  </button>
-                ))}
+      <nav className="bg-surface-1 border-b border-surface-3 px-4 relative">
+        {openGroup && <div className="fixed inset-0 z-10" onClick={() => setOpenGroup(null)} />}
+        <div className="flex items-center gap-x-1">
+          {TAB_GROUPS.map(group => {
+            const activeTab = group.tabs.find(t => t.id === tab)
+            const isActive = !!activeTab
+            const isOpen = openGroup === group.label
+            return (
+              <div key={group.label} className="relative z-20">
+                <button
+                  onClick={() => setOpenGroup(isOpen ? null : group.label)}
+                  className={`flex items-center gap-1.5 px-3 py-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
+                    isActive
+                      ? 'border-accent text-zinc-100'
+                      : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                  }`}
+                >
+                  <span>{isActive ? activeTab.label : group.label}</span>
+                  <span className={`text-[10px] transition-transform duration-150 ${isOpen ? 'rotate-180' : ''} ${isActive ? 'text-accent' : 'text-zinc-600'}`}>▾</span>
+                </button>
+                {isOpen && (
+                  <div className="absolute top-full left-0 mt-0 bg-surface-2 border border-surface-3 rounded-b-lg rounded-tr-lg shadow-xl py-1 min-w-[140px]">
+                    {group.tabs.map(t => (
+                      <button
+                        key={t.id}
+                        onClick={() => selectTab(t.id)}
+                        className={`w-full text-left px-4 py-2 text-xs font-medium transition-colors ${
+                          tab === t.id
+                            ? 'text-accent bg-accent/10'
+                            : 'text-zinc-400 hover:text-zinc-200 hover:bg-surface-3'
+                        }`}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-        ))}
+            )
+          })}
+        </div>
       </nav>
 
       <main className="px-6 py-6 max-w-5xl mx-auto">
@@ -107,8 +138,9 @@ export default function App() {
         {tab === 'matrix'    && <MuscleMatrix   sessions={sessions} />}
         {tab === 'heatmap'   && <MuscleHeatmap  sessions={sessions} />}
         {tab === 'charts'    && <Charts        sessions={sessions} />}
-        {tab === 'programs'  && <Programs />}
+        {tab === 'programs'  && <Programs      sessions={sessions} />}
         {tab === 'strength'  && <StrengthScores />}
+        {tab === 'zone2'     && <Zone2Tracker />}
       </main>
     </div>
   )

@@ -34,6 +34,7 @@ const HISTORY = [
   { date: '2026-04-18', overall: 450, upper: 461, lower: 439, core: 450 },
   { date: '2026-04-19', overall: 452, upper: 461, lower: 444, core: 450 },
   { date: '2026-04-25', overall: 453, upper: 461, lower: 449, core: 450 },
+  { date: '2026-04-26', overall: 462, upper: 461, lower: 475, core: 450 },
 ]
 
 function shortDate(d) {

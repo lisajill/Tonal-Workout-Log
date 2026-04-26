@@ -44,25 +44,21 @@ export default function SessionDetail({ sessions, initialDate }) {
   return (
     <div className="space-y-5">
       {/* Session picker */}
-      <div className="flex flex-wrap gap-2">
+      <select
+        value={selected}
+        onChange={e => setSelected(e.target.value)}
+        className="rounded-lg bg-surface-2 border border-surface-3 text-zinc-200 text-sm px-3 py-2 focus:outline-none focus:border-accent w-full sm:w-auto"
+      >
         {sorted.map(s => {
           const key = sessionKey(s)
           const showName = dateCounts[s.date] > 1
           return (
-            <button
-              key={key}
-              onClick={() => setSelected(key)}
-              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-                key === selected
-                  ? 'bg-accent text-white'
-                  : 'bg-surface-2 text-zinc-400 hover:text-zinc-200'
-              }`}
-            >
+            <option key={key} value={key}>
               {s.date}{showName ? ` · ${s.workout.split('—')[1]?.trim() ?? s.workout}` : ''}
-            </button>
+            </option>
           )
         })}
-      </div>
+      </select>
 
       {/* Header */}
       <div className="card">

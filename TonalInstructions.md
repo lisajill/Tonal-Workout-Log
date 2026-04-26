@@ -21,7 +21,7 @@
 - **No drop sets** under any circumstances
 - **Smart Flex:** ON for all working blocks (`flex: true` in API). OFF for warmup sets.
 - **No squats, no lunges** — right knee injury (sharp pain on downward phase)
-- **Monitor Standing Leg Extension** carefully — discomfort noted at 26–27 lbs
+- **Monitor Standing Leg Extension** carefully — right leg self-limits to ~27 lbs with reduced ROM, stopping before 80° knee flexion where twitch/pain occurs. Left leg can go heavier. Do not let Smart Flex push right leg past comfortable ROM.
 - **Current constraint:** Hands-free lower body only (both hands post-op). Right hand ~week 7+ post-op Apr 18. Left hand cleared of infection ~Apr 14.
 
 ---

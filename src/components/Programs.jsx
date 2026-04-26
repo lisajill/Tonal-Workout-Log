@@ -319,17 +319,44 @@ const PROGRAMS = [
   },
 ]
 
-export default function Programs() {
+const PR_KEYS = {
+  'Barbell Lying Glute Bridge':          'barbell_lying_glute_bridge',
+  'Barbell Hip Thrust':                  'barbell_hip_thrust',
+  'Standing Donkey Kick':                'standing_donkey_kick',
+  'Standing SL Hamstring Curl':          'standing_sl_hamstring_curl',
+  'Standing Single Leg Hamstring Curl':  'standing_sl_hamstring_curl',
+  'Standing Hip Abduction':              'standing_hip_abduction',
+  'Standing Leg Extension':              'standing_leg_extension',
+  'Standing Diagonal Glute Kickback':    'standing_diagonal_glute_kickback',
+  'Standing Straight Leg Glute Kickback':'standing_straight_leg_glute_kickback',
+  'Prone Bench Hamstring Curl':          'prone_bench_hamstring_curl',
+  'Prone Bench Single Leg Hamstring Curl':'prone_bench_sl_hamstring_curl',
+}
+
+function buildPRMap(sessions) {
+  const best = {}
+  for (const s of (sessions ?? [])) {
+    for (const [key, pr] of Object.entries(s.prs ?? {})) {
+      if (pr.weight != null && (best[key] == null || pr.weight > best[key])) {
+        best[key] = pr.weight
+      }
+    }
+  }
+  return best
+}
+
+export default function Programs({ sessions }) {
+  const prMap = buildPRMap(sessions)
   return (
     <div className="space-y-6">
       {PROGRAMS.map(p => (
-        <ProgramCard key={p.id} program={p} />
+        <ProgramCard key={p.id} program={p} prMap={prMap} />
       ))}
     </div>
   )
 }
 
-function ProgramCard({ program: p }) {
+function ProgramCard({ program: p, prMap }) {
   return (
     <details className="card group" open>
       <summary className="flex items-start justify-between cursor-pointer list-none gap-4">
@@ -365,13 +392,24 @@ function ProgramCard({ program: p }) {
                 </tr>
               </thead>
               <tbody>
-                {b.exercises.map(e => (
-                  <tr key={e.name} className="border-b border-surface-3/30">
-                    <td className="py-2 pr-4 text-zinc-200">{e.name}</td>
-                    <td className="py-2 pr-4 text-zinc-400 tabular-nums">{e.sets}</td>
-                    <td className="py-2 text-zinc-500">{e.detail}</td>
-                  </tr>
-                ))}
+                {b.exercises.map(e => {
+                  const prKey = PR_KEYS[e.name]
+                  const pr = prKey ? prMap[prKey] : null
+                  return (
+                    <tr key={e.name} className="border-b border-surface-3/30">
+                      <td className="py-2 pr-4 text-zinc-200">
+                        <span>{e.name}</span>
+                        {pr != null && (
+                          <span className="ml-2 rounded bg-accent/15 px-1.5 py-0.5 text-[11px] font-semibold text-accent tabular-nums">
+                            PR {pr} lbs
+                          </span>
+                        )}
+                      </td>
+                      <td className="py-2 pr-4 text-zinc-400 tabular-nums">{e.sets}</td>
+                      <td className="py-2 text-zinc-500">{e.detail}</td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>

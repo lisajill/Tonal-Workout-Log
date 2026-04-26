@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "fetch": "tsx scripts/fetch-sessions.ts"
+    "fetch": "tsx scripts/fetch-sessions.ts",
+    "import-zone2": "tsx scripts/import-zone2.ts"
   },
   "dependencies": {
     "react": "^18.3.1",
