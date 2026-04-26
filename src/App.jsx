@@ -66,6 +66,7 @@ export default function App() {
   const [tab, setTab] = useState(getInitialTab)
   const [activeSession, setActiveSession] = useState(null)
   const [openGroup, setOpenGroup] = useState(null)
+  const [expandProgram, setExpandProgram] = useState(null)
 
   function setTabAndHash(id) {
     window.location.hash = id
@@ -77,9 +78,10 @@ export default function App() {
     setTabAndHash('sessions')
   }
 
-  function selectTab(id) {
+  function selectTab(id, programId = null) {
     setTabAndHash(id)
     setOpenGroup(null)
+    setExpandProgram(programId)
   }
 
   return (
@@ -151,13 +153,13 @@ export default function App() {
       <main className="px-6 py-6 max-w-5xl mx-auto">
         {tab === 'overview'  && <Overview      sessions={sessions} />}
         {tab === 'log'       && <SessionLog    sessions={sessions} onSelectSession={openSession} />}
-        {tab === 'sessions'  && <SessionDetail key={activeSession} sessions={sessions} initialDate={activeSession} />}
+        {tab === 'sessions'  && <SessionDetail key={activeSession} sessions={sessions} initialKey={activeSession} onNavigate={selectTab} />}
         {tab === 'prs'       && <PRTracker     sessions={sessions} />}
         {tab === 'bodymaps'  && <BodyMaps       sessions={sessions} />}
         {tab === 'matrix'    && <MuscleMatrix   sessions={sessions} />}
         {tab === 'heatmap'   && <MuscleHeatmap  sessions={sessions} />}
         {tab === 'charts'    && <Charts        sessions={sessions} />}
-        {tab === 'programs'  && <Programs      sessions={sessions} />}
+        {tab === 'programs'  && <Programs      sessions={sessions} expandId={expandProgram} />}
         {tab === 'strength'         && <StrengthScores />}
         {tab === 'current-readiness' && <CurrentReadiness />}
         {tab === 'cardio'    && <CardioTracker />}

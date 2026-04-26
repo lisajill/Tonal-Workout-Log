@@ -63,7 +63,7 @@ export default function SessionLog({ sessions, onSelectSession }) {
           {sorted.map((s) => (
             <tr
               key={s.tonal_activity_id ?? `${s.date}::${s.workout}`}
-              onClick={() => onSelectSession?.(s.date)}
+              onClick={() => onSelectSession?.(s.tonal_activity_id ?? `${s.date}::${s.workout}`)}
               className="border-b border-surface-3/40 hover:bg-surface-2 transition-colors cursor-pointer group"
             >
               <td className="py-3 pr-6 text-zinc-400 tabular-nums">{s.date}</td>

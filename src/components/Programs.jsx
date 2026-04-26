@@ -390,20 +390,20 @@ function buildPRMap(sessions) {
   return best
 }
 
-export default function Programs({ sessions }) {
+export default function Programs({ sessions, expandId }) {
   const prMap = buildPRMap(sessions)
   return (
     <div className="space-y-6">
-      {PROGRAMS.map(p => (
-        <ProgramCard key={p.id} program={p} prMap={prMap} />
+      {[...PROGRAMS].sort((a, b) => b.created.localeCompare(a.created)).map(p => (
+        <ProgramCard key={p.id} program={p} prMap={prMap} defaultOpen={p.id === expandId} />
       ))}
     </div>
   )
 }
 
-function ProgramCard({ program: p, prMap }) {
+function ProgramCard({ program: p, prMap, defaultOpen }) {
   return (
-    <details className="card group">
+    <details className="card group" open={defaultOpen || undefined}>
       <summary className="flex items-start justify-between cursor-pointer list-none gap-4">
         <div>
           <h2 className="text-lg font-semibold text-zinc-100">{p.name}</h2>

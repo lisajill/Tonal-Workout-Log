@@ -9,6 +9,15 @@ const MUSCLE_LABELS = {
 
 const SWEAT = { dry: 'Dry', untracked: '—', light: 'Light', moderate: 'Moderate', heavy: 'Heavy', null: '—' }
 
+const PROGRAM_MAP = {
+  'Heavy Express — Floor Bridge + Ankle Straps':       'he_floor_bridge',
+  'Heavy Express — Glute Bridge + Hamstring + Quad':   'he_glute',
+  'Heavy Express — Hip Thrust + Hamstring':            'he_hip',
+  'Hands Free Lower Body':                             'hfla',
+  'Hands Free Lower Body + Core B':                   'hflb',
+  'Hamstring + Quad Strength':                         'hqs',
+}
+
 function readinessEmoji(val) {
   if (val == null) return { icon: '—', color: 'text-zinc-600', bg: 'bg-surface-2' }
   if (val <= 25)  return { icon: '💀', color: 'text-red-400',     bg: 'bg-red-950/40' }
@@ -22,10 +31,10 @@ function sessionKey(s) {
   return s.tonal_activity_id ?? `${s.date}::${s.workout}`
 }
 
-export default function SessionDetail({ sessions, initialDate }) {
+export default function SessionDetail({ sessions, initialKey: initialKeyProp, onNavigate }) {
   const sorted = [...sessions].sort((a, b) => b.date.localeCompare(a.date))
-  const initialKey = initialDate
-    ? sessionKey(sorted.find(s => s.date === initialDate) ?? sorted[0])
+  const initialKey = initialKeyProp && sorted.some(s => sessionKey(s) === initialKeyProp)
+    ? initialKeyProp
     : sessionKey(sorted[0])
   const [selected, setSelected] = useState(initialKey)
   const session = sorted.find(s => sessionKey(s) === selected)
@@ -64,7 +73,13 @@ export default function SessionDetail({ sessions, initialDate }) {
       <div className="card">
         <div className="flex items-start justify-between gap-4 flex-wrap">
           <div>
-            <h2 className="text-lg font-semibold text-zinc-100">{session.workout}</h2>
+            <h2 className="text-lg font-semibold text-zinc-100">
+              {PROGRAM_MAP[session.workout] ? (
+                <button onClick={() => onNavigate?.('programs', PROGRAM_MAP[session.workout])} className="hover:text-accent transition-colors text-left">
+                  {session.workout} ↗
+                </button>
+              ) : session.workout}
+            </h2>
             <p className="text-zinc-500 text-sm mt-0.5">{session.date} · {session.phase} phase</p>
           </div>
           <RatingBadge value={session.subjective_rating} />
@@ -82,6 +97,14 @@ export default function SessionDetail({ sessions, initialDate }) {
           <MiniStat label="Work"      value={session.total_work_kj ? `${session.total_work_kj} kJ` : '—'} />
           <MiniStat label="Sweat"     value={SWEAT[session.sweat] ?? session.sweat ?? '—'} />
         </div>
+
+        {/* Notes */}
+        {session.notes && (
+          <div className="mt-4 rounded-lg bg-amber-950/30 border border-amber-900/40 px-3 py-2.5">
+            <p className="text-xs font-medium text-amber-400/80 mb-0.5">Notes</p>
+            <p className="text-sm text-amber-300/90">{session.notes}</p>
+          </div>
+        )}
 
         {/* Body map */}
         {session.bodymap && (
