@@ -358,7 +358,7 @@ export default function Programs({ sessions }) {
 
 function ProgramCard({ program: p, prMap }) {
   return (
-    <details className="card group" open>
+    <details className="card group">
       <summary className="flex items-start justify-between cursor-pointer list-none gap-4">
         <div>
           <h2 className="text-lg font-semibold text-zinc-100">{p.name}</h2>
