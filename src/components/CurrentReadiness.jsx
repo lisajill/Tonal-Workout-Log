@@ -67,7 +67,7 @@ function computeReadiness() {
         const decayed = decayToFresh(val, hrs, muscle)
         if (readiness[muscle] == null || decayed < readiness[muscle]) {
           readiness[muscle] = decayed
-          sources[muscle] = [event.data.workout]
+          sources[muscle] = [`Tonal: ${event.data.workout}`]
         }
       }
     } else {
@@ -77,7 +77,7 @@ function computeReadiness() {
         const decayed = decayToFresh(val, hrs, muscle)
         if (readiness[muscle] == null || decayed < readiness[muscle]) {
           readiness[muscle] = decayed
-          sources[muscle] = [event.data.activity]
+          sources[muscle] = [`Off-Tonal: ${event.data.activity}`]
         }
       }
     }
