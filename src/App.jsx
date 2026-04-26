@@ -93,6 +93,23 @@ export default function App() {
             const activeTab = group.tabs.find(t => t.id === tab)
             const isActive = !!activeTab
             const isOpen = openGroup === group.label
+            if (group.tabs.length === 1) {
+                const t = group.tabs[0]
+                return (
+                  <button
+                    key={t.id}
+                    onClick={() => selectTab(t.id)}
+                    className={`px-3 py-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
+                      tab === t.id
+                        ? 'border-accent text-zinc-100'
+                        : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                    }`}
+                  >
+                    {t.label}
+                  </button>
+                )
+              }
+
             return (
               <div key={group.label} className="relative z-20">
                 <button
