@@ -1,0 +1,77 @@
+[
+  {
+    "uuid": "7F26ECB1-75AD-4CE1-8E0B-62C2B1D03D85",
+    "date": "2026-04-19",
+    "activity": "Tonal",
+    "duration_min": 23.7,
+    "avg_hr": 95,
+    "muscles": {
+      "glutes": 3,
+      "hamstrings": 3,
+      "quads": 3,
+      "abs": 2,
+      "back": 2
+    },
+    "notes": null
+  },
+  {
+    "uuid": "7950775E-5300-47DA-9194-6D73A92D6978",
+    "date": "2026-04-25",
+    "activity": "Tonal",
+    "duration_min": 31.4,
+    "avg_hr": 90,
+    "muscles": {
+      "glutes": 3,
+      "hamstrings": 3,
+      "quads": 3,
+      "abs": 2,
+      "back": 2
+    },
+    "notes": null
+  },
+  {
+    "uuid": "9934DC93-70F7-4416-84F7-95F1AF1CE961",
+    "date": "2026-04-25",
+    "activity": "Tonal",
+    "duration_min": 9.1,
+    "avg_hr": 94,
+    "muscles": {
+      "glutes": 3,
+      "hamstrings": 3,
+      "quads": 3,
+      "abs": 2,
+      "back": 2
+    },
+    "notes": null
+  },
+  {
+    "uuid": "68A6AC24-8421-468D-BA48-ECC49D116752",
+    "date": "2026-04-26",
+    "activity": "Tonal",
+    "duration_min": 1.5,
+    "avg_hr": 94,
+    "muscles": {
+      "glutes": 3,
+      "hamstrings": 3,
+      "quads": 3,
+      "abs": 2,
+      "back": 2
+    },
+    "notes": null
+  },
+  {
+    "uuid": "B6B92ED0-FFF0-4729-85D3-0EEC8EB49B93",
+    "date": "2026-04-26",
+    "activity": "Tonal",
+    "duration_min": 35.9,
+    "avg_hr": 86,
+    "muscles": {
+      "glutes": 3,
+      "hamstrings": 3,
+      "quads": 3,
+      "abs": 2,
+      "back": 2
+    },
+    "notes": null
+  }
+]

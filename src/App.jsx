@@ -9,6 +9,7 @@ import BodyMaps from './components/BodyMaps.jsx'
 import Programs from './components/Programs.jsx'
 import MuscleMatrix from './components/MuscleMatrix.jsx'
 import StrengthScores from './components/StrengthScores.jsx'
+import CurrentReadiness from './components/CurrentReadiness.jsx'
 import CardioTracker from './components/CardioTracker.jsx'
 import sessions from './data/sessions.json'
 
@@ -35,6 +36,7 @@ const TAB_GROUPS = [
       { id: 'prs',     label: 'PRs' },
       { id: 'matrix',  label: 'Muscle Matrix' },
       { id: 'heatmap', label: 'Readiness' },
+      { id: 'current-readiness', label: 'Current State' },
     ],
   },
   {
@@ -156,7 +158,8 @@ export default function App() {
         {tab === 'heatmap'   && <MuscleHeatmap  sessions={sessions} />}
         {tab === 'charts'    && <Charts        sessions={sessions} />}
         {tab === 'programs'  && <Programs      sessions={sessions} />}
-        {tab === 'strength'  && <StrengthScores />}
+        {tab === 'strength'         && <StrengthScores />}
+        {tab === 'current-readiness' && <CurrentReadiness />}
         {tab === 'cardio'    && <CardioTracker />}
       </main>
     </div>
