@@ -255,6 +255,51 @@ const PROGRAMS = [
     ],
   },
   {
+    id: 'hqs',
+    name: 'Hamstring + Quad Strength',
+    subtitle: 'Hands-free · Prone bench + leg extension · Peak strength focus · ~36 min',
+    created: '2026-04-26',
+    anchor: 'Prone Bench Hamstring Curl — never cut',
+    blocks: [
+      {
+        name: 'Block 1 — Free Lift Warmup',
+        type: 'Pre-workout · Glute activation only if glutes > 50% readiness',
+        exercises: [
+          { name: 'Barbell Hip Thrust', sets: '1 warmup', detail: '10 reps · 40 lbs · glute activation only — skip if glutes cooked' },
+        ],
+      },
+      {
+        name: 'Block 2 — Prone Bench · Bilateral',
+        type: 'Warmup + 3 working sets · 5 reps · 2 min rest after',
+        exercises: [
+          { name: 'Prone Bench Hamstring Curl', sets: 'warmup + 3', detail: '5 reps · Smart Flex ON · 2 min rest after block' },
+        ],
+      },
+      {
+        name: 'Block 3 — Prone Bench · Unilateral',
+        type: '3 working sets · 5 reps/side · 90s rest after',
+        exercises: [
+          { name: 'Prone Bench Single Leg Hamstring Curl', sets: '3', detail: '5/side · Smart Flex ON · right leg self-limits ~27 lbs, stop before 80° knee flexion · 90s rest after block' },
+        ],
+      },
+      {
+        name: 'Block 4 — Leg Extension',
+        type: 'Warmup + 3 working sets · 6 reps/side · 90s rest after',
+        exercises: [
+          { name: 'Standing Leg Extension', sets: 'warmup + 3', detail: '6/side · Smart Flex ON · right leg ~27 lbs limited ROM, stops before knee twitch at 80° · 90s rest after block' },
+        ],
+      },
+    ],
+    tiers: [],
+    cutOrder: ['Block 1 — Free Lift Warmup'],
+    notes: [
+      'Right leg on SL hamstring curl and leg extension: self-limits ~27 lbs, stop before 80° knee flexion',
+      'Hip thrust warmup is separate Free Lift — only do if glutes have >50% readiness',
+      'Fasted session origin: 14.5 hr fast, herbal tea + creatine pre-workout',
+      'Follow with off-Tonal core finisher if energy allows',
+    ],
+  },
+  {
     id: 'hflb',
     name: 'Hands Free Lower Body + Core B',
     subtitle: 'No hands · Hamstring + quad focus · Core stability finisher · One attachment setup',

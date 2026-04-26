@@ -189,7 +189,8 @@
       "lats",
       "calves"
     ],
-    "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0"
+    "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0",
+    "notes": "Right knee discomfort on Standing Leg Extension — monitor"
   },
   {
     "date": "2026-04-18",
@@ -381,7 +382,8 @@
       "hip_flexors",
       "calves"
     ],
-    "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421"
+    "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421",
+    "notes": "Right knee twinge at 80–90° on leg extension — not pain, held weight steady"
   },
   {
     "date": "2026-04-25",
@@ -645,6 +647,7 @@
     "time_under_tension": 6.17,
     "total_work_kj": 7,
     "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
-    "bodymap": "/BodyMapApril26.png"
+    "bodymap": "/BodyMapApril26.png",
+    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80° knee flexion where twitch/pain occurs"
   }
 ]
