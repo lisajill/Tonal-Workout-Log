@@ -124,6 +124,25 @@ export default function CurrentReadiness() {
         </div>
       )}
 
+      {hasData && (
+        <div className="flex flex-wrap gap-3 px-1">
+          {[
+            { icon: '💀', label: 'Cooked', text: 'text-red-300',      range: '0–25%' },
+            { icon: '🥵', label: 'Fatigued', text: 'text-orange-300', range: '26–50%' },
+            { icon: '🌤', label: 'Recovering', text: 'text-yellow-300', range: '51–75%' },
+            { icon: '🌿', label: 'Ready', text: 'text-green-300',      range: '76–90%' },
+            { icon: '✨', label: 'Fresh', text: 'text-emerald-300',    range: '91–100%' },
+          ].map(l => (
+            <div key={l.label} className="flex items-center gap-1.5 text-xs">
+              <span>{l.icon}</span>
+              <span className={`font-medium ${l.text}`}>{l.label}</span>
+              <span className="text-zinc-600">{l.range}</span>
+            </div>
+          ))}
+          <span className="text-xs text-zinc-600 ml-auto">Muscles at 100% hidden</span>
+        </div>
+      )}
+
       {hasData && REGIONS.map(region => {
         const regionMuscles = region.muscles.filter(m => readiness[m] != null && readiness[m] < 100)
         if (regionMuscles.length === 0) return null
@@ -136,14 +155,21 @@ export default function CurrentReadiness() {
                 const s = status(val)
                 const src = sources[m]?.join(', ')
                 return (
-                  <div key={m} className={`${s.bg} rounded-lg px-3 py-3`}>
+                  <div key={m} className={`${s.bg} rounded-lg px-3 py-3 relative group/card`}>
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-medium text-zinc-400">{MUSCLE_LABELS[m]}</span>
-                      <span className="text-base leading-none">{s.icon}</span>
+                      <span className="text-base leading-none cursor-default">{s.icon}</span>
                     </div>
                     <div className={`text-2xl font-bold tabular-nums ${s.text}`}>{val}%</div>
                     <div className={`text-[10px] mt-0.5 ${s.text} opacity-80`}>{s.label}</div>
                     {src && <div className="text-[10px] text-zinc-600 mt-1 truncate">{src}</div>}
+                    {/* Hover tooltip */}
+                    <div className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-10 w-44 rounded-lg bg-surface-3 border border-surface-3 px-3 py-2 text-xs text-zinc-300 shadow-xl opacity-0 group-hover/card:opacity-100 transition-opacity">
+                      <p className="font-semibold mb-1">{MUSCLE_LABELS[m]} — {val}%</p>
+                      <p className={`${s.text} mb-1`}>{s.icon} {s.label}</p>
+                      {src && <p className="text-zinc-500">{src}</p>}
+                      <p className="text-zinc-600 mt-1">Recovers in {RECOVERY_HOURS[m] ?? 48}h</p>
+                    </div>
                   </div>
                 )
               })}
