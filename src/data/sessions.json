@@ -556,11 +556,25 @@
       "triceps": 100
     },
     "prs": {
-      "prone_bench_sl_hamstring_curl": { "weight": 25, "date": "2026-04-26" },
-      "standing_leg_extension": { "weight": 35, "date": "2026-04-26" }
+      "prone_bench_sl_hamstring_curl": {
+        "weight": 25,
+        "date": "2026-04-26"
+      },
+      "standing_leg_extension": {
+        "weight": 35,
+        "date": "2026-04-26"
+      }
     },
-    "muscles_high_volume": ["hamstrings", "quads", "glutes"],
-    "muscles_low_volume": ["hip_flexors", "back", "calves"],
+    "muscles_high_volume": [
+      "hamstrings",
+      "quads",
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "back",
+      "calves"
+    ],
     "functional_strength": 242,
     "movement_quality": 98,
     "movement_quality_delta": 45,
@@ -573,7 +587,8 @@
     "total_reps": 101,
     "time_under_tension": 6.17,
     "total_work_kj": 7,
-    "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb"
+    "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
+    "bodymap": "/BodyMapApril26.png"
   },
   {
     "date": "2026-04-26",
@@ -612,15 +627,24 @@
       "triceps": null
     },
     "prs": {
-      "barbell_hip_thrust": { "weight": null, "date": null }
+      "barbell_hip_thrust": {
+        "weight": null,
+        "date": null
+      }
     },
-    "muscles_high_volume": ["glutes"],
-    "muscles_low_volume": ["hip_flexors", "hamstrings"],
+    "muscles_high_volume": [
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "hamstrings"
+    ],
     "duration": 1.5,
     "total_volume": 440,
     "total_reps": 10,
     "time_under_tension": 0.67,
     "total_work_kj": 1,
-    "tonal_activity_id": "6730f404-0d2f-4711-a7c5-cf150fa169c9"
+    "tonal_activity_id": "6730f404-0d2f-4711-a7c5-cf150fa169c9",
+    "bodymap": "/BodyMapApril26HipThrust.png"
   }
 ]
