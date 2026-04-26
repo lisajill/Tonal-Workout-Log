@@ -99,7 +99,6 @@ export default function CurrentReadiness() {
   const { readiness, sources } = computeReadiness()
 
   const activeMuscles = MUSCLES.filter(m => readiness[m] != null && readiness[m] < 100)
-  const unknownMuscles = MUSCLES.filter(m => readiness[m] == null)
 
   // Group by body region for display
   const REGIONS = [
@@ -153,17 +152,6 @@ export default function CurrentReadiness() {
         )
       })}
 
-      {unknownMuscles.length > 0 && hasData && (
-        <div className="card">
-          <h2 className="label mb-3">No Data</h2>
-          <div className="flex flex-wrap gap-2">
-            {unknownMuscles.map(m => (
-              <span key={m} className="rounded-lg bg-surface-2 px-3 py-1.5 text-xs text-zinc-600">{MUSCLE_LABELS[m]}</span>
-            ))}
-          </div>
-          <p className="text-xs text-zinc-600 mt-3">No recent data — assume fully fresh. Muscles at 100% are also hidden above.</p>
-        </div>
-      )}
 
       <p className="text-xs text-zinc-600">
         Recovery model: 72 hrs (glutes/hamstrings/quads) · 48 hrs (abs/obliques/back/shoulders) · 36 hrs (calves/biceps/triceps) · 24 hrs (grip).
