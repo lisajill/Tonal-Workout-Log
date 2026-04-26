@@ -74,6 +74,7 @@ export default function Overview({ sessions }) {
             <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
             <Goal icon="🤲" text="Reassess upper body reintroduction once hands are cleared" />
             <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
+            <Goal icon="❤️" text="Zone 2 cardio — 150 min/week target (Rhonda Patrick protocol). Walks + Hydrow rowing once cleared post-May 4" />
             <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
           </div>
         </div>
