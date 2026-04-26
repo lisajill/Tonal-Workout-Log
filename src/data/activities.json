@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "uuid": "CAD38B9A-C004-4518-B9A9-E7C988E77F11",
+    "date": "2026-04-26",
+    "activity": "Functional Strength Training",
+    "duration_min": 25.9,
+    "avg_hr": 91,
+    "muscles": {
+      "abs": 4,
+      "obliques": 3,
+      "hip_flexors": 3,
+      "glutes": 2,
+      "back": 2
+    },
+    "notes": null
+  }
+]

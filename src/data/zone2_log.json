@@ -214,5 +214,17 @@
     "zone4_min": 0,
     "avg_hr": 99,
     "distance_mi": 1.46
+  },
+  {
+    "uuid": "CAD38B9A-C004-4518-B9A9-E7C988E77F11",
+    "date": "2026-04-26",
+    "activity": "Functional Strength Training",
+    "duration_min": 25.9,
+    "zone1_min": 23.3,
+    "zone2_min": 1.8,
+    "zone3_min": 0.8,
+    "zone4_min": 0,
+    "avg_hr": 91,
+    "distance_mi": null
   }
 ]
