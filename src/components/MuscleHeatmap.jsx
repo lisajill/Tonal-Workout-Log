@@ -25,21 +25,17 @@ export default function MuscleHeatmap({ sessions }) {
   return (
     <div className="space-y-5">
       {/* Session picker */}
-      <div className="flex flex-wrap gap-2">
+      <select
+        value={selectedIdx}
+        onChange={e => setSelectedIdx(Number(e.target.value))}
+        className="rounded-lg bg-surface-2 border border-surface-3 text-zinc-200 text-sm px-3 py-2 focus:outline-none focus:border-accent w-full sm:w-auto"
+      >
         {sessions.map((s, i) => (
-          <button
-            key={s.date}
-            onClick={() => setSelectedIdx(i)}
-            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-              i === selectedIdx
-                ? 'bg-accent text-white'
-                : 'bg-surface-2 text-zinc-400 hover:text-zinc-200'
-            }`}
-          >
-            {s.date}
-          </button>
+          <option key={i} value={i}>
+            {s.date}{sessions.filter(x => x.date === s.date).length > 1 ? ` · ${s.workout}` : ''}
+          </option>
         ))}
-      </div>
+      </select>
 
       <div className="card">
         <p className="text-zinc-300 font-medium mb-1">{session.workout}</p>
