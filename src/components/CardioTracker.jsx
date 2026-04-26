@@ -238,7 +238,7 @@ export default function CardioTracker() {
       </div>
 
       <p className="text-xs text-zinc-600">
-        After each session: Zones for Training → tap workout → share → Export JSON → auto-saves to Zone2Sessions. Then run <code className="bg-surface-2 px-1 rounded">npm run import-zone2</code>.
+        Tracking began <span className="text-zinc-500">Apr 19, 2026</span> via Zones for Training. Walking automation exports automatically; Tonal sessions exported manually. Then run <code className="bg-surface-2 px-1 rounded">npm run import-zone2</code> to sync.
       </p>
     </div>
   )
