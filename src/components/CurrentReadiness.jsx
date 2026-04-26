@@ -126,7 +126,7 @@ export default function CurrentReadiness() {
       )}
 
       {hasData && REGIONS.map(region => {
-        const regionMuscles = region.muscles.filter(m => readiness[m] != null)
+        const regionMuscles = region.muscles.filter(m => readiness[m] != null && readiness[m] < 100)
         if (regionMuscles.length === 0) return null
         return (
           <div key={region.label} className="card">
