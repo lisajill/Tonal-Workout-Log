@@ -8,6 +8,7 @@
 1. **Always show the full workout to the user before calling `createWorkout`.** Present it as a table with blocks, sets, reps, and notes. Wait for explicit approval.
 2. **Always check muscle readiness before the session** (`getMuscleReadiness()`). Write pre_readiness to the Obsidian session note frontmatter immediately — it cannot be retrieved after the workout.
 3. **Always use the TypeScript client (`tsx scripts/`)**, not the MCP. The MCP is a limited abstraction; the TS client has full API access.
+4. **Always add a `notes` field to sessions.json** for any session with observations — knee behavior, form issues, fatigue notes, anything worth tracking. Include in both sessions.json and the Obsidian session note. Notes appear in the Session Log in the app.
 
 ---
 

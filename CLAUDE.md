@@ -31,6 +31,7 @@ No test suite. No linter configured.
 - `calories`, `avg_hr`, `max_hr`, `energy_level`, `subjective_rating` — manual entry only (Tonal API does not expose these for machine workouts)
 - `sweat` — text label: `dry` / `light` / `moderate` / `heavy`. Never a number.
 - `shot_day` — boolean, true on GLP-1 injection days
+- `notes` — free text for session observations: form issues, pain/discomfort, fatigue, anything worth tracking. Always populate when there's something notable. Displayed in amber in the Session Log.
 - `functional_strength`, `movement_quality`, `movement_quality_delta` — from Tonal Goal Progress screen (manual entry)
 - `strength_overall`, `strength_upper`, `strength_core`, `strength_lower` — from Tonal Strength Score screen (manual entry). Not stored in sessions.json — tracked in `StrengthScores.jsx` HISTORY array and Obsidian frontmatter.
 
