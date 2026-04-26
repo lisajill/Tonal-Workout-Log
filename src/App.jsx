@@ -9,7 +9,7 @@ import BodyMaps from './components/BodyMaps.jsx'
 import Programs from './components/Programs.jsx'
 import MuscleMatrix from './components/MuscleMatrix.jsx'
 import StrengthScores from './components/StrengthScores.jsx'
-import Zone2Tracker from './components/Zone2Tracker.jsx'
+import CardioTracker from './components/CardioTracker.jsx'
 import sessions from './data/sessions.json'
 
 const TAB_GROUPS = [
@@ -46,7 +46,7 @@ const TAB_GROUPS = [
   {
     label: 'Cardio',
     tabs: [
-      { id: 'zone2', label: 'Zone 2' },
+      { id: 'cardio', label: 'Cardio' },
     ],
   },
 ]
@@ -140,7 +140,7 @@ export default function App() {
         {tab === 'charts'    && <Charts        sessions={sessions} />}
         {tab === 'programs'  && <Programs      sessions={sessions} />}
         {tab === 'strength'  && <StrengthScores />}
-        {tab === 'zone2'     && <Zone2Tracker />}
+        {tab === 'cardio'    && <CardioTracker />}
       </main>
     </div>
   )

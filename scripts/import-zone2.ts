@@ -48,7 +48,7 @@ for (const file of files) {
   entries.push({
     uuid:         data.uuid,
     date,
-    activity:     data.activity?.name ?? data.name ?? 'Unknown',
+    activity:     data.source === 'Tonal' ? 'Tonal' : (data.activity?.name ?? data.name ?? 'Unknown'),
     duration_min: toMin(data.duration?.value ?? 0),
     zone1_min:    toMin(data.zones?.zone1?.time?.value ?? 0),
     zone2_min:    toMin(data.zones?.zone2?.time?.value ?? 0),
