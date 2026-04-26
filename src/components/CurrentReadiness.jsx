@@ -124,25 +124,6 @@ export default function CurrentReadiness() {
         </div>
       )}
 
-      {hasData && (
-        <div className="flex flex-wrap gap-3 px-1">
-          {[
-            { icon: '💀', label: 'Cooked', text: 'text-red-300',      range: '0–25%' },
-            { icon: '🥵', label: 'Fatigued', text: 'text-orange-300', range: '26–50%' },
-            { icon: '🌤', label: 'Recovering', text: 'text-yellow-300', range: '51–75%' },
-            { icon: '🌿', label: 'Ready', text: 'text-green-300',      range: '76–90%' },
-            { icon: '✨', label: 'Fresh', text: 'text-emerald-300',    range: '91–100%' },
-          ].map(l => (
-            <div key={l.label} className="flex items-center gap-1.5 text-xs">
-              <span>{l.icon}</span>
-              <span className={`font-medium ${l.text}`}>{l.label}</span>
-              <span className="text-zinc-600">{l.range}</span>
-            </div>
-          ))}
-          <span className="text-xs text-zinc-600 ml-auto">Muscles at 100% hidden</span>
-        </div>
-      )}
-
       {hasData && REGIONS.map(region => {
         const regionMuscles = region.muscles.filter(m => readiness[m] != null && readiness[m] < 100)
         if (regionMuscles.length === 0) return null
@@ -178,6 +159,25 @@ export default function CurrentReadiness() {
         )
       })}
 
+
+      {hasData && (
+        <div className="flex flex-wrap gap-3 px-1">
+          {[
+            { icon: '💀', label: 'Cooked',     text: 'text-red-300',     range: '0–25%' },
+            { icon: '🥵', label: 'Fatigued',   text: 'text-orange-300',  range: '26–50%' },
+            { icon: '🌤', label: 'Recovering', text: 'text-yellow-300',  range: '51–75%' },
+            { icon: '🌿', label: 'Ready',      text: 'text-green-300',   range: '76–90%' },
+            { icon: '✨', label: 'Fresh',      text: 'text-emerald-300', range: '91–100%' },
+          ].map(l => (
+            <div key={l.label} className="flex items-center gap-1.5 text-xs">
+              <span>{l.icon}</span>
+              <span className={`font-medium ${l.text}`}>{l.label}</span>
+              <span className="text-zinc-600">{l.range}</span>
+            </div>
+          ))}
+          <span className="text-xs text-zinc-600 ml-auto">Muscles at 100% hidden</span>
+        </div>
+      )}
 
       <p className="text-xs text-zinc-600">
         Recovery model: 72 hrs (glutes/hamstrings/quads) · 48 hrs (abs/obliques/back/shoulders) · 36 hrs (calves/biceps/triceps) · 24 hrs (grip).
