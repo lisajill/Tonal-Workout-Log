@@ -6,8 +6,8 @@ const ZONE2_DIR    = path.join(process.env.HOME!, 'Documents/Claude/Zone2Session
 const CARDIO_FILE  = path.join(process.cwd(), 'src/data/zone2_log.json')
 const ACTIVITY_FILE = path.join(process.cwd(), 'src/data/activities.json')
 
-// Activities excluded from the readiness model (cardio-only, no meaningful muscle fatigue)
-const CARDIO_ONLY = new Set(['Walking', 'Outdoor Walk', 'Indoor Walk', 'Running', 'Outdoor Run', 'Indoor Run', 'Cycling', 'Outdoor Cycling'])
+// Activities excluded from activities.json — either cardio-only or tracked separately (Tonal uses sessions.json)
+const SKIP_ACTIVITIES = new Set(['Walking', 'Outdoor Walk', 'Indoor Walk', 'Running', 'Outdoor Run', 'Indoor Run', 'Cycling', 'Outdoor Cycling', 'Tonal', 'Traditional Strength Training'])
 
 // Default muscle effort maps by HealthKit activity name (effort 1–5 per muscle)
 // Built lazily — new types added here when first seen in real exports
@@ -96,7 +96,7 @@ for (const file of files) {
   })
 
   // Add to activity log if not cardio-only
-  if (!CARDIO_ONLY.has(activity)) {
+  if (!SKIP_ACTIVITIES.has(activity)) {
     const muscles = MUSCLE_DEFAULTS[activity] ?? null
     if (!muscles) newActivities.push(activity)
     activityEntries.push({

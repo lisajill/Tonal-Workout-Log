@@ -98,7 +98,7 @@ function status(val) {
 export default function CurrentReadiness() {
   const { readiness, sources } = computeReadiness()
 
-  const activeMuscles = MUSCLES.filter(m => readiness[m] != null)
+  const activeMuscles = MUSCLES.filter(m => readiness[m] != null && readiness[m] < 100)
   const unknownMuscles = MUSCLES.filter(m => readiness[m] == null)
 
   // Group by body region for display
@@ -161,7 +161,7 @@ export default function CurrentReadiness() {
               <span key={m} className="rounded-lg bg-surface-2 px-3 py-1.5 text-xs text-zinc-600">{MUSCLE_LABELS[m]}</span>
             ))}
           </div>
-          <p className="text-xs text-zinc-600 mt-3">These muscles have no recent session data — assume fully fresh.</p>
+          <p className="text-xs text-zinc-600 mt-3">No recent data — assume fully fresh. Muscles at 100% are also hidden above.</p>
         </div>
       )}
 
