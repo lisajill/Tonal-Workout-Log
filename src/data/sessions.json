@@ -521,6 +521,63 @@
   },
   {
     "date": "2026-04-26",
+    "workout": "Free Lift — Barbell Hip Thrust",
+    "energy_level": 4,
+    "phase": "active",
+    "subjective_rating": null,
+    "sweat": "dry",
+    "calories": 5,
+    "avg_hr": 94,
+    "max_hr": 103,
+    "pre_readiness": {
+      "glutes": 21,
+      "hamstrings": 72,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": null,
+        "date": null
+      }
+    },
+    "muscles_high_volume": [
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "hamstrings"
+    ],
+    "duration": 1.5,
+    "total_volume": 440,
+    "total_reps": 10,
+    "time_under_tension": 0.67,
+    "total_work_kj": 1,
+    "tonal_activity_id": "6730f404-0d2f-4711-a7c5-cf150fa169c9",
+    "bodymap": "/BodyMapApril26HipThrust.png"
+  },
+  {
+    "date": "2026-04-26",
     "workout": "Hamstring + Quad Strength",
     "energy_level": 4,
     "phase": "active",
@@ -589,62 +646,5 @@
     "total_work_kj": 7,
     "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
     "bodymap": "/BodyMapApril26.png"
-  },
-  {
-    "date": "2026-04-26",
-    "workout": "Free Lift — Barbell Hip Thrust",
-    "energy_level": 4,
-    "phase": "active",
-    "subjective_rating": null,
-    "sweat": "dry",
-    "calories": 5,
-    "avg_hr": 94,
-    "max_hr": 103,
-    "pre_readiness": {
-      "glutes": 21,
-      "hamstrings": 72,
-      "quads": 100,
-      "calves": 100,
-      "abs": 100,
-      "obliques": 100,
-      "back": 100,
-      "chest": 100,
-      "shoulders": 100,
-      "biceps": 100,
-      "triceps": 100
-    },
-    "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "prs": {
-      "barbell_hip_thrust": {
-        "weight": null,
-        "date": null
-      }
-    },
-    "muscles_high_volume": [
-      "glutes"
-    ],
-    "muscles_low_volume": [
-      "hip_flexors",
-      "hamstrings"
-    ],
-    "duration": 1.5,
-    "total_volume": 440,
-    "total_reps": 10,
-    "time_under_tension": 0.67,
-    "total_work_kj": 1,
-    "tonal_activity_id": "6730f404-0d2f-4711-a7c5-cf150fa169c9",
-    "bodymap": "/BodyMapApril26HipThrust.png"
   }
 ]
