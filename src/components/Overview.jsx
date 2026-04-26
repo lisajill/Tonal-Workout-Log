@@ -36,8 +36,9 @@ export default function Overview({ sessions }) {
           Across <strong className="text-zinc-100">{sessions.length} sessions</strong> you've set{' '}
           <strong className="text-zinc-100">{prCount} personal records</strong> in{' '}
           {Object.keys(MOVEMENT_LABELS).length} tracked movements. Two recovery sessions built the baseline,
-          then three heavy express sessions drove rapid strength gains — including a two-session day on Apr 25
-          that confirmed the bench fix and pushed hip thrust to 65 lbs (+86% from session one's 35 lb glute bridge baseline).
+          then strength sessions drove rapid gains — including a two-session day on Apr 25 that confirmed the bench fix
+          and pushed hip thrust to 65 lbs (+86% from session one). Apr 26 added two more PRs: Prone Bench SL Hamstring Curl
+          (25 lbs, +25%) and Standing Leg Extension (35 lbs, +21%), plus a 3-circuit core finisher.
           Your best sessions have come on shot days and after poor sleep. External stressors are not stopping you.
         </p>
       </div>
@@ -106,6 +107,8 @@ export default function Overview({ sessions }) {
               <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Session 4 — glute bridge 120 lbs, PRs everywhere · 5/5" active />
               <ArcEvent date="Apr 25"       color="bg-emerald-400" text="Session 5 — shot day, floor bridge + ankle straps, 3 PRs · 4/5" active shot />
               <ArcEvent date="Apr 25"       color="bg-emerald-400" text="Session 6 (bonus) — Free Lift hip thrust 65 lbs, bench fix confirmed · 5/5" active />
+              <ArcEvent date="Apr 26"       color="bg-emerald-400" text="Session 7 — fasted, Hamstring + Quad Strength, 2 PRs + 3-circuit core finisher · 4/5" active />
+              <ArcEvent date="Apr 26"       color="bg-emerald-400" text="Session 8 (warmup) — Free Lift hip thrust 40 lbs pre-workout" active />
             </div>
           </div>
         </div>
@@ -287,6 +290,8 @@ const SESSION_NARRATIVES = {
   'e6b7b607-d8c0-49ec-8614-09ad03577421': 'Best single session yet. Poor sleep, four days off — didn\'t matter. PRs on almost every set. Glute bridge hit 120 lbs. Volume second-highest in just 24 minutes. First perfect 5/5.',
   '03fb2420-f725-4b1e-9ef7-2654636330cb': 'Shot day energy 4/5. First session with proper rest breaks (2 min post-compound, 90s between isolations) — lower density than Apr 19 but correct execution. Smart Flex proposed 132 lbs on glute bridge — unbudgeable. Worked down to 100–112 lbs, still got a volume PR. Hit PRs on donkey kick (+50%), SL hamstring curl, and hip abduction.',
   '084ab93a-fe9c-49f3-b773-78451edea6d6': 'Bonus session immediately post-workout to test the bench slide fix. Yoga mat under bench + weight plates behind legs — held through 65 lbs. Strength, Power, and Volume PR in one set. Rated 5/5.',
+  'db03899d-36f9-46a7-b51c-c34cb53ab5bb': 'Fasted session, 14.5 hr fast. Glutes at 21% from Apr 25 double session — hip thrust done as a separate Free Lift warmup only. Two PRs: Prone Bench SL Hamstring Curl 25 lbs (+25%) and Standing Leg Extension 35 lbs (+21%). Followed by 3-circuit core finisher off-Tonal (dead bug, pilates teaser, bicycle crunches, clamshells, hollow hold, wall pushups, glute bridge march). Right inner groin clicks on dead bug — monitor.',
+  '6730f404-c0da-42ab-87e8-e1b72e7c81e3': 'Pre-workout Free Lift hip thrust warmup only — 40 lbs × 10 reps, 1.5 min. Glutes too depleted from Apr 25 for a real hip thrust session.',
 }
 
 function buildRecap(s) {

@@ -5,9 +5,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev        # start Vite dev server
-npm run build      # production build
-npm run fetch      # pull latest Tonal workout data → src/data/sessions.json
+npm run dev          # start Vite dev server
+npm run build        # production build
+npm run fetch        # pull latest Tonal workout data → src/data/sessions.json
+npm run import-zone2 # import Zones for Training JSON exports → src/data/zone2_log.json
 npx tsx scripts/my-script.ts  # run a one-off TypeScript script
 ```
 
@@ -43,6 +44,15 @@ No test suite. No linter configured.
 **`Overview.jsx`** — contains hardcoded narrative text (`SESSION_NARRATIVES` keyed by `tonal_activity_id`, Recovery Arc events). Must be manually updated when new sessions are added. Lifetime Stats pulled live from `src/data/lifetime-stats.json`.
 
 **`StrengthScores.jsx`** — `HISTORY` array is hardcoded with Tonal Strength Score snapshots (overall/upper/core/lower). Add a new entry after each session using values from the Strength Score screen in the Tonal app. Goals Progress chart (FS/MQ) is derived live from `sessions.json`.
+
+**Cardio tracking:**
+- `src/data/zone2_log.json` — all cardio sessions from Zones for Training exports (walking auto-exports via Shortcut; Tonal and other types exported manually)
+- `scripts/import-zone2.ts` — deduplicates by UUID, labels Tonal source as "Tonal", writes zone2_log.json
+- `src/components/CardioTracker.jsx` — cardio dashboard (zone breakdown, HR trend, session log). Tracking began Apr 19, 2026.
+- Zone 2 = 108–125 bpm (Fat Burn zone). Weekly target: 150 min per Rhonda Patrick protocol.
+- Walking sessions excluded from readiness model (no soreness unless 25k+ steps).
+
+**Nav structure** — single-tab groups render as direct links, multi-tab groups render as dropdowns. Add new tabs to `TAB_GROUPS` in `App.jsx`.
 
 ## Tonal Workout Building
 
