@@ -25,6 +25,7 @@ No test suite. No linter configured.
 
 **`sessions.json` schema** — key fields per entry:
 - `tonal_activity_id` — Tonal API ID; primary merge key. Multiple sessions on the same date are ordered chronologically and each has a unique ID.
+- `timestamp` — ISO 8601 from Tonal's `localTimestamp`. **Always sort by `timestamp ?? date`, never by array position or date string alone.** Same-day sessions have different timestamps (e.g. warmup at 09:43, main session at 09:45) and date-only sorting will get the order wrong.
 - `total_volume`, `total_reps`, `time_under_tension`, `total_work_kj`, `duration` — populated by fetch script
 - `pre_readiness` / `post_readiness` — muscle readiness maps (0–100); `pre_readiness` must be captured before the workout via `getMuscleReadiness()` — cannot be retrieved after. Post categories from app screenshot: Fresh ≈ 100, Recovering ≈ 50, Fatigued ≈ 15.
 - `prs` — map of `movement_key → { weight, date }`; drives PRTracker and Notable PRs
@@ -48,7 +49,7 @@ No test suite. No linter configured.
 
 **Cardio tracking:**
 - `src/data/zone2_log.json` — all cardio sessions from Zones for Training exports (walking auto-exports via Shortcut; Tonal and other types exported manually)
-- `scripts/import-zone2.ts` — deduplicates by UUID, labels Tonal source as "Tonal", writes zone2_log.json
+- `scripts/import-zone2.ts` — deduplicates by UUID, labels Tonal source as "Tonal", writes zone2_log.json. Each entry includes `timestamp` (from `startDate`). **Always sort by `timestamp ?? date`.**
 - `src/components/CardioTracker.jsx` — cardio dashboard (zone breakdown, HR trend, session log). Tracking began Apr 19, 2026.
 - Zone 2 = 108–125 bpm (Fat Burn zone). Weekly target: 150 min per Rhonda Patrick protocol.
 - Walking sessions excluded from readiness model (no soreness unless 25k+ steps).
