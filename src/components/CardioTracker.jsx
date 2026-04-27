@@ -215,7 +215,10 @@ export default function CardioTracker() {
               {allSessions.map(s => (
                 <tr key={s.uuid} className="border-b border-surface-3/40">
                   <td className="py-2.5 pr-4 text-zinc-400 tabular-nums">{s.date}</td>
-                  <td className="py-2.5 pr-4 text-zinc-200">{activityIcon(s.activity)} {s.activity}</td>
+                  <td className="py-2.5 pr-4 text-zinc-200">
+                    {activityIcon(s.activity)} {s.activity}
+                    {s.notes && <span className="ml-1.5 text-[11px] text-amber-400/80">· {s.notes}</span>}
+                  </td>
                   <td className="py-2.5 pr-4 text-zinc-400 tabular-nums text-right">{s.duration_min}m</td>
                   <td className="py-2.5 pr-4 tabular-nums text-right">
                     <span className={s.zone2_min > 0 ? 'font-semibold' : 'text-zinc-600'} style={s.zone2_min > 0 ? { color: ZONE_COLORS.zone2 } : {}}>

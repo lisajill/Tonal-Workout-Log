@@ -262,5 +262,18 @@
     "zone4_min": 0,
     "avg_hr": 132,
     "distance_mi": 1.06
+  },
+  {
+    "uuid": "8DE8876C-FD71-434A-9CD0-FF0DCF678773",
+    "date": "2026-04-27",
+    "activity": "Walking",
+    "duration_min": 30.8,
+    "zone1_min": 5.4,
+    "zone2_min": 25.3,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 116,
+    "distance_mi": 0.42,
+    "notes": "12 lb weighted vest"
   }
 ]
