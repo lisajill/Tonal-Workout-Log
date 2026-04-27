@@ -85,6 +85,7 @@ for (const file of files) {
   cardioEntries.push({
     uuid:         data.uuid,
     date,
+    timestamp:    data.startDate ?? null,
     activity,
     duration_min: toMin(data.duration?.value ?? 0),
     zone1_min:    toMin(data.zones?.zone1?.time?.value ?? 0),

@@ -72,7 +72,7 @@ export default function CardioTracker() {
   const z2pct = Math.min(100, Math.round((currentWeek.zone2 / WEEKLY_Z2_TARGET) * 100))
 
   // All sessions sorted desc
-  const allSessions = [...cardioLog].sort((a, b) => b.date.localeCompare(a.date))
+  const allSessions = [...cardioLog].sort((a, b) => (b.timestamp ?? b.date).localeCompare(a.timestamp ?? a.date))
 
   // Activity breakdown (all time)
   const activityMap = {}
