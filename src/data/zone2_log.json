@@ -226,5 +226,41 @@
     "zone4_min": 0,
     "avg_hr": 91,
     "distance_mi": null
+  },
+  {
+    "uuid": "0DE14625-4B60-4D4B-B6FD-45CD72F2A794",
+    "date": "2026-04-26",
+    "activity": "Functional Strength Training",
+    "duration_min": 1.2,
+    "zone1_min": 1.2,
+    "zone2_min": 0,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 96,
+    "distance_mi": null
+  },
+  {
+    "uuid": "67FA89B5-B027-4F0D-8EE0-12B897638CB5",
+    "date": "2026-04-26",
+    "activity": "Walking",
+    "duration_min": 31.2,
+    "zone1_min": 31.2,
+    "zone2_min": 0,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 95,
+    "distance_mi": 1.14
+  },
+  {
+    "uuid": "0FAC8343-A8EB-4D65-BA16-B947070E2D8B",
+    "date": "2026-04-27",
+    "activity": "Walking",
+    "duration_min": 22.3,
+    "zone1_min": 0.2,
+    "zone2_min": 7,
+    "zone3_min": 15.1,
+    "zone4_min": 0,
+    "avg_hr": 132,
+    "distance_mi": 1.06
   }
 ]
