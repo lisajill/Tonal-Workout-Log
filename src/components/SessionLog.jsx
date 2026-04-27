@@ -35,6 +35,11 @@ export default function SessionLog({ sessions, onSelectSession }) {
   const sorted = [...sessions].sort((a, b) => {
     let av = a[sortKey] ?? -Infinity
     let bv = b[sortKey] ?? -Infinity
+    if (sortKey === 'date') {
+      const at = a.timestamp ?? a.date
+      const bt = b.timestamp ?? b.date
+      return sortDir === 'asc' ? at.localeCompare(bt) : bt.localeCompare(at)
+    }
     if (typeof av === 'string') return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av)
     return sortDir === 'asc' ? av - bv : bv - av
   })

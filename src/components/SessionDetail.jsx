@@ -32,7 +32,7 @@ function sessionKey(s) {
 }
 
 export default function SessionDetail({ sessions, initialKey: initialKeyProp, onNavigate }) {
-  const sorted = [...sessions].sort((a, b) => b.date.localeCompare(a.date))
+  const sorted = [...sessions].sort((a, b) => (b.timestamp ?? b.date).localeCompare(a.timestamp ?? a.date))
   const initialKey = initialKeyProp && sorted.some(s => sessionKey(s) === initialKeyProp)
     ? initialKeyProp
     : sessionKey(sorted[0])

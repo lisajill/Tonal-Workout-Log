@@ -93,7 +93,8 @@
       "lats",
       "calves"
     ],
-    "tonal_activity_id": "aeb1248b-83ca-41cc-8af5-594c630a0626"
+    "tonal_activity_id": "aeb1248b-83ca-41cc-8af5-594c630a0626",
+    "timestamp": "2026-04-04T12:31:30.530697-04:00"
   },
   {
     "date": "2026-04-05",
@@ -190,7 +191,8 @@
       "calves"
     ],
     "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0",
-    "notes": "Right knee discomfort on Standing Leg Extension — monitor"
+    "notes": "Right knee discomfort on Standing Leg Extension — monitor",
+    "timestamp": "2026-04-05T10:22:44.845581-04:00"
   },
   {
     "date": "2026-04-18",
@@ -287,7 +289,8 @@
       "lats",
       "calves"
     ],
-    "tonal_activity_id": "f8a42e03-03bf-4bdd-8229-d00978f3bc55"
+    "tonal_activity_id": "f8a42e03-03bf-4bdd-8229-d00978f3bc55",
+    "timestamp": "2026-04-18T16:58:01.405-04:00"
   },
   {
     "date": "2026-04-19",
@@ -383,7 +386,8 @@
       "calves"
     ],
     "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421",
-    "notes": "Right knee twinge at 80–90° on leg extension — not pain, held weight steady"
+    "notes": "Right knee twinge at 80–90° on leg extension — not pain, held weight steady",
+    "timestamp": "2026-04-19T09:50:34.720644-04:00"
   },
   {
     "date": "2026-04-25",
@@ -443,7 +447,8 @@
     "total_reps": 21,
     "time_under_tension": 1.72,
     "total_work_kj": 1,
-    "tonal_activity_id": "084ab93a-fe9c-49f3-b773-78451edea6d6"
+    "tonal_activity_id": "084ab93a-fe9c-49f3-b773-78451edea6d6",
+    "timestamp": "2026-04-25T13:18:32.405-04:00"
   },
   {
     "date": "2026-04-25",
@@ -519,7 +524,8 @@
     "total_reps": 92,
     "time_under_tension": 7.42,
     "total_work_kj": 5,
-    "tonal_activity_id": "03fb2420-f725-4b1e-9ef7-2654636330cb"
+    "tonal_activity_id": "03fb2420-f725-4b1e-9ef7-2654636330cb",
+    "timestamp": "2026-04-25T12:15:16.635-04:00"
   },
   {
     "date": "2026-04-26",
@@ -591,7 +597,8 @@
     "total_work_kj": 7,
     "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
     "bodymap": "/BodyMapApril26.png",
-    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80° knee flexion where twitch/pain occurs"
+    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80° knee flexion where twitch/pain occurs",
+    "timestamp": "2026-04-26T09:45:11.54657-04:00"
   },
   {
     "date": "2026-04-26",
@@ -648,6 +655,7 @@
     "time_under_tension": 0.67,
     "total_work_kj": 1,
     "tonal_activity_id": "6730f404-0d2f-4711-a7c5-cf150fa169c9",
-    "bodymap": "/BodyMapApril26HipThrust.png"
+    "bodymap": "/BodyMapApril26HipThrust.png",
+    "timestamp": "2026-04-26T09:43:15.808735-04:00"
   }
 ]

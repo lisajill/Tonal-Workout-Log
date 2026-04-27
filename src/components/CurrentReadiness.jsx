@@ -55,7 +55,7 @@ function computeReadiness() {
       events.push({ date: a.date, type: 'activity', data: { muscles: a.muscles, duration_min: a.duration_min, activity: a.activity } })
     }
   }
-  events.sort((a, b) => a.date.localeCompare(b.date))
+  events.sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
 
   for (const event of events) {
     const hrs = hoursAgo(event.date)

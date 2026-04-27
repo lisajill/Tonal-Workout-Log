@@ -16,7 +16,7 @@ const MOVEMENT_LABELS = {
 export default function Overview({ sessions }) {
   if (!sessions.length) return null
 
-  const sorted   = [...sessions].sort((a, b) => a.date.localeCompare(b.date))
+  const sorted   = [...sessions].sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
   const first    = sorted[0]
   const last     = sorted[sorted.length - 1]
   const daySpan  = daysBetween(first.date, last.date)
@@ -258,7 +258,7 @@ function countPRs(sessions) {
 }
 
 function findNotablePRs(sessions) {
-  const sorted = [...sessions].sort((a, b) => a.date.localeCompare(b.date))
+  const sorted = [...sessions].sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
   const first = sorted[0]
   const bests = {}
   const firsts = {}

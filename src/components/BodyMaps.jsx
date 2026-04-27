@@ -20,7 +20,7 @@ const SWEAT_COLOR = {
 export default function BodyMaps({ sessions }) {
   const sorted = sessions
     .map((s, i) => ({ s, i }))
-    .sort((a, b) => b.s.date.localeCompare(a.s.date) || b.i - a.i)
+    .sort((a, b) => (b.s.timestamp ?? b.s.date).localeCompare(a.s.timestamp ?? a.s.date) || b.i - a.i)
     .map(({ s }) => s)
 
   return (

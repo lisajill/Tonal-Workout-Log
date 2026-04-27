@@ -15,7 +15,7 @@ function shortDate(d) {
 }
 
 export default function MuscleMatrix({ sessions }) {
-  const sorted = [...sessions].sort((a, b) => a.date.localeCompare(b.date))
+  const sorted = [...sessions].sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
 
   // Collect all muscles that appear in any session
   const activeMuscles = ALL_MUSCLES.filter(m =>

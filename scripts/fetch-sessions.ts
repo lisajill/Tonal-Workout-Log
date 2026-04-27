@@ -115,6 +115,7 @@ async function main() {
 
     const apiFields = {
       workout: existing_entry?.workout ?? apiName, // prefer existing name if we matched
+      timestamp: activity.localTimestamp,
       duration: toMinutes(activity.duration),
       total_volume: activity.totalVolume,
       total_reps: activity.totalReps || null,
