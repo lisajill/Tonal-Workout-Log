@@ -272,5 +272,31 @@
     "avg_hr": 116,
     "distance_mi": 0.42,
     "notes": "12 lb weighted vest"
+  },
+  {
+    "uuid": "F76B8B06-4C70-4862-95AC-40CDA33A6D1B",
+    "date": "2026-04-27",
+    "timestamp": "2026-04-27T22:31:25Z",
+    "activity": "Walking",
+    "duration_min": 26.1,
+    "zone1_min": 13.8,
+    "zone2_min": 12.3,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 107,
+    "distance_mi": 1.04
+  },
+  {
+    "uuid": "BD299B27-F9DC-49E5-8136-6F9AACD03856",
+    "date": "2026-04-28",
+    "timestamp": "2026-04-28T22:15:43Z",
+    "activity": "Walking",
+    "duration_min": 27.3,
+    "zone1_min": 24.3,
+    "zone2_min": 3,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 99,
+    "distance_mi": 1.05
   }
 ]
