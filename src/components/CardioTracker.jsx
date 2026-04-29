@@ -27,12 +27,11 @@ const TOOLTIP_STYLE = {
 const AXIS_TICK = { fill: '#71717a', fontSize: 11 }
 const GRID = { strokeDasharray: '3 3', stroke: '#303036' }
 
-function getMonday(dateStr) {
+function getWeekStart(dateStr) {
   const [y, m, d] = dateStr.split('-').map(Number)
-  const day = new Date(y, m - 1, d).getDay()
-  const diff = d - day + (day === 0 ? -6 : 1)
-  const mon = new Date(y, m - 1, diff)
-  return `${mon.getFullYear()}-${String(mon.getMonth()+1).padStart(2,'0')}-${String(mon.getDate()).padStart(2,'0')}`
+  const day = new Date(y, m - 1, d).getDay() // 0=Sun
+  const sun = new Date(y, m - 1, d - day)
+  return `${sun.getFullYear()}-${String(sun.getMonth()+1).padStart(2,'0')}-${String(sun.getDate()).padStart(2,'0')}`
 }
 
 function shortDate(d) {
@@ -55,7 +54,7 @@ export default function CardioTracker() {
   // Weekly aggregates
   const weekMap = {}
   for (const s of cardioLog) {
-    const week = getMonday(s.date)
+    const week = getWeekStart(s.date)
     if (!weekMap[week]) weekMap[week] = { week, zone1: 0, zone2: 0, zone3: 0, zone4: 0, total: 0, sessions: 0 }
     weekMap[week].zone1 += s.zone1_min ?? 0
     weekMap[week].zone2 += s.zone2_min ?? 0
