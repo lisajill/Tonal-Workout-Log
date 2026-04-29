@@ -28,11 +28,11 @@ const AXIS_TICK = { fill: '#71717a', fontSize: 11 }
 const GRID = { strokeDasharray: '3 3', stroke: '#303036' }
 
 function getMonday(dateStr) {
-  const d = new Date(dateStr)
-  const day = d.getDay()
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1)
-  d.setDate(diff)
-  return d.toISOString().slice(0, 10)
+  const [y, m, d] = dateStr.split('-').map(Number)
+  const day = new Date(y, m - 1, d).getDay()
+  const diff = d - day + (day === 0 ? -6 : 1)
+  const mon = new Date(y, m - 1, diff)
+  return `${mon.getFullYear()}-${String(mon.getMonth()+1).padStart(2,'0')}-${String(mon.getDate()).padStart(2,'0')}`
 }
 
 function shortDate(d) {
@@ -66,9 +66,17 @@ export default function CardioTracker() {
   }
   const weeks = Object.values(weekMap).sort((a, b) => a.week.localeCompare(b.week))
 
-  // Current week
-  const thisWeek = getMonday(new Date().toISOString().slice(0, 10))
-  const currentWeek = weekMap[thisWeek] ?? { zone2: 0, total: 0, sessions: 0 }
+  // Rolling 7-day window for the summary cards
+  const today = new Date()
+  const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`
+  const sevenDaysAgo = new Date(today - 7 * 24 * 60 * 60 * 1000)
+  const sevenDaysAgoStr = `${sevenDaysAgo.getFullYear()}-${String(sevenDaysAgo.getMonth()+1).padStart(2,'0')}-${String(sevenDaysAgo.getDate()).padStart(2,'0')}`
+  const rolling7 = cardioLog.filter(s => s.date >= sevenDaysAgoStr)
+  const currentWeek = {
+    zone2:    rolling7.reduce((a, s) => a + (s.zone2_min ?? 0), 0),
+    total:    rolling7.reduce((a, s) => a + (s.duration_min ?? 0), 0),
+    sessions: rolling7.length,
+  }
   const z2pct = Math.min(100, Math.round((currentWeek.zone2 / WEEKLY_Z2_TARGET) * 100))
 
   // All sessions sorted desc
