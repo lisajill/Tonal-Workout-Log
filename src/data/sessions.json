@@ -191,14 +191,14 @@
       "calves"
     ],
     "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0",
-    "notes": "Right knee discomfort on Standing Leg Extension — monitor",
+    "notes": "Right knee discomfort on Standing Leg Extension \u2014 monitor",
     "timestamp": "2026-04-05T10:22:44.845581-04:00"
   },
   {
     "date": "2026-04-18",
     "shot_day": true,
     "bodymap": "/BodyMapApril18.png",
-    "workout": "Heavy Express — Hip Thrust + Hamstring",
+    "workout": "Heavy Express \u2014 Hip Thrust + Hamstring",
     "energy_level": 1,
     "phase": "recovery",
     "subjective_rating": 4.5,
@@ -295,7 +295,7 @@
   {
     "date": "2026-04-19",
     "bodymap": "/BodyMapApril19.png",
-    "workout": "Heavy Express — Glute Bridge + Hamstring + Quad",
+    "workout": "Heavy Express \u2014 Glute Bridge + Hamstring + Quad",
     "energy_level": 1,
     "phase": "active",
     "subjective_rating": 5,
@@ -386,13 +386,13 @@
       "calves"
     ],
     "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421",
-    "notes": "Right knee twinge at 80–90° on leg extension — not pain, held weight steady",
+    "notes": "Right knee twinge at 80\u201390\u00b0 on leg extension \u2014 not pain, held weight steady",
     "timestamp": "2026-04-19T09:50:34.720644-04:00"
   },
   {
     "date": "2026-04-25",
     "shot_day": true,
-    "workout": "Free Lift — Barbell Hip Thrust",
+    "workout": "Free Lift \u2014 Barbell Hip Thrust",
     "bodymap": "/BodyMapApril25b.png",
     "energy_level": 4,
     "phase": "active",
@@ -454,7 +454,7 @@
     "date": "2026-04-25",
     "shot_day": true,
     "bodymap": "/BodyMapApril25.png",
-    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
+    "workout": "Heavy Express \u2014 Floor Bridge + Ankle Straps",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": 4,
@@ -597,12 +597,12 @@
     "total_work_kj": 7,
     "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
     "bodymap": "/BodyMapApril26.png",
-    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80° knee flexion where twitch/pain occurs",
+    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80\u00b0 knee flexion where twitch/pain occurs",
     "timestamp": "2026-04-26T09:45:11.54657-04:00"
   },
   {
     "date": "2026-04-26",
-    "workout": "Free Lift — Barbell Hip Thrust",
+    "workout": "Free Lift \u2014 Barbell Hip Thrust",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": null,
@@ -657,5 +657,61 @@
     "tonal_activity_id": "6730f404-0d2f-4711-a7c5-cf150fa169c9",
     "bodymap": "/BodyMapApril26HipThrust.png",
     "timestamp": "2026-04-26T09:43:15.808735-04:00"
+  },
+  {
+    "date": "2026-04-29",
+    "workout": "Express Lower Body",
+    "energy_level": 3,
+    "phase": "active",
+    "subjective_rating": 3,
+    "sweat": "dry",
+    "calories": 49,
+    "avg_hr": 118,
+    "max_hr": 138,
+    "pre_readiness": {
+      "glutes": 73,
+      "hamstrings": 73,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 32,
+      "hamstrings": 67,
+      "quads": 85,
+      "calves": 100,
+      "abs": 96,
+      "obliques": 98,
+      "back": 98,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {},
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings",
+      "quads"
+    ],
+    "muscles_low_volume": [],
+    "timestamp": "2026-04-29T08:17:32.805053-04:00",
+    "duration": 13.02,
+    "total_volume": 2435,
+    "total_reps": 49,
+    "time_under_tension": 3.3,
+    "total_work_kj": 4,
+    "tonal_activity_id": "dc8ec760-817d-458e-9758-fc33a09c5874",
+    "notes": "Dizziness on last 2 leg extension sets \u2014 monitor. Strong otherwise.",
+    "strength_overall": 468,
+    "strength_upper": 461,
+    "strength_core": 450,
+    "strength_lower": 493
   }
 ]
