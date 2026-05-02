@@ -145,6 +145,7 @@ Block 8: Isolation C — working sets (3×4, flex: true)
 1. **Before workout:** Call `getMuscleReadiness()`. Write to Obsidian session note frontmatter at:
    `Health & Wellness/Tonal/Sessions/YYYY-MM-DD Workout Name.md`
 2. **After workout:** Run `npm run fetch` to pull API data (volume, reps, TUT, kJ) into sessions.json. Manually fill in: `energy_level`, `subjective_rating`, `sweat`, `avg_hr`, `max_hr`, `calories`, `post_readiness`, `prs`, `muscles_high_volume`, `muscles_low_volume`, `functional_strength`, `movement_quality`, `movement_quality_delta`, `strength_overall/upper/core/lower`.
+   - **`avg_hr`**: check `zone2_log.json` first — if the session was exported from Zones app, `avg_hr` is already there (no screenshot needed). May differ slightly from Tonal's reading if Zones excludes rest periods. `max_hr` is not in zone2_log and still needs a screenshot.
    - **post_readiness**: use the `mcp__tonal-strength__get_readiness` MCP tool immediately after the workout — it returns exact percentages per muscle. Do NOT use the TypeScript client for this; the raw API endpoint returns 404. If the MCP is unavailable, fall back to app screenshot categories: Fresh ≈ 100, Recovering ≈ 50, Fatigued ≈ 15.
    - **sweat scale**: use text labels — `dry`, `light`, `moderate`, `heavy`. Never use numbers.
    - **FS/MQ**: from Goal Progress screen (Focus Area + Interests tabs).
