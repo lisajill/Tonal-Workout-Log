@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Overview from './components/Overview.jsx'
 import SessionLog from './components/SessionLog.jsx'
 import SessionDetail from './components/SessionDetail.jsx'
@@ -80,7 +81,9 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-surface-0">
+    <>
+      <Analytics />
+      <div className="min-h-screen bg-surface-0">
       <header className="border-b border-surface-3 px-6 py-4">
         <h1 className="text-lg font-semibold tracking-tight text-zinc-100">Training Tracker</h1>
       </header>
@@ -158,6 +161,7 @@ export default function App() {
         {tab === 'current-readiness' && <CurrentReadiness />}
         {tab === 'cardio'    && <CardioTracker />}
       </main>
-    </div>
+      </div>
+    </>
   )
 }
