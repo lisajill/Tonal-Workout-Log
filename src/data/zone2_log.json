@@ -415,5 +415,18 @@
     "zone4_min": 0,
     "avg_hr": 106,
     "distance_mi": 1.44
+  },
+  {
+    "uuid": "30F36407-3625-46D3-8FD9-67FF65867EE3",
+    "date": "2026-05-02",
+    "timestamp": "2026-05-02T17:15:24Z",
+    "activity": "Tonal",
+    "duration_min": 24.5,
+    "zone1_min": 25.5,
+    "zone2_min": 0,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 88,
+    "distance_mi": null
   }
 ]
