@@ -9,15 +9,6 @@ const MUSCLE_LABELS = {
 
 const SWEAT = { dry: 'Dry', untracked: '—', light: 'Light', moderate: 'Moderate', heavy: 'Heavy', null: '—' }
 
-const PROGRAM_MAP = {
-  'Heavy Express — Floor Bridge + Ankle Straps':       'he_floor_bridge',
-  'Heavy Express — Glute Bridge + Hamstring + Quad':   'he_glute',
-  'Heavy Express — Hip Thrust + Hamstring':            'he_hip',
-  'Hands Free Lower Body':                             'hfla',
-  'Hands Free Lower Body + Core B':                   'hflb',
-  'Hamstring + Quad Strength':                         'hqs',
-}
-
 function readinessEmoji(val) {
   if (val == null) return { icon: '—', color: 'text-zinc-600', bg: 'bg-surface-2' }
   if (val <= 25)  return { icon: '💀', color: 'text-red-400',     bg: 'bg-red-950/40' }
@@ -31,12 +22,17 @@ function sessionKey(s) {
   return s.tonal_activity_id ?? `${s.date}::${s.workout}`
 }
 
-export default function SessionDetail({ sessions, initialKey: initialKeyProp, onNavigate }) {
+export default function SessionDetail({ sessions, initialKey: initialKeyProp }) {
   const sorted = [...sessions].sort((a, b) => (b.timestamp ?? b.date).localeCompare(a.timestamp ?? a.date))
   const initialKey = initialKeyProp && sorted.some(s => sessionKey(s) === initialKeyProp)
     ? initialKeyProp
     : sessionKey(sorted[0])
   const [selected, setSelected] = useState(initialKey)
+
+  function selectSession(key) {
+    setSelected(key)
+    window.location.hash = `sessions:${key}`
+  }
   const session = sorted.find(s => sessionKey(s) === selected)
 
   if (!session) return <div className="card text-zinc-500 text-sm">No sessions.</div>
@@ -55,7 +51,7 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp, on
       {/* Session picker */}
       <select
         value={selected}
-        onChange={e => setSelected(e.target.value)}
+        onChange={e => selectSession(e.target.value)}
         className="rounded-lg bg-surface-2 border border-surface-3 text-zinc-200 text-sm px-3 py-2 focus:outline-none focus:border-accent w-full sm:w-auto"
       >
         {sorted.map(s => {
@@ -73,13 +69,7 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp, on
       <div className="card">
         <div className="flex items-start justify-between gap-4 flex-wrap">
           <div>
-            <h2 className="text-lg font-semibold text-zinc-100">
-              {PROGRAM_MAP[session.workout] ? (
-                <button onClick={() => onNavigate?.('programs', PROGRAM_MAP[session.workout])} className="hover:text-accent transition-colors text-left">
-                  {session.workout} ↗
-                </button>
-              ) : session.workout}
-            </h2>
+            <h2 className="text-lg font-semibold text-zinc-100">{session.workout}</h2>
             <p className="text-zinc-500 text-sm mt-0.5">{session.date} · {session.phase} phase</p>
           </div>
           <RatingBadge value={session.subjective_rating} />
@@ -179,6 +169,57 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp, on
           </div>
         </div>
       ) : null}
+
+      {/* Movements performed */}
+      {session.movements?.length > 0 && (
+        <details className="card group">
+          <summary className="flex items-center justify-between cursor-pointer list-none">
+            <h3 className="label">Movements</h3>
+            <span className="text-zinc-600 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <div className="mt-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-surface-3">
+                  <th className="label pb-2 text-left pr-4">Movement</th>
+                  <th className="label pb-2 text-right pr-6">Reps</th>
+                  <th className="label pb-2 text-left">Sets</th>
+                </tr>
+              </thead>
+              <tbody>
+                {session.movements.map((m, i) => (
+                  <tr key={i} className="border-b border-surface-3/30 align-top">
+                    <td className="py-2 pr-4 text-zinc-300 whitespace-nowrap">{m.name}</td>
+                    <td className="py-2 pr-6 text-zinc-500 tabular-nums text-right whitespace-nowrap">
+                      {m.warmup_sets > 0 && <span className="block text-zinc-600">{m.warmup_sets}W</span>}
+                      <span>{m.sets.length}×{m.sets[0]?.reps ?? '?'}</span>
+                    </td>
+                    <td className="py-2">
+                      {m.warmup_sets > 0 && (
+                        <div className="flex items-center gap-1 mb-0.5">
+                          <span className="text-zinc-600 tabular-nums text-xs">W</span>
+                          {m.warmup_prs?.includes('power') && <PRBadge type="power" />}
+                        </div>
+                      )}
+                      {m.sets.map((s, j) => (
+                        <div key={j} className="flex items-center gap-1 mb-0.5">
+                          <span className="text-zinc-400 tabular-nums text-xs">{s.weight_lbs} lbs</span>
+                          {s.prs?.includes('strength') && <PRBadge type="strength" />}
+                          {s.prs?.includes('power') && <PRBadge type="power" />}
+                        </div>
+                      ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="mt-3 text-[11px] text-zinc-600 flex gap-3">
+              <span><PRBadge type="strength" /> Strength PR (1RM)</span>
+              <span><PRBadge type="power" /> Power PR</span>
+            </p>
+          </div>
+        </details>
+      )}
     </div>
   )
 }
@@ -212,6 +253,12 @@ function RatingBadge({ value }) {
       <p className="text-xs text-zinc-500">out of 5</p>
     </div>
   )
+}
+
+function PRBadge({ type }) {
+  return type === 'strength'
+    ? <span className="rounded px-1 py-px text-[9px] font-bold uppercase tracking-wide bg-emerald-950/60 text-emerald-400 border border-emerald-800/40">S</span>
+    : <span className="rounded px-1 py-px text-[9px] font-bold uppercase tracking-wide bg-yellow-950/60 text-yellow-400 border border-yellow-800/40">P</span>
 }
 
 function formatMovement(key) {

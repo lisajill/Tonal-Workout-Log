@@ -94,7 +94,213 @@
       "calves"
     ],
     "tonal_activity_id": "aeb1248b-83ca-41cc-8af5-594c630a0626",
-    "timestamp": "2026-04-04T12:31:30.530697-04:00"
+    "timestamp": "2026-04-04T12:31:30.530697-04:00",
+    "movements": [
+      {
+        "name": "Feet in Straps Frog Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 29,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Side Lying Hip Abduction",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Standing Hip Abduction",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 6
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 6
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 6
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 6
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 6
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 6
+          }
+        ]
+      },
+      {
+        "name": "Standing Donkey Kick",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 10
+          }
+        ]
+      },
+      {
+        "name": "Standing Diagonal Glute Kickback",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 7
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Standing Straight Leg Glute Kickback",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 8
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 8
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 8
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 8
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 8
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 8
+          }
+        ]
+      },
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 15
+          }
+        ]
+      },
+      {
+        "name": "Barbell Lying Glute Bridge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 15,
+            "weight_lbs": 17.5
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 17.5
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 17.5
+          }
+        ]
+      }
+    ]
   },
   {
     "date": "2026-04-05",
@@ -191,14 +397,160 @@
       "calves"
     ],
     "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0",
-    "notes": "Right knee discomfort on Standing Leg Extension \u2014 monitor",
-    "timestamp": "2026-04-05T10:22:44.845581-04:00"
+    "notes": "Right knee discomfort on Standing Leg Extension — monitor",
+    "timestamp": "2026-04-05T10:22:44.845581-04:00",
+    "movements": [
+      {
+        "name": "Standing Single Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 11
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 11
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Hamstring Curl",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 16
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Single Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          }
+        ]
+      },
+      {
+        "name": "Standing Leg Extension",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          }
+        ]
+      },
+      {
+        "name": "Standing Bicycle",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Clamshell",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          }
+        ]
+      }
+    ]
   },
   {
     "date": "2026-04-18",
     "shot_day": true,
     "bodymap": "/BodyMapApril18.png",
-    "workout": "Heavy Express \u2014 Hip Thrust + Hamstring",
+    "workout": "Heavy Express — Hip Thrust + Hamstring",
     "energy_level": 1,
     "phase": "recovery",
     "subjective_rating": 4.5,
@@ -290,12 +642,126 @@
       "calves"
     ],
     "tonal_activity_id": "f8a42e03-03bf-4bdd-8229-d00978f3bc55",
-    "timestamp": "2026-04-18T16:58:01.405-04:00"
+    "timestamp": "2026-04-18T16:58:01.405-04:00",
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 24
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 28
+          }
+        ]
+      },
+      {
+        "name": "Standing Single Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 25
+          }
+        ]
+      },
+      {
+        "name": "Standing Hip Abduction",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 14
+          }
+        ]
+      },
+      {
+        "name": "Standing Donkey Kick",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 9,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 14,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 14,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 14,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 15
+          }
+        ]
+      }
+    ]
   },
   {
     "date": "2026-04-19",
     "bodymap": "/BodyMapApril19.png",
-    "workout": "Heavy Express \u2014 Glute Bridge + Hamstring + Quad",
+    "workout": "Heavy Express — Glute Bridge + Hamstring + Quad",
     "energy_level": 1,
     "phase": "active",
     "subjective_rating": 5,
@@ -386,13 +852,115 @@
       "calves"
     ],
     "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421",
-    "notes": "Right knee twinge at 80\u201390\u00b0 on leg extension \u2014 not pain, held weight steady",
-    "timestamp": "2026-04-19T09:50:34.720644-04:00"
+    "notes": "Right knee twinge at 80–90° on leg extension — not pain, held weight steady",
+    "timestamp": "2026-04-19T09:50:34.720644-04:00",
+    "movements": [
+      {
+        "name": "Barbell Lying Glute Bridge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 23.5
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 28
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 32.5
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 60
+          }
+        ]
+      },
+      {
+        "name": "Standing Single Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 22
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 22
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 19
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 28
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          }
+        ]
+      },
+      {
+        "name": "Standing Leg Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 29
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 29
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          }
+        ]
+      }
+    ]
   },
   {
     "date": "2026-04-25",
     "shot_day": true,
-    "workout": "Free Lift \u2014 Barbell Hip Thrust",
+    "workout": "Free Lift — Barbell Hip Thrust",
     "bodymap": "/BodyMapApril25b.png",
     "energy_level": 4,
     "phase": "active",
@@ -448,13 +1016,33 @@
     "time_under_tension": 1.72,
     "total_work_kj": 1,
     "tonal_activity_id": "084ab93a-fe9c-49f3-b773-78451edea6d6",
-    "timestamp": "2026-04-25T13:18:32.405-04:00"
+    "timestamp": "2026-04-25T13:18:32.405-04:00",
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 32.5
+          }
+        ]
+      }
+    ]
   },
   {
     "date": "2026-04-25",
     "shot_day": true,
     "bodymap": "/BodyMapApril25.png",
-    "workout": "Heavy Express \u2014 Floor Bridge + Ankle Straps",
+    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": 4,
@@ -525,7 +1113,135 @@
     "time_under_tension": 7.42,
     "total_work_kj": 5,
     "tonal_activity_id": "03fb2420-f725-4b1e-9ef7-2654636330cb",
-    "timestamp": "2026-04-25T12:15:16.635-04:00"
+    "timestamp": "2026-04-25T12:15:16.635-04:00",
+    "movements": [
+      {
+        "name": "Barbell Lying Glute Bridge",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 50
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 55
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 56
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Standing Donkey Kick",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 30
+          }
+        ]
+      },
+      {
+        "name": "Standing Single Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 27
+          }
+        ]
+      },
+      {
+        "name": "Standing Hip Abduction",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 16
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 16
+          }
+        ]
+      }
+    ]
   },
   {
     "date": "2026-04-26",
@@ -597,12 +1313,110 @@
     "total_work_kj": 7,
     "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
     "bodymap": "/BodyMapApril26.png",
-    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80\u00b0 knee flexion where twitch/pain occurs",
-    "timestamp": "2026-04-26T09:45:11.54657-04:00"
+    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80° knee flexion where twitch/pain occurs",
+    "timestamp": "2026-04-26T09:45:11.54657-04:00",
+    "movements": [
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Hamstring Curl",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Single Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          }
+        ]
+      },
+      {
+        "name": "Standing Leg Extension",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 29
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 35
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 35
+          }
+        ]
+      }
+    ]
   },
   {
     "date": "2026-04-26",
-    "workout": "Free Lift \u2014 Barbell Hip Thrust",
+    "workout": "Free Lift — Barbell Hip Thrust",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": null,
@@ -694,13 +1508,113 @@
       "biceps": 100,
       "triceps": 100
     },
-    "prs": {},
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": 45.5,
+        "date": "2026-04-29"
+      },
+      "standing_hip_abduction": {
+        "weight": 17,
+        "date": "2026-04-29"
+      },
+      "standing_leg_extension": {
+        "weight": 27,
+        "date": "2026-04-29"
+      }
+    },
     "muscles_high_volume": [
       "glutes",
       "hamstrings",
       "quads"
     ],
     "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 1,
+        "warmup_prs": [
+          "power"
+        ],
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 44.5,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 45,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 45.5,
+            "prs": [
+              "strength"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Standing Hip Abduction",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 17,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 17,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 18
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 18
+          }
+        ]
+      },
+      {
+        "name": "Standing Leg Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 27,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 40
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 27
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 35
+          }
+        ]
+      }
+    ],
     "timestamp": "2026-04-29T08:17:32.805053-04:00",
     "duration": 13.02,
     "total_volume": 2435,
@@ -708,7 +1622,7 @@
     "time_under_tension": 3.3,
     "total_work_kj": 4,
     "tonal_activity_id": "dc8ec760-817d-458e-9758-fc33a09c5874",
-    "notes": "Dizziness on last 2 leg extension sets \u2014 monitor. Strong otherwise.",
+    "notes": "Dizziness on last 2 leg extension sets — monitor. Strong otherwise.",
     "strength_overall": 468,
     "strength_upper": 461,
     "strength_core": 450,

@@ -1,4 +1,4 @@
-const PROGRAMS = [
+export const PROGRAMS = [
   {
     id: 'he_floor_bridge',
     name: 'Heavy Express — Floor Bridge + Ankle Straps',

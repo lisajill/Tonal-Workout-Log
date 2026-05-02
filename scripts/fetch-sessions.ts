@@ -6,6 +6,19 @@ import TonalClient from '@dlwiest/ts-tonal-client'
 const SESSIONS_PATH = resolve(import.meta.dirname, '../src/data/sessions.json')
 const LIFETIME_PATH = resolve(import.meta.dirname, '../src/data/lifetime-stats.json')
 
+interface MovementSet {
+  reps: number
+  weight_lbs: number
+  prs?: string[]
+}
+
+interface SessionMovement {
+  name: string
+  warmup_sets: number
+  warmup_prs?: string[]
+  sets: MovementSet[]
+}
+
 interface SessionEntry {
   date: string
   workout: string
@@ -26,6 +39,7 @@ interface SessionEntry {
   prs: Record<string, { weight: number | null; date: string | null }>
   muscles_high_volume: string[]
   muscles_low_volume: string[]
+  movements?: SessionMovement[]
   bodymap?: string
   shot_day?: boolean
   tonal_activity_id?: string
@@ -57,6 +71,43 @@ async function main() {
   console.log('Authenticating with Tonal...')
   const client = await TonalClient.create({ username, password })
   console.log('Authenticated.')
+
+  // Raw API helper — ts-tonal-client exposes httpClient for direct endpoint calls
+  const http = (client as any).httpClient
+  const userInfo = await (client as any).userService.getUserInfo()
+  const userId = userInfo.id ?? userInfo.userId ?? userInfo.sub
+
+  // Cache movement name map — fetched once, used for all sessions
+  console.log('Fetching movement catalog...')
+  const allMovements: any[] = await http.request('/movements')
+  const nameMap = new Map<string, string>(allMovements.map((m: any) => [m.id, m.name]))
+  console.log(`Got ${allMovements.length} movements.`)
+
+  async function fetchActivityDetail(activityId: string): Promise<SessionMovement[] | null> {
+    try {
+      const data = await http.request(`/users/${userId}/workout-activities/${activityId}`)
+      const byMovement = new Map<string, { name: string; warmupSets: MovementSet[]; workingSets: MovementSet[] }>()
+      for (const s of (data.workoutSetActivity ?? [])) {
+        const mid = s.movementId
+        if (!mid) continue
+        if (!byMovement.has(mid)) {
+          byMovement.set(mid, { name: nameMap.get(mid) ?? mid.slice(0, 8), warmupSets: [], workingSets: [] })
+        }
+        const entry = byMovement.get(mid)!
+        const set: MovementSet = { reps: s.repCount ?? 0, weight_lbs: s.baseWeight ?? 0 }
+        if (s.warmUp) entry.warmupSets.push(set)
+        else entry.workingSets.push(set)
+      }
+      const result: SessionMovement[] = []
+      for (const [, m] of byMovement) {
+        if (m.workingSets.length === 0) continue  // skip rest/warmup-only
+        result.push({ name: m.name, warmup_sets: m.warmupSets.length, sets: m.workingSets })
+      }
+      return result.length > 0 ? result : null
+    } catch {
+      return null
+    }
+  }
 
   console.log('Fetching lifetime stats...')
   const stats = await client.getUserStatistics()
@@ -124,8 +175,11 @@ async function main() {
       tonal_activity_id: activity.id,
     }
 
+    const needsMovements = !existing_entry?.movements
+    const movements = needsMovements ? await fetchActivityDetail(activity.id) : existing_entry!.movements
+
     if (existing_entry) {
-      merged.push({ ...existing_entry, ...apiFields })
+      merged.push({ ...existing_entry, ...apiFields, ...(movements ? { movements } : {}) })
     } else {
       merged.push({
         date,
@@ -142,6 +196,7 @@ async function main() {
         prs: {},
         muscles_high_volume: [],
         muscles_low_volume: [],
+        ...(movements ? { movements } : {}),
         ...apiFields,
       })
     }

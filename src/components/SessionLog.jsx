@@ -1,14 +1,5 @@
 import { useState } from 'react'
 
-const PROGRAM_MAP = {
-  'Heavy Express — Floor Bridge + Ankle Straps':       'he_floor_bridge',
-  'Heavy Express — Glute Bridge + Hamstring + Quad':   'he_glute',
-  'Heavy Express — Hip Thrust + Hamstring':            'he_hip',
-  'Hands Free Lower Body':                             'hfla',
-  'Hands Free Lower Body + Core B':                   'hflb',
-  'Hamstring + Quad Strength':                         'hqs',
-}
-
 const SWEAT = { dry: 'Dry', untracked: '—', light: 'Light', moderate: 'Moderate', heavy: 'Heavy' }
 
 const COLS = [
@@ -75,16 +66,13 @@ export default function SessionLog({ sessions, onSelectSession }) {
               <td className="py-3 pr-6 max-w-[240px]">
                 <div className="flex items-center gap-1.5">
                   <span className="font-medium text-zinc-100 group-hover:text-accent transition-colors">{s.workout}</span>
-                  {PROGRAM_MAP[s.workout] && (
-                    <a
-                      href={`#programs`}
-                      onClick={e => e.stopPropagation()}
-                      className="text-zinc-600 hover:text-accent transition-colors text-xs shrink-0"
-                      title="View custom workout"
-                    >↗</a>
-                  )}
                 </div>
                 {s.notes && <p className="text-[11px] text-amber-400/80 mt-0.5 leading-snug">{s.notes}</p>}
+                {Object.entries(s.prs ?? {}).filter(([, pr]) => pr.weight != null).map(([key, pr]) => (
+                  <p key={key} className="text-[11px] text-emerald-400/80 mt-0.5 leading-snug">
+                    PR · {key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())} — {pr.weight} lbs
+                  </p>
+                ))}
               </td>
               <td className="py-3 pr-6 tabular-nums text-zinc-300 text-right">{s.duration}</td>
               <td className="py-3 pr-6 tabular-nums text-zinc-300 text-right">{s.total_volume?.toLocaleString() ?? '—'}</td>

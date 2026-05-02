@@ -79,7 +79,8 @@ for (const file of files) {
 
   const date = data.startDate?.slice(0, 10) ?? 'unknown'
   const toMin = (sec: number) => Math.round((sec / 60) * 10) / 10
-  const activity = data.source === 'Tonal' ? 'Tonal' : (data.activity?.name ?? data.name ?? 'Unknown')
+  const rawActivity = data.source === 'Tonal' ? 'Tonal' : (data.activity?.name ?? data.name ?? 'Unknown')
+  const activity = rawActivity === 'Indoor Walk' ? 'Treadmill' : rawActivity
 
   // Always add to cardio log (zone/HR data useful for everyone)
   cardioEntries.push({

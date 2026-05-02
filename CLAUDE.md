@@ -28,7 +28,8 @@ No test suite. No linter configured.
 - `timestamp` — ISO 8601 from Tonal's `localTimestamp`. **Always sort by `timestamp ?? date`, never by array position or date string alone.** Same-day sessions have different timestamps (e.g. warmup at 09:43, main session at 09:45) and date-only sorting will get the order wrong.
 - `total_volume`, `total_reps`, `time_under_tension`, `total_work_kj`, `duration` — populated by fetch script
 - `pre_readiness` / `post_readiness` — muscle readiness maps (0–100). `pre_readiness` must be captured before the workout via `getMuscleReadiness()`. **`post_readiness` can also be fetched via `getMuscleReadiness()` immediately after the workout** — the API returns exact percentages (not just categories). Capture it right away; it reflects current state and will decay over time. App screenshot categories are only a fallback: Fresh ≈ 100, Recovering ≈ 50, Fatigued ≈ 15.
-- `prs` — map of `movement_key → { weight, date }`; drives PRTracker and Notable PRs
+- `movements` — array of `{ name, warmup_sets, warmup_prs?, sets: [{ reps, weight_lbs, prs? }] }`. Auto-populated by `npm run fetch` via the raw `/users/{uid}/workout-activities/{id}` endpoint (not exposed by ts-tonal-client; accessed via `(client as any).httpClient`). Only fetched for sessions missing `movements`. Per-set PR flags (`prs: ["strength","power"]`) are added manually after each session.
+- `prs` — map of `movement_key → { weight, date }`; drives PRTracker and Session Log PR display
 - `calories`, `avg_hr`, `max_hr`, `energy_level`, `subjective_rating` — manual entry only (Tonal API does not expose these for machine workouts)
 - `sweat` — text label: `dry` / `light` / `moderate` / `heavy`. Never a number.
 - `shot_day` — boolean, true on GLP-1 injection days
@@ -41,7 +42,9 @@ No test suite. No linter configured.
 - `text-accent` / `border-accent` — indigo-400 primary accent
 - `card` and `label` are utility classes defined in `src/index.css`
 
-**`Programs.jsx`** — static component; custom workout designs are hardcoded JSX, not derived from `sessions.json`. Edit directly to add/update workout templates.
+**Session linking** — URL hash format is `#sessions:TONAL_ACTIVITY_ID`. `App.jsx` parses this on load via `parseHash()`. The session picker in `SessionDetail` updates the hash on change. Use this to share/bookmark a specific session.
+
+**`Programs.jsx`** — still exists and exports `PROGRAMS`, but has no nav tab. Custom workout designs are hardcoded here; the Custom Workouts tab was removed. Movements are now stored per-session in `sessions.json` and displayed inline in `SessionDetail`.
 
 **`Overview.jsx`** — contains hardcoded narrative text (`SESSION_NARRATIVES` keyed by `tonal_activity_id`, Recovery Arc events). Must be manually updated when new sessions are added. Lifetime Stats pulled live from `src/data/lifetime-stats.json`.
 
