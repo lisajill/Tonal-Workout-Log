@@ -1,9 +1,12 @@
 name: Import Zone2 Workout
 
 on:
-  push:
-    paths:
-      - 'pending/*.json'
+  workflow_dispatch:
+    inputs:
+      workout_json:
+        description: 'Raw workout JSON'
+        required: true
+        type: string
 
 jobs:
   import:
@@ -21,15 +24,15 @@ jobs:
 
       - run: npm ci
 
+      - name: Write workout file
+        env:
+          WORKOUT_JSON: ${{ inputs.workout_json }}
+        run: printf '%s' "$WORKOUT_JSON" > pending/workout.json
+
       - name: Run import
         env:
           ZONE2_SOURCE_DIR: ${{ github.workspace }}/pending
         run: npm run import-zone2
-
-      - name: Remove processed files
-        run: |
-          git rm pending/*.json
-          git checkout -- pending/.gitkeep 2>/dev/null || true
 
       - name: Commit and push
         run: |
@@ -37,5 +40,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/data/zone2_log.json src/data/activities.json
           git diff --cached --quiet && echo "Nothing new to import" && exit 0
-          git commit -m "Import Zone2 session from pending"
+          git commit -m "Import Zone2 session from phone"
           git push
