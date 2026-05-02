@@ -99,17 +99,11 @@ export default function Overview({ sessions }) {
             <div className="absolute left-3 top-0 bottom-0 w-px bg-surface-3" />
             <div className="space-y-3">
               <ArcEvent date="Oct 2025"     color="bg-red-500"     text="Training stopped — cellulitis → tenosynovitis surgery" />
-              <ArcEvent date="Nov–Jan"      color="bg-orange-500"  text="PT irritated trigger fingers on both small fingers" />
               <ArcEvent date="Feb 26, 2026" color="bg-orange-400"  text="A1 pulley release — small finger, right hand" />
               <ArcEvent date="Mar 26, 2026" color="bg-yellow-500"  text="A1 pulley release — small finger, left hand" />
-              <ArcEvent date="Apr 4, 2026"  color="bg-accent"      text="First session back — 5,553 lbs · 4/5" active />
-              <ArcEvent date="Apr 5"        color="bg-accent"      text="Session 2 — sore legs, first hamstring PRs" active />
-              <ArcEvent date="Apr 18"       color="bg-accent"      text="Session 3 — shot day, hip thrust PR 56 lbs · 4.5/5" active shot />
-              <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Session 4 — glute bridge 120 lbs, PRs everywhere · 5/5" active />
-              <ArcEvent date="Apr 25"       color="bg-emerald-400" text="Session 5 — shot day, floor bridge + ankle straps, 3 PRs · 4/5" active shot />
-              <ArcEvent date="Apr 25"       color="bg-emerald-400" text="Session 6 (bonus) — Free Lift hip thrust 65 lbs, bench fix confirmed · 5/5" active />
-              <ArcEvent date="Apr 26"       color="bg-emerald-400" text="Session 7 — fasted, Hamstring + Quad Strength, 2 PRs + 3-circuit core finisher · 4/5" active />
-              <ArcEvent date="Apr 26"       color="bg-emerald-400" text="Session 8 (warmup) — Free Lift hip thrust 40 lbs pre-workout" active />
+              <ArcEvent date="Apr 4, 2026"  color="bg-accent"      text="First session back — hands-free lower body only" active />
+              <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Breakout session — glute bridge 120 lbs, PRs across the board · 5/5" active />
+              <ArcEvent date="May 2"        color="bg-emerald-400" text="Hands cleared — first upper body session, hip thrust strength + power PR at 62 lbs" active />
             </div>
           </div>
         </div>
@@ -281,7 +275,6 @@ function findNotablePRs(sessions) {
         : null,
     }))
     .sort((a, b) => (b.growth ?? 0) - (a.growth ?? 0))
-    .slice(0, 6)
 }
 
 const SESSION_NARRATIVES = {
@@ -293,6 +286,7 @@ const SESSION_NARRATIVES = {
   '084ab93a-fe9c-49f3-b773-78451edea6d6': 'Bonus session immediately post-workout to test the bench slide fix. Yoga mat under bench + weight plates behind legs — held through 65 lbs. Strength, Power, and Volume PR in one set. Rated 5/5.',
   'db03899d-36f9-46a7-b51c-c34cb53ab5bb': 'Fasted session, 14.5 hr fast. Glutes at 21% from Apr 25 double session — hip thrust done as a separate Free Lift warmup only. Two PRs: Prone Bench SL Hamstring Curl 25 lbs (+25%) and Standing Leg Extension 35 lbs (+21%). Followed by 3-circuit core finisher off-Tonal (dead bug, pilates teaser, bicycle crunches, clamshells, hollow hold, wall pushups, glute bridge march). Right inner groin clicks on dead bug — monitor.',
   '6730f404-c0da-42ab-87e8-e1b72e7c81e3': 'Pre-workout Free Lift hip thrust warmup only — 40 lbs × 10 reps, 1.5 min. Glutes too depleted from Apr 25 for a real hip thrust session.',
+  'f61fce07-1e13-4dfc-8eec-f5a2c32a661a': 'First Hands Back — first upper body session since surgery. Tonal crashed mid-workout during bench press sets 2–3. Still got a hip thrust strength + power PR at 62 lbs. Shot day. Energy 5/5.',
 }
 
 function buildRecap(s) {
