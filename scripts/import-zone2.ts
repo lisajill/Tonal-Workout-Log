@@ -2,7 +2,7 @@ import 'dotenv/config'
 import fs from 'fs'
 import path from 'path'
 
-const ZONE2_DIR    = path.join(process.env.HOME!, 'Documents/Claude/Zone2Sessions')
+const ZONE2_DIR    = process.env.ZONE2_SOURCE_DIR ?? path.join(process.env.HOME!, 'Documents/Claude/Zone2Sessions')
 const CARDIO_FILE  = path.join(process.cwd(), 'src/data/zone2_log.json')
 const ACTIVITY_FILE = path.join(process.cwd(), 'src/data/activities.json')
 

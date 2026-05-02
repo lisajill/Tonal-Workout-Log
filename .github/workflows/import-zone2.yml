@@ -1,0 +1,41 @@
+name: Import Zone2 Workout
+
+on:
+  push:
+    paths:
+      - 'pending/*.json'
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run import
+        env:
+          ZONE2_SOURCE_DIR: ${{ github.workspace }}/pending
+        run: npm run import-zone2
+
+      - name: Remove processed files
+        run: |
+          git rm pending/*.json
+          git checkout -- pending/.gitkeep 2>/dev/null || true
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/zone2_log.json src/data/activities.json
+          git diff --cached --quiet && echo "Nothing new to import" && exit 0
+          git commit -m "Import Zone2 session from pending"
+          git push
