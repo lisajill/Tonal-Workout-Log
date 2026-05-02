@@ -23,7 +23,7 @@
 - **Smart Flex:** ON for all working blocks (`flex: true` in API). OFF for warmup sets.
 - **No squats, no lunges** — right knee injury (sharp pain on downward phase)
 - **Monitor Standing Leg Extension** carefully — right leg self-limits to ~27 lbs with reduced ROM, stopping before 80° knee flexion where twitch/pain occurs. Left leg can go heavier. Do not let Smart Flex push right leg past comfortable ROM.
-- **Current constraint:** Hands-free lower body only (both hands post-op). Right hand ~week 7+ post-op Apr 18. Left hand cleared of infection ~Apr 14.
+- **Hand status:** Both hands cleared as of May 2, 2026 ("First Hands Back" session). Upper body and full compound movements are now available. Right hand was post-op Apr 18; cleared for use ~7 weeks later. No longer restricted to hands-free movements.
 
 ---
 
@@ -74,7 +74,7 @@
 | Movement | ID | Muscles | Accessories | Notes |
 |---|---|---|---|---|
 | Barbell Lying Glute Bridge | `b686f885-427c-4e64-9aa3-4b485c82678e` | Glutes, Hamstrings | Roller, Mat | Floor version — barbell rests on hips, hands-free ✓. **Smart Flex overshoots** — proposed 132 lbs on Apr 25 (unbudgeable). Working range was 100–120 lbs. Always start warmup manually at ~75 lbs and adjust before Smart Flex takes over. |
-| Barbell Hip Thrust | `d44826e1-f6b3-4bed-9d6f-8456d9cde3ec` | Glutes, Hamstrings | Bench, Roller | **Bench slides** — fixed with yoga mat under bench + weight plates behind legs. Tested Apr 25: held through 65 lbs working set. Find the right bench distance from machine before loading. |
+| Barbell Hip Thrust | `d44826e1-f6b3-4bed-9d6f-8456d9cde3ec` | Glutes, Hamstrings | Bench, Roller | **Bench slides** — fixed with yoga mat under bench + weight plates behind legs. Tested Apr 25: held through 65 lbs working set. Find the right bench distance from machine before loading. **API weight is per-cable (half of app-displayed total)** — e.g. API returns 31 lbs when app shows 62 lbs. Always store the app-displayed weight in sessions.json. Smart Flex can push aggressively (strength PR at 62 lbs on May 2). |
 | Resisted Glute Bridge | `93457225-18db-41bc-974e-e874fb4d07d1` | Glutes, Abs, Hamstrings | Mat | Uses **handles** — NOT hands-free. Exclude. |
 
 ---
@@ -145,7 +145,7 @@ Block 8: Isolation C — working sets (3×4, flex: true)
 1. **Before workout:** Call `getMuscleReadiness()`. Write to Obsidian session note frontmatter at:
    `Health & Wellness/Tonal/Sessions/YYYY-MM-DD Workout Name.md`
 2. **After workout:** Run `npm run fetch` to pull API data (volume, reps, TUT, kJ) into sessions.json. Manually fill in: `energy_level`, `subjective_rating`, `sweat`, `avg_hr`, `max_hr`, `calories`, `post_readiness`, `prs`, `muscles_high_volume`, `muscles_low_volume`, `functional_strength`, `movement_quality`, `movement_quality_delta`, `strength_overall/upper/core/lower`.
-   - **post_readiness**: capture from the Tonal app's Muscle Readiness screen immediately after. If only categories are visible (not exact %), use: Fresh ≈ 100, Recovering ≈ 50, Fatigued ≈ 15.
+   - **post_readiness**: use the `mcp__tonal-strength__get_readiness` MCP tool immediately after the workout — it returns exact percentages per muscle. Do NOT use the TypeScript client for this; the raw API endpoint returns 404. If the MCP is unavailable, fall back to app screenshot categories: Fresh ≈ 100, Recovering ≈ 50, Fatigued ≈ 15.
    - **sweat scale**: use text labels — `dry`, `light`, `moderate`, `heavy`. Never use numbers.
    - **FS/MQ**: from Goal Progress screen (Focus Area + Interests tabs).
    - **Strength scores**: from the Strength Score screen (Overall + region breakdown).
