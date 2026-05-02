@@ -1627,5 +1627,123 @@
     "strength_upper": 461,
     "strength_core": 450,
     "strength_lower": 493
+  },
+  {
+    "date": "2026-05-02",
+    "workout": "First Hands Back",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 4,
+    "sweat": "dry",
+    "calories": 46,
+    "avg_hr": 97,
+    "max_hr": 129,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": 75,
+      "hamstrings": 99,
+      "quads": 100,
+      "calves": 100,
+      "abs": 97,
+      "obliques": 100,
+      "back": 89,
+      "chest": 82,
+      "shoulders": 96,
+      "biceps": 96,
+      "triceps": 95
+    },
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": 62,
+        "date": "2026-05-02"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes",
+      "chest"
+    ],
+    "muscles_low_volume": [
+      "back",
+      "abs",
+      "hamstrings",
+      "shoulders",
+      "biceps",
+      "triceps"
+    ],
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 31
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 62,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 56
+          }
+        ]
+      },
+      {
+        "name": "Bench Press",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 35
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 20
+          }
+        ]
+      },
+      {
+        "name": "Seated Lat Pulldown",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-02T13:15:24.407635-04:00",
+    "duration": 24.45,
+    "total_volume": 1949,
+    "total_reps": 40,
+    "time_under_tension": 2.92,
+    "total_work_kj": 5,
+    "tonal_activity_id": "f61fce07-1e13-4dfc-8eec-f5a2c32a661a",
+    "functional_strength": 130,
+    "movement_quality": 44,
+    "movement_quality_delta": null,
+    "strength_overall": 468,
+    "strength_upper": 461,
+    "strength_core": 450,
+    "strength_lower": 494,
+    "notes": "Tonal crashed mid-workout during bench press sets 2–3. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs × 10), seated lat pulldown 1 set (25 lbs × 5). Neutral lat pulldown not reached."
   }
 ]
