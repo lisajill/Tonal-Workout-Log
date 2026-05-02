@@ -72,7 +72,7 @@ export default function Overview({ sessions }) {
           <div className="space-y-2">
             <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Compounded Tirzepatide (GLP-1)" />
             <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
-            <Goal icon="🤲" text="Reassess upper body reintroduction once hands are cleared" />
+            <Goal icon="🤲" text="Reintegrate upper body — hands cleared May 2, 2026. Build back compound pressing and pulling." />
             <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
             <Goal icon="❤️" text="Zone 2 cardio — 150 min/week target (Rhonda Patrick protocol). Walks + Hydrow rowing once cleared post-May 4" />
             <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
@@ -81,12 +81,12 @@ export default function Overview({ sessions }) {
         <div className="card">
           <h2 className="label mb-3">Training Context</h2>
           <div className="space-y-2">
-            <ContextItem label="Current constraint" value="Hands-free lower body only — both hands post-op" />
-            <ContextItem label="Right hand"         value="Light grip available, ~week 7 post-op at Apr 18" />
-            <ContextItem label="Left hand"          value="No grip — cleared of infection ~Apr 14" />
+            <ContextItem label="Hand status"         value="Both hands cleared — upper body training resumed May 2, 2026" />
+            <ContextItem label="Right hand"         value="Post-op (A1 pulley release Feb 2026) — cleared ~7 weeks post-Apr 18" />
+            <ContextItem label="Left hand"          value="Post-op (A1 pulley release Mar 2026) — cleared of infection ~Apr 14" />
             <ContextItem label="Medication"         value="Compounded Tirzepatide (GLP-1) — shot day affects energy and output" />
             <ContextItem label="Life stage"         value="Perimenopause — training adapted accordingly" />
-            <ContextItem label="Next milestone"     value="Upper body reassessment when hands are cleared" />
+            <ContextItem label="Next milestone"     value="Return to riding — target mid-May 2026" />
           </div>
         </div>
       </div>
