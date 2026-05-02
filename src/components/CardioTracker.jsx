@@ -119,7 +119,7 @@ export default function CardioTracker() {
           <span className="text-3xl font-bold tabular-nums text-zinc-200">
             {Math.round(currentWeek.total)}m
           </span>
-          <span className="text-xs text-zinc-500">{currentWeek.sessions} session{currentWeek.sessions !== 1 ? 's' : ''}</span>
+          <span className="text-xs text-zinc-500">all zones · {currentWeek.sessions} session{currentWeek.sessions !== 1 ? 's' : ''}</span>
         </div>
 
         <div className="card flex flex-col gap-1">
@@ -127,7 +127,7 @@ export default function CardioTracker() {
           <span className="text-3xl font-bold tabular-nums text-accent">
             {Math.round(cardioLog.reduce((s, e) => s + (e.zone2_min ?? 0), 0))}m
           </span>
-          <span className="text-xs text-zinc-500">{cardioLog.length} sessions</span>
+          <span className="text-xs text-zinc-500">fat burn only · {cardioLog.length} sessions</span>
         </div>
 
         <div className="card flex flex-col gap-1">
