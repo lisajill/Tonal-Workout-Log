@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import cardioLog from '../data/zone2_log.json'
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -37,6 +38,14 @@ function getWeekStart(dateStr) {
 function shortDate(d) {
   const [, m, day] = d.split('-')
   return `${parseInt(m)}/${parseInt(day)}`
+}
+
+function weekLabel(weekStart) {
+  const [y, m, d] = weekStart.split('-').map(Number)
+  const sun = new Date(y, m - 1, d)
+  const sat = new Date(y, m - 1, d + 6)
+  const fmt = dt => `${dt.toLocaleString('default', { month: 'short' })} ${dt.getDate()}`
+  return `${fmt(sun)} – ${fmt(sat)}`
 }
 
 function activityIcon(activity) {
@@ -80,6 +89,27 @@ export default function CardioTracker() {
 
   // All sessions sorted desc
   const allSessions = [...cardioLog].sort((a, b) => (b.timestamp ?? b.date).localeCompare(a.timestamp ?? a.date))
+
+  // Group sessions by calendar week (Sun–Sat), newest first
+  const weeklyGroups = []
+  const weekSessionMap = {}
+  for (const s of allSessions) {
+    const wk = getWeekStart(s.date)
+    if (!weekSessionMap[wk]) {
+      weekSessionMap[wk] = { weekStart: wk, sessions: [], totalMin: 0, z2Min: 0 }
+      weeklyGroups.push(weekSessionMap[wk])
+    }
+    weekSessionMap[wk].sessions.push(s)
+    weekSessionMap[wk].totalMin += s.duration_min ?? 0
+    weekSessionMap[wk].z2Min += s.zone2_min ?? 0
+  }
+
+  const [openWeeks, setOpenWeeks] = useState(new Set())
+  const toggleWeek = wk => setOpenWeeks(prev => {
+    const next = new Set(prev)
+    next.has(wk) ? next.delete(wk) : next.add(wk)
+    return next
+  })
 
   // Activity breakdown (all time)
   const activityMap = {}
@@ -219,29 +249,56 @@ export default function CardioTracker() {
               </tr>
             </thead>
             <tbody>
-              {allSessions.map(s => (
-                <tr key={s.uuid} className="border-b border-surface-3/40">
-                  <td className="py-2.5 pr-4 text-zinc-400 tabular-nums">{s.date}</td>
-                  <td className="py-2.5 pr-4 text-zinc-200">
-                    {activityIcon(s.activity)} {s.activity}
-                    {s.notes && <span className="ml-1.5 text-[11px] text-amber-400/80">· {s.notes}</span>}
-                  </td>
-                  <td className="py-2.5 pr-4 text-zinc-400 tabular-nums text-right">{s.duration_min}m</td>
-                  <td className="py-2.5 pr-4 tabular-nums text-right">
-                    <span className={s.zone2_min > 0 ? 'font-semibold' : 'text-zinc-600'} style={s.zone2_min > 0 ? { color: ZONE_COLORS.zone2 } : {}}>
-                      {s.zone2_min > 0 ? `${s.zone2_min}m` : '—'}
-                    </span>
-                  </td>
-                  <td className="py-2.5 pr-4 tabular-nums text-right text-zinc-500">
-                    {s.zone3_min > 0 ? `${s.zone3_min}m` : '—'}
-                  </td>
-                  <td className="py-2.5 pr-4 tabular-nums text-right text-zinc-500">
-                    {s.zone4_min > 0 ? `${s.zone4_min}m` : '—'}
-                  </td>
-                  <td className="py-2.5 pr-4 text-zinc-400 tabular-nums text-right">{s.avg_hr ? `${s.avg_hr}` : '—'}</td>
-                  <td className="py-2.5 text-zinc-400 tabular-nums text-right">{s.distance_mi ?? '—'}</td>
-                </tr>
-              ))}
+              {weeklyGroups.map((group, idx) => {
+                const isCurrent = idx === 0
+                const isOpen = isCurrent || openWeeks.has(group.weekStart)
+                return (
+                  <>
+                    <tr
+                      key={`hdr-${group.weekStart}`}
+                      className={`border-b border-surface-3 ${!isCurrent ? 'cursor-pointer hover:bg-surface-2/50' : ''}`}
+                      onClick={!isCurrent ? () => toggleWeek(group.weekStart) : undefined}
+                    >
+                      <td colSpan={8} className="py-2">
+                        <div className="flex items-center justify-between">
+                          <span className="text-zinc-300 font-medium text-xs">
+                            {isCurrent ? 'This week' : weekLabel(group.weekStart)}
+                          </span>
+                          <div className="flex items-center gap-3 text-zinc-500 text-xs">
+                            <span>{Math.round(group.totalMin)}m total</span>
+                            <span style={{ color: ZONE_COLORS.zone2 }}>{Math.round(group.z2Min)}m Z2</span>
+                            <span>{group.sessions.length} session{group.sessions.length !== 1 ? 's' : ''}</span>
+                            {!isCurrent && <span className="text-zinc-600">{isOpen ? '▲' : '▼'}</span>}
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    {isOpen && group.sessions.map(s => (
+                      <tr key={s.uuid} className="border-b border-surface-3/40">
+                        <td className="py-2.5 pr-4 text-zinc-400 tabular-nums">{s.date}</td>
+                        <td className="py-2.5 pr-4 text-zinc-200">
+                          {activityIcon(s.activity)} {s.activity}
+                          {s.notes && <span className="ml-1.5 text-[11px] text-amber-400/80">· {s.notes}</span>}
+                        </td>
+                        <td className="py-2.5 pr-4 text-zinc-400 tabular-nums text-right">{s.duration_min}m</td>
+                        <td className="py-2.5 pr-4 tabular-nums text-right">
+                          <span className={s.zone2_min > 0 ? 'font-semibold' : 'text-zinc-600'} style={s.zone2_min > 0 ? { color: ZONE_COLORS.zone2 } : {}}>
+                            {s.zone2_min > 0 ? `${s.zone2_min}m` : '—'}
+                          </span>
+                        </td>
+                        <td className="py-2.5 pr-4 tabular-nums text-right text-zinc-500">
+                          {s.zone3_min > 0 ? `${s.zone3_min}m` : '—'}
+                        </td>
+                        <td className="py-2.5 pr-4 tabular-nums text-right text-zinc-500">
+                          {s.zone4_min > 0 ? `${s.zone4_min}m` : '—'}
+                        </td>
+                        <td className="py-2.5 pr-4 text-zinc-400 tabular-nums text-right">{s.avg_hr ? `${s.avg_hr}` : '—'}</td>
+                        <td className="py-2.5 text-zinc-400 tabular-nums text-right">{s.distance_mi ?? '—'}</td>
+                      </tr>
+                    ))}
+                  </>
+                )
+              })}
             </tbody>
           </table>
         )}
