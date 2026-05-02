@@ -11,6 +11,7 @@
     "import-zone2": "tsx scripts/import-zone2.ts"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "recharts": "^2.13.0"
