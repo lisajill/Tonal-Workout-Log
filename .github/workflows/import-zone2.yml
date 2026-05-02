@@ -3,8 +3,8 @@ name: Import Zone2 Workout
 on:
   workflow_dispatch:
     inputs:
-      workout_json:
-        description: 'Raw workout JSON'
+      workout_b64:
+        description: 'Base64-encoded workout JSON'
         required: true
         type: string
 
@@ -25,9 +25,7 @@ jobs:
       - run: npm ci
 
       - name: Write workout file
-        env:
-          WORKOUT_JSON: ${{ inputs.workout_json }}
-        run: printf '%s' "$WORKOUT_JSON" > pending/workout.json
+        run: echo "${{ inputs.workout_b64 }}" | base64 -d > pending/workout.json
 
       - name: Run import
         env:
