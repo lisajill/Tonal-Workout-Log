@@ -80,7 +80,9 @@ for (const file of files) {
   const date = data.startDate?.slice(0, 10) ?? 'unknown'
   const toMin = (sec: number) => Math.round((sec / 60) * 10) / 10
   const rawActivity = data.source === 'Tonal' ? 'Tonal' : (data.activity?.name ?? data.name ?? 'Unknown')
-  const activity = rawActivity === 'Indoor Walk' ? 'Treadmill' : rawActivity
+  const activity = rawActivity === 'Indoor Walk' ? 'Treadmill'
+    : rawActivity === 'Hydrow' ? 'Rowing'
+    : rawActivity
 
   // Always add to cardio log (zone/HR data useful for everyone)
   cardioEntries.push({
@@ -113,8 +115,8 @@ for (const file of files) {
   }
 }
 
-cardioEntries.sort((a, b) => a.date.localeCompare(b.date))
-activityEntries.sort((a, b) => a.date.localeCompare(b.date))
+cardioEntries.sort((a, b) => ((a as any).timestamp ?? a.date).localeCompare((b as any).timestamp ?? b.date))
+activityEntries.sort((a, b) => ((a as any).timestamp ?? a.date).localeCompare((b as any).timestamp ?? b.date))
 
 fs.writeFileSync(CARDIO_FILE, JSON.stringify(cardioEntries, null, 2))
 fs.writeFileSync(ACTIVITY_FILE, JSON.stringify(activityEntries, null, 2))

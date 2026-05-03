@@ -480,5 +480,26 @@
     "zone4_min": 0,
     "avg_hr": 97,
     "distance_mi": 0.97
+  },
+  {
+    "uuid": "57527050-995D-45CF-96F3-7F634EA10425",
+    "date": "2026-05-03",
+    "timestamp": "2026-05-03T20:08:58Z",
+    "activity": "Rowing",
+    "duration_min": 15.0,
+    "zone1_min": 7.4,
+    "zone2_min": 6.8,
+    "zone3_min": 0.8,
+    "zone4_min": 0,
+    "avg_hr": 111,
+    "distance_mi": null,
+    "notes": "First rowing session in 15 weeks. Beginner Camp #2 of 11.",
+    "rowing_program": "Beginner Camp #2 of 11",
+    "rowing_distance_m": 1575,
+    "rowing_duration_min": 15.0,
+    "rowing_avg_split": "3:10.5",
+    "rowing_stroke_rate_spm": 23,
+    "rowing_avg_watts": 57,
+    "rowing_drag": 104
   }
 ]
