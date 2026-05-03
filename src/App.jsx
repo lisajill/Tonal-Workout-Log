@@ -43,10 +43,11 @@ const TAB_GROUPS = [
   },
   {
     label: 'Cardio',
-    tabs: [
-      { id: 'cardio', label: 'Cardio' },
-      { id: 'rowing', label: 'Rowing' },
-    ],
+    tabs: [{ id: 'cardio', label: 'Cardio' }],
+  },
+  {
+    label: 'Rowing',
+    tabs: [{ id: 'rowing', label: 'Rowing' }],
   },
 ]
 
