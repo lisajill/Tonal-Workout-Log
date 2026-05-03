@@ -86,10 +86,10 @@ export default function CardioTracker() {
   }
   const z2pct = Math.min(100, Math.round((currentWeek.zone2 / WEEKLY_Z2_TARGET) * 100))
 
-  // All sessions sorted desc
+  // All sessions sorted desc (most recent first) by timestamp ?? date
   const allSessions = [...cardioLog].sort((a, b) => (b.timestamp ?? b.date).localeCompare(a.timestamp ?? a.date))
 
-  // Group sessions by calendar week (Sun–Sat), newest first
+  // Group sessions by calendar week (Sun–Sat), newest week first; sessions within each week also newest first
   const weeklyGroups = []
   const weekSessionMap = {}
   for (const s of allSessions) {
@@ -117,7 +117,7 @@ export default function CardioTracker() {
   }
 
   // HR trend (sessions with avg_hr)
-  const hrData = allSessions.filter(s => s.avg_hr).reverse().map(s => ({
+  const hrData = allSessions.filter(s => s.avg_hr).map(s => ({
     label: shortDate(s.date),
     avg_hr: s.avg_hr,
     date: s.date,
