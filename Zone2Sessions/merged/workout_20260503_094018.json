@@ -1,0 +1,82 @@
+{
+    "uuid": "FAE2898B-F5EC-4E6F-A0EF-737A6FC7DD26",
+    "name": "Tonal",
+    "activity": {
+        "name": "Traditional Strength Training",
+        "type": 50
+    },
+    "startDate": "2026-05-03T13:40:18Z",
+    "endDate": "2026-05-03T13:42:30Z",
+    "source": "Tonal",
+    "location": "Indoor",
+    "zones": {
+        "zone4": {
+            "name": "PEAK",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone3": {
+            "name": "CARDIO",
+            "rate": 0.08324,
+            "time": {
+                "value": 10,
+                "unit": "sec"
+            }
+        },
+        "zone2": {
+            "name": "FAT BURN",
+            "rate": 0.86421,
+            "time": {
+                "value": 114,
+                "unit": "sec"
+            }
+        },
+        "zone1": {
+            "name": "WARM UP",
+            "rate": 0.05255,
+            "time": {
+                "value": 6,
+                "unit": "sec"
+            }
+        }
+    },
+    "duration": {
+        "value": 131,
+        "unit": "sec"
+    },
+    "activeCalories": {
+        "value": 10,
+        "unit": "kcal"
+    },
+    "averageIntensity": {
+        "value": 68,
+        "unit": "%"
+    },
+    "minIntensity": {
+        "value": 59,
+        "unit": "%"
+    },
+    "maxIntensity": {
+        "value": 77,
+        "unit": "%"
+    },
+    "averageHeartRate": {
+        "value": 122,
+        "unit": "bpm"
+    },
+    "minHeartRate": {
+        "value": 107,
+        "unit": "bpm"
+    },
+    "maxHeartRate": {
+        "value": 138,
+        "unit": "bpm"
+    },
+    "device": {
+        "name": "Tonal",
+        "manufacturer": "Tonal Systems, Inc."
+    }
+}
