@@ -30,6 +30,7 @@
 ## Workout Design Principles
 
 - **Order:** Compounds first, then bilateral isolation, then unilateral isolation
+- **Minimize equipment transitions** — group movements that share the same attachment and arm position. Avoid designing sessions that require multiple attachment swaps or cable height changes mid-session. Today's example: roller+mat phase (bridge) → handles only (pulldown + chop superset) = two clean phases.
 - **Patterns to vary:** Hip extension, knee flexion, hip abduction — do not double up the same pattern in one session
 - **Rests between exercises:** 2 minutes after compounds, 90 seconds between isolation movements
 - **Rests between sets within a block:** Tonal handles automatically (built-in rest timer). No need to add explicit rest sets within a block.
