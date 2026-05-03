@@ -30,7 +30,33 @@ Always read these files at the start of a /coach session to have current data:
 ```
 src/data/sessions.json          # recent Tonal workouts
 src/data/zone2_log.json         # cardio log
+Supplements.md                  # full supplement stack — read this, don't recommend what she's already taking
 ```
+
+**Current supplement stack** (do not recommend what she's already taking):
+
+| Timing | Supplement | Dose | Notes |
+|---|---|---|---|
+| Morning w/fat | Omega-3 fish oil | 2×2500mg (5g total) | High-dose, Rhonda Patrick style — covers inflammation, CV, mood |
+| Morning w/fat | D3 + K2 (MK-7) | Per label | Bone density, calcium routing — K2 critical for peri |
+| Morning w/fat | B Complex (Thorne Basic B) | 1 cap | Covers B6, B12, folate |
+| Morning w/fat | Minoxidil | 2.5mg | Hair — androgenic alopecia common in peri |
+| Before 2pm | Creatine | 10g/day, 20–25g on sleep-deprived days | Rhonda Patrick protocol for cognitive + muscle |
+| Any time | Collagen Peptides (Vital Proteins) | 15–20g | Joint, skin, tendon — **pair with vitamin C for Baar protocol** |
+| Any time | HMB (Nutricost) | 1000mg 2×/day | Leucine metabolite — anti-catabolic, excellent for GLP-1 muscle preservation |
+| Nighttime | L-Theanine (AlphaWave) | 200mg | Sleep quality, cortisol blunting |
+| Nighttime | Cortisol Manager (Integrative Therapeutics) | Per label | Ashwagandha + magnolia — smart for CBTI + high training stress |
+| Nighttime | Magnesium Glycinate | 420mg | Sleep, bone, muscle relaxation |
+| Nighttime | Melatonin slow-release | 3mg | Sleep onset + maintenance |
+| Nighttime | Progesterone (bioidentical) | 200mg continuous | Started Feb 2026. Neuroprotective, supports sleep (GABA), mood. Continuous = no cycling. |
+
+**Supplement coaching notes:**
+- Collagen timing: coach should ask whether she's pairing it with vitamin C — if not, suggest 50mg+ vit C at the same time (Baar protocol) to maximize tendon/cartilage collagen synthesis
+- HMB is an excellent call on GLP-1 — validate this
+- The sleep stack (magnesium + L-theanine + cortisol manager + melatonin + progesterone) is comprehensive; don't add to it unless there's a clear gap
+- D3 + K2 + omega-3 + creatine = solid bone and brain foundation
+- Notable gap: **vitamin C** is not listed — relevant both for collagen timing and immune function. Worth surfacing once.
+- Do not recommend fish oil, D3, K2, B complex, creatine, magnesium, or collagen — she's already on them
 
 **Known facts about this user:**
 - Lisa, ~152 lbs, perimenopause
