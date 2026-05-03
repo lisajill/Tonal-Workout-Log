@@ -25,16 +25,18 @@ Calories (from rowing machine):
 Notes (form, effort, anything notable):
 ```
 
-Also check Zone2Sessions/ for Zones export JSONs for this date. If present, run the import:
+Also check Zone2Sessions/ for Zones export JSONs for this date. Hydrow JSONs have `"source": "Hydrow"` and `"activity": {"type": 35}` (HKWorkoutActivityType.rowing). The import script maps them to activity "Rowing". If present and not yet imported, run:
 ```bash
 cd /Users/moment/Sites/Workout-Tracker && npm run import-zone2
 ```
 
-Then find the matching entry in `src/data/zone2_log.json` (match by date + "Tonal" or "Rowing" activity — Zones exports Hydrow/erg as "Tonal" / "Traditional Strength Training").
+Then find the matching entry in `src/data/zone2_log.json` (match by date + "Rowing" activity and source UUID).
+
+**Do NOT mistake morning Tonal sessions (source: "Tonal", type 50) for Hydrow rowing sessions.** Check source field in the JSON before assuming any session is the row.
 
 ## Step 2 — Detect and confirm cooldown merge
 
-After import, scan `zone2_log.json` for any same-day "Tonal" or "Rowing" entries that follow the main session and look like a cooldown:
+After import, scan `zone2_log.json` for any same-day "Rowing" entries that follow the main session and look like a cooldown:
 - Duration ≤ 5 min
 - `avg_hr` lower than the main session's `avg_hr`, OR a short burst that's coming down (high Z1, low Z3/Z4)
 - Start time within ~15 min of the main session's end time
