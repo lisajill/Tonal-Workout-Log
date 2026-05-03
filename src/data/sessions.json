@@ -1812,7 +1812,8 @@
     "total_work_kj": 0,
     "tonal_activity_id": "e14b0170-141a-4d6e-a243-f3983650ff25",
     "shot_day": false,
-    "notes": "Post-workout custom lift — 2 sets Farmer March, 28 lbs."
+    "notes": "Post-workout custom lift — 2 sets Farmer March, 28 lbs.",
+    "merged_into": "53adbfc8-8448-4abf-913e-a9ae9123553f"
   },
   {
     "date": "2026-05-03",
@@ -1821,7 +1822,7 @@
     "phase": "active",
     "subjective_rating": 5,
     "sweat": "dry",
-    "calories": 55,
+    "calories": 65,
     "avg_hr": 97,
     "max_hr": 137,
     "pre_readiness": {
@@ -1996,10 +1997,26 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Farmer March",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 28,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 28,
+            "duration_sec": 30
+          }
+        ]
       }
     ],
     "timestamp": "2026-05-03T09:15:59.81188-04:00",
-    "duration": 22.87,
+    "duration": 25.05,
     "total_volume": 4615,
     "total_reps": 87,
     "time_under_tension": 7.42,
@@ -2013,6 +2030,6 @@
     "functional_strength": 244,
     "movement_quality": 127,
     "movement_quality_delta": 83,
-    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs — strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked)."
+    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs — strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked). Followed by 2×30s Farmer March free lift, 28 lbs."
   }
 ]

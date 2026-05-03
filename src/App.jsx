@@ -11,7 +11,8 @@ import MuscleMatrix from './components/MuscleMatrix.jsx'
 import StrengthScores from './components/StrengthScores.jsx'
 import CurrentReadiness from './components/CurrentReadiness.jsx'
 import CardioTracker from './components/CardioTracker.jsx'
-import sessions from './data/sessions.json'
+import rawSessions from './data/sessions.json'
+const sessions = rawSessions.filter(s => !s.merged_into)
 
 const TAB_GROUPS = [
   {
