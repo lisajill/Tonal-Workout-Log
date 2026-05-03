@@ -22,6 +22,8 @@ Read all of these before designing the workout. Follow TonalInstructions.md exac
 
 Run a tsx script to call `getMuscleReadiness()` via the TypeScript client. Show the user their current readiness for glutes, hamstrings, quads, calves, and the rest. Flag any muscle below 70% as a caution.
 
+Immediately after fetching, write the pre-workout Obsidian session note with readiness populated. Use a placeholder filename `Health & Wellness/Tonal/Sessions/YYYY-MM-DD In Progress.md` since the workout name isn't known yet. Use the frontmatter template from TonalInstructions.md — populate `pre_readiness` with the live values, leave all other post-workout fields as null. This ensures readiness is captured even if the session is cancelled before approval.
+
 ## Step 3 — Ask for workout parameters
 
 Ask the user:
@@ -58,12 +60,12 @@ Show the full workout as a table:
 
 Ask: "Send it?" Do NOT call createWorkout until the user explicitly approves.
 
-## Step 6 — Write Obsidian pre-workout note
+## Step 6 — Finalize Obsidian pre-workout note
 
-Before creating the workout on Tonal, write the session note to Obsidian at:
+The placeholder note was created in Step 2. Now that the workout name is known, recreate it at the correct path:
 `Health & Wellness/Tonal/Sessions/YYYY-MM-DD Workout Name.md`
 
-Use the frontmatter template from TonalInstructions.md. Populate pre_readiness with the live values from Step 2. Leave all post-workout fields as null.
+DELETE the placeholder (`YYYY-MM-DD In Progress.md`) and PUT the final note with the workout name in the filename. Use the same frontmatter from Step 2 — `pre_readiness` is already populated, leave post-workout fields as null.
 
 Use the Obsidian REST API (https://127.0.0.1:27124, Bearer token from OBSIDIAN_API_KEY in .env, --insecure).
 

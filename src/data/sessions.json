@@ -1746,5 +1746,270 @@
     "strength_lower": 494,
     "notes": "Tonal crashed mid-workout during bench press sets 2–3. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs × 10), seated lat pulldown 1 set (25 lbs × 5). Neutral lat pulldown not reached.",
     "shot_day": true
+  },
+  {
+    "date": "2026-05-03",
+    "workout": "Free Lift",
+    "energy_level": 5,
+    "phase": "active",
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": 10,
+    "avg_hr": 123,
+    "max_hr": 138,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Farmer March",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 28
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 28
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-03T09:40:18.764739-04:00",
+    "duration": 2.18,
+    "total_volume": 0,
+    "total_reps": null,
+    "time_under_tension": 1.02,
+    "total_work_kj": 0,
+    "tonal_activity_id": "e14b0170-141a-4d6e-a243-f3983650ff25",
+    "shot_day": false,
+    "notes": "Post-workout custom lift — 2 sets Farmer March, 28 lbs."
+  },
+  {
+    "date": "2026-05-03",
+    "workout": "Glute & Core",
+    "energy_level": 5,
+    "phase": "active",
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 55,
+    "avg_hr": 97,
+    "max_hr": 137,
+    "pre_readiness": {
+      "glutes": 94,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 60,
+      "hamstrings": 98,
+      "quads": 100,
+      "calves": 100,
+      "abs": 83,
+      "obliques": 84,
+      "back": 75,
+      "chest": 100,
+      "shoulders": 95,
+      "biceps": 94,
+      "triceps": 100
+    },
+    "prs": {
+      "barbell_lying_glute_bridge": {
+        "weight": 127,
+        "date": "2026-05-03"
+      },
+      "standing_chop": {
+        "weight": 23,
+        "date": "2026-05-03"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes",
+      "back",
+      "obliques"
+    ],
+    "muscles_low_volume": [
+      "chest",
+      "triceps",
+      "quads"
+    ],
+    "movements": [
+      {
+        "name": "Barbell Lying Glute Bridge",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 126
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 127
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 127
+          }
+        ],
+        "prs": [
+          {
+            "set": 1,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "set": 2,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "set": 3,
+            "prs": [
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Half Kneeling Single Arm Pulldown (Contralateral)",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 40
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 40
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 35
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 35
+          }
+        ]
+      },
+      {
+        "name": "Standing Chop",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 19
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 19
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 21
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 21
+          },
+          {
+            "reps": 9,
+            "weight_lbs": 23
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 23
+          }
+        ],
+        "prs": [
+          {
+            "set": 2,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "set": 3,
+            "prs": [
+              "strength",
+              "power",
+              "volume"
+            ]
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-03T09:15:59.81188-04:00",
+    "duration": 22.87,
+    "total_volume": 4615,
+    "total_reps": 87,
+    "time_under_tension": 7.42,
+    "total_work_kj": 9,
+    "tonal_activity_id": "53adbfc8-8448-4abf-913e-a9ae9123553f",
+    "shot_day": false,
+    "strength_overall": 474,
+    "strength_upper": 462,
+    "strength_core": 454,
+    "strength_lower": 505,
+    "functional_strength": 244,
+    "movement_quality": 127,
+    "movement_quality_delta": 83,
+    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs — strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked)."
   }
 ]
