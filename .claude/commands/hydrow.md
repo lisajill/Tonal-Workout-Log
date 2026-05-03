@@ -32,7 +32,19 @@ cd /Users/moment/Sites/Workout-Tracker && npm run import-zone2
 
 Then find the matching entry in `src/data/zone2_log.json` (match by date + "Tonal" or "Rowing" activity — Zones exports Hydrow/erg as "Tonal" / "Traditional Strength Training").
 
-## Step 2 — Merge Zones + erg data
+## Step 2 — Detect and confirm cooldown merge
+
+After import, scan `zone2_log.json` for any same-day "Tonal" or "Rowing" entries that follow the main session and look like a cooldown:
+- Duration ≤ 5 min
+- `avg_hr` lower than the main session's `avg_hr`, OR a short burst that's coming down (high Z1, low Z3/Z4)
+- Start time within ~15 min of the main session's end time
+
+If a cooldown candidate is found, ask:
+> "Found a short follow-on session (X min, avg HR Y bpm). Merge it into the main rowing entry as a cooldown?"
+
+Only proceed with the merge if the user confirms.
+
+## Step 3 — Merge Zones + erg data
 
 If two separate Zones entries exist for the session (main + cooldown), combine them:
 - Total `duration_min`, `zone*_min` by summing raw seconds, then converting to minutes
@@ -56,7 +68,7 @@ Update the entry:
 "rowing_drag": <number>
 ```
 
-## Step 3 — Create Obsidian note
+## Step 4 — Create Obsidian note
 
 PUT to `https://127.0.0.1:27124/vault/Health%20%26%20Wellness/Cardio/Sessions/YYYY-MM-DD Rowing.md`
 Authorization: Bearer <OBSIDIAN_API_KEY from .env> — always use `--insecure`
@@ -112,7 +124,7 @@ uuid: <UUID>
 
 Only include zone rows where zone > 0 min (always show Zone 2 in bold).
 
-## Step 4 — Show prior session comparison
+## Step 5 — Show prior session comparison
 
 Search zone2_log.json for earlier "Rowing" entries. If any exist, show a comparison table:
 
@@ -123,7 +135,7 @@ Search zone2_log.json for earlier "Rowing" entries. If any exist, show a compari
 
 Goal direction: lower split = faster, higher watts = more powerful.
 
-## Step 5 — Commit and push
+## Step 6 — Commit and push
 
 ```bash
 cd /Users/moment/Sites/Workout-Tracker
@@ -132,6 +144,6 @@ git commit -m "Log rowing session YYYY-MM-DD: <distance>m, <split>/500m, <watts>
 git pull --rebase origin main && git push origin main
 ```
 
-## Step 6 — Report
+## Step 7 — Report
 
 Confirm: note created, zone2_log updated, push succeeded. One line on today's performance vs prior sessions if history exists.
