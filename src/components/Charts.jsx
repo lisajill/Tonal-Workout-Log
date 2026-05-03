@@ -3,6 +3,7 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip, Legend,
   ResponsiveContainer, ReferenceLine, LabelList,
 } from 'recharts'
+import cardioLog from '../data/zone2_log.json'
 
 const TOOLTIP_STYLE = {
   contentStyle: { background: '#18181b', border: '1px solid #303036', borderRadius: 8, fontSize: 12 },
@@ -20,7 +21,31 @@ function shortDate(d) {
   return `${parseInt(m)}/${parseInt(day)}`
 }
 
+function parseSplitSecs(s) {
+  if (!s) return null
+  const [m, sec] = s.split(':')
+  return parseFloat(m) * 60 + parseFloat(sec)
+}
+
+function fmtSplit(secs) {
+  if (secs == null) return '—'
+  const m = Math.floor(secs / 60)
+  const s = (secs % 60).toFixed(1).padStart(4, '0')
+  return `${m}:${s}`
+}
+
 export default function Charts({ sessions }) {
+  const rowingData = [...cardioLog]
+    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split)
+    .sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
+    .map(s => ({
+      label: shortDate(s.date),
+      date: s.date,
+      split_sec: parseSplitSecs(s.rowing_avg_split),
+      watts: s.rowing_avg_watts ?? null,
+      distance: s.rowing_distance_m ?? null,
+      spm: s.rowing_stroke_rate_spm ?? null,
+    }))
   const dateSeen = {}
   const data = sessions.map(s => {
     const base = shortDate(s.date)
@@ -179,6 +204,67 @@ export default function Charts({ sessions }) {
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
+      {/* Rowing charts */}
+      {rowingData.length > 0 && (
+        <>
+          <div className="flex items-center gap-2 pt-2">
+            <span className="text-zinc-400 text-xs font-semibold uppercase tracking-widest">Rowing</span>
+            <div className="flex-1 h-px bg-surface-3" />
+          </div>
+
+          <ChartCard title="Split /500m" subtitle="Avg split per rowing session — lower is faster">
+            <ResponsiveContainer width="100%" height={240}>
+              <LineChart data={rowingData} margin={{ top: 24, right: 16, bottom: 0, left: 0 }}>
+                <CartesianGrid {...GRID} />
+                <XAxis dataKey="label" tick={AXIS_TICK} />
+                <YAxis tick={AXIS_TICK} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
+                <Tooltip {...TOOLTIP_STYLE}
+                  formatter={v => [fmtSplit(v), 'Avg Split']}
+                  labelFormatter={label => rowingData.find(r => r.label === label)?.date ?? label}
+                />
+                <Line type="monotone" dataKey="split_sec" stroke="#6366f1" strokeWidth={2} dot={{ r: 4 }}>
+                  <LabelList dataKey="split_sec" position="top" style={LABEL_STYLE} formatter={v => fmtSplit(v)} />
+                </Line>
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartCard>
+
+          <ChartCard title="Avg Peak Power" subtitle="Watts per rowing session — higher is more powerful">
+            <ResponsiveContainer width="100%" height={240}>
+              <LineChart data={rowingData} margin={{ top: 24, right: 16, bottom: 0, left: 0 }}>
+                <CartesianGrid {...GRID} />
+                <XAxis dataKey="label" tick={AXIS_TICK} />
+                <YAxis tick={AXIS_TICK} unit="W" domain={['auto', 'auto']} />
+                <Tooltip {...TOOLTIP_STYLE}
+                  formatter={v => [`${v} W`, 'Avg Peak Power']}
+                  labelFormatter={label => rowingData.find(r => r.label === label)?.date ?? label}
+                />
+                <Line type="monotone" dataKey="watts" stroke="#f59e0b" strokeWidth={2} dot={{ r: 4 }}>
+                  <LabelList dataKey="watts" position="top" style={LABEL_STYLE} formatter={v => `${v}W`} />
+                </Line>
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartCard>
+
+          <ChartCard title="Rowing Distance" subtitle="Meters per session">
+            <ResponsiveContainer width="100%" height={240}>
+              <BarChart data={rowingData} margin={{ top: 24, right: 16, bottom: 0, left: 0 }} barCategoryGap="30%">
+                <CartesianGrid {...GRID} />
+                <XAxis dataKey="label" tick={AXIS_TICK} />
+                <YAxis tick={AXIS_TICK} unit="m" domain={['auto', 'auto']} />
+                <Tooltip {...TOOLTIP_STYLE}
+                  formatter={v => [`${v}m`, 'Distance']}
+                  labelFormatter={label => rowingData.find(r => r.label === label)?.date ?? label}
+                />
+                <Bar dataKey="distance" fill="#6366f1" radius={[4, 4, 0, 0]}>
+                  <LabelList dataKey="distance" position="top" style={LABEL_STYLE} formatter={v => `${v}m`} />
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartCard>
+        </>
+      )}
+
     </div>
   )
 }

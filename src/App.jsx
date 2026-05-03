@@ -11,6 +11,7 @@ import MuscleMatrix from './components/MuscleMatrix.jsx'
 import StrengthScores from './components/StrengthScores.jsx'
 import CurrentReadiness from './components/CurrentReadiness.jsx'
 import CardioTracker from './components/CardioTracker.jsx'
+import RowingTracker from './components/RowingTracker.jsx'
 import rawSessions from './data/sessions.json'
 const sessions = rawSessions.filter(s => !s.merged_into)
 
@@ -25,7 +26,7 @@ const TAB_GROUPS = [
   {
     label: 'Sessions',
     tabs: [
-      { id: 'log',      label: 'Session Log' },
+      { id: 'log',      label: 'Tonal Sessions' },
       { id: 'sessions', label: 'Detail' },
       { id: 'bodymaps', label: 'Body Maps' },
     ],
@@ -44,6 +45,7 @@ const TAB_GROUPS = [
     label: 'Cardio',
     tabs: [
       { id: 'cardio', label: 'Cardio' },
+      { id: 'rowing', label: 'Rowing' },
     ],
   },
 ]
@@ -161,6 +163,7 @@ export default function App() {
         {tab === 'strength'         && <StrengthScores />}
         {tab === 'current-readiness' && <CurrentReadiness />}
         {tab === 'cardio'    && <CardioTracker />}
+        {tab === 'rowing'    && <RowingTracker />}
       </main>
       </div>
     </>
