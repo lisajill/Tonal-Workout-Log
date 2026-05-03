@@ -74,16 +74,15 @@ export default function CardioTracker() {
   }
   const weeks = Object.values(weekMap).sort((a, b) => a.week.localeCompare(b.week))
 
-  // Rolling 7-day window for the summary cards
+  // Current calendar week (Sun–Sat) for the summary cards
   const today = new Date()
   const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`
-  const sevenDaysAgo = new Date(today - 7 * 24 * 60 * 60 * 1000)
-  const sevenDaysAgoStr = `${sevenDaysAgo.getFullYear()}-${String(sevenDaysAgo.getMonth()+1).padStart(2,'0')}-${String(sevenDaysAgo.getDate()).padStart(2,'0')}`
-  const rolling7 = cardioLog.filter(s => s.date >= sevenDaysAgoStr)
+  const currentWeekStart = getWeekStart(todayStr)
+  const thisWeekSessions = cardioLog.filter(s => s.date >= currentWeekStart)
   const currentWeek = {
-    zone2:    rolling7.reduce((a, s) => a + (s.zone2_min ?? 0), 0),
-    total:    rolling7.reduce((a, s) => a + (s.duration_min ?? 0), 0),
-    sessions: rolling7.length,
+    zone2:    thisWeekSessions.reduce((a, s) => a + (s.zone2_min ?? 0), 0),
+    total:    thisWeekSessions.reduce((a, s) => a + (s.duration_min ?? 0), 0),
+    sessions: thisWeekSessions.length,
   }
   const z2pct = Math.min(100, Math.round((currentWeek.zone2 / WEEKLY_Z2_TARGET) * 100))
 

@@ -56,7 +56,7 @@ No test suite. No linter configured.
 - `src/components/CardioTracker.jsx` — cardio dashboard (zone breakdown, HR trend, session log). Tracking began Apr 19, 2026.
 - Zone 2 = 108–125 bpm (Fat Burn zone). Weekly target: 150 min per Rhonda Patrick protocol.
 - Weeks run **Sunday–Saturday**. `getWeekStart()` uses local date parts (not `new Date('YYYY-MM-DD')` which parses UTC and breaks in negative-offset timezones).
-- **Summary cards** ("This Week Z2", "This Week Total") use a **rolling 7-day window**. "This Week Total" is all-zone duration (not just Z2) — always show "all zones" in the subtitle to avoid confusion with the Z2-only "All-Time Z2" card.
+- **Summary cards** ("This Week Z2", "This Week Total") use the **current calendar week (Sun–Sat)**, same as the session log grouping. "This Week Total" is all-zone duration (not just Z2) — always show "all zones" in the subtitle to avoid confusion with the Z2-only "All-Time Z2" card.
 - **Session Log** groups by **calendar week (Sun–Sat)**. Current week is always expanded; prior weeks collapse to a summary header and expand on click.
 - Walking sessions excluded from readiness model (no soreness unless 25k+ steps).
 - Vest walks are **always explicitly labelled** by the user (e.g. notes: "12 lb weighted vest"). Outdoor walks without a vest label are plain walks — never assume vest.

@@ -1752,8 +1752,8 @@
     "workout": "Free Lift",
     "energy_level": 5,
     "phase": "active",
-    "subjective_rating": null,
-    "sweat": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
     "calories": 10,
     "avg_hr": 123,
     "max_hr": 138,
@@ -1913,7 +1913,8 @@
         "sets": [
           {
             "reps": 0,
-            "weight_lbs": 5
+            "weight_lbs": 5,
+            "duration_sec": 120
           }
         ]
       },

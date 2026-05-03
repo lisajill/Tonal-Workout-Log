@@ -9,6 +9,7 @@ const LIFETIME_PATH = resolve(import.meta.dirname, '../src/data/lifetime-stats.j
 interface MovementSet {
   reps: number
   weight_lbs: number
+  duration_sec?: number
   prs?: string[]
 }
 
@@ -95,6 +96,7 @@ async function main() {
         }
         const entry = byMovement.get(mid)!
         const set: MovementSet = { reps: s.repCount ?? 0, weight_lbs: s.baseWeight ?? 0 }
+        if (s.prescribedDuration) set.duration_sec = s.prescribedDuration
         if (s.warmUp) entry.warmupSets.push(set)
         else entry.workingSets.push(set)
       }

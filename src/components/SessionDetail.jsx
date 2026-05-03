@@ -192,7 +192,7 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp }) 
                     <td className="py-2 pr-4 text-zinc-300 whitespace-nowrap">{m.name}</td>
                     <td className="py-2 pr-6 text-zinc-500 tabular-nums text-right whitespace-nowrap">
                       {m.warmup_sets > 0 && <span className="block text-zinc-600">{m.warmup_sets}W</span>}
-                      <span>{m.sets.length}×{m.sets[0]?.reps ?? '?'}</span>
+                      <span>{m.sets.length}×{m.sets[0]?.duration_sec != null ? `${m.sets[0].duration_sec}s` : (m.sets[0]?.reps || '—')}</span>
                     </td>
                     <td className="py-2">
                       {m.warmup_sets > 0 && (
