@@ -20,7 +20,7 @@ Read all of these before designing the workout. Follow TonalInstructions.md exac
 
 ## Step 2 — Check muscle readiness
 
-Run a tsx script to call `getMuscleReadiness()` via the TypeScript client. Show the user their current readiness for glutes, hamstrings, quads, calves, and the rest. Flag any muscle below 70% as a caution.
+Use the `mcp__tonal-strength__get_readiness` MCP tool (not the TypeScript client — raw API endpoint returns 404). Show the user their current readiness for glutes, hamstrings, quads, calves, and the rest. Flag any muscle below 70% as a caution.
 
 Immediately after fetching, write the pre-workout Obsidian session note with readiness populated. Use a placeholder filename `Health & Wellness/Tonal/Sessions/YYYY-MM-DD In Progress.md` since the workout name isn't known yet. Use the frontmatter template from TonalInstructions.md — populate `pre_readiness` with the live values, leave all other post-workout fields as null. This ensures readiness is captured even if the session is cancelled before approval.
 
@@ -45,7 +45,7 @@ Using TonalInstructions.md and the Obsidian context as the guide:
 - 1 warmup set for compound anchor only (warmUp: true, flex: false)
 - Rest blocks: 2 min after compound, 90 sec between isolations
 - No drop sets, no squats, no lunges
-- Hands-free only unless Hand Recovery Gates.md confirms clearance
+- Both hands cleared as of May 2, 2026 — upper body and compound movements available. Still read Hand Recovery Gates.md to catch any regression.
 - If today is an injection day (check Zepbound tracker), note it as a flag — may affect energy
 
 Cross-reference readiness data — if a muscle is below 70%, consider reducing volume or swapping movements that heavily load it.

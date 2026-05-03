@@ -69,11 +69,26 @@
 
 > **Note:** Adductors are not a tracked muscle group in Tonal's catalog. No ankle strap adduction movement exists. Adductor work must happen off-Tonal.
 
+### Handles / Upper Body (cleared as of May 2, 2026)
+
+Both hands cleared as of May 2, 2026. Full upper body and compound movements now available.
+
+| Movement | ID | Muscles | Pattern | Notes |
+|---|---|---|---|---|
+| Half Kneeling Single Arm Pulldown (Contralateral) | `1c432cc6-60ff-46eb-9d1d-72cd1c08174d` | Back, Biceps | Vertical pull, unilateral | SA = single arm; Contralateral = opposite knee down. Good for anti-rotation core demand. |
+| Standing Chop | `596e7a05-1086-4045-84fb-2b8a2edc88dd` | Obliques, Abs, Shoulders | Rotational | High-to-low diagonal pattern. Both sides. Smart Flex hit 23 lbs (PR) on May 3. |
+
+### Freestanding (no cable, uses machine for balance)
+
+| Movement | Notes |
+|---|---|
+| Bent Knee Calf Raise | Freestanding — hands touch Tonal screen for balance only, no cable load. Tagged "Lower" in catalog. Use during rest periods or as accessory. |
+
 ### Compound (on-machine, hands-free)
 
 | Movement | ID | Muscles | Accessories | Notes |
 |---|---|---|---|---|
-| Barbell Lying Glute Bridge | `b686f885-427c-4e64-9aa3-4b485c82678e` | Glutes, Hamstrings | Roller, Mat | Floor version — barbell rests on hips, hands-free ✓. **Smart Flex overshoots** — proposed 132 lbs on Apr 25 (unbudgeable). Working range was 100–120 lbs. Always start warmup manually at ~75 lbs and adjust before Smart Flex takes over. |
+| Barbell Lying Glute Bridge | `b686f885-427c-4e64-9aa3-4b485c82678e` | Glutes, Hamstrings | Roller, Mat | Floor version — barbell rests on hips, hands-free ✓. **API weight is per-cable (half of app-displayed total)** — e.g. API returns 63.5 lbs when app shows 127 lbs. **Smart Flex overshoots aggressively** — hit 126–127 lbs on May 3 (strength PRs); proposed 132 lbs on Apr 25 (unbudgeable). Always start warmup manually at ~75 lbs and adjust before Smart Flex takes over. |
 | Barbell Hip Thrust | `d44826e1-f6b3-4bed-9d6f-8456d9cde3ec` | Glutes, Hamstrings | Bench, Roller | **Bench slides** — fixed with yoga mat under bench + weight plates behind legs. Tested Apr 25: held through 65 lbs working set. Find the right bench distance from machine before loading. **API weight is per-cable (half of app-displayed total)** — e.g. API returns 31 lbs when app shows 62 lbs. Always store the app-displayed weight in sessions.json. Smart Flex can push aggressively (strength PR at 62 lbs on May 2). |
 | Resisted Glute Bridge | `93457225-18db-41bc-974e-e874fb4d07d1` | Glutes, Abs, Hamstrings | Mat | Uses **handles** — NOT hands-free. Exclude. |
 

@@ -6,7 +6,9 @@ Log post-workout data for the most recent Tonal session. Updates the Obsidian se
 cd /Users/moment/Sites/Workout-Tracker && npm run fetch
 ```
 
-This pulls volume, reps, TUT, and kJ from the Tonal API into sessions.json. Note the values for today's session.
+This pulls volume, reps, TUT, kJ, and `duration_sec` (for timed sets) from the Tonal API into sessions.json. Note the values for today's session.
+
+**Check screenshots folder** at `/Users/moment/Sites/Workout-Tracker/screenshots/` for files dated today — the user often captures HR, calories, strength scores, and movement detail screens there. Read them before asking for data.
 
 ## Step 2 — Collect post-workout data from the user
 
