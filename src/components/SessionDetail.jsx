@@ -187,30 +187,41 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp }) 
                 </tr>
               </thead>
               <tbody>
-                {session.movements.map((m, i) => (
-                  <tr key={i} className="border-b border-surface-3/30 align-top">
-                    <td className="py-2 pr-4 text-zinc-300 whitespace-nowrap">{m.name}</td>
-                    <td className="py-2 pr-6 text-zinc-500 tabular-nums text-right whitespace-nowrap">
-                      {m.warmup_sets > 0 && <span className="block text-zinc-600">{m.warmup_sets}W</span>}
-                      <span>{m.sets.length}×{m.sets[0]?.duration_sec != null ? `${m.sets[0].duration_sec}s` : (m.sets[0]?.reps || '—')}</span>
-                    </td>
-                    <td className="py-2">
-                      {m.warmup_sets > 0 && (
-                        <div className="flex items-center gap-1 mb-0.5">
-                          <span className="text-zinc-600 tabular-nums text-xs">W</span>
-                          {m.warmup_prs?.includes('power') && <PRBadge type="power" />}
-                        </div>
-                      )}
-                      {m.sets.map((s, j) => (
-                        <div key={j} className="flex items-center gap-1 mb-0.5">
-                          <span className="text-zinc-400 tabular-nums text-xs">{s.weight_lbs} lbs</span>
-                          {s.prs?.includes('strength') && <PRBadge type="strength" />}
-                          {s.prs?.includes('power') && <PRBadge type="power" />}
-                        </div>
-                      ))}
-                    </td>
-                  </tr>
-                ))}
+                {session.movements.map((m, i) => {
+                  const first = m.sets[0]
+                  const repsLabel = first?.duration_sec != null
+                    ? `${first.duration_sec}s`
+                    : first?.reps || null
+                  const allSameWeight = m.sets.every(s => s.weight_lbs === first?.weight_lbs)
+                  const hasPrs = m.sets.some(s => s.prs?.length)
+                  return (
+                    <tr key={i} className="border-b border-surface-3/30 align-top">
+                      <td className="py-2 pr-4 text-zinc-300 whitespace-nowrap">{m.name}</td>
+                      <td className="py-2 pr-6 text-zinc-500 tabular-nums text-right whitespace-nowrap">
+                        {m.warmup_sets > 0 && <span className="block text-zinc-600">{m.warmup_sets}W</span>}
+                        <span>{repsLabel ? `${m.sets.length}×${repsLabel}` : `${m.sets.length} sets`}</span>
+                      </td>
+                      <td className="py-2">
+                        {m.warmup_sets > 0 && (
+                          <div className="flex items-center gap-1 mb-0.5">
+                            <span className="text-zinc-600 tabular-nums text-xs">W</span>
+                            {m.warmup_prs?.includes('power') && <PRBadge type="power" />}
+                          </div>
+                        )}
+                        {allSameWeight && !hasPrs
+                          ? <span className="text-zinc-400 tabular-nums text-xs">{first?.weight_lbs} lbs</span>
+                          : m.sets.map((s, j) => (
+                            <div key={j} className="flex items-center gap-1 mb-0.5">
+                              <span className="text-zinc-400 tabular-nums text-xs">{s.weight_lbs} lbs</span>
+                              {s.prs?.includes('strength') && <PRBadge type="strength" />}
+                              {s.prs?.includes('power') && <PRBadge type="power" />}
+                            </div>
+                          ))
+                        }
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
             <p className="mt-3 text-[11px] text-zinc-600 flex gap-3">
