@@ -59,6 +59,14 @@ Read the existing note content. Patch ONLY the post-workout fields with the new 
 
 PUT the merged note back using the Obsidian REST API (https://127.0.0.1:27124, Bearer OBSIDIAN_API_KEY, --insecure).
 
-## Step 5 — Confirm
+## Step 5 — Handle Free Lift / secondary sessions
+
+If today has more than one Tonal session (e.g. a short Free Lift that followed the main workout), ask the user: "Do you want to merge the [Free Lift] into [Main Session] as one combined session?"
+
+If yes: add the Free Lift's movements to the main session's `movements` array, add its `calories` and `duration` to the main session's totals, update the note, and set `merged_into: <main_activity_id>` on the Free Lift entry in sessions.json.
+
+**Timed Free Lift sets** (e.g. Farmer March): the Tonal API returns `reps: 0` and no duration. Ask the user how long each set was and add `duration_sec` manually to each set object.
+
+## Step 6 — Confirm
 
 Report: note updated (path), fields written, and any fields that were left null because data wasn't provided.

@@ -78,6 +78,7 @@ Both hands cleared as of May 2, 2026. Full upper body and compound movements now
 |---|---|---|---|---|
 | Half Kneeling Single Arm Pulldown (Contralateral) | `1c432cc6-60ff-46eb-9d1d-72cd1c08174d` | Back, Biceps | Vertical pull, unilateral | SA = single arm; Contralateral = opposite knee down. Good for anti-rotation core demand. |
 | Standing Chop | `596e7a05-1086-4045-84fb-2b8a2edc88dd` | Obliques, Abs, Shoulders | Rotational | High-to-low diagonal pattern. Both sides. Smart Flex hit 23 lbs (PR) on May 3. |
+| Farmer March | `b11f89b0-5470-44a2-b70a-5391e972eb71` | Grip, Core, Glutes | Carry/march | Free Lift exercise — timed, not rep-based. API returns `reps: 0`, no per-set duration. **Must add `duration_sec` manually** after the session. |
 
 ### Freestanding (no cable, uses machine for balance)
 
