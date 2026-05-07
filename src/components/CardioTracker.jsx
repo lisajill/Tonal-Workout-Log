@@ -235,7 +235,8 @@ export default function CardioTracker() {
         {isEmpty ? (
           <p className="text-zinc-600 text-sm">No sessions logged yet.</p>
         ) : (
-          <table className="w-full text-sm">
+          <div className="overflow-x-auto">
+          <table className="w-full text-sm min-w-[560px]">
             <thead>
               <tr className="border-b border-surface-3">
                 <th className="label pb-2 pr-4 text-left">Date</th>
@@ -303,6 +304,7 @@ export default function CardioTracker() {
               })}
             </tbody>
           </table>
+          </div>
         )}
       </div>
 

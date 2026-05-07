@@ -88,13 +88,13 @@ export default function App() {
     <>
       <Analytics />
       <div className="min-h-screen bg-surface-0">
-      <header className="border-b border-surface-3 px-6 py-4">
+      <header className="border-b border-surface-3 px-3 py-4 sm:px-6">
         <h1 className="text-lg font-semibold tracking-tight text-zinc-100">Training Tracker</h1>
       </header>
 
-      <nav className="bg-surface-1 border-b border-surface-3 px-4 relative">
+      <nav className="bg-surface-1 border-b border-surface-3 px-2 relative">
         {openGroup && <div className="fixed inset-0 z-10" onClick={() => setOpenGroup(null)} />}
-        <div className="flex items-center gap-x-1">
+        <div className="flex items-center gap-x-0.5 overflow-x-auto scrollbar-hide">
           {TAB_GROUPS.map(group => {
             const activeTab = group.tabs.find(t => t.id === tab)
             const isActive = !!activeTab
@@ -152,7 +152,7 @@ export default function App() {
         </div>
       </nav>
 
-      <main className="px-6 py-6 max-w-5xl mx-auto">
+      <main className="px-3 py-4 sm:px-6 sm:py-6 max-w-5xl mx-auto">
         {tab === 'overview'  && <Overview      sessions={sessions} />}
         {tab === 'log'       && <SessionLog    sessions={sessions} onSelectSession={openSession} />}
         {tab === 'sessions'  && <SessionDetail key={activeSession} sessions={sessions} initialKey={activeSession} />}

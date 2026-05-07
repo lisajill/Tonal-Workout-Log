@@ -177,8 +177,8 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp }) 
             <h3 className="label">Movements</h3>
             <span className="text-zinc-600 group-open:rotate-180 transition-transform">▾</span>
           </summary>
-          <div className="mt-4">
-            <table className="w-full text-sm">
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full text-sm min-w-[320px]">
               <thead>
                 <tr className="border-b border-surface-3">
                   <th className="label pb-2 text-left pr-4">Movement</th>
