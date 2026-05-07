@@ -62,7 +62,12 @@
       "Bash(sed -i '' 's/a\\\\.date\\\\.localeCompare\\(b\\\\.date\\)/\\(a.timestamp ?? a.date\\).localeCompare\\(b.timestamp ?? b.date\\)/g' src/components/MuscleMatrix.jsx src/components/CurrentReadiness.jsx src/components/Overview.jsx)",
       "Bash(sed -i '' 's/b\\\\.s\\\\.date\\\\.localeCompare\\(a\\\\.s\\\\.date\\)/\\(b.s.timestamp ?? b.s.date\\).localeCompare\\(a.s.timestamp ?? a.s.date\\)/g' src/components/BodyMaps.jsx)",
       "mcp__tonal-strength__get_workout_detail",
-      "Bash(grep -oE '`[^`]{3,60}`' /Users/moment/Sites/Workout-Tracker/node_modules/@dlwiest/ts-tonal-client/dist/index.esm.js)"
+      "Bash(grep -oE '`[^`]{3,60}`' /Users/moment/Sites/Workout-Tracker/node_modules/@dlwiest/ts-tonal-client/dist/index.esm.js)",
+      "mcp__tonal-strength__search_exercises",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(npx tsc *)",
+      "Bash(open *)",
+      "Bash(kill %1)"
     ]
   }
 }

@@ -1,14 +1,13 @@
 {
-    "uuid": "FAE2898B-F5EC-4E6F-A0EF-737A6FC7DD26",
-    "name": "Tonal",
+    "uuid": "BBC30D94-9563-48F5-8C32-1FB9F0E57CA7",
+    "name": "Walking",
     "activity": {
-        "name": "Traditional Strength Training",
-        "type": 50
+        "name": "Walking",
+        "type": 52
     },
-    "startDate": "2026-05-03T13:40:18Z",
-    "endDate": "2026-05-03T13:42:30Z",
-    "source": "Tonal",
-    "location": "Indoor",
+    "startDate": "2026-05-06T12:44:00Z",
+    "endDate": "2026-05-06T13:58:24Z",
+    "source": "UltraAmazeWatch",
     "zones": {
         "zone4": {
             "name": "PEAK",
@@ -20,63 +19,78 @@
         },
         "zone3": {
             "name": "CARDIO",
-            "rate": 0.08324,
+            "rate": 0.0,
             "time": {
-                "value": 10,
+                "value": 0,
                 "unit": "sec"
             }
         },
         "zone2": {
             "name": "FAT BURN",
-            "rate": 0.86421,
+            "rate": 0.07056,
             "time": {
-                "value": 114,
+                "value": 315,
                 "unit": "sec"
             }
         },
         "zone1": {
             "name": "WARM UP",
-            "rate": 0.05255,
+            "rate": 0.92944,
             "time": {
-                "value": 6,
+                "value": 4149,
                 "unit": "sec"
             }
         }
     },
     "duration": {
-        "value": 131,
+        "value": 4464,
         "unit": "sec"
     },
     "activeCalories": {
-        "value": 10,
+        "value": 25,
         "unit": "kcal"
     },
+    "distance": {
+        "value": 0.3,
+        "unit": "mi"
+    },
+    "pace": {
+        "value": "246′29″",
+        "unit": "/mi"
+    },
     "averageIntensity": {
-        "value": 68,
+        "value": 47,
         "unit": "%"
     },
     "minIntensity": {
-        "value": 59,
+        "value": 33,
         "unit": "%"
     },
     "maxIntensity": {
-        "value": 77,
+        "value": 74,
         "unit": "%"
     },
     "averageHeartRate": {
-        "value": 122,
+        "value": 85,
         "unit": "bpm"
     },
     "minHeartRate": {
-        "value": 107,
+        "value": 60,
         "unit": "bpm"
     },
     "maxHeartRate": {
-        "value": 138,
+        "value": 133,
         "unit": "bpm"
     },
+    "weather": {
+        "humidity": "79%",
+        "temperature": "60°F"
+    },
     "device": {
-        "name": "Tonal",
-        "manufacturer": "Tonal Systems, Inc."
+        "name": "Apple Watch",
+        "manufacturer": "Apple Inc.",
+        "model": "Watch",
+        "hardwareVersion": "Watch6,18",
+        "softwareVersion": "26.3"
     }
 }

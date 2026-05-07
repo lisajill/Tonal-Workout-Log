@@ -20,10 +20,11 @@ Distance (meters):
 Avg split /500m (M:SS.s):
 Strokes per minute:
 Avg peak power (watts):
-Drag:
 Calories (from rowing machine):
 Notes (form, effort, anything notable):
 ```
+
+Drag is fixed at 104 — no need to ask or record.
 
 Also check Zone2Sessions/ for Zones export JSONs for this date. Hydrow JSONs have `"source": "Hydrow"` and `"activity": {"type": 35}` (HKWorkoutActivityType.rowing). The import script maps them to activity "Rowing". If present and not yet imported, run:
 ```bash
@@ -66,8 +67,7 @@ Update the entry:
 "rowing_duration_min": <number>,
 "rowing_avg_split": "M:SS.s",
 "rowing_stroke_rate_spm": <number>,
-"rowing_avg_watts": <number>,
-"rowing_drag": <number>
+"rowing_avg_watts": <number>
 ```
 
 ## Step 4 — Create Obsidian note
@@ -90,7 +90,6 @@ distance_m: <n>
 avg_split: "<M:SS.s>"
 stroke_rate_spm: <n>
 avg_peak_power_w: <n>
-drag: <n>
 calories: <n>
 uuid: <UUID>
 ---
@@ -109,7 +108,6 @@ uuid: <UUID>
 | Avg Split | <M:SS.s> /500m |
 | Stroke Rate | <X> spm |
 | Avg Peak Power | <X> W |
-| Drag | <X> |
 | Calories | <X> |
 
 ## Heart Rate & Zones

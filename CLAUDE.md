@@ -54,7 +54,8 @@ No test suite. No linter configured.
 **Cardio tracking:**
 - `src/data/zone2_log.json` — all cardio sessions from Zones for Training exports. Walking auto-exports via Shortcut → GitHub Actions (`pending/workout.json` → import script → zone2_log.json push). Tonal, Hydrow, and other activity types are exported manually from the Zones app.
 - `scripts/import-zone2.ts` — deduplicates by UUID, labels Tonal source as "Tonal", maps Hydrow source → "Rowing", writes zone2_log.json. Each entry includes `timestamp` (from `startDate`). **Always sort by `timestamp ?? date`.**
-- `src/components/CardioTracker.jsx` — cardio dashboard (zone breakdown, HR trend, session log). Tracking began Apr 19, 2026. Session log sorted **descending** (most recent first) by `timestamp ?? date`.
+- `src/components/CardioTracker.jsx` — cardio dashboard (zone breakdown, HR trend, session log). Tracking began Apr 19, 2026. Session log sorted **descending** (most recent first) by `timestamp ?? date`. Distance column shows `{n}mi` for walking/running or `{n}m` for rowing.
+- `src/components/RowingTracker.jsx` — standalone Rowing tab. Summary cards (sessions, total km, best split, best watts), trend charts (split /500m, avg peak power, distance — render once 2+ sessions exist), session log table (date, program, dist, split, watts, SPM, avg HR). Reads `zone2_log.json` directly, filters `activity === 'Rowing'`.
 - Zone 2 = 108–125 bpm (Fat Burn zone). Weekly target: 150 min per Rhonda Patrick protocol.
 - Weeks run **Sunday–Saturday**. `getWeekStart()` uses local date parts (not `new Date('YYYY-MM-DD')` which parses UTC and breaks in negative-offset timezones).
 - **Summary cards** ("This Week Z2", "This Week Total") use the **current calendar week (Sun–Sat)**, same as the session log grouping. "This Week Total" is all-zone duration (not just Z2) — always show "all zones" in the subtitle to avoid confusion with the Z2-only "All-Time Z2" card.
@@ -62,9 +63,15 @@ No test suite. No linter configured.
 - Walking sessions excluded from readiness model (no soreness unless 25k+ steps).
 - Vest walks are **always explicitly labelled** by the user (e.g. notes: "12 lb weighted vest"). Outdoor walks without a vest label are plain walks — never assume vest.
 - Tonal sessions appear in zone2_log only when manually exported from Zones for Training. They won't appear automatically from `npm run fetch`.
-- **Hydrow rowing sessions** — exported manually from Zones app as JSON (source: "Hydrow", activity type 35). Import script maps to activity "Rowing". Rowing entries carry extra fields: `rowing_program`, `rowing_distance_m`, `rowing_duration_min`, `rowing_avg_split`, `rowing_stroke_rate_spm`, `rowing_avg_watts`, `rowing_drag`. Use `/hydrow` skill to log. A short follow-on session (≤5 min, lower avg HR, starts within 15 min of main) is a cooldown — confirm before merging. Cooldown JSONs go in `Zone2Sessions/merged/` after merging.
+- **Hydrow rowing sessions** — exported manually from Zones app as JSON (source: "Hydrow", activity type 35). Import script maps to activity "Rowing". Rowing entries carry extra fields: `rowing_program`, `rowing_distance_m`, `rowing_duration_min`, `rowing_avg_split`, `rowing_stroke_rate_spm`, `rowing_avg_watts`. Drag is fixed at 104 — not tracked. Use `/hydrow` skill to log. A short follow-on session (≤5 min, lower avg HR, starts within 15 min of main) is a cooldown — confirm before merging. Cooldown JSONs go in `Zone2Sessions/merged/` after merging. **Never confuse Tonal sessions (source: "Tonal", type 50) with Hydrow sessions (source: "Hydrow", type 35)** — always check source field before labelling.
+- `src/components/Charts.jsx` — Tonal charts (volume, density, HR, calories, rating, reps, duration/TUT) followed by a Rowing section (split /500m, avg peak power, distance). Rowing section only renders when rowing data exists.
 
-**Nav structure** — single-tab groups render as direct links, multi-tab groups render as dropdowns. Add new tabs to `TAB_GROUPS` in `App.jsx`.
+**Nav structure** — single-tab groups render as direct links, multi-tab groups render as dropdowns. Add new tabs to `TAB_GROUPS` in `App.jsx`. Current tabs:
+- Summary: Overview, Strength Scores
+- Sessions: Tonal Sessions, Detail, Body Maps
+- Analysis: Charts, PRs, Muscle Matrix, Readiness, Current State
+- Cardio (direct link)
+- Rowing (direct link)
 
 ## Coach Skill — Obsidian Health Context
 
