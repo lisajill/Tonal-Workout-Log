@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import cardioLog from '../data/zone2_log.json'
+import rawSessions from '../data/sessions.json'
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, ReferenceLine, LabelList, Cell,
@@ -56,6 +57,10 @@ function activityIcon(activity) {
   if (a.includes('bike') || a.includes('cycl')) return '🚴'
   return '💪'
 }
+
+const tonalVolumeByDate = rawSessions
+  .filter(s => !s.merged_into && s.total_volume != null)
+  .reduce((acc, s) => { acc[s.date] = (acc[s.date] ?? 0) + s.total_volume; return acc }, {})
 
 export default function CardioTracker() {
   const isEmpty = cardioLog.length === 0
@@ -246,7 +251,7 @@ export default function CardioTracker() {
                 <th className="label pb-2 pr-4 text-right" style={{ color: ZONE_COLORS.zone3 }}>Z3</th>
                 <th className="label pb-2 pr-4 text-right" style={{ color: ZONE_COLORS.zone4 }}>Z4</th>
                 <th className="label pb-2 pr-4 text-right">Avg HR</th>
-                <th className="label pb-2 text-right">Dist</th>
+                <th className="label pb-2 text-right">Dist / Vol</th>
               </tr>
             </thead>
             <tbody>
@@ -295,7 +300,11 @@ export default function CardioTracker() {
                         </td>
                         <td className="py-2.5 pr-4 text-zinc-400 tabular-nums text-right">{s.avg_hr ? `${s.avg_hr}` : '—'}</td>
                         <td className="py-2.5 text-zinc-400 tabular-nums text-right">
-                          {s.distance_mi != null ? `${s.distance_mi}mi` : s.rowing_distance_m != null ? `${s.rowing_distance_m}m` : '—'}
+                          {s.activity === 'Tonal'
+                            ? (tonalVolumeByDate[s.date] ? `${tonalVolumeByDate[s.date].toLocaleString()} lbs` : '—')
+                            : s.distance_mi != null ? `${s.distance_mi}mi`
+                            : s.rowing_distance_m != null ? `${s.rowing_distance_m}m`
+                            : '—'}
                         </td>
                       </tr>
                     ))}

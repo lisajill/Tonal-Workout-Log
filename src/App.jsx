@@ -68,6 +68,7 @@ export default function App() {
   const [tab, setTab] = useState(initial.tab)
   const [activeSession, setActiveSession] = useState(initial.sessionKey)
   const [openGroup, setOpenGroup] = useState(null)
+  const [dropdownStyle, setDropdownStyle] = useState({})
 
   function setTabAndHash(id, sessionKey = null) {
     window.location.hash = sessionKey ? `${id}:${sessionKey}` : id
@@ -100,26 +101,30 @@ export default function App() {
             const isActive = !!activeTab
             const isOpen = openGroup === group.label
             if (group.tabs.length === 1) {
-                const t = group.tabs[0]
-                return (
-                  <button
-                    key={t.id}
-                    onClick={() => selectTab(t.id)}
-                    className={`px-3 py-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
-                      tab === t.id
-                        ? 'border-accent text-zinc-100'
-                        : 'border-transparent text-zinc-500 hover:text-zinc-300'
-                    }`}
-                  >
-                    {t.label}
-                  </button>
-                )
-              }
-
+              const t = group.tabs[0]
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => selectTab(t.id)}
+                  className={`px-3 py-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
+                    tab === t.id
+                      ? 'border-accent text-zinc-100'
+                      : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                  }`}
+                >
+                  {t.label}
+                </button>
+              )
+            }
             return (
               <div key={group.label} className="relative z-20">
                 <button
-                  onClick={() => setOpenGroup(isOpen ? null : group.label)}
+                  onClick={e => {
+                    if (isOpen) { setOpenGroup(null); return }
+                    const rect = e.currentTarget.getBoundingClientRect()
+                    setDropdownStyle({ top: rect.bottom, left: rect.left })
+                    setOpenGroup(group.label)
+                  }}
                   className={`flex items-center gap-1.5 px-3 py-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
                     isActive
                       ? 'border-accent text-zinc-100'
@@ -129,27 +134,34 @@ export default function App() {
                   <span>{isActive ? activeTab.label : group.label}</span>
                   <span className={`text-[10px] transition-transform duration-150 ${isOpen ? 'rotate-180' : ''} ${isActive ? 'text-accent' : 'text-zinc-600'}`}>▾</span>
                 </button>
-                {isOpen && (
-                  <div className="absolute top-full left-0 mt-0 bg-surface-2 border border-surface-3 rounded-b-lg rounded-tr-lg shadow-xl py-1 min-w-[140px]">
-                    {group.tabs.map(t => (
-                      <button
-                        key={t.id}
-                        onClick={() => selectTab(t.id)}
-                        className={`w-full text-left px-4 py-2 text-xs font-medium transition-colors ${
-                          tab === t.id
-                            ? 'text-accent bg-accent/10'
-                            : 'text-zinc-400 hover:text-zinc-200 hover:bg-surface-3'
-                        }`}
-                      >
-                        {t.label}
-                      </button>
-                    ))}
-                  </div>
-                )}
               </div>
             )
           })}
         </div>
+        {openGroup && (() => {
+          const group = TAB_GROUPS.find(g => g.label === openGroup)
+          if (!group) return null
+          return (
+            <div
+              className="fixed z-20 bg-surface-2 border border-surface-3 rounded-b-lg rounded-tr-lg shadow-xl py-1 min-w-[140px]"
+              style={dropdownStyle}
+            >
+              {group.tabs.map(t => (
+                <button
+                  key={t.id}
+                  onClick={() => selectTab(t.id)}
+                  className={`w-full text-left px-4 py-2 text-xs font-medium transition-colors ${
+                    tab === t.id
+                      ? 'text-accent bg-accent/10'
+                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-surface-3'
+                  }`}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          )
+        })()}
       </nav>
 
       <main className="px-3 py-4 sm:px-6 sm:py-6 max-w-5xl mx-auto">
