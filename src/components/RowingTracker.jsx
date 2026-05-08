@@ -99,7 +99,7 @@ export default function RowingTracker() {
                 <LineChart data={chartData} margin={{ top: 16, right: 16, bottom: 0, left: 0 }}>
                   <CartesianGrid {...GRID} />
                   <XAxis dataKey="label" tick={AXIS_TICK} />
-                  <YAxis tick={AXIS_TICK} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
+                  <YAxis tick={AXIS_TICK} tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
                   <Tooltip
                     {...TOOLTIP_STYLE}
                     formatter={v => [fmtSplit(v), 'Avg Split']}
