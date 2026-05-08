@@ -662,7 +662,7 @@
     "rowing_duration_min": 10,
     "rowing_avg_split": "3:11.7",
     "rowing_stroke_rate_spm": 25,
-    "rowing_avg_watts": null,
-    "notes": "Peak power 61W. Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm) pending sync — merge when imported."
+    "rowing_avg_watts": 61,
+    "notes": "Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm, 22W) pending sync — merge when imported."
   }
 ]
