@@ -655,7 +655,14 @@
     "zone2_min": 6.4,
     "zone3_min": 2,
     "zone4_min": 0,
-    "avg_hr": 121,
-    "distance_mi": null
+    "avg_hr": 122,
+    "distance_mi": null,
+    "rowing_program": "Beginner Camp #3 of 11",
+    "rowing_distance_m": 1565,
+    "rowing_duration_min": 10,
+    "rowing_avg_split": "3:11.7",
+    "rowing_stroke_rate_spm": 25,
+    "rowing_avg_watts": null,
+    "notes": "Peak power 61W. Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm) pending sync — merge when imported."
   }
 ]
