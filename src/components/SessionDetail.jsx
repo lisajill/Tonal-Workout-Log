@@ -44,6 +44,18 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp }) 
   const sessionPRs = Object.entries(session.prs ?? {})
     .filter(([, pr]) => pr.weight != null)
 
+  // Build previous-best map from sessions that came before this one
+  const chronological = [...sessions].sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
+  const currentIdx = chronological.findIndex(s => sessionKey(s) === selected)
+  const prevBests = {}
+  for (const s of chronological.slice(0, currentIdx)) {
+    for (const [key, pr] of Object.entries(s.prs ?? {})) {
+      if (pr.weight != null && (prevBests[key] == null || pr.weight > prevBests[key])) {
+        prevBests[key] = pr.weight
+      }
+    }
+  }
+
   const dateCounts = sorted.reduce((acc, s) => { acc[s.date] = (acc[s.date] ?? 0) + 1; return acc }, {})
 
   return (
@@ -141,12 +153,22 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp }) 
         <div className="card">
           <h3 className="label mb-3">PRs This Session</h3>
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {sessionPRs.map(([key, pr]) => (
-              <div key={key} className="flex items-center justify-between rounded-lg bg-surface-2 px-3 py-2">
-                <span className="text-sm text-zinc-300">{formatMovement(key)}</span>
-                <span className="text-sm font-bold text-accent tabular-nums">{pr.weight} lbs</span>
-              </div>
-            ))}
+            {sessionPRs.map(([key, pr]) => {
+              const prev = prevBests[key]
+              const pct = prev != null ? Math.round(((pr.weight - prev) / prev) * 100) : null
+              return (
+                <div key={key} className="flex items-center justify-between rounded-lg bg-surface-2 px-3 py-2">
+                  <span className="text-sm text-zinc-300">{formatMovement(key)}</span>
+                  <div className="text-right">
+                    <span className="text-sm font-bold text-accent tabular-nums">{pr.weight} lbs</span>
+                    {prev != null
+                      ? <p className="text-xs text-zinc-500 tabular-nums">{prev} → {pr.weight} ({pct > 0 ? '+' : ''}{pct}%)</p>
+                      : <p className="text-xs text-zinc-600">first time</p>
+                    }
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       )}
