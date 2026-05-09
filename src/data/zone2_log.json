@@ -663,6 +663,32 @@
     "rowing_avg_split": "3:11.7",
     "rowing_stroke_rate_spm": 25,
     "rowing_avg_watts": 61,
-    "notes": "Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm, 22W) pending sync — merge when imported."
+    "notes": "Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm, 22W) pending sync \u2014 merge when imported."
+  },
+  {
+    "uuid": "EB7121D5-A80D-4A36-BD88-F211306A0FA2",
+    "date": "2026-05-09",
+    "timestamp": "2026-05-09T14:38:44Z",
+    "activity": "Tonal",
+    "duration_min": 20.1,
+    "zone1_min": 20.12,
+    "zone2_min": 0,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 86,
+    "distance_mi": null
+  },
+  {
+    "uuid": "76E9B7D7-DD35-4936-8300-6FC0E73E72B8",
+    "date": "2026-05-09",
+    "timestamp": "2026-05-09T15:00:40Z",
+    "activity": "Tonal",
+    "duration_min": 9.67,
+    "zone1_min": 5.92,
+    "zone2_min": 3.75,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 105,
+    "distance_mi": null
   }
 ]
