@@ -73,5 +73,20 @@
       "shoulders": 2
     },
     "notes": null
+  },
+  {
+    "uuid": "57C2DBE7-6EAF-4FCA-8B52-65814163F554",
+    "date": "2026-05-13",
+    "activity": "Functional Strength Training",
+    "duration_min": 14.7,
+    "avg_hr": 114,
+    "muscles": {
+      "abs": 4,
+      "obliques": 3,
+      "hip_flexors": 3,
+      "glutes": 2,
+      "back": 2
+    },
+    "notes": null
   }
 ]
