@@ -88,5 +88,20 @@
       "back": 2
     },
     "notes": null
+  },
+  {
+    "uuid": "5250B52C-6186-4153-A171-253282F4B460",
+    "date": "2026-05-13",
+    "activity": "Rowing",
+    "duration_min": 19.9,
+    "avg_hr": 133,
+    "muscles": {
+      "back": 4,
+      "abs": 3,
+      "hamstrings": 3,
+      "glutes": 3,
+      "shoulders": 2
+    },
+    "notes": null
   }
 ]
