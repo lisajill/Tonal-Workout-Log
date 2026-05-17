@@ -741,6 +741,13 @@
     "zone3_min": 9.7,
     "zone4_min": 1.4,
     "avg_hr": 133,
-    "distance_mi": null
+    "distance_mi": null,
+    "rowing_program": "Free Row — 2k race piece + cooldown",
+    "rowing_distance_m": 2513,
+    "rowing_duration_min": 19.9,
+    "rowing_avg_split": "3:12",
+    "rowing_stroke_rate_spm": 25,
+    "rowing_avg_watts": 50,
+    "notes": "Concept2 at hotel gym. 2k in 12:48.2 (splits: 3:17.4 / 3:16.9 / 3:13.6 / 3:00.4 — strong negative split). Followed by 5:05 cooldown (513m, ~5:00/500m, 19 SPM). Sweat: moderate."
   }
 ]

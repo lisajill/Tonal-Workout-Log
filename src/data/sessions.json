@@ -2960,5 +2960,87 @@
     "strength_core": 456,
     "strength_lower": 535,
     "notes": "Standing-only due to hair dye (no bending/lying). First time on standing push movements. Hands tingling throughout but manageable with press movements. Then free lift: Alternating Biceps Curl (strength+power PR at 15 lbs, dropped to 10), Triceps Kickbacks 3\u00d75@8, Pull Through progressive 30\u219235\u219240 lbs. Strong energy throughout."
+  },
+  {
+    "date": "2026-05-13",
+    "workout": "Hotel Gym \u2014 Life Fitness Circuit",
+    "tonal_activity_id": "manual-hotel-gym-20260513",
+    "timestamp": "2026-05-13T06:00:00-04:00",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "shot_day": false,
+    "total_volume": 6550,
+    "total_reps": 120,
+    "movements": [
+      {
+        "name": "Lat Pulldown",
+        "warmup_sets": 0,
+        "sets": [
+          {"reps": 6, "weight_lbs": 70},
+          {"reps": 5, "weight_lbs": 90},
+          {"reps": 5, "weight_lbs": 70},
+          {"reps": 5, "weight_lbs": 70}
+        ]
+      },
+      {
+        "name": "Seated Leg Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {"reps": 5, "weight_lbs": 90},
+          {"reps": 5, "weight_lbs": 70},
+          {"reps": 5, "weight_lbs": 70}
+        ]
+      },
+      {
+        "name": "Chest Press",
+        "warmup_sets": 0,
+        "sets": [
+          {"reps": 5, "weight_lbs": 70},
+          {"reps": 3, "weight_lbs": 70},
+          {"reps": 2, "weight_lbs": 50},
+          {"reps": 3, "weight_lbs": 70},
+          {"reps": 2, "weight_lbs": 50}
+        ]
+      },
+      {
+        "name": "Leg Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {"reps": 5, "weight_lbs": 70},
+          {"reps": 5, "weight_lbs": 50},
+          {"reps": 5, "weight_lbs": 50}
+        ]
+      },
+      {
+        "name": "Shoulder Press",
+        "warmup_sets": 0,
+        "sets": [
+          {"reps": 5, "weight_lbs": 30},
+          {"reps": 5, "weight_lbs": 30},
+          {"reps": 5, "weight_lbs": 30}
+        ]
+      },
+      {
+        "name": "Goblet Squat",
+        "warmup_sets": 0,
+        "sets": [
+          {"reps": 5, "weight_lbs": 40},
+          {"reps": 5, "weight_lbs": 40},
+          {"reps": 5, "weight_lbs": 40}
+        ]
+      },
+      {
+        "name": "Hip Thrust",
+        "warmup_sets": 0,
+        "sets": [
+          {"reps": 8, "weight_lbs": 40},
+          {"reps": 8, "weight_lbs": 40},
+          {"reps": 8, "weight_lbs": 40}
+        ]
+      }
+    ],
+    "notes": "Hotel gym (Life Fitness machines), circuit format 3\u20134 rounds. Leg extension: right knee pain R1 at 70 lbs; dropped to 50 lbs R2\u20133, bilateral knee pain on descent past ~30 deg. Chest press: dropped to 50 lbs for last 2 reps in R2\u20133. Finished with 3\u00d75 goblet squat and 3\u00d78 hip thrust (40 lb DB). 20 min sauna post-workout."
   }
 ]
