@@ -749,5 +749,18 @@
     "rowing_stroke_rate_spm": 25,
     "rowing_avg_watts": 50,
     "notes": "Concept2 at hotel gym. 2k in 12:48.2 (splits: 3:17.4 / 3:16.9 / 3:13.6 / 3:00.4 — strong negative split). Followed by 5:05 cooldown (513m, ~5:00/500m, 19 SPM). Sweat: moderate."
+  },
+  {
+    "uuid": "3B7ADA5D-F346-412B-86BE-571ED550506E",
+    "date": "2026-05-17",
+    "timestamp": "2026-05-17T13:14:31Z",
+    "activity": "Walking",
+    "duration_min": 27.4,
+    "zone1_min": 21.9,
+    "zone2_min": 5.5,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 100,
+    "distance_mi": 1.03
   }
 ]
