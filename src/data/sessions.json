@@ -397,7 +397,7 @@
       "calves"
     ],
     "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0",
-    "notes": "Right knee discomfort on Standing Leg Extension \u2014 monitor",
+    "notes": "Right knee discomfort on Standing Leg Extension — monitor",
     "timestamp": "2026-04-05T10:22:44.845581-04:00",
     "movements": [
       {
@@ -550,7 +550,7 @@
     "date": "2026-04-18",
     "shot_day": true,
     "bodymap": "/BodyMapApril18.png",
-    "workout": "Heavy Express \u2014 Hip Thrust + Hamstring",
+    "workout": "Heavy Express — Hip Thrust + Hamstring",
     "energy_level": 1,
     "phase": "recovery",
     "subjective_rating": 4.5,
@@ -761,7 +761,7 @@
   {
     "date": "2026-04-19",
     "bodymap": "/BodyMapApril19.png",
-    "workout": "Heavy Express \u2014 Glute Bridge + Hamstring + Quad",
+    "workout": "Heavy Express — Glute Bridge + Hamstring + Quad",
     "energy_level": 1,
     "phase": "active",
     "subjective_rating": 5,
@@ -852,7 +852,7 @@
       "calves"
     ],
     "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421",
-    "notes": "Right knee twinge at 80\u201390\u00b0 on leg extension \u2014 not pain, held weight steady",
+    "notes": "Right knee twinge at 80–90° on leg extension — not pain, held weight steady",
     "timestamp": "2026-04-19T09:50:34.720644-04:00",
     "movements": [
       {
@@ -960,7 +960,7 @@
   {
     "date": "2026-04-25",
     "shot_day": true,
-    "workout": "Free Lift \u2014 Barbell Hip Thrust",
+    "workout": "Free Lift — Barbell Hip Thrust",
     "bodymap": "/BodyMapApril25b.png",
     "energy_level": 4,
     "phase": "active",
@@ -1042,7 +1042,7 @@
     "date": "2026-04-25",
     "shot_day": true,
     "bodymap": "/BodyMapApril25.png",
-    "workout": "Heavy Express \u2014 Floor Bridge + Ankle Straps",
+    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": 4,
@@ -1313,7 +1313,7 @@
     "total_work_kj": 7,
     "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
     "bodymap": "/BodyMapApril26.png",
-    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80\u00b0 knee flexion where twitch/pain occurs",
+    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80° knee flexion where twitch/pain occurs",
     "timestamp": "2026-04-26T09:45:11.54657-04:00",
     "movements": [
       {
@@ -1416,7 +1416,7 @@
   },
   {
     "date": "2026-04-26",
-    "workout": "Free Lift \u2014 Barbell Hip Thrust",
+    "workout": "Free Lift — Barbell Hip Thrust",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": null,
@@ -1622,7 +1622,7 @@
     "time_under_tension": 3.3,
     "total_work_kj": 4,
     "tonal_activity_id": "dc8ec760-817d-458e-9758-fc33a09c5874",
-    "notes": "Dizziness on last 2 leg extension sets \u2014 monitor. Strong otherwise.",
+    "notes": "Dizziness on last 2 leg extension sets — monitor. Strong otherwise.",
     "strength_overall": 468,
     "strength_upper": 461,
     "strength_core": 450,
@@ -1744,7 +1744,7 @@
     "strength_upper": 461,
     "strength_core": 450,
     "strength_lower": 494,
-    "notes": "Tonal crashed mid-workout during bench press sets 2\u20133. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs \u00d7 10), seated lat pulldown 1 set (25 lbs \u00d7 5). Neutral lat pulldown not reached.",
+    "notes": "Tonal crashed mid-workout during bench press sets 2–3. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs × 10), seated lat pulldown 1 set (25 lbs × 5). Neutral lat pulldown not reached.",
     "shot_day": true
   },
   {
@@ -1812,7 +1812,7 @@
     "total_work_kj": 0,
     "tonal_activity_id": "e14b0170-141a-4d6e-a243-f3983650ff25",
     "shot_day": false,
-    "notes": "Post-workout custom lift \u2014 2 sets Farmer March, 28 lbs.",
+    "notes": "Post-workout custom lift — 2 sets Farmer March, 28 lbs.",
     "merged_into": "53adbfc8-8448-4abf-913e-a9ae9123553f"
   },
   {
@@ -2030,7 +2030,7 @@
     "functional_strength": 244,
     "movement_quality": 127,
     "movement_quality_delta": 83,
-    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs \u2014 strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked). Followed by 2\u00d730s Farmer March free lift, 28 lbs."
+    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs — strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked). Followed by 2×30s Farmer March free lift, 28 lbs."
   },
   {
     "date": "2026-05-07",
@@ -2247,7 +2247,7 @@
     "strength_upper": 462,
     "strength_core": 454,
     "strength_lower": 524,
-    "notes": "Left hand grip limited \u2014 lowered weights asymmetrically on all movements. Bent knee calf raises (off-machine, 2 sets) during Farmer March rest. Short NRD pre-session warmup merged in."
+    "notes": "Left hand grip limited — lowered weights asymmetrically on all movements. Bent knee calf raises (off-machine, 2 sets) during Farmer March rest. Short NRD pre-session warmup merged in."
   },
   {
     "date": "2026-05-07",
@@ -2312,7 +2312,7 @@
   },
   {
     "date": "2026-05-08",
-    "workout": "Hip Thrust \u2014 Ankle Strap & Grip",
+    "workout": "Hip Thrust — Ankle Strap & Grip",
     "energy_level": 5,
     "phase": "active",
     "subjective_rating": 5,
@@ -2587,7 +2587,7 @@
     "strength_core": 454,
     "strength_lower": 534,
     "shot_day": false,
-    "notes": "Hands tingling throughout; reduced pulldown weight progressively (43\u219238\u219234 lbs) and hammer curl dropped to 30 lbs on set 3 due to hand/arm fatigue. Energy 5/5 despite fatigued glutes and hamstrings going in."
+    "notes": "Hands tingling throughout; reduced pulldown weight progressively (43→38→34 lbs) and hammer curl dropped to 30 lbs on set 3 due to hand/arm fatigue. Energy 5/5 despite fatigued glutes and hamstrings going in."
   },
   {
     "date": "2026-05-09",
@@ -2946,11 +2946,11 @@
       }
     ],
     "timestamp": "2026-05-09T10:38:44.19562-04:00",
-    "duration": 29.77,
-    "total_volume": 3203,
-    "total_reps": 115,
-    "time_under_tension": 9.82,
-    "total_work_kj": 10,
+    "duration": 20.1,
+    "total_volume": 2201,
+    "total_reps": 67,
+    "time_under_tension": 6.57,
+    "total_work_kj": 8,
     "tonal_activity_id": "d44eb4e1-ac92-4a69-a400-cd55702ad725",
     "shot_day": false,
     "functional_strength": 345,
@@ -2959,11 +2959,11 @@
     "strength_upper": 487,
     "strength_core": 456,
     "strength_lower": 535,
-    "notes": "Standing-only due to hair dye (no bending/lying). First time on standing push movements. Hands tingling throughout but manageable with press movements. Then free lift: Alternating Biceps Curl (strength+power PR at 15 lbs, dropped to 10), Triceps Kickbacks 3\u00d75@8, Pull Through progressive 30\u219235\u219240 lbs. Strong energy throughout."
+    "notes": "Standing-only due to hair dye (no bending/lying). First time on standing push movements. Hands tingling throughout but manageable with press movements. Then free lift: Alternating Biceps Curl (strength+power PR at 15 lbs, dropped to 10), Triceps Kickbacks 3×5@8, Pull Through progressive 30→35→40 lbs. Strong energy throughout."
   },
   {
     "date": "2026-05-13",
-    "workout": "Hotel Gym \u2014 Life Fitness Circuit",
+    "workout": "Hotel Gym — Life Fitness Circuit",
     "tonal_activity_id": "manual-hotel-gym-20260513",
     "timestamp": "2026-05-13T06:00:00-04:00",
     "energy_level": 5,
@@ -2978,69 +2978,264 @@
         "name": "Lat Pulldown",
         "warmup_sets": 0,
         "sets": [
-          {"reps": 6, "weight_lbs": 70},
-          {"reps": 5, "weight_lbs": 90},
-          {"reps": 5, "weight_lbs": 70},
-          {"reps": 5, "weight_lbs": 70}
+          {
+            "reps": 6,
+            "weight_lbs": 70
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 90
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 70
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 70
+          }
         ]
       },
       {
         "name": "Seated Leg Curl",
         "warmup_sets": 0,
         "sets": [
-          {"reps": 5, "weight_lbs": 90},
-          {"reps": 5, "weight_lbs": 70},
-          {"reps": 5, "weight_lbs": 70}
+          {
+            "reps": 5,
+            "weight_lbs": 90
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 70
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 70
+          }
         ]
       },
       {
         "name": "Chest Press",
         "warmup_sets": 0,
         "sets": [
-          {"reps": 5, "weight_lbs": 70},
-          {"reps": 3, "weight_lbs": 70},
-          {"reps": 2, "weight_lbs": 50},
-          {"reps": 3, "weight_lbs": 70},
-          {"reps": 2, "weight_lbs": 50}
+          {
+            "reps": 5,
+            "weight_lbs": 70
+          },
+          {
+            "reps": 3,
+            "weight_lbs": 70
+          },
+          {
+            "reps": 2,
+            "weight_lbs": 50
+          },
+          {
+            "reps": 3,
+            "weight_lbs": 70
+          },
+          {
+            "reps": 2,
+            "weight_lbs": 50
+          }
         ]
       },
       {
         "name": "Leg Extension",
         "warmup_sets": 0,
         "sets": [
-          {"reps": 5, "weight_lbs": 70},
-          {"reps": 5, "weight_lbs": 50},
-          {"reps": 5, "weight_lbs": 50}
+          {
+            "reps": 5,
+            "weight_lbs": 70
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 50
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 50
+          }
         ]
       },
       {
         "name": "Shoulder Press",
         "warmup_sets": 0,
         "sets": [
-          {"reps": 5, "weight_lbs": 30},
-          {"reps": 5, "weight_lbs": 30},
-          {"reps": 5, "weight_lbs": 30}
+          {
+            "reps": 5,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30
+          }
         ]
       },
       {
         "name": "Goblet Squat",
         "warmup_sets": 0,
         "sets": [
-          {"reps": 5, "weight_lbs": 40},
-          {"reps": 5, "weight_lbs": 40},
-          {"reps": 5, "weight_lbs": 40}
+          {
+            "reps": 5,
+            "weight_lbs": 40
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 40
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 40
+          }
         ]
       },
       {
         "name": "Hip Thrust",
         "warmup_sets": 0,
         "sets": [
-          {"reps": 8, "weight_lbs": 40},
-          {"reps": 8, "weight_lbs": 40},
-          {"reps": 8, "weight_lbs": 40}
+          {
+            "reps": 8,
+            "weight_lbs": 40
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 40
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 40
+          }
         ]
       }
     ],
-    "notes": "Hotel gym (Life Fitness machines), circuit format 3\u20134 rounds. Leg extension: right knee pain R1 at 70 lbs; dropped to 50 lbs R2\u20133, bilateral knee pain on descent past ~30 deg. Chest press: dropped to 50 lbs for last 2 reps in R2\u20133. Finished with 3\u00d75 goblet squat and 3\u00d78 hip thrust (40 lb DB). 20 min sauna post-workout."
+    "notes": "Hotel gym (Life Fitness machines), circuit format 3–4 rounds. Leg extension: right knee pain R1 at 70 lbs; dropped to 50 lbs R2–3, bilateral knee pain on descent past ~30 deg. Chest press: dropped to 50 lbs for last 2 reps in R2–3. Finished with 3×5 goblet squat and 3×8 hip thrust (40 lb DB). 20 min sauna post-workout."
+  },
+  {
+    "date": "2026-05-22",
+    "workout": "Quick Fit: Arms and Core Burner",
+    "energy_level": 3,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "light",
+    "calories": 42,
+    "avg_hr": 105,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": 99,
+      "hamstrings": 99,
+      "quads": 94,
+      "calves": 99,
+      "abs": 80,
+      "obliques": 86,
+      "back": 99,
+      "chest": 100,
+      "shoulders": 62,
+      "biceps": 99,
+      "triceps": 81
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Lateral Raise",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Inline Lift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 11
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 11
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 12
+          }
+        ]
+      },
+      {
+        "name": "Skull Crusher",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 9
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 10
+          }
+        ]
+      },
+      {
+        "name": "Hip Raise",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-22T16:49:23.231986-04:00",
+    "duration": 14.93,
+    "total_volume": 1032,
+    "total_reps": 80,
+    "time_under_tension": 8.02,
+    "total_work_kj": 4,
+    "tonal_activity_id": "dc00694f-77b1-419b-852c-cabdfd8c8916",
+    "shot_day": false,
+    "functional_strength": 29,
+    "movement_quality": 39,
+    "movement_quality_delta": -71,
+    "strength_overall": 492,
+    "strength_upper": 486,
+    "strength_core": 456,
+    "strength_lower": 535
   }
 ]
