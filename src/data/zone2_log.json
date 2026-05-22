@@ -788,5 +788,18 @@
     "zone4_min": 0,
     "avg_hr": 99,
     "distance_mi": 0.56
+  },
+  {
+    "uuid": "BDEBB174-13D2-4AF5-97FC-16AC4101B244",
+    "date": "2026-05-22",
+    "timestamp": "2026-05-22T15:37:24Z",
+    "activity": "Equestrian Sports",
+    "duration_min": 49.2,
+    "zone1_min": 17.2,
+    "zone2_min": 19.8,
+    "zone3_min": 12.3,
+    "zone4_min": 0,
+    "avg_hr": 116,
+    "distance_mi": null
   }
 ]

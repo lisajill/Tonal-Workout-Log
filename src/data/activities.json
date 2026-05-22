@@ -103,5 +103,21 @@
       "shoulders": 2
     },
     "notes": null
+  },
+  {
+    "uuid": "BDEBB174-13D2-4AF5-97FC-16AC4101B244",
+    "date": "2026-05-22",
+    "activity": "Equestrian Sports",
+    "duration_min": 49.2,
+    "avg_hr": 116,
+    "muscles": {
+      "adductors": 5,
+      "hip_flexors": 4,
+      "glutes": 3,
+      "abs": 3,
+      "grip": 3,
+      "back": 2
+    },
+    "notes": null
   }
 ]
