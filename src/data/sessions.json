@@ -3237,5 +3237,190 @@
     "strength_upper": 486,
     "strength_core": 456,
     "strength_lower": 535
+  },
+  {
+    "date": "2026-05-24",
+    "workout": "Week 1 - Day 1",
+    "energy_level": 3,
+    "phase": "program",
+    "subjective_rating": 3,
+    "sweat": "dry",
+    "calories": 69,
+    "avg_hr": 96,
+    "max_hr": 131,
+    "pre_readiness": {
+      "glutes": 50,
+      "hamstrings": 70,
+      "quads": 100,
+      "calves": 100,
+      "abs": 70,
+      "obliques": 100,
+      "back": 80,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 95,
+      "obliques": 100,
+      "back": 48,
+      "chest": 84,
+      "shoulders": 73,
+      "biceps": 70,
+      "triceps": 64
+    },
+    "prs": {
+      "barbell_seated_lat_pulldown": {
+        "weight": 29.5,
+        "date": "2026-05-24"
+      },
+      "bench_chest_fly": {
+        "weight": 12,
+        "date": "2026-05-24"
+      }
+    },
+    "muscles_high_volume": [
+      "back",
+      "biceps"
+    ],
+    "muscles_low_volume": [
+      "glutes",
+      "hamstrings",
+      "quads",
+      "calves"
+    ],
+    "movements": [
+      {
+        "name": "Barbell Seated Lat Pulldown",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 29.5
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 29.5
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 29.5,
+            "prs": [
+              "power"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Floor Slide",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          }
+        ]
+      },
+      {
+        "name": "Barbell Chinup",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 30.5
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 30.5
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 31.5
+          }
+        ]
+      },
+      {
+        "name": "Reverse Grip Barbell Triceps Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 9.5
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 12.5
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 11.5
+          }
+        ]
+      },
+      {
+        "name": "Bench Chest Fly",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 12,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 12
+          }
+        ]
+      },
+      {
+        "name": "Standing Overhead Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 10
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-24T09:07:27.605089-04:00",
+    "duration": 31.55,
+    "total_volume": 4059,
+    "total_reps": 108,
+    "time_under_tension": 10.08,
+    "total_work_kj": 11,
+    "tonal_activity_id": "4a7e96f8-fdf5-49fa-8332-f68f70904e42",
+    "functional_strength": 41,
+    "movement_quality": 97,
+    "movement_quality_delta": 97,
+    "strength_overall": 493,
+    "strength_upper": 487,
+    "strength_core": 456,
+    "strength_lower": 435,
+    "notes": "Adductors and inner thighs still sore from first equestrian session (May 22) — not in readiness schema. Upper-body pull focus; no lower body work.",
+    "program": "Triple Threat: Dynamic Gains"
   }
 ]
