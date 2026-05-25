@@ -3422,5 +3422,245 @@
     "strength_lower": 435,
     "notes": "Adductors and inner thighs still sore from first equestrian session (May 22) — not in readiness schema. Upper-body pull focus; no lower body work.",
     "program": "Triple Threat: Dynamic Gains"
+  },
+  {
+    "date": "2026-05-25",
+    "workout": "Week 1 - Day 2",
+    "energy_level": 1,
+    "phase": null,
+    "subjective_rating": 3,
+    "sweat": "moderate",
+    "calories": 175,
+    "avg_hr": 113,
+    "max_hr": 148,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 73,
+      "chest": 100,
+      "shoulders": 98,
+      "biceps": 95,
+      "triceps": 89
+    },
+    "post_readiness": {
+      "glutes": 1,
+      "hamstrings": 19,
+      "quads": 12,
+      "calves": 65,
+      "abs": 81,
+      "obliques": 85,
+      "back": 53,
+      "chest": 100,
+      "shoulders": 82,
+      "biceps": 96,
+      "triceps": 89
+    },
+    "prs": {
+      "racked_squat": {
+        "weight": 20,
+        "date": "2026-05-25"
+      },
+      "single_arm_deadlift": {
+        "weight": 57,
+        "date": "2026-05-25"
+      },
+      "rdl": {
+        "weight": 30,
+        "date": "2026-05-25"
+      }
+    },
+    "muscles_high_volume": [
+      "Quads",
+      "Hamstrings",
+      "Glutes",
+      "Core"
+    ],
+    "muscles_low_volume": [
+      "Calves"
+    ],
+    "movements": [
+      {
+        "name": "Racked Squat",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 20,
+            "prs": [
+              "strength",
+              "power",
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Suitcase March",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 33,
+            "duration_sec": 25
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 33,
+            "duration_sec": 25
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 33,
+            "duration_sec": 25
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 33,
+            "duration_sec": 25
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 35,
+            "duration_sec": 25
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 35,
+            "duration_sec": 25
+          }
+        ]
+      },
+      {
+        "name": "Assisted Reverse Lunge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Single Arm Deadlift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 56,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 56
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 57,
+            "prs": [
+              "volume"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 57
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 57
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 57
+          }
+        ]
+      },
+      {
+        "name": "RDL",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 9,
+            "weight_lbs": 38
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 30,
+            "prs": [
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Resisted Calf Raise",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 16
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 17
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-25T09:47:16.708167-04:00",
+    "duration": 37.6,
+    "total_volume": 5922,
+    "total_reps": 117,
+    "time_under_tension": 13.43,
+    "total_work_kj": 10,
+    "tonal_activity_id": "3b8eaa21-cefb-42b8-a69e-8f041ddfe62e",
+    "shot_day": false,
+    "strength_overall": 493,
+    "strength_upper": 487,
+    "strength_core": 456,
+    "strength_lower": 536,
+    "functional_strength": 100,
+    "movement_quality": 64,
+    "movement_quality_delta": -33,
+    "notes": "Heavy lower body on equestrian soreness — glutes and quads already compromised going in. Assisted Reverse Lunge substituted for Resisted Lunge. Energy 1 but subjective 3; lower strength score jumped 435→536."
   }
 ]
