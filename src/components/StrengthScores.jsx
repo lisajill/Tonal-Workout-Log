@@ -43,6 +43,7 @@ const HISTORY = [
   { date: '2026-05-09', overall: 493, upper: 487, lower: 535, core: 456 },
   { date: '2026-05-24', overall: 493, upper: 487, lower: 435, core: 456 },
   { date: '2026-05-25', overall: 493, upper: 487, lower: 536, core: 456 },
+  { date: '2026-05-27', overall: 496, upper: 486, lower: 536, core: 465 },
 ]
 
 function shortDate(d) {

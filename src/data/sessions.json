@@ -3662,5 +3662,206 @@
     "movement_quality": 64,
     "movement_quality_delta": -33,
     "notes": "Heavy lower body on equestrian soreness — glutes and quads already compromised going in. Assisted Reverse Lunge substituted for Resisted Lunge. Got dizzy and nauseated mid-session, thought had a fever (no fever) — 3 days into Xyzal after doc switched from Zyrtec; dizziness consistent with antihistamine transition side effects, not GI. Pre-workout: 3 eggs, 100g egg whites, green tea, Yogi spiced vanilla tea, 20g creatine 15 min before. Energy 1 but subjective 3; lower strength score jumped 435→536."
+  },
+  {
+    "date": "2026-05-27",
+    "workout": "Week 1 - Day 3",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 103,
+    "avg_hr": 110,
+    "max_hr": 139,
+    "pre_readiness": {
+      "glutes": 59,
+      "hamstrings": 77,
+      "quads": 70,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 59,
+      "hamstrings": 75,
+      "quads": 71,
+      "calves": 100,
+      "abs": 87,
+      "obliques": 85,
+      "back": 41,
+      "chest": 51,
+      "shoulders": 48,
+      "biceps": 44,
+      "triceps": 84
+    },
+    "prs": {
+      "alternating_bench_press": {
+        "weight": 18,
+        "date": "2026-05-27"
+      }
+    },
+    "muscles_high_volume": [
+      "Chest",
+      "Back",
+      "Biceps",
+      "Core"
+    ],
+    "muscles_low_volume": [
+      "Shoulders",
+      "Triceps"
+    ],
+    "movements": [
+      {
+        "name": "Alternating Bench Press",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 20,
+            "weight_lbs": 18,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 20,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 20,
+            "weight_lbs": 14,
+            "prs": [
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bent Over Row",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 21
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 18
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 18
+          }
+        ]
+      },
+      {
+        "name": "Biceps Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 15,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Y-Pull",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 6
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Pushup",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          }
+        ]
+      },
+      {
+        "name": "Rotational Lift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 21
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 21
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 13
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-27T18:20:24.442172-04:00",
+    "duration": 41.15,
+    "total_volume": 4181,
+    "total_reps": 245,
+    "time_under_tension": 14.35,
+    "total_work_kj": 17,
+    "tonal_activity_id": "5e75b25f-81f7-469f-a9f0-97cf118a7f97",
+    "shot_day": false,
+    "functional_strength": 181,
+    "movement_quality": 125,
+    "movement_quality_delta": 61,
+    "strength_overall": 496,
+    "strength_upper": 486,
+    "strength_core": 465,
+    "strength_lower": 536,
+    "notes": "Energy 5, felt great. Rope handle on Rotational Lift rests on lower knuckle (MCP joint) of both thumbs — went down in weight due to discomfort. Concern given bilateral hand surgery history. Consider alternative attachment for this movement."
   }
 ]
