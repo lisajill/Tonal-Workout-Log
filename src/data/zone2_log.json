@@ -970,5 +970,18 @@
     "zone4_min": 0,
     "avg_hr": 115,
     "distance_mi": null
+  },
+  {
+    "uuid": "9905D6F0-1FEC-497F-8338-3FA9297A6B24",
+    "date": "2026-06-01",
+    "timestamp": "2026-06-01T01:29:18Z",
+    "activity": "Yoga",
+    "duration_min": 14.7,
+    "zone1_min": 14.7,
+    "zone2_min": 0,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 74,
+    "distance_mi": null
   }
 ]

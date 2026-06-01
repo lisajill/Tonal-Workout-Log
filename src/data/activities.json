@@ -119,5 +119,19 @@
       "back": 2
     },
     "notes": null
+  },
+  {
+    "uuid": "9905D6F0-1FEC-497F-8338-3FA9297A6B24",
+    "date": "2026-06-01",
+    "activity": "Yoga",
+    "duration_min": 14.7,
+    "avg_hr": 74,
+    "muscles": {
+      "back": 2,
+      "hip_flexors": 2,
+      "abs": 2,
+      "shoulders": 1
+    },
+    "notes": null
   }
 ]
