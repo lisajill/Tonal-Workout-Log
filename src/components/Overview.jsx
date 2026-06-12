@@ -27,6 +27,10 @@ const MOVEMENT_LABELS = {
   standing_straight_leg_glute_kickback: 'Standing Straight Leg Glute Kickback',
 }
 
+function formatMovement(key) {
+  return MOVEMENT_LABELS[key] ?? key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+}
+
 function pad2(n) { return String(n).padStart(2, '0') }
 
 // Sunday-start week using local date parts (never new Date('YYYY-MM-DD') — UTC parse)
@@ -54,8 +58,18 @@ export default function Overview({ sessions, onSelectSession }) {
   const avgTUT    = (sessions.reduce((s, x) => s + (x.time_under_tension ?? 0), 0) / sessions.length).toFixed(1)
   const avgRating = (sessions.reduce((s, x) => s + x.subjective_rating, 0) / sessions.length).toFixed(1)
   const prCount   = countPRs(sessions)
-  const recaps   = sessions.map(buildRecap)
   const bestPRs  = findNotablePRs(sessions)
+
+  // Latest PR event + distinct movements PR'd — drives the dynamic TL;DR
+  const prMovements = new Set()
+  let lastPR = null
+  for (const s of sorted) {
+    for (const [key, pr] of Object.entries(s.prs ?? {})) {
+      if (pr.weight == null) continue
+      prMovements.add(key)
+      if (!lastPR || (pr.date ?? s.date) >= lastPR.date) lastPR = { key, weight: pr.weight, date: pr.date ?? s.date }
+    }
+  }
 
   // ── This week (Sun–Sat) ──────────────────────────────────────────────
   const todayStr = localTodayStr()
@@ -148,16 +162,15 @@ export default function Overview({ sessions, onSelectSession }) {
         </div>
       </div>
 
-      {/* ── TL;DR — serif narrative ───────────────────────────────────── */}
+      {/* ── TL;DR — serif narrative, computed live from the data ────────── */}
       <div className="card border-l-[3px] border-l-accent">
         <p className="font-display text-lg leading-relaxed text-zinc-200">
-          Across <strong className="text-accent-hover">{sessions.length} sessions</strong> you've set{' '}
-          <strong className="text-cat-pr">{prCount} personal records</strong> in{' '}
-          {Object.keys(MOVEMENT_LABELS).length} tracked movements. Two recovery sessions built the baseline,
-          then strength sessions drove rapid gains — including a two-session day on Apr 25 that confirmed the bench fix
-          and pushed hip thrust to 65 lbs (+86% from session one). Apr 26 added two more PRs: Prone Bench SL Hamstring Curl
-          (25 lbs, +25%) and Standing Leg Extension (35 lbs, +21%), plus a 3-circuit core finisher.
-          Your best sessions have come on shot days and after poor sleep. <em>External stressors are not stopping you.</em>
+          Across <strong className="text-accent-hover">{sessions.length} sessions</strong> since {first.date} you've set{' '}
+          <strong className="text-cat-pr">{prCount} personal records</strong> in {prMovements.size} movements.
+          Most recent: <em>{last.workout}</em> on {last.date}
+          {last.total_volume ? <> — {last.total_volume.toLocaleString()} lbs{last.subjective_rating ? ` at ${last.subjective_rating}/5` : ''}</> : null}.
+          {lastPR && <> Latest record: {formatMovement(lastPR.key)} at <strong className="text-cat-pr">{lastPR.weight} lbs</strong> on {lastPR.date}.</>}
+          {' '}<em>External stressors are not stopping you.</em>
         </p>
       </div>
 
@@ -196,7 +209,7 @@ export default function Overview({ sessions, onSelectSession }) {
           <div className="space-y-2">
             <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Compounded Tirzepatide (GLP-1)" />
             <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
-            <Goal icon="🤲" text="Reintegrate upper body — hands cleared May 2, 2026. Build back compound pressing and pulling." />
+            <Goal icon="🤲" text="Upper body — grip-aware programming while nerves heal (bilateral carpal tunnel + ulnar neuropathy, dx Jun 11, 2026)" />
             <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
             <Goal icon="❤️" text="Zone 2 cardio — 150 min/week target (Rhonda Patrick protocol). Walks + Hydrow rowing once cleared post-May 4" />
             <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
@@ -205,9 +218,8 @@ export default function Overview({ sessions, onSelectSession }) {
         <div className="card">
           <div className="section-header"><h2 className="label">Training Context</h2></div>
           <div className="space-y-2">
-            <ContextItem label="Hand status"         value="Both hands cleared — upper body training resumed May 2, 2026" />
-            <ContextItem label="Right hand"         value="Post-op (A1 pulley release Feb 2026) — cleared ~7 weeks post-Apr 18" />
-            <ContextItem label="Left hand"          value="Post-op (A1 pulley release Mar 2026) — cleared of infection ~Apr 14" />
+            <ContextItem label="Hand status"         value="Uncleared as of Jun 11, 2026 — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only)" />
+            <ContextItem label="Surgical history"   value="A1 pulley releases Feb + Mar 2026 (both hands) — recovered; upper body training resumed May 2, 2026" />
             <ContextItem label="Medication"         value="Compounded Tirzepatide (GLP-1) — shot day affects energy and output" />
             <ContextItem label="Life stage"         value="Perimenopause — training adapted accordingly" />
             <ContextItem label="Next milestone"     value="Return to riding — target mid-May 2026" />
@@ -228,6 +240,7 @@ export default function Overview({ sessions, onSelectSession }) {
               <ArcEvent date="Apr 4, 2026"  color="bg-accent"      text="First session back — hands-free lower body only" active />
               <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Breakout session — glute bridge 120 lbs, PRs across the board · 5/5" active />
               <ArcEvent date="May 2"        color="bg-emerald-400" text="Hands cleared — first upper body session, hip thrust strength + power PR at 62 lbs" active />
+              <ArcEvent date="Jun 11"       color="bg-orange-400"  text="Hands uncleared — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only). Grip-aware programming." active />
             </div>
           </div>
         </div>
@@ -235,14 +248,14 @@ export default function Overview({ sessions, onSelectSession }) {
         {bestPRs.length > 0 && (
           <div className="card">
             <div className="section-header">
-              <h2 className="label">Notable PRs</h2>
-              <span className="pr-badge">⬆ PR</span>
+              <h2 className="label">Most Improved Lifts</h2>
+              <span className="pr-badge">⬆ {prCount} PRs</span>
             </div>
             <div className="space-y-2">
-              {bestPRs.map(pr => (
+              {bestPRs.slice(0, 8).map(pr => (
                 <div key={pr.key} className="flex items-center justify-between rounded-lg bg-surface-2 px-3 py-2">
                   <div>
-                    <p className="text-sm font-medium text-zinc-100">{MOVEMENT_LABELS[pr.key] ?? pr.key}</p>
+                    <p className="text-sm font-medium text-zinc-100">{formatMovement(pr.key)}</p>
                     <p className="text-xs text-zinc-500 mt-0.5 mono-stat">Set {pr.date}</p>
                   </div>
                   <div className="text-right shrink-0 pl-4">
@@ -252,65 +265,12 @@ export default function Overview({ sessions, onSelectSession }) {
                 </div>
               ))}
             </div>
+            <a href="#prs" className="mt-3 block text-right text-xs text-accent-hover hover:text-zinc-100 transition-colors">
+              All {bestPRs.length} movements →
+            </a>
           </div>
         )}
       </div>
-
-      {/* Collapsible: Progress Story + Recaps */}
-      <details className="card group">
-        <summary className="label cursor-pointer list-none flex items-center justify-between">
-          Progress Story &amp; Session Recaps
-          <span className="text-zinc-600 group-open:rotate-180 transition-transform">▾</span>
-        </summary>
-        <div className="mt-4 space-y-4 leading-relaxed text-zinc-300 text-sm">
-          <p>
-            You logged your first Tonal session on <strong className="text-zinc-100">{first.date}</strong> — a
-            {' '}<em>{first.workout}</em> in the recovery phase. This was a return after a significant break: cellulitis
-            leading to tenosynovitis surgery in Oct 2025, two A1 pulley releases (Feb and Mar 2026), and months of
-            hands-free-only constraint. Re-entry at {first.total_volume?.toLocaleString()} lbs total
-            volume and an average heart rate of {first.avg_hr} bpm.
-            That session ended with glutes and hamstrings nearly depleted (1% and 13% readiness respectively),
-            while quads held up at 74% — a clear signal of where the work landed.
-          </p>
-          <p>
-            The very next day you came back for <em>Hands Free Lower Body + Core B</em>, training on already-sore legs.
-            Volume dropped to {sorted[1]?.total_volume?.toLocaleString()} lbs — appropriate for day-two fatigue —
-            and you rated it {sorted[1]?.subjective_rating}/5. First hamstring PRs: prone bench curl, SL curl, and leg extension in the same session.
-          </p>
-          <p>
-            After a 13-day gap — caused by a post-op infection at the left surgical site, cleared around Apr 14 — you returned on April 18.
-            Shot day (GLP-1), tired, full — and still delivered a{' '}
-            <strong className="text-zinc-100">4.5/5</strong>. Fully recovered going in (100% readiness), {sorted[2]?.total_volume?.toLocaleString()} lbs in {sorted[2]?.duration} minutes, hip thrust PR at 56 lbs.
-          </p>
-          <p>
-            April 19 is the best single session on record. Poor sleep, four days off — glute bridge climbed to{' '}
-            <strong className="text-zinc-100">120 lbs</strong> ({Math.round(((120 - 35) / 35) * 100)}% up from session one),
-            PRs on nearly every set, perfect 5/5.
-          </p>
-          <p>
-            April 25 — another shot day — brought two sessions. The main workout hit PRs on donkey kick (+50%), SL hamstring curl,
-            and hip abduction. Smart Flex proposed 132 lbs on the glute bridge and it was unbudgeable; worked down to 100–112 lbs with a volume PR on set 3.
-            Then immediately after: a Free Lift hip thrust to solve the bench-slide problem. Yoga mat under the bench fixed it.
-            Hit <strong className="text-zinc-100">65 lbs</strong> for a Strength, Power, and Volume PR in the same set — rated 5/5.
-          </p>
-        </div>
-        <div className="mt-5 space-y-3 border-t border-surface-3 pt-4">
-          <p className="label">Session Recaps</p>
-          {recaps.map(r => (
-            <div key={r.id} className="flex gap-3 items-start">
-              <div className="w-1 self-stretch rounded-full bg-cat-strength/40 shrink-0" />
-              <div className="flex-1">
-                <div className="flex items-baseline gap-2 flex-wrap">
-                  <span className="text-xs text-zinc-500 mono-stat">{r.date}</span>
-                  <span className="text-sm font-medium text-zinc-100">{r.workout}</span>
-                  <span className="text-xs text-zinc-500 mono-stat">{r.duration} min · {r.volume?.toLocaleString()} lbs · {r.rating}/5</span>
-                </div>
-                <p className="text-sm text-zinc-400 mt-0.5">{r.narrative}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </details>
 
       {/* Footnote */}
       <p className="text-xs text-zinc-700 text-center pt-2">
@@ -444,30 +404,6 @@ function findNotablePRs(sessions) {
         : null,
     }))
     .sort((a, b) => (b.growth ?? 0) - (a.growth ?? 0))
-}
-
-const SESSION_NARRATIVES = {
-  'aeb1248b-83ca-41cc-8af5-594c630a0626': 'First tracked session. Tonal MCP connected mid-session. Legs were toast by the end — glutes and hamstrings at near-zero readiness post. Set early baselines on glute bridge and kickbacks.',
-  '00341bc1-7c4d-4713-9f63-8bce102fa9b0': 'Came back on sore legs the next day. Appropriately lighter volume. First time on the hamstring curl machine — hit PRs immediately on prone curl, SL curl, and leg extension.',
-  'f8a42e03-03bf-4bdd-8229-d00978f3bc55': 'Shot day. Tired and full. Trained anyway and rated it 4.5/5. Went heavy on hip thrusts, set a 56 lb PR. Hip abduction and donkey kick PRs too. Short, dense, effective.',
-  'e6b7b607-d8c0-49ec-8614-09ad03577421': 'Best single session yet. Poor sleep, four days off — didn\'t matter. PRs on almost every set. Glute bridge hit 120 lbs. Volume second-highest in just 24 minutes. First perfect 5/5.',
-  '03fb2420-f725-4b1e-9ef7-2654636330cb': 'Shot day energy 4/5. First session with proper rest breaks (2 min post-compound, 90s between isolations) — lower density than Apr 19 but correct execution. Smart Flex proposed 132 lbs on glute bridge — unbudgeable. Worked down to 100–112 lbs, still got a volume PR. Hit PRs on donkey kick (+50%), SL hamstring curl, and hip abduction.',
-  '084ab93a-fe9c-49f3-b773-78451edea6d6': 'Bonus session immediately post-workout to test the bench slide fix. Yoga mat under bench + weight plates behind legs — held through 65 lbs. Strength, Power, and Volume PR in one set. Rated 5/5.',
-  'db03899d-36f9-46a7-b51c-c34cb53ab5bb': 'Fasted session, 14.5 hr fast. Glutes at 21% from Apr 25 double session — hip thrust done as a separate Free Lift warmup only. Two PRs: Prone Bench SL Hamstring Curl 25 lbs (+25%) and Standing Leg Extension 35 lbs (+21%). Followed by 3-circuit core finisher off-Tonal (dead bug, pilates teaser, bicycle crunches, clamshells, hollow hold, wall pushups, glute bridge march). Right inner groin clicks on dead bug — monitor.',
-  '6730f404-c0da-42ab-87e8-e1b72e7c81e3': 'Pre-workout Free Lift hip thrust warmup only — 40 lbs × 10 reps, 1.5 min. Glutes too depleted from Apr 25 for a real hip thrust session.',
-  'f61fce07-1e13-4dfc-8eec-f5a2c32a661a': 'First Hands Back — first upper body session since surgery. Tonal crashed mid-workout during bench press sets 2–3. Still got a hip thrust strength + power PR at 62 lbs. Shot day. Energy 5/5.',
-}
-
-function buildRecap(s) {
-  return {
-    id: s.tonal_activity_id ?? `${s.date}::${s.workout}`,
-    date: s.date,
-    workout: s.workout,
-    duration: s.duration,
-    volume: s.total_volume,
-    rating: s.subjective_rating,
-    narrative: SESSION_NARRATIVES[s.tonal_activity_id] ?? '',
-  }
 }
 
 function ArcEvent({ date, color, text, active, shot }) {

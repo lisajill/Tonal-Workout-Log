@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 import Overview from './components/Overview.jsx'
 import SessionLog from './components/SessionLog.jsx'
@@ -75,6 +75,18 @@ export default function App() {
   const [activeSession, setActiveSession] = useState(initial.sessionKey)
   const [openGroup, setOpenGroup] = useState(null)
   const [dropdownStyle, setDropdownStyle] = useState({})
+
+  // Keep tab state in sync with the hash — enables plain anchor links
+  // between tabs and makes browser back/forward work
+  useEffect(() => {
+    function onHash() {
+      const next = parseHash()
+      setTab(next.tab)
+      setActiveSession(next.sessionKey)
+    }
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
 
   function setTabAndHash(id, sessionKey = null) {
     window.location.hash = sessionKey ? `${id}:${sessionKey}` : id

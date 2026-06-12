@@ -1,12 +1,36 @@
-const ALL_MUSCLES = [
-  'glutes', 'hamstrings', 'quads', 'hip_flexors',
-  'lower_back', 'lats', 'calves', 'abs', 'obliques',
+const CAT_STRENGTH = '#a78bfa'
+
+// Region grouping — muscles only render if they appear in the data
+const REGIONS = [
+  { label: 'Lower Body', muscles: ['glutes', 'hamstrings', 'quads', 'hip_flexors', 'adductors', 'calves'] },
+  { label: 'Core',       muscles: ['abs', 'obliques', 'core', 'lower_back'] },
+  { label: 'Upper Body', muscles: ['chest', 'back', 'lats', 'shoulders', 'biceps', 'triceps', 'forearms', 'grip'] },
 ]
 
 const MUSCLE_LABELS = {
-  glutes: 'Glutes', hamstrings: 'Hamstrings', quads: 'Quads',
-  hip_flexors: 'Hip Flexors', lower_back: 'Lower Back', lats: 'Lats',
-  calves: 'Calves', abs: 'Abs', obliques: 'Obliques',
+  glutes: 'Glutes', hamstrings: 'Hamstrings', quads: 'Quads', hip_flexors: 'Hip Flexors',
+  adductors: 'Adductors', calves: 'Calves', abs: 'Abs', obliques: 'Obliques',
+  core: 'Core (general)', lower_back: 'Lower Back', chest: 'Chest', back: 'Back', lats: 'Lats',
+  shoulders: 'Shoulders', biceps: 'Biceps', triceps: 'Triceps', forearms: 'Forearms', grip: 'Grip',
+}
+
+// Manual sessions sometimes tag muscles as "Quads" / "Core" — normalize to snake_case
+function normalizeMuscle(m) {
+  return m.toLowerCase().replace(/\s+/g, '_')
+}
+
+function pad2(n) { return String(n).padStart(2, '0') }
+
+function getWeekStart(dateStr) {
+  const [y, m, d] = dateStr.split('-').map(Number)
+  const day = new Date(y, m - 1, d).getDay()
+  const sun = new Date(y, m - 1, d - day)
+  return `${sun.getFullYear()}-${pad2(sun.getMonth() + 1)}-${pad2(sun.getDate())}`
+}
+
+function localTodayStr() {
+  const t = new Date()
+  return `${t.getFullYear()}-${pad2(t.getMonth() + 1)}-${pad2(t.getDate())}`
 }
 
 function shortDate(d) {
@@ -14,107 +38,162 @@ function shortDate(d) {
   return `${parseInt(m)}/${parseInt(day)}`
 }
 
+function daysSince(dateStr) {
+  const [y, m, d] = dateStr.split('-').map(Number)
+  return Math.floor((Date.now() - new Date(y, m - 1, d, 12).getTime()) / 86400000)
+}
+
+// Cell color by weekly training load: high-volume hit = 1, low-volume = 0.5
+function cellStyle(score) {
+  if (score <= 0) return { backgroundColor: '#18181b' }
+  const alpha = score >= 2.5 ? 0.95 : score >= 1.5 ? 0.7 : score >= 1 ? 0.48 : 0.25
+  return { backgroundColor: `rgba(167, 139, 250, ${alpha})` }
+}
+
+function staleness(days) {
+  if (days == null) return { text: 'never', cls: 'text-zinc-700' }
+  if (days <= 7)  return { text: `${days}d`, cls: 'text-emerald-400' }
+  if (days <= 14) return { text: `${days}d`, cls: 'text-amber-400' }
+  return { text: `${days}d`, cls: 'text-red-400' }
+}
+
 export default function MuscleMatrix({ sessions }) {
   const sorted = [...sessions].sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
+  if (!sorted.length) return <div className="card text-zinc-500 text-sm">No sessions.</div>
 
-  // Collect all muscles that appear in any session
-  const activeMuscles = ALL_MUSCLES.filter(m =>
-    sorted.some(s =>
-      s.muscles_high_volume?.includes(m) || s.muscles_low_volume?.includes(m)
-    )
-  )
+  const todayStr = localTodayStr()
+  const currentWeek = getWeekStart(todayStr)
+
+  // All weeks from first session through this week
+  const weeks = []
+  {
+    let [y, m, d] = getWeekStart(sorted[0].date).split('-').map(Number)
+    let cursor = new Date(y, m - 1, d)
+    for (;;) {
+      const ws = `${cursor.getFullYear()}-${pad2(cursor.getMonth() + 1)}-${pad2(cursor.getDate())}`
+      weeks.push(ws)
+      if (ws === currentWeek) break
+      cursor.setDate(cursor.getDate() + 7)
+      if (weeks.length > 104) break // safety
+    }
+  }
+
+  // muscle → { weekScores: {week: score}, lastDate, totalSessions }
+  const stats = {}
+  const seen = new Set()
+  for (const s of sorted) {
+    const week = getWeekStart(s.date)
+    const hit = (raw, w) => {
+      const m = normalizeMuscle(raw)
+      seen.add(m)
+      const st = (stats[m] ??= { weekScores: {}, lastDate: null, totalSessions: 0 })
+      st.weekScores[week] = (st.weekScores[week] ?? 0) + w
+      if (!st.lastDate || s.date > st.lastDate) st.lastDate = s.date
+      st.totalSessions += 1
+    }
+    for (const m of s.muscles_high_volume ?? []) hit(m, 1)
+    for (const m of s.muscles_low_volume ?? []) hit(m, 0.5)
+  }
+
+  const regions = REGIONS
+    .map(r => ({ ...r, muscles: r.muscles.filter(m => seen.has(m)) }))
+    .filter(r => r.muscles.length > 0)
+  // anything in the data we didn't classify
+  const classified = new Set(REGIONS.flatMap(r => r.muscles))
+  const other = [...seen].filter(m => !classified.has(m))
+  if (other.length) regions.push({ label: 'Other', muscles: other })
+
+  // most neglected currently-trained muscle (trained before, stale longest)
+  const neglected = [...seen]
+    .map(m => ({ m, days: stats[m].lastDate ? daysSince(stats[m].lastDate) : null }))
+    .filter(x => x.days != null)
+    .sort((a, b) => b.days - a.days)[0]
 
   return (
-    <div className="card overflow-x-auto">
-      <div className="section-header">
-        <h2 className="font-display italic text-2xl text-zinc-100">Muscle Matrix</h2>
-        <p className="text-xs text-zinc-600">load per session — all sessions</p>
-      </div>
+    <div className="space-y-5">
+      <h1 className="font-display italic text-3xl" style={{ color: CAT_STRENGTH }}>Muscle Matrix</h1>
 
-      <table className="w-full text-xs">
-        <thead>
-          <tr className="border-b border-surface-3">
-            <th className="label pb-2 pr-4 text-left w-32">Muscle</th>
-            {sorted.map(s => (
-              <th key={s.date} className="label pb-2 px-2 text-center whitespace-nowrap">
-                {shortDate(s.date)}
-                {s.shot_day && (
-                  <span className="relative group/shot inline-block">
-                    <span className="block text-amber-400 normal-case font-normal cursor-default">💉</span>
-                    <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 z-10 whitespace-nowrap rounded-md bg-surface-3 border border-surface-3 px-2 py-1 text-xs text-zinc-200 shadow-lg opacity-0 group-hover/shot:opacity-100 transition-opacity">
-                      GLP-1 shot day
-                    </span>
-                  </span>
-                )}
-              </th>
+      <div className="card overflow-x-auto">
+        <div className="section-header">
+          <div>
+            <h2 className="label">Weekly Coverage</h2>
+            <p className="text-xs text-zinc-500 mt-1">
+              How often each muscle gets trained, week by week — darker = more work.
+              {neglected && neglected.days > 7 && <> Most neglected: <span className="text-amber-400">{MUSCLE_LABELS[neglected.m] ?? neglected.m}</span> ({neglected.days}d ago).</>}
+            </p>
+          </div>
+          <div className="hidden sm:flex items-center gap-2 text-[10px] text-zinc-500 shrink-0">
+            <span>less</span>
+            {[0.5, 1, 1.5, 2.5].map(s => (
+              <span key={s} className="h-3 w-3 rounded-sm" style={cellStyle(s)} />
             ))}
-            <th className="label pb-2 pl-4 text-center">Total sessions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {activeMuscles.map(m => {
-            const counts = sorted.map(s => {
-              if (s.muscles_high_volume?.includes(m)) return 'high'
-              if (s.muscles_low_volume?.includes(m)) return 'low'
-              return null
-            })
-            const total = counts.filter(Boolean).length
-            return (
-              <tr key={m} className="border-b border-surface-3/40">
-                <td className="py-2.5 pr-4 font-medium text-zinc-300 whitespace-nowrap">
-                  {MUSCLE_LABELS[m]}
-                </td>
-                {counts.map((level, i) => (
-                  <td key={i} className="py-2.5 px-2 text-center">
-                    <Cell level={level} />
-                  </td>
-                ))}
-                <td className="py-2.5 pl-4 text-center tabular-nums text-zinc-400">
-                  {total} / {sorted.length}
-                </td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+            <span>more</span>
+          </div>
+        </div>
 
-      {/* Legend */}
-      <div className="mt-4 flex flex-wrap gap-4 pt-4 border-t border-surface-3">
-        <LegendItem color="bg-accent" label="High volume" />
-        <LegendItem color="bg-accent/25" label="Low volume" />
-        <LegendItem color="bg-surface-2" label="Not targeted" />
-        <span className="flex items-center gap-1.5 text-xs text-zinc-500">
-          <span>💉</span> GLP-1 shot day
-        </span>
+        <table className="w-full text-xs min-w-[560px]">
+          <thead>
+            <tr>
+              <th className="label !text-[9px] text-left pb-2 pr-3 w-28">Muscle</th>
+              {weeks.map(w => (
+                <th key={w} className={`label !text-[9px] pb-2 px-0.5 text-center mono-stat ${w === currentWeek ? '!text-accent-hover' : ''}`}>
+                  {shortDate(w)}
+                </th>
+              ))}
+              <th className="label !text-[9px] pb-2 pl-3 text-right whitespace-nowrap">Last hit</th>
+              <th className="label !text-[9px] pb-2 pl-3 text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {regions.map(region => (
+              <RegionRows key={region.label} region={region} weeks={weeks} stats={stats} currentWeek={currentWeek} />
+            ))}
+          </tbody>
+        </table>
+
+        <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-zinc-600">
+          <span>High-volume session = 1 · low-volume = ½</span>
+          <span><span className="text-emerald-400">●</span> hit within 7d</span>
+          <span><span className="text-amber-400">●</span> 8–14d ago</span>
+          <span><span className="text-red-400">●</span> 15d+ — due</span>
+        </p>
       </div>
     </div>
   )
 }
 
-function Cell({ level }) {
-  const tip = level === 'high' ? 'High volume' : level === 'low' ? 'Low volume' : 'Not targeted'
-  const style =
-    level === 'high' ? 'bg-accent text-white' :
-    level === 'low'  ? 'bg-accent/25 text-accent' :
-                       'bg-surface-2 text-zinc-700'
-  const label = level === 'high' ? 'H' : level === 'low' ? 'L' : '—'
+function RegionRows({ region, weeks, stats, currentWeek }) {
   return (
-    <span className="relative group/cell inline-flex">
-      <span className={`inline-flex h-6 w-6 items-center justify-center rounded font-bold text-[10px] cursor-default ${style}`}>
-        {label}
-      </span>
-      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 z-10 whitespace-nowrap rounded-md bg-surface-3 border border-surface-3 px-2 py-1 text-xs text-zinc-200 shadow-lg opacity-0 group-hover/cell:opacity-100 transition-opacity">
-        {tip}
-      </span>
-    </span>
-  )
-}
-
-function LegendItem({ color, label }) {
-  return (
-    <span className="flex items-center gap-1.5 text-xs text-zinc-500">
-      <span className={`inline-flex h-4 w-4 rounded ${color}`} />
-      {label}
-    </span>
+    <>
+      <tr>
+        <td colSpan={weeks.length + 3} className="pt-4 pb-1.5">
+          <span className="label !text-[10px]" style={{ color: CAT_STRENGTH }}>{region.label}</span>
+        </td>
+      </tr>
+      {region.muscles.map(m => {
+        const st = stats[m]
+        const days = st?.lastDate ? daysSince(st.lastDate) : null
+        const stale = staleness(days)
+        return (
+          <tr key={m} className="group">
+            <td className="py-px pr-3 text-zinc-300 whitespace-nowrap">{MUSCLE_LABELS[m] ?? m}</td>
+            {weeks.map(w => {
+              const score = st?.weekScores[w] ?? 0
+              return (
+                <td key={w} className="px-0.5 py-px">
+                  <div
+                    className={`h-5 w-full rounded-sm ${w === currentWeek ? 'ring-1 ring-inset ring-surface-3' : ''}`}
+                    style={cellStyle(score)}
+                    title={`${MUSCLE_LABELS[m] ?? m} — week of ${shortDate(w)}: ${score > 0 ? `${score}× load` : 'not trained'}`}
+                  />
+                </td>
+              )
+            })}
+            <td className={`pl-3 text-right mono-stat whitespace-nowrap ${stale.cls}`}>{stale.text}</td>
+            <td className="pl-3 text-right mono-stat text-zinc-500">{st?.totalSessions ?? 0}</td>
+          </tr>
+        )
+      })}
+    </>
   )
 }

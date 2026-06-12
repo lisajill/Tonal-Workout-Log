@@ -1,21 +1,13 @@
 import cardioLog from '../data/zone2_log.json'
 import {
-  LineChart, Line, BarChart, Bar,
+  LineChart, Line, BarChart, Bar, ComposedChart, Area,
   XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, LabelList,
+  ResponsiveContainer,
 } from 'recharts'
+import { AXIS, GRID, ChartTip } from './chartTheme.jsx'
 
 const CAT_ROWING = '#38bdf8' // sky-400 — rowing category color (design.md)
 const POWER = '#f59e0b'
-
-const TOOLTIP_STYLE = {
-  contentStyle: { background: '#18181b', border: '1px solid #303036', borderRadius: 8, fontSize: 12, fontFamily: '"JetBrains Mono", monospace' },
-  labelStyle: { color: '#a1a1aa', marginBottom: 4 },
-  itemStyle: { color: '#e4e4e7' },
-  cursor: false,
-}
-const AXIS_TICK = { fill: '#71717a', fontSize: 11 }
-const GRID = { strokeDasharray: '3 3', stroke: '#303036' }
 
 function shortDate(d) {
   const [, m, day] = d.split('-')
@@ -100,23 +92,23 @@ export default function RowingTracker() {
               <div className="section-header">
                 <div>
                   <h2 className="label">Split /500m</h2>
-                  <p className="text-xs text-zinc-500 mt-1">Lower = faster — goal: below 3:00</p>
+                  <p className="text-xs text-zinc-500 mt-1">Goal: below 3:00 — axis flipped so up = improving</p>
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={180}>
-                <LineChart data={chartData} margin={{ top: 16, right: 16, bottom: 0, left: 0 }}>
+                <ComposedChart data={chartData} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
+                  <defs>
+                    <linearGradient id="gradRowSplit" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor={CAT_ROWING} stopOpacity={0.4} />
+                      <stop offset="100%" stopColor={CAT_ROWING} stopOpacity={0.03} />
+                    </linearGradient>
+                  </defs>
                   <CartesianGrid {...GRID} />
-                  <XAxis dataKey="label" tick={AXIS_TICK} />
-                  <YAxis tick={AXIS_TICK} tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
-                  <Tooltip
-                    {...TOOLTIP_STYLE}
-                    formatter={v => [fmtSplit(v), 'Avg Split']}
-                    labelFormatter={label => chartData.find(r => r.label === label)?.date ?? label}
-                  />
-                  <Line type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 5 }}>
-                    <LabelList dataKey="split_sec" position="top" style={{ fill: '#a1a1aa', fontSize: 10 }} formatter={v => fmtSplit(v)} />
-                  </Line>
-                </LineChart>
+                  <XAxis dataKey="label" {...AXIS} />
+                  <YAxis {...AXIS} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
+                  <Tooltip content={<ChartTip names={{ split_sec: 'Avg Split' }} formats={{ split_sec: v => `${fmtSplit(v)} /500m` }} />} cursor={{ stroke: '#3f3f46' }} />
+                  <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradRowSplit)" dot={{ r: 3 }} activeDot={{ r: 4.5 }} />
+                </ComposedChart>
               </ResponsiveContainer>
             </div>
 
@@ -128,18 +120,12 @@ export default function RowingTracker() {
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={180}>
-                <LineChart data={chartData} margin={{ top: 16, right: 16, bottom: 0, left: 0 }}>
+                <LineChart data={chartData} margin={{ top: 8, right: 8, bottom: 0, left: -8 }}>
                   <CartesianGrid {...GRID} />
-                  <XAxis dataKey="label" tick={AXIS_TICK} />
-                  <YAxis tick={AXIS_TICK} unit="W" domain={['auto', 'auto']} />
-                  <Tooltip
-                    {...TOOLTIP_STYLE}
-                    formatter={v => [`${v} W`, 'Avg Peak Power']}
-                    labelFormatter={label => chartData.find(r => r.label === label)?.date ?? label}
-                  />
-                  <Line type="monotone" dataKey="watts" stroke={POWER} strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 5 }}>
-                    <LabelList dataKey="watts" position="top" style={{ fill: '#a1a1aa', fontSize: 10 }} formatter={v => `${v}W`} />
-                  </Line>
+                  <XAxis dataKey="label" {...AXIS} />
+                  <YAxis {...AXIS} unit="W" domain={['auto', 'auto']} />
+                  <Tooltip content={<ChartTip names={{ watts: 'Avg Peak Power' }} formats={{ watts: v => `${v} W` }} />} cursor={{ stroke: '#3f3f46' }} />
+                  <Line isAnimationActive={false} type="monotone" dataKey="watts" stroke={POWER} strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 4.5 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -153,18 +139,18 @@ export default function RowingTracker() {
               </div>
             </div>
             <ResponsiveContainer width="100%" height={180}>
-              <BarChart data={chartData} margin={{ top: 16, right: 16, bottom: 0, left: 0 }} barCategoryGap="30%">
+              <BarChart data={chartData} margin={{ top: 8, right: 8, bottom: 0, left: -8 }} barCategoryGap="35%">
+                <defs>
+                  <linearGradient id="gradRowDist" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor={CAT_ROWING} stopOpacity={0.95} />
+                    <stop offset="100%" stopColor={CAT_ROWING} stopOpacity={0.3} />
+                  </linearGradient>
+                </defs>
                 <CartesianGrid {...GRID} />
-                <XAxis dataKey="label" tick={AXIS_TICK} />
-                <YAxis tick={AXIS_TICK} unit="m" domain={['auto', 'auto']} />
-                <Tooltip
-                  {...TOOLTIP_STYLE}
-                  formatter={v => [`${v}m`, 'Distance']}
-                  labelFormatter={label => chartData.find(r => r.label === label)?.date ?? label}
-                />
-                <Bar dataKey="distance" fill={CAT_ROWING} radius={[4, 4, 0, 0]}>
-                  <LabelList dataKey="distance" position="top" style={{ fill: '#a1a1aa', fontSize: 10 }} formatter={v => `${v}m`} />
-                </Bar>
+                <XAxis dataKey="label" {...AXIS} />
+                <YAxis {...AXIS} unit="m" domain={['auto', 'auto']} />
+                <Tooltip content={<ChartTip names={{ distance: 'Distance' }} formats={{ distance: v => `${v} m` }} />} cursor={{ fill: '#242428', opacity: 0.5 }} />
+                <Bar isAnimationActive={false} dataKey="distance" fill="url(#gradRowDist)" radius={[5, 5, 0, 0]} maxBarSize={48} />
               </BarChart>
             </ResponsiveContainer>
           </div>

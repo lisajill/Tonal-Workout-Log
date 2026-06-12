@@ -3,9 +3,9 @@ import cardioLog from '../data/zone2_log.json'
 import rawSessions from '../data/sessions.json'
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, ReferenceLine, LabelList,
-  LineChart, Line, Legend,
+  ResponsiveContainer, ReferenceLine, ComposedChart, Area, Legend,
 } from 'recharts'
+import { AXIS, GRID, ChartTip } from './chartTheme.jsx'
 
 const WEEKLY_Z2_TARGET = 150
 const CAT_CARDIO = '#34d399' // emerald-400 — cardio category color (design.md)
@@ -21,14 +21,7 @@ const ZONE_LABELS = {
   zone3: 'Cardio',
   zone4: 'Peak',
 }
-const TOOLTIP_STYLE = {
-  contentStyle: { background: '#18181b', border: '1px solid #303036', borderRadius: 8, fontSize: 12, fontFamily: '"JetBrains Mono", monospace' },
-  labelStyle: { color: '#a1a1aa', marginBottom: 4 },
-  itemStyle: { color: '#e4e4e7' },
-  cursor: false,
-}
-const AXIS_TICK = { fill: '#71717a', fontSize: 11 }
-const GRID = { strokeDasharray: '3 3', stroke: '#303036' }
+const ZONE_FMT = Object.fromEntries(['zone1', 'zone2', 'zone3', 'zone4'].map(z => [z, v => `${Math.round(v)} min`]))
 
 function getWeekStart(dateStr) {
   const [y, m, d] = dateStr.split('-').map(Number)
@@ -179,21 +172,18 @@ export default function CardioTracker() {
           <div className="flex items-center justify-center h-32 text-zinc-600 text-sm">No data yet.</div>
         ) : (
           <ResponsiveContainer width="100%" height={240}>
-            <BarChart data={weeks.map(w => ({ ...w, label: shortDate(w.week) }))} margin={{ top: 16, right: 16, bottom: 0, left: 0 }} barCategoryGap="30%">
+            <BarChart data={weeks.map(w => ({ ...w, label: shortDate(w.week) }))} margin={{ top: 8, right: 8, bottom: 0, left: -8 }} barCategoryGap="30%">
               <CartesianGrid {...GRID} />
-              <XAxis dataKey="label" tick={AXIS_TICK} />
-              <YAxis tick={AXIS_TICK} unit="m" />
-              <Tooltip
-                {...TOOLTIP_STYLE}
-                formatter={(v, name) => [`${Math.round(v)} min`, ZONE_LABELS[name] ?? name]}
-              />
-              <Legend formatter={name => ZONE_LABELS[name] ?? name} wrapperStyle={{ fontSize: 11, color: '#71717a' }} />
+              <XAxis dataKey="label" {...AXIS} />
+              <YAxis {...AXIS} unit="m" />
+              <Tooltip content={<ChartTip names={ZONE_LABELS} formats={ZONE_FMT} />} cursor={{ fill: '#242428', opacity: 0.5 }} />
+              <Legend formatter={name => ZONE_LABELS[name] ?? name} wrapperStyle={{ fontSize: 11, color: '#71717a' }} iconType="circle" iconSize={7} />
               <ReferenceLine y={WEEKLY_Z2_TARGET} stroke={CAT_CARDIO} strokeDasharray="4 2"
                 label={{ value: `Z2 target ${WEEKLY_Z2_TARGET}m`, fill: CAT_CARDIO, fontSize: 10, position: 'insideTopRight' }} />
-              <Bar dataKey="zone1" stackId="a" fill={ZONE_COLORS.zone1} />
-              <Bar dataKey="zone2" stackId="a" fill={ZONE_COLORS.zone2} />
-              <Bar dataKey="zone3" stackId="a" fill={ZONE_COLORS.zone3} />
-              <Bar dataKey="zone4" stackId="a" fill={ZONE_COLORS.zone4} radius={[4, 4, 0, 0]} />
+              <Bar isAnimationActive={false} dataKey="zone1" stackId="a" fill={ZONE_COLORS.zone1} maxBarSize={42} />
+              <Bar isAnimationActive={false} dataKey="zone2" stackId="a" fill={ZONE_COLORS.zone2} maxBarSize={42} />
+              <Bar isAnimationActive={false} dataKey="zone3" stackId="a" fill={ZONE_COLORS.zone3} maxBarSize={42} />
+              <Bar isAnimationActive={false} dataKey="zone4" stackId="a" fill={ZONE_COLORS.zone4} radius={[4, 4, 0, 0]} maxBarSize={42} />
             </BarChart>
           </ResponsiveContainer>
         )}
@@ -209,24 +199,21 @@ export default function CardioTracker() {
             </div>
           </div>
           <ResponsiveContainer width="100%" height={180}>
-            <LineChart data={hrData} margin={{ top: 16, right: 16, bottom: 0, left: 0 }}>
+            <ComposedChart data={hrData} margin={{ top: 8, right: 8, bottom: 0, left: -8 }}>
+              <defs>
+                <linearGradient id="gradCardioHr" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#f59e0b" stopOpacity={0.35} />
+                  <stop offset="100%" stopColor="#f59e0b" stopOpacity={0.02} />
+                </linearGradient>
+              </defs>
               <CartesianGrid {...GRID} />
-              <XAxis dataKey="label" tick={AXIS_TICK} />
-              <YAxis tick={AXIS_TICK} unit=" bpm" domain={['auto', 'auto']} />
-              <Tooltip
-                {...TOOLTIP_STYLE}
-                formatter={v => [`${v} bpm`, 'Avg HR']}
-                labelFormatter={label => {
-                  const row = hrData.find(r => r.label === label)
-                  return row ? row.date : label
-                }}
-              />
+              <XAxis dataKey="label" {...AXIS} interval="preserveStartEnd" minTickGap={28} />
+              <YAxis {...AXIS} unit=" bpm" domain={['auto', 'auto']} />
+              <Tooltip content={<ChartTip names={{ avg_hr: 'Avg HR' }} formats={{ avg_hr: v => `${v} bpm` }} />} cursor={{ stroke: '#3f3f46' }} />
               <ReferenceLine y={108} stroke={CAT_CARDIO} strokeDasharray="3 2"
                 label={{ value: 'Z2 floor 108', fill: CAT_CARDIO, fontSize: 10, position: 'insideTopRight' }} />
-              <Line type="monotone" dataKey="avg_hr" stroke="#f59e0b" strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 5 }}>
-                <LabelList dataKey="avg_hr" position="top" style={{ fill: '#a1a1aa', fontSize: 10 }} formatter={v => `${v}`} />
-              </Line>
-            </LineChart>
+              <Area isAnimationActive={false} type="monotone" dataKey="avg_hr" stroke="#f59e0b" strokeWidth={2} fill="url(#gradCardioHr)" dot={false} activeDot={{ r: 4 }} />
+            </ComposedChart>
           </ResponsiveContainer>
         </div>
       )}
