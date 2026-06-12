@@ -1,0 +1,92 @@
+{
+    "uuid": "0DE14625-4B60-4D4B-B6FD-45CD72F2A794",
+    "name": "Functional Strength Training",
+    "activity": {
+        "name": "Functional Strength Training",
+        "type": 20
+    },
+    "startDate": "2026-04-26T20:22:35Z",
+    "endDate": "2026-04-26T20:23:46Z",
+    "source": "UltraAmazeWatch",
+    "zones": {
+        "zone4": {
+            "name": "PEAK",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone3": {
+            "name": "CARDIO",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone2": {
+            "name": "FAT BURN",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone1": {
+            "name": "WARM UP",
+            "rate": 1.0,
+            "time": {
+                "value": 71,
+                "unit": "sec"
+            }
+        }
+    },
+    "duration": {
+        "value": 71,
+        "unit": "sec"
+    },
+    "activeCalories": {
+        "value": 3,
+        "unit": "kcal"
+    },
+    "averageIntensity": {
+        "value": 54,
+        "unit": "%"
+    },
+    "minIntensity": {
+        "value": 46,
+        "unit": "%"
+    },
+    "maxIntensity": {
+        "value": 55,
+        "unit": "%"
+    },
+    "averageMETs": {
+        "value": 4,
+        "unit": "METs"
+    },
+    "averageHeartRate": {
+        "value": 96,
+        "unit": "bpm"
+    },
+    "minHeartRate": {
+        "value": 84,
+        "unit": "bpm"
+    },
+    "maxHeartRate": {
+        "value": 100,
+        "unit": "bpm"
+    },
+    "weather": {
+        "humidity": "56%",
+        "temperature": "57°F"
+    },
+    "device": {
+        "name": "Apple Watch",
+        "manufacturer": "Apple Inc.",
+        "model": "Watch",
+        "hardwareVersion": "Watch6,18",
+        "softwareVersion": "26.3"
+    }
+}

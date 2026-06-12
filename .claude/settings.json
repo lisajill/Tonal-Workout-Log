@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__monarch__GetTransactions",
+      "mcp__monarch__GetSpendingByCategory",
+      "mcp__tonal__get_muscle_readiness"
+    ]
+  }
+}

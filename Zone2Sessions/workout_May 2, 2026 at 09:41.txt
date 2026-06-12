@@ -1,0 +1,93 @@
+{
+    "uuid": "A4143223-A4D8-4599-8D47-946A166B2C69",
+    "name": "Rowing",
+    "activity": {
+        "name": "Rowing",
+        "type": 35
+    },
+    "startDate": "2026-05-02T13:31:22Z",
+    "endDate": "2026-05-02T13:37:38Z",
+    "source": "UltraAmazeWatch",
+    "location": "Indoor",
+    "zones": {
+        "zone4": {
+            "name": "PEAK",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone3": {
+            "name": "CARDIO",
+            "rate": 0.50602,
+            "time": {
+                "value": 190,
+                "unit": "sec"
+            }
+        },
+        "zone2": {
+            "name": "FAT BURN",
+            "rate": 0.24747,
+            "time": {
+                "value": 93,
+                "unit": "sec"
+            }
+        },
+        "zone1": {
+            "name": "WARM UP",
+            "rate": 0.24651,
+            "time": {
+                "value": 92,
+                "unit": "sec"
+            }
+        }
+    },
+    "duration": {
+        "value": 375,
+        "unit": "sec"
+    },
+    "activeCalories": {
+        "value": 43,
+        "unit": "kcal"
+    },
+    "averageIntensity": {
+        "value": 72,
+        "unit": "%"
+    },
+    "minIntensity": {
+        "value": 45,
+        "unit": "%"
+    },
+    "maxIntensity": {
+        "value": 84,
+        "unit": "%"
+    },
+    "averageMETs": {
+        "value": 7.4,
+        "unit": "METs"
+    },
+    "averageHeartRate": {
+        "value": 129,
+        "unit": "bpm"
+    },
+    "minHeartRate": {
+        "value": 81,
+        "unit": "bpm"
+    },
+    "maxHeartRate": {
+        "value": 152,
+        "unit": "bpm"
+    },
+    "weather": {
+        "humidity": "86%",
+        "temperature": "49°F"
+    },
+    "device": {
+        "name": "Apple Watch",
+        "manufacturer": "Apple Inc.",
+        "model": "Watch",
+        "hardwareVersion": "Watch6,18",
+        "softwareVersion": "26.3"
+    }
+}

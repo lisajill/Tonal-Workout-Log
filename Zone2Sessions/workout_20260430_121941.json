@@ -1,0 +1,92 @@
+{
+    "uuid": "229A8CA3-2FDB-45B0-BADC-49F234E40FAF",
+    "name": "Functional Strength Training",
+    "activity": {
+        "name": "Functional Strength Training",
+        "type": 20
+    },
+    "startDate": "2026-04-30T16:19:41Z",
+    "endDate": "2026-04-30T16:46:32Z",
+    "source": "UltraAmazeWatch",
+    "zones": {
+        "zone4": {
+            "name": "PEAK",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone3": {
+            "name": "CARDIO",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone2": {
+            "name": "FAT BURN",
+            "rate": 0.00621,
+            "time": {
+                "value": 10,
+                "unit": "sec"
+            }
+        },
+        "zone1": {
+            "name": "WARM UP",
+            "rate": 0.99379,
+            "time": {
+                "value": 1601,
+                "unit": "sec"
+            }
+        }
+    },
+    "duration": {
+        "value": 1611,
+        "unit": "sec"
+    },
+    "activeCalories": {
+        "value": 47,
+        "unit": "kcal"
+    },
+    "averageIntensity": {
+        "value": 50,
+        "unit": "%"
+    },
+    "minIntensity": {
+        "value": 40,
+        "unit": "%"
+    },
+    "maxIntensity": {
+        "value": 61,
+        "unit": "%"
+    },
+    "averageMETs": {
+        "value": 2.4,
+        "unit": "METs"
+    },
+    "averageHeartRate": {
+        "value": 89,
+        "unit": "bpm"
+    },
+    "minHeartRate": {
+        "value": 72,
+        "unit": "bpm"
+    },
+    "maxHeartRate": {
+        "value": 110,
+        "unit": "bpm"
+    },
+    "weather": {
+        "humidity": "90%",
+        "temperature": "48°F"
+    },
+    "device": {
+        "name": "Apple Watch",
+        "manufacturer": "Apple Inc.",
+        "model": "Watch",
+        "hardwareVersion": "Watch6,18",
+        "softwareVersion": "26.3"
+    }
+}

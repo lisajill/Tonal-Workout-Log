@@ -3276,7 +3276,7 @@
     },
     "prs": {
       "barbell_seated_lat_pulldown": {
-        "weight": 29.5,
+        "weight": 59,
         "date": "2026-05-24"
       },
       "bench_chest_fly": {
@@ -3301,15 +3301,15 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 29.5
+            "weight_lbs": 59
           },
           {
             "reps": 6,
-            "weight_lbs": 29.5
+            "weight_lbs": 59
           },
           {
             "reps": 6,
-            "weight_lbs": 29.5,
+            "weight_lbs": 59,
             "prs": [
               "power"
             ]
@@ -3343,15 +3343,15 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 30.5
+            "weight_lbs": 61
           },
           {
             "reps": 6,
-            "weight_lbs": 30.5
+            "weight_lbs": 61
           },
           {
             "reps": 6,
-            "weight_lbs": 31.5
+            "weight_lbs": 63
           }
         ]
       },
@@ -3361,15 +3361,15 @@
         "sets": [
           {
             "reps": 10,
-            "weight_lbs": 9.5
+            "weight_lbs": 19
           },
           {
             "reps": 10,
-            "weight_lbs": 12.5
+            "weight_lbs": 25
           },
           {
             "reps": 10,
-            "weight_lbs": 11.5
+            "weight_lbs": 23
           }
         ]
       },
@@ -3863,5 +3863,681 @@
     "strength_core": 465,
     "strength_lower": 536,
     "notes": "Energy 5, felt great. Rope handle on Rotational Lift rests on lower knuckle (MCP joint) of both thumbs — went down in weight due to discomfort. Concern given bilateral hand surgery history. Consider alternative attachment for this movement."
+  },
+  {
+    "date": "2026-05-28",
+    "workout": "Free Lift",
+    "energy_level": null,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Barbell Deadlift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 44.5
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-28T15:28:36.689-04:00",
+    "duration": 2.42,
+    "total_volume": 712,
+    "total_reps": 8,
+    "time_under_tension": 0.67,
+    "total_work_kj": 2,
+    "tonal_activity_id": "a5096dcc-e12f-4bb7-8887-dd0bece5acc5"
+  },
+  {
+    "date": "2026-05-30",
+    "timestamp": "2026-05-30T09:54:41.483-04:00",
+    "workout": "Week 2 - Day 1",
+    "tonal_activity_id": "15c98432-6eef-421d-82ca-aa449994fa35",
+    "program": "Triple Threat: Dynamic Gains",
+    "phase": null,
+    "energy_level": 5,
+    "subjective_rating": 5,
+    "sweat": null,
+    "shot_day": false,
+    "duration": 37.4,
+    "total_volume": 4445,
+    "total_reps": 112,
+    "time_under_tension": 12.52,
+    "total_work_kj": 14,
+    "calories": 69,
+    "avg_hr": 86,
+    "max_hr": 123,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 95,
+      "obliques": 100,
+      "back": 43,
+      "chest": 82,
+      "shoulders": 75,
+      "biceps": 68,
+      "triceps": 65
+    },
+    "prs": {
+      "barbell_chinup": {
+        "weight": 60,
+        "date": "2026-05-30"
+      },
+      "bench_chest_fly": {
+        "weight": 13,
+        "date": "2026-05-30"
+      },
+      "barbell_seated_lat_pulldown": {
+        "weight": 65,
+        "date": "2026-05-30"
+      }
+    },
+    "functional_strength": 213,
+    "movement_quality": 195,
+    "movement_quality_delta": null,
+    "strength_overall": 496,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 535,
+    "movements": [
+      {
+        "name": "Barbell Seated Lat Pulldown",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 61
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 61
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 65,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 65
+          }
+        ]
+      },
+      {
+        "name": "Floor Slide",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 5,
+            "duration_sec": 25
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 5,
+            "duration_sec": 25
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 5,
+            "duration_sec": 25
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 5,
+            "duration_sec": 25
+          }
+        ]
+      },
+      {
+        "name": "Barbell Chinup",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 59
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 53
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 60,
+            "prs": [
+              "power"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Reverse Grip Barbell Triceps Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 3,
+            "weight_lbs": 22
+          },
+          {
+            "reps": 3,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 3,
+            "weight_lbs": 27
+          }
+        ]
+      },
+      {
+        "name": "Bench Chest Fly",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 2,
+            "weight_lbs": 11
+          },
+          {
+            "reps": 2,
+            "weight_lbs": 13,
+            "prs": [
+              "strength"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Standing Overhead Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 2,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 2,
+            "weight_lbs": 12
+          }
+        ]
+      }
+    ],
+    "notes": "First session using Polar H10 chest strap — Apple Watch left off due to D-Moose hooks on both wrists."
+  },
+  {
+    "date": "2026-05-31",
+    "workout": "Week 2 - Day 2",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "moderate",
+    "calories": 176,
+    "avg_hr": 115,
+    "max_hr": 151,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 67,
+      "chest": 100,
+      "shoulders": 99,
+      "biceps": 92,
+      "triceps": 89
+    },
+    "post_readiness": {
+      "glutes": 1,
+      "hamstrings": 17,
+      "quads": 6,
+      "calves": 66,
+      "abs": 80,
+      "obliques": 83,
+      "back": 46,
+      "chest": 100,
+      "shoulders": 82,
+      "biceps": 93,
+      "triceps": 89
+    },
+    "prs": {
+      "racked_squat": {
+        "weight": 21,
+        "date": "2026-05-31"
+      },
+      "single_arm_deadlift": {
+        "weight": 64,
+        "date": "2026-05-31"
+      },
+      "rdl": {
+        "weight": 35,
+        "date": "2026-05-31"
+      }
+    },
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Racked Squat",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 21,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 21,
+            "prs": [
+              "volume",
+              "power"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Suitcase March",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 35,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 35,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 20
+          }
+        ]
+      },
+      {
+        "name": "Assisted Reverse Lunge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Single-Arm Deadlift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 55,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 55,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 60,
+            "prs": [
+              "power",
+              "volume"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 60
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 64
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 64
+          }
+        ]
+      },
+      {
+        "name": "RDL",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 35,
+            "prs": [
+              "power",
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Resisted Calf Raise",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 17
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 20
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-31T09:58:02.894138-04:00",
+    "duration": 42.28,
+    "total_volume": 6324,
+    "total_reps": 119,
+    "time_under_tension": 13.57,
+    "total_work_kj": 11,
+    "tonal_activity_id": "22c3796d-ec8d-446c-bccf-220edf8d64bc",
+    "shot_day": false,
+    "functional_strength": 313,
+    "movement_quality": 265,
+    "movement_quality_delta": 70,
+    "strength_overall": 496,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 536,
+    "notes": "Knee strap worn (patellar tendon strap) — minimal relief, likely needs full sleeve per PT consult. Energy 5/5, best session yet on this program. No PRs flagged."
+  },
+  {
+    "date": "2026-06-07",
+    "workout": "Week 2 - Day 3",
+    "energy_level": 3,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 85,
+    "avg_hr": 103,
+    "max_hr": 144,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": 100,
+      "hamstrings": 98,
+      "quads": 100,
+      "calves": 100,
+      "abs": 90,
+      "obliques": 89,
+      "back": 45,
+      "chest": 47,
+      "shoulders": 58,
+      "biceps": 44,
+      "triceps": 83
+    },
+    "prs": {},
+    "muscles_high_volume": [
+      "chest",
+      "back",
+      "obliques"
+    ],
+    "muscles_low_volume": [
+      "biceps",
+      "shoulders"
+    ],
+    "movements": [
+      {
+        "name": "Alternating Bench Press",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 20,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 24,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 34,
+            "weight_lbs": 13,
+            "prs": [
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bent Over Row",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 19
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 19
+          },
+          {
+            "reps": 17,
+            "weight_lbs": 18
+          }
+        ]
+      },
+      {
+        "name": "Biceps Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 15,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Y-Pull",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 5
+          }
+        ]
+      },
+      {
+        "name": "Pushup",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 25
+          }
+        ]
+      },
+      {
+        "name": "Rotational Lift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 14
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-06-07T16:38:09.175-04:00",
+    "duration": 37,
+    "total_volume": 3971,
+    "total_reps": 245,
+    "time_under_tension": 13.55,
+    "total_work_kj": 15,
+    "tonal_activity_id": "31b5bb97-e3a2-4f1c-b325-48943428f9e5",
+    "functional_strength": 52,
+    "movement_quality": 48,
+    "movement_quality_delta": null,
+    "strength_overall": 496,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 536
   }
 ]

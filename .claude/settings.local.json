@@ -67,7 +67,34 @@
       "Bash(echo \"Exit: $?\")",
       "Bash(npx tsc *)",
       "Bash(open *)",
-      "Bash(kill %1)"
+      "Bash(kill %1)",
+      "Bash(gh run *)",
+      "Bash(xargs -I{} gh api repos/lisajill/Tonal-Workout-Log/deployments/{}/statuses --jq '.[0] | {state: .state, created: .created_at}')",
+      "Bash(pdftotext /Users/moment/Downloads/testrsults.pdf -)",
+      "Bash(grep -v \"^\\\\-\\\\-$\\\\|Ordered\\\\|Date\\\\|©\\\\|Rights\\\\|document\\\\|inquiries\\\\|physician\\\\|Performing\\\\|Footnote\\\\|Icon\\\\|Previous\\\\|This\\\\|If you\")",
+      "Bash(grep -v \"^$\\\\|Copyright\\\\|Rights\\\\|document\\\\|inquiries\\\\|physician\\\\|Performing\\\\|Footnote\\\\|Icon\\\\|Previous\\\\|This\\\\|If you\\\\|©\\\\|Date Created\\\\|Wess\\\\|DOB\\\\|Patient\\\\|Specimen\\\\|Account\\\\|Age\\\\|Sex\\\\|Order\")",
+      "Bash(grep OBSIDIAN_API_KEY /Users/moment/Sites/Workout-Tracker/.env)",
+      "mcp__monarch__GetSpendingByCategory",
+      "mcp__monarch__GetBudget",
+      "mcp__monarch__GetTransactions",
+      "mcp__monarch__UpdateTransaction",
+      "mcp__monarch__GetCategories",
+      "mcp__monarch__CreateCategory",
+      "WebFetch(domain:vpic.nhtsa.dot.gov)",
+      "Skill(run)",
+      "Bash(break)",
+      "Bash(command -v chromium-cli)",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Read(//Applications/**)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1440,1150 --virtual-time-budget=10000 --screenshot=/tmp/wt-shots/overview-top.png 'http://localhost:5173/#overview')",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1440,1000 --virtual-time-budget=15000 --screenshot=/tmp/wt-shots/cardio-top.png 'http://localhost:5173/#cardio')",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --run-all-compositor-stages-before-draw --window-size=1440,1000 --virtual-time-budget=30000 --screenshot=/tmp/wt-shots/cardio-30s.png 'http://localhost:5173/#cardio')",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1440,1000 --virtual-time-budget=15000 --screenshot=/tmp/wt-shots/prod-cardio.png 'https://workouts.lisajill.net/#cardio')",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1440,700 --virtual-time-budget=10000 --screenshot=/tmp/wt-shots/current-readiness-2.png 'http://localhost:5173/#current-readiness')",
+      "Bash(git show *)"
     ]
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true
   }
 }

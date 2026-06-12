@@ -1,0 +1,104 @@
+{
+    "uuid": "48E061AB-1779-432C-98AC-5CB7B723AE18",
+    "name": "Walking",
+    "activity": {
+        "name": "Walking",
+        "type": 52
+    },
+    "startDate": "2026-04-22T20:42:45Z",
+    "endDate": "2026-04-22T21:09:25Z",
+    "source": "UltraAmazeWatch",
+    "zones": {
+        "zone4": {
+            "name": "PEAK",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone3": {
+            "name": "CARDIO",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone2": {
+            "name": "FAT BURN",
+            "rate": 0.16253,
+            "time": {
+                "value": 260,
+                "unit": "sec"
+            }
+        },
+        "zone1": {
+            "name": "WARM UP",
+            "rate": 0.83747,
+            "time": {
+                "value": 1339,
+                "unit": "sec"
+            }
+        }
+    },
+    "duration": {
+        "value": 1599,
+        "unit": "sec"
+    },
+    "activeCalories": {
+        "value": 93,
+        "unit": "kcal"
+    },
+    "distance": {
+        "value": 1.04,
+        "unit": "mi"
+    },
+    "pace": {
+        "value": "25′35″",
+        "unit": "/mi"
+    },
+    "averageIntensity": {
+        "value": 58,
+        "unit": "%"
+    },
+    "minIntensity": {
+        "value": 46,
+        "unit": "%"
+    },
+    "maxIntensity": {
+        "value": 64,
+        "unit": "%"
+    },
+    "averageMETs": {
+        "value": 4.4,
+        "unit": "METs"
+    },
+    "elevationAscended": {
+        "value": 179,
+        "unit": "ft"
+    },
+    "averageHeartRate": {
+        "value": 104,
+        "unit": "bpm"
+    },
+    "minHeartRate": {
+        "value": 84,
+        "unit": "bpm"
+    },
+    "maxHeartRate": {
+        "value": 115,
+        "unit": "bpm"
+    },
+    "weather": {
+        "humidity": "66%",
+        "temperature": "48°F"
+    },
+    "device": {
+        "name": "Apple Watch",
+        "manufacturer": "Apple Inc.",
+        "model": "Watch",
+        "hardwareVersion": "Watch6,18",
+        "softwareVersion": "26.3"
+    }
+}
