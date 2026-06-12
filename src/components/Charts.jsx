@@ -6,11 +6,15 @@ import {
 import cardioLog from '../data/zone2_log.json'
 
 const TOOLTIP_STYLE = {
-  contentStyle: { background: '#18181b', border: '1px solid #303036', borderRadius: 8, fontSize: 12 },
+  contentStyle: { background: '#18181b', border: '1px solid #303036', borderRadius: 8, fontSize: 12, fontFamily: '"JetBrains Mono", monospace' },
   labelStyle: { color: '#a1a1aa', marginBottom: 4 },
   itemStyle: { color: '#e4e4e7' },
   cursor: false,
 }
+
+// Category coding (design.md): strength metrics in the violet family, rowing in sky
+const CAT_STRENGTH = '#a78bfa'
+const CAT_ROWING   = '#38bdf8'
 
 const AXIS_TICK = { fill: '#71717a', fontSize: 11 }
 const GRID = { strokeDasharray: '3 3', stroke: '#303036' }
@@ -78,6 +82,7 @@ export default function Charts({ sessions }) {
 
   return (
     <div className="space-y-5">
+      <h1 className="font-display italic text-3xl text-zinc-100">Charts</h1>
       {/* Shot day legend if any */}
       {shotDates.length > 0 && (
         <div className="flex items-center gap-2 text-xs text-amber-400">
@@ -94,7 +99,7 @@ export default function Charts({ sessions }) {
             <YAxis tick={AXIS_TICK} tickFormatter={v => `${(v / 1000).toFixed(1)}k`} />
             <Tooltip {...TOOLTIP_STYLE} formatter={v => [`${v.toLocaleString()} lbs`, 'Volume']} />
             {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
-            <Bar dataKey="volume" fill="#6366f1" radius={[4, 4, 0, 0]} activeBar={{ fill: '#6366f1', opacity: 0.8 }}>
+            <Bar dataKey="volume" fill={CAT_STRENGTH} radius={[4, 4, 0, 0]} activeBar={{ fill: CAT_STRENGTH, opacity: 0.8 }}>
               <LabelList dataKey="volume" position="top" style={LABEL_STYLE} formatter={v => `${(v / 1000).toFixed(1)}k`} />
             </Bar>
           </BarChart>
@@ -109,7 +114,7 @@ export default function Charts({ sessions }) {
             <YAxis tick={AXIS_TICK} unit=" lbs/m" />
             <Tooltip {...TOOLTIP_STYLE} formatter={v => [`${v} lbs/min`, 'Density']} />
             {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
-            <Bar dataKey="vol_per_min" fill="#a78bfa" radius={[4, 4, 0, 0]} activeBar={{ fill: '#a78bfa', opacity: 0.8 }}>
+            <Bar dataKey="vol_per_min" fill="#818cf8" radius={[4, 4, 0, 0]} activeBar={{ fill: '#818cf8', opacity: 0.8 }}>
               <LabelList dataKey="vol_per_min" position="top" style={LABEL_STYLE} formatter={v => `${v}`} />
             </Bar>
           </BarChart>
@@ -164,7 +169,7 @@ export default function Charts({ sessions }) {
             <ReferenceLine y={parseFloat(avgRating)} stroke="#52525b" strokeDasharray="4 2"
               label={{ value: `avg ${avgRating}`, fill: '#71717a', fontSize: 11, position: 'insideTopRight' }} />
             {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
-            <Line type="monotone" dataKey="rating" stroke="#22d3ee" strokeWidth={2} dot={{ r: 4 }}>
+            <Line type="monotone" dataKey="rating" stroke="#f472b6" strokeWidth={2} dot={{ r: 4 }}>
               <LabelList dataKey="rating" position="top" style={LABEL_STYLE} formatter={v => `${v}`} />
             </Line>
           </LineChart>
@@ -179,7 +184,7 @@ export default function Charts({ sessions }) {
             <YAxis tick={AXIS_TICK} />
             <Tooltip {...TOOLTIP_STYLE} formatter={v => [`${v.toLocaleString()} reps`, 'Total Reps']} />
             {shotDates.map(d => <ReferenceLine key={d} x={d} stroke="#f59e0b" strokeDasharray="4 2" label={{ value: '💉', position: 'insideTopLeft', fontSize: 11 }} />)}
-            <Bar dataKey="reps" fill="#34d399" radius={[4, 4, 0, 0]} activeBar={{ fill: '#34d399', opacity: 0.8 }}>
+            <Bar dataKey="reps" fill="#c4b5fd" radius={[4, 4, 0, 0]} activeBar={{ fill: '#c4b5fd', opacity: 0.8 }}>
               <LabelList dataKey="reps" position="top" style={LABEL_STYLE} formatter={v => v?.toLocaleString()} />
             </Bar>
           </BarChart>
@@ -208,7 +213,7 @@ export default function Charts({ sessions }) {
       {rowingData.length > 0 && (
         <>
           <div className="flex items-center gap-2 pt-2">
-            <span className="text-zinc-400 text-xs font-semibold uppercase tracking-widest">Rowing</span>
+            <span className="font-display italic text-xl" style={{ color: CAT_ROWING }}>Rowing</span>
             <div className="flex-1 h-px bg-surface-3" />
           </div>
 
@@ -222,7 +227,7 @@ export default function Charts({ sessions }) {
                   formatter={v => [fmtSplit(v), 'Avg Split']}
                   labelFormatter={label => rowingData.find(r => r.label === label)?.date ?? label}
                 />
-                <Line type="monotone" dataKey="split_sec" stroke="#6366f1" strokeWidth={2} dot={{ r: 4 }}>
+                <Line type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} dot={{ r: 4 }}>
                   <LabelList dataKey="split_sec" position="top" style={LABEL_STYLE} formatter={v => fmtSplit(v)} />
                 </Line>
               </LineChart>
@@ -256,7 +261,7 @@ export default function Charts({ sessions }) {
                   formatter={v => [`${v}m`, 'Distance']}
                   labelFormatter={label => rowingData.find(r => r.label === label)?.date ?? label}
                 />
-                <Bar dataKey="distance" fill="#6366f1" radius={[4, 4, 0, 0]}>
+                <Bar dataKey="distance" fill={CAT_ROWING} radius={[4, 4, 0, 0]}>
                   <LabelList dataKey="distance" position="top" style={LABEL_STYLE} formatter={v => `${v}m`} />
                 </Bar>
               </BarChart>
@@ -272,9 +277,11 @@ export default function Charts({ sessions }) {
 function ChartCard({ title, subtitle, children }) {
   return (
     <div className="card">
-      <div className="mb-4">
-        <h2 className="label">{title}</h2>
-        {subtitle && <p className="text-zinc-500 text-xs mt-0.5">{subtitle}</p>}
+      <div className="section-header">
+        <div>
+          <h2 className="label">{title}</h2>
+          {subtitle && <p className="text-zinc-500 text-xs mt-1">{subtitle}</p>}
+        </div>
       </div>
       {children}
     </div>

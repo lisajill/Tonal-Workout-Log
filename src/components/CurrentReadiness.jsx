@@ -111,6 +111,7 @@ export default function CurrentReadiness() {
 
   return (
     <div className="space-y-5">
+      <h1 className="font-display italic text-3xl" style={{ color: '#fb923c' }}>Current State</h1>
       <div className="card border-accent/20 bg-accent/5">
         <p className="text-xs text-zinc-400 leading-relaxed">
           Estimated current muscle readiness based on Tonal post-session data and off-Tonal activity logs, decayed toward 100% over time.
@@ -119,8 +120,15 @@ export default function CurrentReadiness() {
       </div>
 
       {!hasData && (
-        <div className="card flex items-center justify-center h-32 text-zinc-600 text-sm">
-          No readiness data yet — complete a Tonal session first.
+        <div className="card flex flex-col items-center justify-center gap-1 h-32">
+          {Object.values(readiness).some(v => v != null) ? (
+            <>
+              <p className="text-emerald-400 text-sm font-medium">✨ All muscle groups fully recovered</p>
+              <p className="text-zinc-600 text-xs">Everything has decayed back to 100% — clear to train anything.</p>
+            </>
+          ) : (
+            <p className="text-zinc-600 text-sm">No readiness data yet — complete a Tonal session first.</p>
+          )}
         </div>
       )}
 

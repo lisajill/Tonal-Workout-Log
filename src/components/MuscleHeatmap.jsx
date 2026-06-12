@@ -24,6 +24,7 @@ export default function MuscleHeatmap({ sessions }) {
 
   return (
     <div className="space-y-5">
+      <h1 className="font-display italic text-3xl" style={{ color: '#fb923c' }}>Readiness</h1>
       {/* Session picker */}
       <select
         value={selectedIdx}

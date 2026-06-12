@@ -5,7 +5,7 @@ import {
 } from 'recharts'
 
 const TOOLTIP_STYLE = {
-  contentStyle: { background: '#18181b', border: '1px solid #303036', borderRadius: 8, fontSize: 12 },
+  contentStyle: { background: '#18181b', border: '1px solid #303036', borderRadius: 8, fontSize: 12, fontFamily: '"JetBrains Mono", monospace' },
   labelStyle: { color: '#a1a1aa', marginBottom: 4 },
   itemStyle: { color: '#e4e4e7' },
   cursor: false,
@@ -44,6 +44,9 @@ const HISTORY = [
   { date: '2026-05-24', overall: 493, upper: 487, lower: 435, core: 456 },
   { date: '2026-05-25', overall: 493, upper: 487, lower: 536, core: 456 },
   { date: '2026-05-27', overall: 496, upper: 486, lower: 536, core: 465 },
+  { date: '2026-05-30', overall: 496, upper: 487, lower: 535, core: 465 },
+  { date: '2026-05-31', overall: 496, upper: 487, lower: 536, core: 465 },
+  { date: '2026-06-07', overall: 496, upper: 487, lower: 536, core: 465 },
 ]
 
 function shortDate(d) {
@@ -85,17 +88,19 @@ export default function StrengthScores() {
 
   return (
     <div className="space-y-5">
+      <h1 className="font-display italic text-3xl text-zinc-100">Strength Scores</h1>
+
       {/* Current score cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {REGIONS.map(({ key, label }) => {
           const delta = current[key] - first[key]
           return (
-            <div key={key} className="card flex flex-col gap-1">
+            <div key={key} className="stat-card flex flex-col gap-1" style={{ borderLeftColor: COLORS[key] }}>
               <span className="label">{label}</span>
-              <span className="text-3xl font-bold" style={{ color: COLORS[key] }}>
+              <span className="mono-stat text-3xl font-bold" style={{ color: COLORS[key] }}>
                 {current[key]}
               </span>
-              <span className={`text-xs font-medium ${delta > 0 ? 'text-emerald-400' : delta < 0 ? 'text-rose-400' : 'text-zinc-500'}`}>
+              <span className={`mono-stat text-xs font-medium ${delta > 0 ? 'text-emerald-400' : delta < 0 ? 'text-rose-400' : 'text-zinc-500'}`}>
                 {delta > 0 ? `+${delta}` : delta} since start
               </span>
             </div>
@@ -105,9 +110,11 @@ export default function StrengthScores() {
 
       {/* History chart */}
       <div className="card">
-        <div className="mb-4">
-          <h2 className="label">Strength Score History</h2>
-          <p className="text-zinc-500 text-xs mt-0.5">All-time progression across body regions</p>
+        <div className="section-header">
+          <div>
+            <h2 className="label">Strength Score History</h2>
+            <p className="text-zinc-500 text-xs mt-1">All-time progression across body regions</p>
+          </div>
         </div>
         <ResponsiveContainer width="100%" height={280}>
           <LineChart data={chartData} margin={{ top: 24, right: 16, bottom: 0, left: 0 }}>
@@ -146,22 +153,24 @@ export default function StrengthScores() {
       {/* Goals Progress */}
       {goalsData.length > 0 && (
         <div className="card">
-          <div className="mb-4">
-            <h2 className="label">Goals Progress</h2>
-            <p className="text-zinc-500 text-xs mt-0.5">Functional Strength and Movement Quality per session</p>
+          <div className="section-header">
+            <div>
+              <h2 className="label">Goals Progress</h2>
+              <p className="text-zinc-500 text-xs mt-1">Functional Strength and Movement Quality per session — weekly metrics, reset each week</p>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-3 mb-5">
             {latestGoals?.fs != null && (
-              <div className="rounded-lg bg-surface-2 px-4 py-3">
+              <div className="stat-card !bg-surface-2" style={{ borderLeftColor: COLORS.fs }}>
                 <p className="label mb-1">Functional Strength</p>
-                <p className="text-2xl font-bold" style={{ color: COLORS.fs }}>{latestGoals.fs}</p>
+                <p className="mono-stat text-2xl font-bold" style={{ color: COLORS.fs }}>{latestGoals.fs}</p>
                 <p className="text-xs text-zinc-500 mt-0.5">Target 100–133</p>
               </div>
             )}
             {latestGoals?.mq != null && (
-              <div className="rounded-lg bg-surface-2 px-4 py-3">
+              <div className="stat-card !bg-surface-2" style={{ borderLeftColor: COLORS.mq }}>
                 <p className="label mb-1">Movement Quality</p>
-                <p className="text-2xl font-bold" style={{ color: COLORS.mq }}>{latestGoals.mq}</p>
+                <p className="mono-stat text-2xl font-bold" style={{ color: COLORS.mq }}>{latestGoals.mq}</p>
                 <p className="text-xs text-zinc-500 mt-0.5">Target 59–79</p>
               </div>
             )}
@@ -183,17 +192,17 @@ export default function StrengthScores() {
       )}
 
       {/* Historical table */}
-      <div className="card">
-        <div className="mb-4">
+      <div className="card !p-0 overflow-hidden">
+        <div className="section-header !mb-0 border-b-0 px-5 pt-5 pb-3">
           <h2 className="label">Score Log</h2>
-          <p className="text-zinc-500 text-xs mt-0.5">Every recorded snapshot</p>
+          <p className="text-zinc-500 text-xs">every recorded snapshot</p>
         </div>
         <table className="w-full text-sm">
           <thead>
-            <tr className="text-left border-b border-surface-3">
-              <th className="pb-2 text-zinc-500 font-medium">Date</th>
+            <tr className="text-left bg-surface-2">
+              <th className="label py-2.5 pl-5">Date</th>
               {REGIONS.map(({ key, label }) => (
-                <th key={key} className="pb-2 font-medium text-right" style={{ color: COLORS[key] }}>
+                <th key={key} className="label py-2.5 pr-5 text-right" style={{ color: COLORS[key] }}>
                   {label}
                 </th>
               ))}
@@ -201,10 +210,10 @@ export default function StrengthScores() {
           </thead>
           <tbody>
             {[...HISTORY].reverse().map((row, i) => (
-              <tr key={i} className="border-b border-surface-3 last:border-0">
-                <td className="py-2 text-zinc-400">{row.date}</td>
+              <tr key={i} className={`border-b border-surface-3/40 last:border-0 ${i % 2 === 1 ? 'bg-surface-0/40' : ''}`}>
+                <td className="py-2 pl-5 text-zinc-400 mono-stat text-xs">{row.date}</td>
                 {REGIONS.map(({ key }) => (
-                  <td key={key} className="py-2 text-right text-zinc-200">{row[key]}</td>
+                  <td key={key} className="py-2 pr-5 text-right text-zinc-200 mono-stat">{row[key]}</td>
                 ))}
               </tr>
             ))}

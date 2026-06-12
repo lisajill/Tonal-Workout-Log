@@ -4,16 +4,31 @@
 
 @layer base {
   body {
-    @apply bg-surface-0 text-zinc-100 antialiased;
+    @apply bg-surface-0 text-zinc-100 antialiased font-sans;
   }
 }
 
 @layer components {
   .card {
-    @apply bg-surface-1 rounded-xl border border-surface-3 p-5;
+    @apply bg-surface-1 rounded-lg border border-surface-3 p-5;
   }
   .label {
-    @apply text-xs font-medium uppercase tracking-widest text-zinc-500;
+    @apply text-[0.6875rem] font-medium uppercase tracking-widest text-zinc-500;
+  }
+  /* Stat tile with a 3px category accent bar on the left (design.md) */
+  .stat-card {
+    @apply bg-surface-1 rounded-lg border border-surface-3 border-l-[3px] p-4;
+  }
+  /* Block section header — uppercase tracked title over a hairline rule */
+  .section-header {
+    @apply flex items-baseline justify-between gap-4 border-b border-surface-3 pb-2 mb-4;
+  }
+  .pr-badge {
+    @apply inline-flex items-center gap-0.5 rounded-full bg-cat-pr/20 px-1.5 py-px text-[10px] font-bold uppercase tracking-wide text-cat-pr;
+  }
+  /* Tabular monospace numbers for stats columns */
+  .mono-stat {
+    @apply font-mono tabular-nums;
   }
 }
 

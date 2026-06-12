@@ -15,9 +15,11 @@ import RowingTracker from './components/RowingTracker.jsx'
 import rawSessions from './data/sessions.json'
 const sessions = rawSessions.filter(s => !s.merged_into)
 
+// Each group carries a category color — color = category (design.md)
 const TAB_GROUPS = [
   {
     label: 'Summary',
+    color: '#6366f1', // accent
     tabs: [
       { id: 'overview',  label: 'Overview' },
       { id: 'strength',  label: 'Strength Scores' },
@@ -25,6 +27,7 @@ const TAB_GROUPS = [
   },
   {
     label: 'Sessions',
+    color: '#a78bfa', // cat-strength
     tabs: [
       { id: 'log',      label: 'Tonal Sessions' },
       { id: 'sessions', label: 'Detail' },
@@ -33,6 +36,7 @@ const TAB_GROUPS = [
   },
   {
     label: 'Analysis',
+    color: '#fb923c', // cat-recovery
     tabs: [
       { id: 'charts',  label: 'Charts' },
       { id: 'prs',     label: 'PRs' },
@@ -43,10 +47,12 @@ const TAB_GROUPS = [
   },
   {
     label: 'Cardio',
+    color: '#34d399', // cat-cardio
     tabs: [{ id: 'cardio', label: 'Cardio' }],
   },
   {
     label: 'Rowing',
+    color: '#38bdf8', // cat-rowing
     tabs: [{ id: 'rowing', label: 'Rowing' }],
   },
 ]
@@ -89,13 +95,17 @@ export default function App() {
     <>
       <Analytics />
       <div className="min-h-screen bg-surface-0">
-      <header className="border-b border-surface-3 px-3 py-4 sm:px-6">
-        <h1 className="text-lg font-semibold tracking-tight text-zinc-100">Training Tracker</h1>
-      </header>
-
-      <nav className="bg-surface-1 border-b border-surface-3 px-2 relative">
+      <nav className="sticky top-0 z-30 h-12 bg-surface-1/95 backdrop-blur border-b border-surface-3 px-3 sm:px-6">
         {openGroup && <div className="fixed inset-0 z-10" onClick={() => setOpenGroup(null)} />}
-        <div className="flex items-center gap-x-0.5 overflow-x-auto scrollbar-hide">
+        <div className="flex h-full items-center gap-x-3 max-w-7xl mx-auto">
+          <button
+            onClick={() => selectTab('overview')}
+            className="font-display italic text-xl text-zinc-100 leading-none shrink-0 pr-2 sm:pr-4 hover:text-accent-hover transition-colors"
+            title="Overview"
+          >
+            LJ <span className="text-accent">Fitness</span>
+          </button>
+          <div className="flex h-full items-center gap-x-0.5 overflow-x-auto scrollbar-hide">
           {TAB_GROUPS.map(group => {
             const activeTab = group.tabs.find(t => t.id === tab)
             const isActive = !!activeTab
@@ -106,18 +116,19 @@ export default function App() {
                 <button
                   key={t.id}
                   onClick={() => selectTab(t.id)}
-                  className={`px-3 py-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
+                  className={`h-full px-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
                     tab === t.id
-                      ? 'border-accent text-zinc-100'
-                      : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                      ? 'text-zinc-100'
+                      : 'border-transparent text-zinc-500 hover:text-zinc-200'
                   }`}
+                  style={tab === t.id ? { borderBottomColor: group.color } : undefined}
                 >
                   {t.label}
                 </button>
               )
             }
             return (
-              <div key={group.label} className="relative z-20">
+              <div key={group.label} className="relative z-20 h-full">
                 <button
                   onClick={e => {
                     if (isOpen) { setOpenGroup(null); return }
@@ -125,37 +136,46 @@ export default function App() {
                     setDropdownStyle({ top: rect.bottom, left: rect.left })
                     setOpenGroup(group.label)
                   }}
-                  className={`flex items-center gap-1.5 px-3 py-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
+                  className={`flex h-full items-center gap-1.5 px-3 text-xs font-medium whitespace-nowrap transition-colors border-b-2 ${
                     isActive
-                      ? 'border-accent text-zinc-100'
-                      : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                      ? 'text-zinc-100'
+                      : 'border-transparent text-zinc-500 hover:text-zinc-200'
                   }`}
+                  style={isActive ? { borderBottomColor: group.color } : undefined}
                 >
                   <span>{isActive ? activeTab.label : group.label}</span>
-                  <span className={`text-[10px] transition-transform duration-150 ${isOpen ? 'rotate-180' : ''} ${isActive ? 'text-accent' : 'text-zinc-600'}`}>▾</span>
+                  <span
+                    className={`text-[10px] transition-transform duration-150 ${isOpen ? 'rotate-180' : ''} ${isActive ? '' : 'text-zinc-600'}`}
+                    style={isActive ? { color: group.color } : undefined}
+                  >▾</span>
                 </button>
               </div>
             )
           })}
+          </div>
         </div>
         {openGroup && (() => {
           const group = TAB_GROUPS.find(g => g.label === openGroup)
           if (!group) return null
           return (
             <div
-              className="fixed z-20 bg-surface-2 border border-surface-3 rounded-b-lg rounded-tr-lg shadow-xl py-1 min-w-[140px]"
+              className="fixed z-20 bg-surface-2 border border-surface-3 rounded-b-lg rounded-tr-lg shadow-lg py-1 min-w-[150px]"
               style={dropdownStyle}
             >
               {group.tabs.map(t => (
                 <button
                   key={t.id}
                   onClick={() => selectTab(t.id)}
-                  className={`w-full text-left px-4 py-2 text-xs font-medium transition-colors ${
+                  className={`w-full text-left px-4 py-2 text-xs font-medium transition-colors flex items-center gap-2 ${
                     tab === t.id
-                      ? 'text-accent bg-accent/10'
+                      ? 'text-zinc-100 bg-surface-3/60'
                       : 'text-zinc-400 hover:text-zinc-200 hover:bg-surface-3'
                   }`}
                 >
+                  <span
+                    className={`h-1.5 w-1.5 rounded-full shrink-0 ${tab === t.id ? '' : 'opacity-0'}`}
+                    style={{ backgroundColor: group.color }}
+                  />
                   {t.label}
                 </button>
               ))}
@@ -164,8 +184,8 @@ export default function App() {
         })()}
       </nav>
 
-      <main className="px-3 py-4 sm:px-6 sm:py-6 max-w-5xl mx-auto">
-        {tab === 'overview'  && <Overview      sessions={sessions} />}
+      <main className="px-3 py-4 sm:px-6 sm:py-6 max-w-7xl mx-auto">
+        {tab === 'overview'  && <Overview      sessions={sessions} onSelectSession={openSession} />}
         {tab === 'log'       && <SessionLog    sessions={sessions} onSelectSession={openSession} />}
         {tab === 'sessions'  && <SessionDetail key={activeSession} sessions={sessions} initialKey={activeSession} />}
         {tab === 'prs'       && <PRTracker     sessions={sessions} />}

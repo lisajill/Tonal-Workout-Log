@@ -1,4 +1,18 @@
 import lifetime from '../data/lifetime-stats.json'
+import zone2Log from '../data/zone2_log.json'
+import YearAtAGlance from './YearAtAGlance.jsx'
+
+const CAT = {
+  strength: '#a78bfa',
+  cardio:   '#34d399',
+  rowing:   '#38bdf8',
+  mixed:    '#818cf8',
+  recovery: '#fb923c',
+  pr:       '#f472b6',
+}
+
+const WEEKLY_Z2_TARGET = 150
+const WEEKLY_STRENGTH_TARGET = 3 // current program is 3 days/week
 
 const MOVEMENT_LABELS = {
   barbell_hip_thrust:                   'Barbell Hip Thrust',
@@ -13,7 +27,22 @@ const MOVEMENT_LABELS = {
   standing_straight_leg_glute_kickback: 'Standing Straight Leg Glute Kickback',
 }
 
-export default function Overview({ sessions }) {
+function pad2(n) { return String(n).padStart(2, '0') }
+
+// Sunday-start week using local date parts (never new Date('YYYY-MM-DD') — UTC parse)
+function getWeekStart(dateStr) {
+  const [y, m, d] = dateStr.split('-').map(Number)
+  const day = new Date(y, m - 1, d).getDay()
+  const sun = new Date(y, m - 1, d - day)
+  return `${sun.getFullYear()}-${pad2(sun.getMonth() + 1)}-${pad2(sun.getDate())}`
+}
+
+function localTodayStr() {
+  const t = new Date()
+  return `${t.getFullYear()}-${pad2(t.getMonth() + 1)}-${pad2(t.getDate())}`
+}
+
+export default function Overview({ sessions, onSelectSession }) {
   if (!sessions.length) return null
 
   const sorted   = [...sessions].sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
@@ -28,39 +57,134 @@ export default function Overview({ sessions }) {
   const recaps   = sessions.map(buildRecap)
   const bestPRs  = findNotablePRs(sessions)
 
+  // ── This week (Sun–Sat) ──────────────────────────────────────────────
+  const todayStr = localTodayStr()
+  const weekStart = getWeekStart(todayStr)
+  const weekDays = Array.from({ length: 7 }, (_, i) => {
+    const [y, m, d] = weekStart.split('-').map(Number)
+    const dt = new Date(y, m - 1, d + i)
+    return `${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`
+  })
+
+  const weekStrength = sessions.filter(s => s.date >= weekStart && s.date <= todayStr)
+  const weekCardio   = zone2Log.filter(e => e.date >= weekStart && e.date <= todayStr)
+  const weekZ2       = weekCardio.reduce((a, e) => a + (e.zone2_min ?? 0), 0)
+  const weekVolume   = weekStrength.reduce((a, s) => a + (s.total_volume ?? 0), 0)
+
+  const dayActivity = weekDays.map(d => {
+    const types = new Set()
+    for (const s of sessions) if (s.date === d) types.add('strength')
+    for (const e of zone2Log) {
+      if (e.date !== d) continue
+      if (e.activity === 'Tonal') types.add('strength')
+      else if (e.activity === 'Rowing') types.add('rowing')
+      else types.add('cardio')
+    }
+    return { date: d, types: [...types] }
+  })
+
   return (
     <div className="space-y-6">
-      {/* TL;DR */}
-      <div className="card border-accent/30 bg-accent/5">
-        <p className="text-sm text-zinc-300 leading-relaxed">
-          Across <strong className="text-zinc-100">{sessions.length} sessions</strong> you've set{' '}
-          <strong className="text-zinc-100">{prCount} personal records</strong> in{' '}
+
+      {/* ── This Week — reference-style day strip + progress rings ───── */}
+      <div className="card">
+        <div className="section-header">
+          <div>
+            <h2 className="font-display italic text-2xl text-zinc-100">This Week</h2>
+            <p className="text-xs text-zinc-500 mt-0.5 mono-stat">{weekLabel(weekStart)}</p>
+          </div>
+          <p className="label hidden sm:block">Sun – Sat</p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_auto]">
+          {/* Day strip */}
+          <div className="grid grid-cols-7 gap-1.5 sm:gap-2">
+            {dayActivity.map(({ date, types }, i) => {
+              const isToday = date === todayStr
+              const isFuture = date > todayStr
+              const dayNum = Number(date.slice(8))
+              return (
+                <div
+                  key={date}
+                  className={`rounded-lg border px-1 py-2 text-center ${
+                    isToday ? 'border-accent/60 bg-accent/5' : 'border-surface-3 bg-surface-2/40'
+                  } ${isFuture ? 'opacity-40' : ''}`}
+                >
+                  <p className="label !text-[9px] sm:!text-[10px]">{['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][i]}</p>
+                  <p className={`mono-stat mt-0.5 text-sm font-semibold ${isToday ? 'text-accent-hover' : 'text-zinc-300'}`}>{dayNum}</p>
+                  <div className="mt-1.5 flex min-h-[8px] items-center justify-center gap-1">
+                    {types.length === 0 && !isFuture && <span className="h-1 w-3 rounded-full bg-surface-3" />}
+                    {types.map(t => (
+                      <span key={t} className="h-2 w-2 rounded-full" style={{ backgroundColor: CAT[t] }} title={t} />
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Rings */}
+          <div className="flex items-center justify-center gap-8 lg:pl-6 lg:border-l lg:border-surface-3">
+            <ProgressRing
+              value={weekZ2}
+              target={WEEKLY_Z2_TARGET}
+              color={CAT.cardio}
+              label="Zone 2"
+              sub={`${Math.round(weekZ2)} / ${WEEKLY_Z2_TARGET} min`}
+            />
+            <ProgressRing
+              value={weekStrength.length}
+              target={WEEKLY_STRENGTH_TARGET}
+              color={CAT.strength}
+              label="Strength"
+              sub={`${weekStrength.length} / ${WEEKLY_STRENGTH_TARGET} sessions`}
+            />
+            <div className="hidden sm:block">
+              <p className="label !text-[10px]">Week volume</p>
+              <p className="mono-stat text-xl font-semibold text-zinc-100">{weekVolume.toLocaleString()}</p>
+              <p className="text-[11px] text-zinc-500">lbs lifted</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── TL;DR — serif narrative ───────────────────────────────────── */}
+      <div className="card border-l-[3px] border-l-accent">
+        <p className="font-display text-lg leading-relaxed text-zinc-200">
+          Across <strong className="text-accent-hover">{sessions.length} sessions</strong> you've set{' '}
+          <strong className="text-cat-pr">{prCount} personal records</strong> in{' '}
           {Object.keys(MOVEMENT_LABELS).length} tracked movements. Two recovery sessions built the baseline,
           then strength sessions drove rapid gains — including a two-session day on Apr 25 that confirmed the bench fix
           and pushed hip thrust to 65 lbs (+86% from session one). Apr 26 added two more PRs: Prone Bench SL Hamstring Curl
           (25 lbs, +25%) and Standing Leg Extension (35 lbs, +21%), plus a 3-circuit core finisher.
-          Your best sessions have come on shot days and after poor sleep. External stressors are not stopping you.
+          Your best sessions have come on shot days and after poor sleep. <em>External stressors are not stopping you.</em>
         </p>
       </div>
 
-      {/* Hero stats — this training block */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-        <Stat label="Sessions" value={sessions.length} />
-        <Stat label="Days active" value={daySpan} />
-        <Stat label="Volume" value={`${(totalVol / 1000).toFixed(1)}k lbs`} />
-        <Stat label="Total reps" value={totalReps.toLocaleString()} />
-        <Stat label="Avg TUT" value={`${avgTUT}m`} />
-        <Stat label="Avg rating" value={`${avgRating} / 5`} />
+      {/* ── Block stats ───────────────────────────────────────────────── */}
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <Stat label="Sessions"   value={sessions.length}                 color={CAT.strength} />
+        <Stat label="Days active" value={daySpan}                        color={CAT.strength} />
+        <Stat label="Volume"     value={`${(totalVol / 1000).toFixed(1)}k`} unit="lbs"  color={CAT.strength} />
+        <Stat label="Total reps" value={totalReps.toLocaleString()}      color={CAT.strength} />
+        <Stat label="Avg TUT"    value={avgTUT} unit="min"               color={CAT.recovery} />
+        <Stat label="Avg rating" value={avgRating} unit="/ 5"            color={CAT.pr} />
       </div>
 
-      {/* Lifetime stats */}
+      {/* ── Year at a Glance ──────────────────────────────────────────── */}
+      <YearAtAGlance sessions={sessions} onSelectSession={onSelectSession} />
+
+      {/* ── Lifetime stats banner ─────────────────────────────────────── */}
       <div className="card">
-        <h2 className="label mb-4">Lifetime Stats</h2>
+        <div className="section-header">
+          <h2 className="label">Lifetime Stats</h2>
+          <p className="text-xs text-zinc-600">all Tonal history</p>
+        </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
           <MiniLifeStat label="Total workouts"  value={lifetime.totalWorkouts} />
-          <MiniLifeStat label="Lifetime volume" value={`${lifetime.totalVolumeLbs.toLocaleString()} lbs`} />
-          <MiniLifeStat label="Total time"      value={`${Math.round(lifetime.totalDurationMinutes / 60)} hrs`} />
-          <MiniLifeStat label="Avg per session" value={`${lifetime.avgVolumePerWorkout.toLocaleString()} lbs`} />
+          <MiniLifeStat label="Lifetime volume" value={`${lifetime.totalVolumeLbs.toLocaleString()}`} unit="lbs" />
+          <MiniLifeStat label="Total time"      value={`${Math.round(lifetime.totalDurationMinutes / 60)}`} unit="hrs" />
+          <MiniLifeStat label="Avg per session" value={`${lifetime.avgVolumePerWorkout.toLocaleString()}`} unit="lbs" />
           <MiniLifeStat label="Movements used"  value={lifetime.totalMovements} />
         </div>
       </div>
@@ -68,7 +192,7 @@ export default function Overview({ sessions }) {
       {/* Goals + Context side by side */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="card">
-          <h2 className="label mb-3">Goals</h2>
+          <div className="section-header"><h2 className="label">Goals</h2></div>
           <div className="space-y-2">
             <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Compounded Tirzepatide (GLP-1)" />
             <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
@@ -79,7 +203,7 @@ export default function Overview({ sessions }) {
           </div>
         </div>
         <div className="card">
-          <h2 className="label mb-3">Training Context</h2>
+          <div className="section-header"><h2 className="label">Training Context</h2></div>
           <div className="space-y-2">
             <ContextItem label="Hand status"         value="Both hands cleared — upper body training resumed May 2, 2026" />
             <ContextItem label="Right hand"         value="Post-op (A1 pulley release Feb 2026) — cleared ~7 weeks post-Apr 18" />
@@ -94,7 +218,7 @@ export default function Overview({ sessions }) {
       {/* Recovery arc + Notable PRs side by side */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="card">
-          <h2 className="label mb-4">Recovery Arc</h2>
+          <div className="section-header"><h2 className="label">Recovery Arc</h2></div>
           <div className="relative">
             <div className="absolute left-3 top-0 bottom-0 w-px bg-surface-3" />
             <div className="space-y-3">
@@ -110,17 +234,20 @@ export default function Overview({ sessions }) {
 
         {bestPRs.length > 0 && (
           <div className="card">
-            <h2 className="label mb-4">Notable PRs</h2>
+            <div className="section-header">
+              <h2 className="label">Notable PRs</h2>
+              <span className="pr-badge">⬆ PR</span>
+            </div>
             <div className="space-y-2">
               {bestPRs.map(pr => (
                 <div key={pr.key} className="flex items-center justify-between rounded-lg bg-surface-2 px-3 py-2">
                   <div>
                     <p className="text-sm font-medium text-zinc-100">{MOVEMENT_LABELS[pr.key] ?? pr.key}</p>
-                    <p className="text-xs text-zinc-500 mt-0.5">Set {pr.date}</p>
+                    <p className="text-xs text-zinc-500 mt-0.5 mono-stat">Set {pr.date}</p>
                   </div>
                   <div className="text-right shrink-0 pl-4">
-                    <p className="text-base font-bold text-accent tabular-nums">{pr.weight} lbs</p>
-                    {pr.growth != null && <p className="text-xs text-emerald-400">+{pr.growth}%</p>}
+                    <p className="mono-stat text-base font-bold text-cat-pr">{pr.weight} lbs</p>
+                    {pr.growth != null && <p className="mono-stat text-xs text-emerald-400">+{pr.growth}%</p>}
                   </div>
                 </div>
               ))}
@@ -171,12 +298,12 @@ export default function Overview({ sessions }) {
           <p className="label">Session Recaps</p>
           {recaps.map(r => (
             <div key={r.id} className="flex gap-3 items-start">
-              <div className="w-1 self-stretch rounded-full bg-accent/30 shrink-0" />
+              <div className="w-1 self-stretch rounded-full bg-cat-strength/40 shrink-0" />
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  <span className="text-xs text-zinc-500 tabular-nums">{r.date}</span>
+                  <span className="text-xs text-zinc-500 mono-stat">{r.date}</span>
                   <span className="text-sm font-medium text-zinc-100">{r.workout}</span>
-                  <span className="text-xs text-zinc-500">{r.duration} min · {r.volume?.toLocaleString()} lbs · {r.rating}/5</span>
+                  <span className="text-xs text-zinc-500 mono-stat">{r.duration} min · {r.volume?.toLocaleString()} lbs · {r.rating}/5</span>
                 </div>
                 <p className="text-sm text-zinc-400 mt-0.5">{r.narrative}</p>
               </div>
@@ -201,20 +328,54 @@ export default function Overview({ sessions }) {
   )
 }
 
-function Stat({ label, value }) {
+// SVG progress ring — reference's "daily habit progress" rings, dark-mode (design.md)
+function ProgressRing({ value, target, color, label, sub }) {
+  const pct = Math.min(100, Math.round((value / target) * 100))
+  const r = 26
+  const c = 2 * Math.PI * r
   return (
-    <div className="card text-center">
-      <p className="label">{label}</p>
-      <p className="mt-2 text-2xl font-bold text-zinc-100 tabular-nums">{value}</p>
+    <div className="flex flex-col items-center gap-1.5">
+      <div className="relative h-16 w-16">
+        <svg viewBox="0 0 64 64" className="h-16 w-16 -rotate-90">
+          <circle cx="32" cy="32" r={r} fill="none" stroke="#303036" strokeWidth="6" />
+          <circle
+            cx="32" cy="32" r={r} fill="none"
+            stroke={color} strokeWidth="6" strokeLinecap="round"
+            strokeDasharray={c}
+            strokeDashoffset={c * (1 - pct / 100)}
+            className="transition-[stroke-dashoffset] duration-700"
+          />
+        </svg>
+        <span className="mono-stat absolute inset-0 flex items-center justify-center text-sm font-bold text-zinc-100">
+          {pct}%
+        </span>
+      </div>
+      <p className="label !text-[10px]">{label}</p>
+      <p className="mono-stat text-[11px] text-zinc-500 -mt-1">{sub}</p>
     </div>
   )
 }
 
-function MiniLifeStat({ label, value }) {
+function Stat({ label, value, unit, color }) {
+  return (
+    <div className="stat-card" style={{ borderLeftColor: color }}>
+      <p className="label">{label}</p>
+      <p className="mono-stat mt-1.5 text-2xl font-bold text-zinc-100">
+        {value}
+        {unit && <span className="ml-1 text-xs font-medium text-zinc-500">{unit}</span>}
+      </p>
+    </div>
+  )
+}
+
+function MiniLifeStat({ label, value, unit }) {
   return (
     <div className="rounded-lg bg-surface-2 px-3 py-2.5 text-center">
       <p className="label">{label}</p>
-      <p className="mt-1.5 text-base font-bold text-zinc-100 tabular-nums">{value}</p>
+      <p className="mono-stat mt-1.5 text-base font-bold text-zinc-100">
+        {value}
+        {unit && <span className="ml-1 text-[10px] font-medium text-zinc-500">{unit}</span>}
+      </p>
     </div>
   )
 }
@@ -235,6 +396,14 @@ function ContextItem({ label, value }) {
       <p className="text-zinc-300 text-sm">{value}</p>
     </div>
   )
+}
+
+function weekLabel(weekStart) {
+  const [y, m, d] = weekStart.split('-').map(Number)
+  const sun = new Date(y, m - 1, d)
+  const sat = new Date(y, m - 1, d + 6)
+  const fmt = dt => `${dt.toLocaleString('default', { month: 'short' })} ${dt.getDate()}`
+  return `${fmt(sun)} – ${fmt(sat)}, ${sat.getFullYear()}`
 }
 
 function daysBetween(a, b) {
@@ -308,7 +477,7 @@ function ArcEvent({ date, color, text, active, shot }) {
         {shot ? <span className="text-xs">💉</span> : null}
       </span>
       <div>
-        <p className={`text-xs font-semibold tabular-nums ${active ? 'text-zinc-200' : 'text-zinc-500'}`}>{date}</p>
+        <p className={`text-xs font-semibold mono-stat ${active ? 'text-zinc-200' : 'text-zinc-500'}`}>{date}</p>
         <p className={`text-sm mt-0.5 ${active ? 'text-zinc-300' : 'text-zinc-500'}`}>{text}</p>
       </div>
     </div>

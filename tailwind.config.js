@@ -15,6 +15,21 @@ export default {
           DEFAULT: '#6366f1',
           hover: '#818cf8',
         },
+        // Category colors — color = category, used consistently (design.md)
+        cat: {
+          strength: '#a78bfa', // violet-400 — Tonal strength sessions
+          cardio: '#34d399',   // emerald-400 — Zone 2 / cardio
+          rowing: '#38bdf8',   // sky-400 — rowing
+          recovery: '#fb923c', // orange-400 — readiness / recovery
+          pr: '#f472b6',       // pink-400 — PRs / bests
+          body: '#a3e635',     // lime-400 — body maps / muscle state
+          mixed: '#818cf8',    // indigo-400 — strength + cardio same day
+        },
+      },
+      fontFamily: {
+        display: ['"Instrument Serif"', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
     },
   },

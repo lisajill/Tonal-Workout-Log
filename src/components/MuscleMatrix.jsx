@@ -26,7 +26,10 @@ export default function MuscleMatrix({ sessions }) {
 
   return (
     <div className="card overflow-x-auto">
-      <h2 className="label mb-4">Muscle Load — All Sessions</h2>
+      <div className="section-header">
+        <h2 className="font-display italic text-2xl text-zinc-100">Muscle Matrix</h2>
+        <p className="text-xs text-zinc-600">load per session — all sessions</p>
+      </div>
 
       <table className="w-full text-xs">
         <thead>

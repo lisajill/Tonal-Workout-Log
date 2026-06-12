@@ -25,6 +25,7 @@ export default function BodyMaps({ sessions }) {
 
   return (
     <div className="space-y-4">
+      <h1 className="font-display italic text-3xl" style={{ color: '#a3e635' }}>Body Maps</h1>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         {sorted.map((s, i) => {
           const postMuscles = MUSCLES
