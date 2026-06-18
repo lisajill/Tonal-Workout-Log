@@ -4539,5 +4539,762 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 536
+  },
+  {
+    "date": "2026-06-13",
+    "workout": "Grip-Free 1 — Hip Power",
+    "energy_level": 4,
+    "phase": "active",
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 115,
+    "avg_hr": 82,
+    "max_hr": 95,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 28,
+      "hamstrings": 90,
+      "quads": 98,
+      "calves": 100,
+      "abs": 93,
+      "obliques": 98,
+      "back": 88,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": 110,
+        "date": "2026-06-13"
+      },
+      "standing_straight_leg_glute_kickback": {
+        "weight": 27,
+        "date": "2026-06-13"
+      },
+      "standing_hip_abduction": {
+        "weight": 20,
+        "date": "2026-06-13"
+      },
+      "ankle_strap_hip_adduction": {
+        "weight": 20,
+        "date": "2026-06-13"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "quads",
+      "calves",
+      "core"
+    ],
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 66
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 100
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 110,
+            "prs": [
+              "strength",
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 120
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 90
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 20,
+            "duration_sec": 90
+          }
+        ]
+      },
+      {
+        "name": "Standing Straight Leg Glute Kickback",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 27,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 27,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Standing Hip Abduction",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 19,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 19,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20,
+            "prs": [
+              "strength",
+              "volume"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20,
+            "prs": [
+              "strength",
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ankle Strap Move (Hip Adduction)",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 20,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 15
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-06-13T12:12:33.292-04:00",
+    "duration": 36.45,
+    "total_volume": 3585,
+    "total_reps": 107,
+    "time_under_tension": 8.12,
+    "total_work_kj": 6,
+    "tonal_activity_id": "1c1bf34c-64b0-47b4-9655-fa17a91f477b",
+    "shot_day": false,
+    "functional_strength": 100,
+    "movement_quality": 38,
+    "movement_quality_delta": null,
+    "strength_overall": 502,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 553,
+    "notes": "First GF1 session — new PRs across the board: Hip Thrust 110 lbs, Kickback 27 lbs, Hip Abduction 20 lbs. Unusually strong. Ankle Strap adduction: only did 2 sets (API logged 3); started 20 lbs, dropped to 15 (too many reps at 20). Next: 5 reps/side. Wore knee support brace — seemed to help. Rest fillers: clamshells 2×15/side; bent-knee calf raises 2×30s. Pre-workout: collagen + Vit C ~1hr before (Baar protocol). Ferritin at 6am, no Vit C, 2hr fast after (iron absorption protocol). Post-workout: Premier Protein shake. Sleep severely disrupted night before — woke every 15 min with heavy burping (GI distress). Shot day was Thu Jun 12 at new titrated dose 6.3mg; suspect last 2 shots were partial doses (air in pen) so may have hit a full dose after 2 weeks under-dosing. Strong performance despite this."
+  },
+  {
+    "date": "2026-06-14",
+    "workout": "Grip-Free 2 — Hamstring Burnout",
+    "energy_level": 3,
+    "phase": "active",
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 83,
+    "avg_hr": 88,
+    "max_hr": 125,
+    "pre_readiness": {
+      "glutes": 53,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 9,
+      "hamstrings": 38,
+      "quads": 98,
+      "calves": 100,
+      "abs": 89,
+      "obliques": 99,
+      "back": 90,
+      "chest": 99,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 99
+    },
+    "prs": {
+      "barbell_lying_glute_bridge": {
+        "weight": 137,
+        "date": "2026-06-14"
+      },
+      "prone_bench_hamstring_curl": {
+        "weight": 30,
+        "date": "2026-06-14"
+      },
+      "prone_bench_single_leg_hamstring_curl": {
+        "weight": 31,
+        "date": "2026-06-14"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings"
+    ],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Barbell Lying Glute Bridge",
+        "warmup_sets": 1,
+        "warmup_prs": [
+          "power"
+        ],
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 135,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 136,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 137,
+            "prs": [
+              "strength",
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 120
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 90
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 27,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Single-Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 26,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 31,
+            "prs": [
+              "strength",
+              "power",
+              "volume"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 31,
+            "prs": [
+              "strength",
+              "power",
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "The Hundred",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 31,
+            "duration_sec": 45
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 31,
+            "duration_sec": 45
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-06-14T12:44:51.662365-04:00",
+    "duration": 35.98,
+    "total_volume": 4404,
+    "total_reps": 65,
+    "time_under_tension": 6.52,
+    "total_work_kj": 5,
+    "tonal_activity_id": "c46806dd-d0e4-4368-a27c-d6044e4a81e7",
+    "shot_day": false,
+    "functional_strength": 200,
+    "movement_quality": 70,
+    "movement_quality_delta": 32,
+    "strength_overall": 507,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 570,
+    "notes": "Energy 3 (home at 1am from Indigo Girls show). Rating 5 despite fatigue — glutes at 53% pre. Actively pushed above Smart Flex on all movements — manually added weight on top of SF bumps throughout. PRs on all 3 main movements reflect combined SF + user-directed progression. Prone SL hamstring curl: knees on bench (confirmed safer than hanging). All-time PRs: glute bridge 137 lbs, SL hamstring curl 31 lbs, bilateral hamstring curl 30 lbs. Warmup power PR at 75 lbs on bridge. Dry sweat. Tirzepatide still suppressing."
+  },
+  {
+    "date": "2026-06-18",
+    "workout": "Hands Free Lower Body + Core B",
+    "energy_level": 5,
+    "phase": "active",
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 159,
+    "avg_hr": 107,
+    "max_hr": 142,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 1,
+      "hamstrings": 5,
+      "quads": 62,
+      "calves": 100,
+      "abs": 81,
+      "obliques": 92,
+      "back": 84,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 99
+    },
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": 120,
+        "date": "2026-06-18"
+      },
+      "standing_single_leg_hamstring_curl": {
+        "weight": 30,
+        "date": "2026-06-18"
+      },
+      "prone_bench_hamstring_curl": {
+        "weight": 31,
+        "date": "2026-06-18"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings",
+      "quads"
+    ],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 111,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 114,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 120,
+            "prs": [
+              "strength",
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Standing Single-Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 29,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 29,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30,
+            "prs": [
+              "volume"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30,
+            "prs": [
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 31,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 27,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Single-Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          }
+        ]
+      },
+      {
+        "name": "Standing Leg Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 25
+          }
+        ]
+      },
+      {
+        "name": "Standing Bicycle",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          }
+        ]
+      },
+      {
+        "name": "Clamshell",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-06-18T09:18:47.087-04:00",
+    "duration": 46.37,
+    "total_volume": 6415,
+    "total_reps": 136,
+    "time_under_tension": 18.7,
+    "total_work_kj": 10,
+    "tonal_activity_id": "a0b443e4-11cf-4f5e-b43f-6a7603dc253a",
+    "shot_day": true,
+    "functional_strength": 100,
+    "movement_quality": 86,
+    "strength_overall": 519,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 605,
+    "notes": "Shot day (6.3mg tirzepatide). Hip thrust PRs on all 3 working sets — exceeded GF3 moderate target, beat GF1 PR of 110 lbs (new: 120 lbs). Prone bench hamstring curl: drop sets — started at 31 lbs, lowered to 27 then 25 for full ROM, working to failure. Standing leg extension: right knee pain even with brace, stopping before 80° — brace being returned. Returning the brace."
   }
 ]

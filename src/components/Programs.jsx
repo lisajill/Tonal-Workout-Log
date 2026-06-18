@@ -1,4 +1,398 @@
+// Current rotation overview — rendered above the program cards
+const ROTATION = {
+  title: 'Current Rotation — Grip-Free Heavy',
+  since: '2026-06-12',
+  context: 'Hands uncleared (bilateral carpal tunnel + ulnar neuropathy, sensory-only, Jun 11 2026). Ankle straps + hip-resting barbell only. Low reps, very high load, full muscle burnout per session.',
+  week: [
+    { day: 'Sun', workout: 'Grip-Free 1 — Hip Power', intensity: 'HEAVY thrust — PR hunt' },
+    { day: 'Tue', workout: 'Grip-Free 2 — Hamstring Burnout', intensity: 'HEAVY bridge — PR hunt' },
+    { day: 'Thu', workout: 'Grip-Free 3 — Unilateral Stability', intensity: 'Moderate thrust (~90%)' },
+    { day: 'Sat', workout: 'Grip-Free 4 — Quad & Core', intensity: 'Moderate bridge (~90%)' },
+    { day: 'Floats', workout: 'Aux — Pilates Upper & Core', intensity: 'Light · 1–2×/week' },
+  ],
+  rules: [
+    'Staged rollout: weeks 1–2 the only goal is GF1–GF2–GF3 completed each week — GF4 + Aux are bonus until the rhythm holds',
+    'Deload rule: pre-session glutes or hamstrings < 70% readiness → hold last week’s loads, no pushing',
+    '3-min general warmup every session: bodyweight glute bridges ×15, leg swings, cat-cow',
+    'Vest on for all standing blocks — axial bone loading + balance demand',
+    'Hands: bar rests on hips, hands only steady it. Tingling or numbness = stop',
+    '25–30g protein within 2h of every session',
+    'Riding days displace a main day — a schooling day is not a rest day',
+  ],
+}
+
 export const PROGRAMS = [
+  {
+    id: 'gf1',
+    name: 'Grip-Free 1 — Hip Power',
+    subtitle: 'Grip-free · HEAVY hip thrust · Glute burnout from 3 angles · Vest on standing work · ~30 min',
+    created: '2026-06-12',
+    anchor: 'Barbell Hip Thrust — HEAVY day, PR hunt, explosive concentric',
+    blocks: [
+      {
+        name: 'Block 1 — Barbell · Bench',
+        type: 'Warmup · Smart Flex OFF',
+        exercises: [
+          { name: 'Barbell Hip Thrust', sets: '1 warmup', detail: '5 reps · set bench distance first, yoga mat under bench' },
+        ],
+      },
+      {
+        name: 'Block 2 — Barbell · Bench',
+        type: 'Working sets · Smart Flex ON · 5 reps',
+        exercises: [
+          { name: 'Barbell Hip Thrust', sets: '3', detail: '5 reps · drive up EXPLOSIVELY · PR territory 62+ lbs' },
+        ],
+      },
+      {
+        name: 'Block 3 — Rest',
+        type: '2 min',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '120s · Filler: vest heel drops ×20 (bone loading)' },
+        ],
+      },
+      {
+        name: 'Block 4 — Ankle Straps · Standing · Vest on',
+        type: 'Working sets · Smart Flex ON · 5 reps/side',
+        exercises: [
+          { name: 'Standing Straight Leg Glute Kickback', sets: '3', detail: '5/side · hip extension' },
+        ],
+      },
+      {
+        name: 'Block 5 — Rest',
+        type: '90 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '90s · Filler: clamshells ×15/side' },
+        ],
+      },
+      {
+        name: 'Block 6 — Ankle Straps · Standing · Vest on',
+        type: 'Working sets · Smart Flex ON · 5 reps/side',
+        exercises: [
+          { name: 'Standing Hip Abduction', sets: '3', detail: '5/side · lateral seat stability (riding)' },
+        ],
+      },
+      {
+        name: 'Block 7 — Rest',
+        type: '90 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '90s · re-strap and stand sideways for adduction' },
+        ],
+      },
+      {
+        name: 'Block 8 — Ankle Strap · Adduction',
+        type: 'Working sets · manual weight · 5 reps/side',
+        exercises: [
+          { name: 'Ankle Strap Move (Hip Adduction)', sets: '3', detail: '5/side · sweep across midline · set weight manually ~10–15 lbs · riding leg contact' },
+        ],
+      },
+    ],
+    tiers: [
+      { tier: 1, when: 'Low energy / shot day', adjustment: 'Cut Block 8 (Adduction)' },
+      { tier: 2, when: 'Moderate', adjustment: 'As written' },
+      { tier: 3, when: 'Strong', adjustment: 'Push thrust load — this is the PR-hunt day' },
+    ],
+    cutOrder: [
+      'Block 8 — Hip Adduction',
+      'Block 4 — Straight Leg Kickback',
+      'Block 6 — Standing Hip Abduction',
+      'Block 2 — never cut (anchor)',
+    ],
+    notes: [
+      'Tonal workout ID: e1c60347-b987-4cda-ae77-4809654f4f2e',
+      '3-min general warmup before Block 1: BW glute bridges ×15, leg swings, cat-cow',
+      'Bar rests on hips — hands only steady it. Tingling/numbness = stop',
+      'API weight is per-cable for hip thrust — log app-displayed total',
+    ],
+  },
+  {
+    id: 'gf2',
+    name: 'Grip-Free 2 — Hamstring Burnout',
+    subtitle: 'Grip-free · HEAVY glute bridge · Hams: heavy extension → bilateral → unilateral · ~28 min',
+    created: '2026-06-12',
+    anchor: 'Barbell Lying Glute Bridge — HEAVY day, PR hunt',
+    blocks: [
+      {
+        name: 'Block 1 — Barbell · Floor',
+        type: 'Warmup · Smart Flex OFF',
+        exercises: [
+          { name: 'Barbell Lying Glute Bridge', sets: '1 warmup', detail: '5 reps · start manually ~75 lbs — Smart Flex overshoots' },
+        ],
+      },
+      {
+        name: 'Block 2 — Barbell · Floor',
+        type: 'Working sets · Smart Flex ON · 5 reps',
+        exercises: [
+          { name: 'Barbell Lying Glute Bridge', sets: '3', detail: '5 reps · PR territory 127 lbs' },
+        ],
+      },
+      {
+        name: 'Block 3 — Rest',
+        type: '2 min',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '120s · Filler: dead bugs ×10/side (anti-extension core)' },
+        ],
+      },
+      {
+        name: 'Block 4 — Prone Bench · Bilateral',
+        type: 'Working sets · Smart Flex ON · 5 reps',
+        exercises: [
+          { name: 'Prone Bench Hamstring Curl', sets: '3', detail: '5 reps · zero knee involvement (confirmed safe)' },
+        ],
+      },
+      {
+        name: 'Block 5 — Rest',
+        type: '90 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '90s · Filler: vest calf raises ×20' },
+        ],
+      },
+      {
+        name: 'Block 6 — Prone Bench · Unilateral',
+        type: 'Working sets · Smart Flex ON · 4 reps/side',
+        exercises: [
+          { name: 'Prone Bench Single Leg Hamstring Curl', sets: '3', detail: '4/side · weak side first' },
+        ],
+      },
+      {
+        name: 'Block 7 — Rest',
+        type: '60 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '60s · loops on feet for The Hundred' },
+        ],
+      },
+      {
+        name: 'Block 8 — Pilates Loops · Supine',
+        type: 'Timed · 2 × 45s · light weight',
+        exercises: [
+          { name: 'The Hundred', sets: '2', detail: '45s · loops on feet, hands extended · classic 100 beats' },
+        ],
+      },
+    ],
+    tiers: [
+      { tier: 1, when: 'Low energy / shot day', adjustment: 'Cut Block 8 (The Hundred)' },
+      { tier: 2, when: 'Moderate', adjustment: 'As written' },
+      { tier: 3, when: 'Strong', adjustment: 'Push bridge load — this is the PR-hunt day' },
+    ],
+    cutOrder: [
+      'Block 8 — The Hundred',
+      'Block 6 — Prone Bench SL Curl',
+      'Block 4 — Prone Bench Hamstring Curl',
+      'Block 2 — never cut (anchor)',
+    ],
+    notes: [
+      'Tonal workout ID: 46442f85-0519-44d5-b4ec-36ec35939c22',
+      '3-min general warmup before Block 1: BW glute bridges ×15, leg swings, cat-cow',
+      'One bench setup after the floor compound — clean transition',
+      'API weight is per-cable for glute bridge — log app-displayed total',
+    ],
+  },
+  {
+    id: 'gf3',
+    name: 'Grip-Free 3 — Unilateral Stability',
+    subtitle: 'Grip-free · Moderate thrust (~90%) · Right hip chain + balance · Independent seat · ~27 min',
+    created: '2026-06-12',
+    anchor: 'Barbell Hip Thrust — moderate day: hold ~90% of GF1, decline Smart Flex bumps',
+    blocks: [
+      {
+        name: 'Block 1 — Barbell · Bench',
+        type: 'Warmup · Smart Flex OFF',
+        exercises: [
+          { name: 'Barbell Hip Thrust', sets: '1 warmup', detail: '5 reps' },
+        ],
+      },
+      {
+        name: 'Block 2 — Barbell · Bench',
+        type: 'Working sets · Smart Flex ON · 5 reps · ~90% load',
+        exercises: [
+          { name: 'Barbell Hip Thrust', sets: '3', detail: '5 reps · hold ~90% of GF1 load · explosive intent, no PR hunting' },
+        ],
+      },
+      {
+        name: 'Block 3 — Rest',
+        type: '2 min',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '120s · Filler: vest heel drops ×20 (bone loading)' },
+        ],
+      },
+      {
+        name: 'Block 4 — Ankle Straps · Standing · Vest on',
+        type: 'Working sets · Smart Flex ON · 4 reps/side',
+        exercises: [
+          { name: 'Standing Single Leg Hamstring Curl', sets: '3', detail: '4/side · RIGHT (weak) side first · standing leg trains balance' },
+        ],
+      },
+      {
+        name: 'Block 5 — Rest',
+        type: '90 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '90s · Filler: single-leg stance 30s/side — eyes closed when easy' },
+        ],
+      },
+      {
+        name: 'Block 6 — Ankle Straps · Standing · Vest on',
+        type: 'Working sets · Smart Flex ON · 4 reps/side',
+        exercises: [
+          { name: 'Standing Diagonal Glute Kickback', sets: '3', detail: '4/side · hip extension + lateral — the riding pattern' },
+        ],
+      },
+    ],
+    tiers: [
+      { tier: 1, when: 'Low energy / shot day', adjustment: 'Cut Block 6 (Diagonal Kickback)' },
+      { tier: 2, when: 'Moderate', adjustment: 'As written' },
+      { tier: 3, when: 'Strong', adjustment: 'Add eyes-closed balance time — not load' },
+    ],
+    cutOrder: [
+      'Block 6 — Diagonal Glute Kickback',
+      'Block 4 — Standing SL Hamstring Curl',
+      'Block 2 — never cut (anchor)',
+    ],
+    notes: [
+      'Tonal workout ID: b1b34863-6879-4d48-878a-c93f8322dc3a',
+      '3-min general warmup before Block 1: BW glute bridges ×15, leg swings, cat-cow',
+      'Every standing rep doubles as single-leg proprioception for seat symmetry',
+      'Track right-vs-left in session notes — the gap closing is the goal',
+    ],
+  },
+  {
+    id: 'gf4',
+    name: 'Grip-Free 4 — Quad & Core',
+    subtitle: 'Grip-free · Moderate bridge (~90%) · Quads + rotational core · Knee-brace test day · ~30 min',
+    created: '2026-06-12',
+    anchor: 'Barbell Lying Glute Bridge — moderate day: hold ~90% of GF2',
+    blocks: [
+      {
+        name: 'Block 1 — Barbell · Floor',
+        type: 'Warmup · Smart Flex OFF',
+        exercises: [
+          { name: 'Barbell Lying Glute Bridge', sets: '1 warmup', detail: '5 reps · start manually ~75 lbs' },
+        ],
+      },
+      {
+        name: 'Block 2 — Barbell · Floor',
+        type: 'Working sets · Smart Flex ON · 5 reps · ~90% load',
+        exercises: [
+          { name: 'Barbell Lying Glute Bridge', sets: '3', detail: '5 reps · hold ~90% of GF2 load · decline Smart Flex bumps' },
+        ],
+      },
+      {
+        name: 'Block 3 — Rest',
+        type: '2 min',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '120s · Filler: Assisted Rear Lunge ×5/side, light hand rest · step-ups take this slot once pain-free ×2 with brace' },
+        ],
+      },
+      {
+        name: 'Block 4 — Ankle Straps · Standing · Vest on',
+        type: 'Working sets · Smart Flex ON · 5 reps/side',
+        exercises: [
+          { name: 'Standing Leg Extension', sets: '3', detail: '5/side · RIGHT caps ~27 lbs, stop before 80° flexion · test ROM with knee brace, log results' },
+        ],
+      },
+      {
+        name: 'Block 5 — Rest',
+        type: '90 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '90s · Filler: vest calf raises ×20' },
+        ],
+      },
+      {
+        name: 'Block 6 — Pilates Loops · Side Lying',
+        type: 'Timed · 3 × 35s/side · ~6 controlled reps',
+        exercises: [
+          { name: 'Side Lying Leg Press', sets: '3', detail: '35s/side · loops on feet · knee-friendly quad press' },
+        ],
+      },
+      {
+        name: 'Block 7 — Rest',
+        type: '60 sec',
+        exercises: [
+          { name: 'Rest', sets: '—', detail: '60s · loops set up for Oblique Boat' },
+        ],
+      },
+      {
+        name: 'Block 8 — Pilates Loops · Seated',
+        type: 'Timed · 3 × 40s/side · ~8 controlled reps',
+        exercises: [
+          { name: 'Oblique Boat', sets: '3', detail: '40s/side · C-curve rotation · light press-out hold, neutral wrist · dancing core' },
+        ],
+      },
+    ],
+    tiers: [
+      { tier: 1, when: 'Low energy / shot day', adjustment: 'Cut Block 8 (Oblique Boat)' },
+      { tier: 2, when: 'Moderate', adjustment: 'As written' },
+      { tier: 3, when: 'Strong', adjustment: 'Add brace-tested ROM/load on leg extension — log it' },
+    ],
+    cutOrder: [
+      'Block 8 — Oblique Boat',
+      'Block 6 — Side Lying Leg Press',
+      'Block 4 — Standing Leg Extension',
+      'Block 2 — never cut (anchor)',
+    ],
+    notes: [
+      'Tonal workout ID: 61fb61a6-3e3d-489a-9004-8b3c6aaf6837',
+      '3-min general warmup before Block 1: BW glute bridges ×15, leg swings, cat-cow',
+      'Pilates loop movements only accept timed sets via API — durations ≈ 6–8 controlled reps',
+      'Knee brace experiment lives here: leg extension ROM first, step-up trial second',
+    ],
+  },
+  {
+    id: 'aux_pilates',
+    name: 'Aux — Pilates Upper & Core',
+    subtitle: 'Auxiliary · Light · Loop-anchored, no sustained grip · Never replaces a main day · ~27 min',
+    created: '2026-06-12',
+    anchor: 'No anchor — light auxiliary. Tingling or numbness = stop immediately',
+    blocks: [
+      {
+        name: 'Block 1 — Pilates Loops',
+        type: 'Timed · 3 × 40s · ~8 controlled reps',
+        exercises: [
+          { name: 'Pulling Straps T-Pull', sets: '3', detail: '40s · back / rear delts · posture for riding' },
+        ],
+      },
+      {
+        name: 'Block 2 — Pilates Loops',
+        type: 'Timed · 3 × 40s',
+        exercises: [
+          { name: 'Serve a Tray', sets: '3', detail: '40s · chest + external rotation' },
+        ],
+      },
+      {
+        name: 'Block 3 — Pilates Loops',
+        type: 'Timed · 3 × 40s/side',
+        exercises: [
+          { name: 'Draw a Sword', sets: '3', detail: '40s/side · shoulders, diagonal pattern' },
+        ],
+      },
+      {
+        name: 'Block 4 — Pilates Loops',
+        type: 'Timed · 3 × 35s/side',
+        exercises: [
+          { name: 'Resisted Mermaid', sets: '3', detail: '35s/side · obliques, lateral line' },
+        ],
+      },
+      {
+        name: 'Block 5 — Pilates Loops',
+        type: 'Timed · 3 × 40s',
+        exercises: [
+          { name: 'Roll Down', sets: '3', detail: '40s · abs, spinal articulation' },
+        ],
+      },
+    ],
+    tiers: [
+      { tier: 1, when: 'Any doubt about hands', adjustment: 'Skip entirely — zero cost' },
+      { tier: 2, when: 'Normal', adjustment: 'As written, light weights' },
+      { tier: 3, when: 'Strong', adjustment: 'Nudge weight only if hands fully quiet' },
+    ],
+    cutOrder: [
+      'Any block — order does not matter here',
+    ],
+    notes: [
+      'Tonal workout ID: 8d5baf16-3c3a-40e5-b279-8e309a5875cf',
+      'Loops anchor on open/extended hand or forearm — NO sustained grip',
+      '60s rests between blocks · no vest · start light everywhere',
+      'Runs on off-days or after a main session — never instead of one',
+    ],
+  },
   {
     id: 'he_floor_bridge',
     name: 'Heavy Express — Floor Bridge + Ankle Straps',

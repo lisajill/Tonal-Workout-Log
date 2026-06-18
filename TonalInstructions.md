@@ -23,7 +23,7 @@
 - **Smart Flex:** ON for all working blocks (`flex: true` in API). OFF for warmup sets.
 - **No squats, no lunges** — right knee injury (sharp pain on downward phase)
 - **Monitor Standing Leg Extension** carefully — right leg self-limits to ~27 lbs with reduced ROM, stopping before 80° knee flexion where twitch/pain occurs. Left leg can go heavier. Do not let Smart Flex push right leg past comfortable ROM.
-- **Hand status:** Both hands cleared as of May 2, 2026 ("First Hands Back" session). Upper body and full compound movements are now available. Right hand was post-op Apr 18; cleared for use ~7 weeks later. No longer restricted to hands-free movements.
+- **Hand status: UNCLEARED as of Jun 11, 2026** — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only). Supersedes the May 2 clearance. No sustained grip under load, no cubital-tunnel pressure (no Zercher holds), no wrist-extension weight bearing (no quadruped/pushups). OK: ankle straps, hip-resting barbell (hands steady only), Pilates loops on open/extended hand, light frame touch for balance. Tingling/numbness = stop. Active programming: the **Grip-Free Heavy Rotation** (5 workouts created Jun 12, 2026 — see Obsidian `Health & Wellness/Tonal/Grip-Free Heavy Rotation.md`).
 
 ---
 
@@ -106,6 +106,8 @@ Both hands cleared as of May 2, 2026. Full upper body and compound movements now
 
 ## API Quirks
 
+- **Pilates Loops movements only accept `prescribedDuration` in custom workouts** — `prescribedReps` returns HTTP 500 on createWorkout. All loop movements have `hideReps: true`. Use timed sets (~35–40s ≈ 6–8 controlled reps). Discovered Jun 12, 2026.
+- **Generic `Ankle Strap Move` (`00000000-0000-0000-0000-000000000006`) works rep-based in custom workouts** — use it for movements not in the catalog (e.g. standing hip ADDuction). Counts reps, no side-switch prompts, set weight manually.
 - **`totalWork` is in joules**, not kJ. Divide by 1000 for kJ.
 - **`localTimestamp` is only populated for Internal (Tonal) activities.** External (Apple Watch) activities have `localTimestamp: "0001-01-01T00:00:00Z"`. Use `timestamp` for external activities.
 - **`activityType === 'Internal'`** filters to Tonal machine workouts. External = Apple Watch, walking, etc.
