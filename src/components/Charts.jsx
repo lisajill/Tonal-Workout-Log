@@ -33,6 +33,21 @@ function isShotDay(s) {
   return weekdayIdx(s.date) === 4
 }
 
+// Returns all Thursday date strings between startDate and endDate (inclusive)
+function thursdaysInRange(startDate, endDate) {
+  const [sy, sm, sd] = startDate.split('-').map(Number)
+  const [ey, em, ed] = endDate.split('-').map(Number)
+  let d = new Date(sy, sm - 1, sd)
+  const end = new Date(ey, em - 1, ed)
+  while (d.getDay() !== 4) d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1)
+  const out = []
+  while (d <= end) {
+    out.push(`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`)
+    d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 7)
+  }
+  return out
+}
+
 function hasPR(s) {
   return Object.values(s.prs ?? {}).some(p => p.weight != null)
     || s.movements?.some(m => m.sets.some(t => t.prs?.length) || m.warmup_prs?.length)
@@ -147,7 +162,15 @@ export default function Charts({ sessions: rawSessions }) {
   })
 
   const meta = Object.fromEntries(data.map(d => [d.label, d]))
-  const shotLabels = data.filter(d => d.shot).map(d => d.label)
+
+  // Inject phantom entries for Thursdays with no session so shot-day markers always appear
+  const sessionDates = new Set(sessions.map(s => s.date))
+  const phantomShots = thursdaysInRange(sessions[0].date, sessions[sessions.length - 1].date)
+    .filter(d => !sessionDates.has(d))
+    .map(d => ({ label: shortDate(d), date: d, shot: true }))
+  const volumeChartData = [...data, ...phantomShots].sort((a, b) => a.date.localeCompare(b.date))
+
+  const shotLabels = volumeChartData.filter(d => d.shot).map(d => d.label)
 
   // ── Insights ──────────────────────────────────────────────────────
   const vols = data.map(d => d.volume).filter(v => v != null)
@@ -227,7 +250,7 @@ export default function Charts({ sessions: rawSessions }) {
         ]}
       >
         <ResponsiveContainer width="100%" height={280}>
-          <ComposedChart data={data} margin={{ top: 12, right: 8, bottom: 0, left: -8 }}>
+          <ComposedChart data={volumeChartData} margin={{ top: 12, right: 8, bottom: 0, left: -8 }}>
             <defs>
               <linearGradient id="gradVol" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor={CAT_STRENGTH} stopOpacity={0.55} />
