@@ -104,7 +104,7 @@ export default function Overview({ sessions, onSelectSession }) {
       <div className="card">
         <div className="section-header">
           <div>
-            <h2 className="font-display italic text-2xl text-zinc-100">This Week</h2>
+            <h2 className="text-2xl font-semibold text-zinc-100">This Week</h2>
             <p className="text-xs text-zinc-500 mt-0.5 mono-stat">{weekLabel(weekStart)}</p>
           </div>
           <p className="label hidden sm:block">Sun – Sat</p>
@@ -162,9 +162,9 @@ export default function Overview({ sessions, onSelectSession }) {
         </div>
       </div>
 
-      {/* ── TL;DR — serif narrative, computed live from the data ────────── */}
+      {/* ── TL;DR — computed live from the data ────────── */}
       <div className="card border-l-[3px] border-l-accent">
-        <p className="font-display text-lg leading-relaxed text-zinc-200">
+        <p className="text-lg leading-relaxed text-zinc-200">
           Across <strong className="text-accent-hover">{sessions.length} sessions</strong> since {first.date} you've set{' '}
           <strong className="text-cat-pr">{prCount} personal records</strong> in {prMovements.size} movements.
           Most recent: <em>{last.workout}</em> on {last.date}
@@ -207,22 +207,22 @@ export default function Overview({ sessions, onSelectSession }) {
         <div className="card">
           <div className="section-header"><h2 className="label">Goals</h2></div>
           <div className="space-y-2">
-            <Goal icon="💪" text="Build muscle mass to increase TDEE — priority while on Compounded Tirzepatide (GLP-1)" />
-            <Goal icon="🐴" text="Return to riding — target mid-May 2026" />
-            <Goal icon="🤲" text="Upper body — grip-aware programming while nerves heal (bilateral carpal tunnel + ulnar neuropathy, dx Jun 11, 2026)" />
-            <Goal icon="📈" text="Progress to heavier express sessions — shorter, denser, higher rated" />
-            <Goal icon="❤️" text="Zone 2 cardio — 150 min/week target (Rhonda Patrick protocol). Walks + Hydrow rowing once cleared post-May 4" />
-            <Goal icon="⚖️" text="Perimenopause-aware programming — phase-matched intensity, recovery-first when needed" />
+            <Goal icon="💪" text="Body recomposition on Tirzepatide — preserve and build muscle mass while losing fat. Protein target 125–130g/day." />
+            <Goal icon="🐴" text="Riding on hold — Marley is lame. Building lower body strength in the meantime." />
+            <Goal icon="🤲" text="Grip-free strength program (GF1–GF4) — building lower body while bilateral carpal tunnel + ulnar neuropathy resolves (dx Jun 11, 2026)" />
+            <Goal icon="🦵" text="Right knee — pain on terminal extension under load (leg extension). Investigating cause; brace returned Jun 18." />
+            <Goal icon="❤️" text="Zone 2 — 150 min/week (Rhonda Patrick protocol). Walking + Hydrow rowing. Heat (&gt;90°F) is current limiter." />
+            <Goal icon="⚖️" text="Perimenopause-aware programming — bone density, tendon health, recovery-first when needed." />
           </div>
         </div>
         <div className="card">
           <div className="section-header"><h2 className="label">Training Context</h2></div>
           <div className="space-y-2">
-            <ContextItem label="Hand status"         value="Uncleared as of Jun 11, 2026 — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only)" />
+            <ContextItem label="Hand status"         value="Grip uncleared — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only, dx Jun 11, 2026). Running grip-free program." />
             <ContextItem label="Surgical history"   value="A1 pulley releases Feb + Mar 2026 (both hands) — recovered; upper body training resumed May 2, 2026" />
-            <ContextItem label="Medication"         value="Compounded Tirzepatide (GLP-1) — shot day affects energy and output" />
-            <ContextItem label="Life stage"         value="Perimenopause — training adapted accordingly" />
-            <ContextItem label="Next milestone"     value="Return to riding — target mid-May 2026" />
+            <ContextItem label="Medication"         value="Compounded Tirzepatide 6.3mg weekly (GLP-1+GIP agonist) — shot day affects energy, appetite, and GI" />
+            <ContextItem label="Life stage"         value="Perimenopause — training adapted for bone density, tendon health, and muscle preservation" />
+            <ContextItem label="Next milestone"     value="Resolve right knee pain on terminal leg extension — PT evaluation underway Jun 18, 2026" />
           </div>
         </div>
       </div>
@@ -240,7 +240,10 @@ export default function Overview({ sessions, onSelectSession }) {
               <ArcEvent date="Apr 4, 2026"  color="bg-accent"      text="First session back — hands-free lower body only" active />
               <ArcEvent date="Apr 19"       color="bg-emerald-400" text="Breakout session — glute bridge 120 lbs, PRs across the board · 5/5" active />
               <ArcEvent date="May 2"        color="bg-emerald-400" text="Hands cleared — first upper body session, hip thrust strength + power PR at 62 lbs" active />
-              <ArcEvent date="Jun 11"       color="bg-orange-400"  text="Hands uncleared — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only). Grip-aware programming." active />
+              <ArcEvent date="Jun 11"       color="bg-orange-400"  text="Hands uncleared — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only). Grip-free programming." active />
+              <ArcEvent date="Jun 13"       color="bg-emerald-400" text="Grip-Free program launched (GF1–GF4) — hip thrust 110 lbs, 4 PRs first session · 5/5" active />
+              <ArcEvent date="Jun 2026"     color="bg-orange-400"  text="Riding on hold — Marley is lame" active />
+              <ArcEvent date="Jun 18"       color="bg-orange-400"  text="Knee: patellar tracking brace trialed and returned — pain on terminal leg extension persists at end range. PT evaluation scheduled." active />
             </div>
           </div>
         </div>

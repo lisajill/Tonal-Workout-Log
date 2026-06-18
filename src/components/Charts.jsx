@@ -187,7 +187,7 @@ export default function Charts({ sessions: rawSessions }) {
 
   return (
     <div className="space-y-5">
-      <h1 className="font-display italic text-3xl text-zinc-100">Charts</h1>
+      <h1 className="font-semibold text-3xl text-zinc-100">Charts</h1>
 
       {/* Insight chips */}
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
@@ -422,7 +422,7 @@ export default function Charts({ sessions: rawSessions }) {
       {rowingData.length > 0 && (
         <>
           <div className="flex items-center gap-2 pt-2">
-            <span className="font-display italic text-xl" style={{ color: CAT_ROWING }}>Rowing</span>
+            <span className="font-semibold text-xl" style={{ color: CAT_ROWING }}>Rowing</span>
             <div className="flex-1 h-px bg-surface-3" />
           </div>
 

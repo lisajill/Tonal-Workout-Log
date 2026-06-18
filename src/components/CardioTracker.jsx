@@ -119,7 +119,7 @@ export default function CardioTracker() {
   return (
     <div className="space-y-5">
 
-      <h1 className="font-display italic text-3xl text-cat-cardio">Cardio</h1>
+      <h1 className="font-semibold text-3xl text-cat-cardio">Cardio</h1>
 
       {/* Summary cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">

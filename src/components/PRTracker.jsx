@@ -76,7 +76,7 @@ export default function PRTracker({ sessions }) {
 
   return (
     <div className="space-y-5">
-      <h1 className="font-display italic text-3xl" style={{ color: CAT_PR }}>Personal Records</h1>
+      <h1 className="font-semibold text-3xl" style={{ color: CAT_PR }}>Personal Records</h1>
 
       {/* Insight chips */}
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
@@ -111,7 +111,7 @@ export default function PRTracker({ sessions }) {
             <div key={key} className="card !p-4">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="font-display text-lg leading-tight text-zinc-100">{formatMovement(key)}</p>
+                  <p className="text-lg leading-tight text-zinc-100">{formatMovement(key)}</p>
                   <p className="mono-stat mt-0.5 text-[11px] text-zinc-600">
                     {count > 0 ? `${count} PR${count > 1 ? 's' : ''} · last ${last.date}` : 'no PR logged yet'}
                   </p>

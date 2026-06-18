@@ -57,7 +57,7 @@ export default function RowingTracker() {
   return (
     <div className="space-y-5">
 
-      <h1 className="font-display italic text-3xl" style={{ color: CAT_ROWING }}>Rowing</h1>
+      <h1 className="font-semibold text-3xl" style={{ color: CAT_ROWING }}>Rowing</h1>
 
       {/* Summary cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">

@@ -111,7 +111,7 @@ export default function MuscleMatrix({ sessions }) {
 
   return (
     <div className="space-y-5">
-      <h1 className="font-display italic text-3xl" style={{ color: CAT_STRENGTH }}>Muscle Matrix</h1>
+      <h1 className="font-semibold text-3xl" style={{ color: CAT_STRENGTH }}>Muscle Matrix</h1>
 
       <div className="card overflow-x-auto">
         <div className="section-header">

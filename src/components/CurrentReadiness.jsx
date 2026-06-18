@@ -111,7 +111,7 @@ export default function CurrentReadiness() {
 
   return (
     <div className="space-y-5">
-      <h1 className="font-display italic text-3xl" style={{ color: '#fb923c' }}>Current State</h1>
+      <h1 className="font-semibold text-3xl" style={{ color: '#fb923c' }}>Current State</h1>
       <div className="card border-accent/20 bg-accent/5">
         <p className="text-xs text-zinc-400 leading-relaxed">
           Estimated current muscle readiness based on Tonal post-session data and off-Tonal activity logs, decayed toward 100% over time.

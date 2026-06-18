@@ -68,7 +68,7 @@ export default function SessionLog({ sessions, onSelectSession }) {
     <div className="card !p-0 overflow-hidden">
       <div className="section-header !mb-0 border-b-0 px-5 pt-5 pb-3">
         <div>
-          <h2 className="font-display italic text-2xl text-zinc-100">Session Log</h2>
+          <h2 className="font-semibold text-2xl text-zinc-100">Session Log</h2>
           <p className="text-xs text-zinc-500 mt-0.5">{sessions.length} Tonal sessions — click a row for detail, ▸ to preview movements</p>
         </div>
         <div className="hidden sm:flex items-center gap-3 text-[10px] text-zinc-500">

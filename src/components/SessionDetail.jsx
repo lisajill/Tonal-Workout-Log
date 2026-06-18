@@ -111,7 +111,7 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp }) 
       <div className="card !p-0 overflow-hidden">
         <div className="flex flex-wrap items-start justify-between gap-4 px-5 py-4 border-b border-surface-3">
           <div>
-            <h2 className="font-display italic text-3xl leading-tight" style={{ color: CAT_STRENGTH }}>
+            <h2 className="font-semibold text-3xl leading-tight" style={{ color: CAT_STRENGTH }}>
               {dayName(session.date)}
             </h2>
             <p className="text-sm text-zinc-400 mt-0.5">
@@ -252,7 +252,7 @@ function MovementBlock({ movement: m }) {
   return (
     <div className="rounded-lg border border-surface-3 bg-surface-0/40 px-4 py-3 overflow-x-auto">
       <div className="flex items-baseline justify-between gap-3 border-b border-surface-3 pb-2 mb-2">
-        <p className="font-display text-lg text-zinc-100 whitespace-nowrap">{m.name}</p>
+        <p className="text-lg text-zinc-100 whitespace-nowrap">{m.name}</p>
         {(m.warmup_prs?.length > 0) && (
           <span className="flex gap-1 shrink-0">{m.warmup_prs.map(t => <PRMark key={t} type={t} warmup />)}</span>
         )}
@@ -343,7 +343,7 @@ function RatingBadge({ value }) {
   return (
     <div className="text-right shrink-0">
       <p className="label !text-[9px] mb-0.5">Session Rating</p>
-      <p className={`font-display text-4xl ${color}`}>{value}</p>
+      <p className={`text-4xl ${color}`}>{value}</p>
       <p className="text-xs text-zinc-500">out of 5</p>
     </div>
   )

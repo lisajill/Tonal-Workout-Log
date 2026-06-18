@@ -112,7 +112,7 @@ export default function App() {
         <div className="flex h-full items-center gap-x-3 max-w-7xl mx-auto">
           <button
             onClick={() => selectTab('overview')}
-            className="font-display italic text-xl text-zinc-100 leading-none shrink-0 pr-2 sm:pr-4 hover:text-accent-hover transition-colors"
+            className="font-semibold text-xl text-zinc-100 leading-none shrink-0 pr-2 sm:pr-4 hover:text-accent-hover transition-colors"
             title="Overview"
           >
             LJ <span className="text-accent">Fitness</span>

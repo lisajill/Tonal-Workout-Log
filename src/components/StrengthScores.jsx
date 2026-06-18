@@ -98,7 +98,7 @@ export default function StrengthScores() {
 
   return (
     <div className="space-y-5">
-      <h1 className="font-display italic text-3xl text-zinc-100">Strength Scores</h1>
+      <h1 className="text-3xl font-semibold text-zinc-100">Strength Scores</h1>
 
       {/* Insight chips */}
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
