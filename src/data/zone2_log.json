@@ -1256,5 +1256,31 @@
     "zone4_min": 0,
     "avg_hr": 93,
     "distance_mi": 1.03
+  },
+  {
+    "uuid": "6F94841A-8555-4DB9-A0E7-1A609A0E1CB1",
+    "date": "2026-06-19",
+    "timestamp": "2026-06-19T00:20:49Z",
+    "activity": "Walking",
+    "duration_min": 16.1,
+    "zone1_min": 16.1,
+    "zone2_min": 0,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 82,
+    "distance_mi": 0.53
+  },
+  {
+    "uuid": "82F086BF-EE21-44A4-BA34-8D3B5C75B9CE",
+    "date": "2026-06-19",
+    "timestamp": "2026-06-19T12:32:12Z",
+    "activity": "Walking",
+    "duration_min": 39.9,
+    "zone1_min": 37.5,
+    "zone2_min": 2.4,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 94,
+    "distance_mi": 1.45
   }
 ]
