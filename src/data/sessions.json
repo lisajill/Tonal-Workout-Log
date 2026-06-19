@@ -5296,5 +5296,237 @@
     "strength_core": 465,
     "strength_lower": 605,
     "notes": "Shot day (6.3mg tirzepatide). Hip thrust PRs on all 3 working sets — exceeded GF3 moderate target, beat GF1 PR of 110 lbs (new: 120 lbs). Prone bench hamstring curl: drop sets — started at 31 lbs, lowered to 27 then 25 for full ROM, working to failure. Standing leg extension: right knee pain even with brace, stopping before 80° — brace being returned. Returning the brace."
+  },
+  {
+    "date": "2026-06-19",
+    "workout": "GF — Bridge, Hip Flexors + Diagonal",
+    "energy_level": 2,
+    "phase": null,
+    "subjective_rating": 3,
+    "sweat": "dry",
+    "calories": 81,
+    "avg_hr": 92,
+    "max_hr": 120,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": 1,
+      "hamstrings": 11,
+      "quads": 87,
+      "calves": 100,
+      "abs": 87,
+      "obliques": 95,
+      "back": 83,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {
+      "barbell_lying_glute_bridge": {
+        "weight": 70,
+        "date": "2026-06-19"
+      },
+      "standing_donkey_kick": {
+        "weight": 29,
+        "date": "2026-06-19"
+      },
+      "standing_diagonal_glute_kickback": {
+        "weight": 15,
+        "date": "2026-06-19"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings"
+    ],
+    "muscles_low_volume": [
+      "abs"
+    ],
+    "movements": [
+      {
+        "name": "Barbell Lying Glute Bridge",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 68.5
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 68.5
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 70,
+            "prs": [
+              "strength"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 120
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 90
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 90
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 90
+          }
+        ]
+      },
+      {
+        "name": "Ankle Strap Move",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0
+          }
+        ]
+      },
+      {
+        "name": "Standing Donkey Kick",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 29
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 29
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          }
+        ]
+      },
+      {
+        "name": "Standing Diagonal Glute Kickback",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15,
+            "prs": [
+              "power",
+              "volume"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15
+          }
+        ]
+      },
+      {
+        "name": "Standing Bicycle",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-06-19T18:14:32.712106-04:00",
+    "duration": 24.67,
+    "total_volume": 4139,
+    "total_reps": 90,
+    "time_under_tension": 7.97,
+    "total_work_kj": 5,
+    "tonal_activity_id": "cb0d45a8-d405-4b82-b586-b6f7bb4d68cf",
+    "functional_strength": 200,
+    "movement_quality": 143,
+    "movement_quality_delta": 57,
+    "strength_overall": 519,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 606,
+    "notes": "Hip flexion block not set to alternating — ended up doing 5 reps each side as a single set instead of 3×5 per side. Forgot banded lateral walk (rest block finisher not obvious). Standing bicycle: held on with one hand for balance while the other arm crunched — good movement to continue building."
   }
 ]
