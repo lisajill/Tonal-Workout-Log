@@ -1,16 +1,16 @@
 {
-  "totalWorkouts": 210,
-  "totalVolumeLbs": 561038,
-  "totalDurationMinutes": 4644,
-  "totalTimeUnderTensionMinutes": 1854,
+  "totalWorkouts": 211,
+  "totalVolumeLbs": 565177,
+  "totalDurationMinutes": 4668,
+  "totalTimeUnderTensionMinutes": 1862,
   "maxVolumeInWorkout": 7713,
   "maxVolumeInWeek": 30294,
-  "avgVolumePerWorkout": 2672,
-  "avgVolumePerWeek": 3224,
+  "avgVolumePerWorkout": 2679,
+  "avgVolumePerWeek": 3230,
   "avgWorkoutDurationMinutes": 22,
   "maxWorkoutsPerWeek": 14,
   "avgWorkoutsPerWeek": 1.2,
   "totalMovements": 201,
-  "totalCustomWorkouts": 20,
+  "totalCustomWorkouts": 21,
   "totalFreeliftWorkouts": 19
 }

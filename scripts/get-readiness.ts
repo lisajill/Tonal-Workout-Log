@@ -2,16 +2,11 @@ import 'dotenv/config'
 import TonalClient from '@dlwiest/ts-tonal-client'
 
 async function main() {
-  const username = process.env.TONAL_EMAIL!
-  const password = process.env.TONAL_PASSWORD!
-  const client = await TonalClient.create({ username, password })
+  const client = await TonalClient.create({ username: process.env.TONAL_EMAIL!, password: process.env.TONAL_PASSWORD! })
   const http = (client as any).httpClient
-  const userInfo = await (client as any).userService.getUserInfo()
-  const uid = userInfo.id ?? userInfo.userId ?? userInfo.sub
-  console.log('uid:', uid)
-  // http.request returns data directly (not a response object)
-  const data = await http.request(`/users/${uid}/muscle-readiness/current`)
-  console.log(JSON.stringify(data, null, 2))
+  const info = await (client as any).userService.getUserInfo()
+  const uid = info.id ?? info.userId ?? info.sub
+  const r = await http.request(`/users/${uid}/muscle-readiness/current`)
+  console.log(JSON.stringify(r, null, 2))
 }
-
-main().catch(console.error)
+main()
