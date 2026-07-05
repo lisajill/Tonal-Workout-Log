@@ -5528,5 +5528,148 @@
     "strength_core": 465,
     "strength_lower": 606,
     "notes": "Hip flexion block not set to alternating — ended up doing 5 reps each side as a single set instead of 3×5 per side. Forgot banded lateral walk (rest block finisher not obvious). Standing bicycle: held on with one hand for balance while the other arm crunched — good movement to continue building."
+  },
+  {
+    "date": "2026-07-05",
+    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
+    "energy_level": 2,
+    "phase": "active",
+    "subjective_rating": 3,
+    "sweat": "dry",
+    "calories": 53,
+    "avg_hr": 98,
+    "max_hr": 121,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": 50,
+      "hamstrings": 50,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {
+      "barbell_lying_glute_bridge": {
+        "weight": 143,
+        "date": "2026-07-05"
+      },
+      "standing_donkey_kick": {
+        "weight": 32,
+        "date": "2026-07-05"
+      },
+      "standing_single_leg_hamstring_curl": {
+        "weight": 33,
+        "date": "2026-07-05"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings"
+    ],
+    "muscles_low_volume": [],
+    "timestamp": "2026-07-05T13:49:46-04:00",
+    "duration": 18.2,
+    "total_volume": 4639,
+    "total_reps": 49,
+    "time_under_tension": null,
+    "total_work_kj": 5,
+    "tonal_activity_id": null,
+    "shot_day": false,
+    "functional_strength": 100,
+    "movement_quality": 41,
+    "strength_overall": 523,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 616,
+    "notes": "Energy 2, vibes 3 — Zepbound titration side effects. Skipped the 4th movement in the session (workout listed 4 movements total) due to titration side effects; did the 3 logged. Titrating to 7.5mg dose Thursday. Glutes/hamstrings still recovering (50%) going into this session; new PRs on all 3 logged movements (glute bridge 143 lbs strength+volume, donkey kick 32 lbs strength, hamstring curl 33 lbs strength).",
+    "movements": [
+      {
+        "name": "Barbell Lying Glute Bridge",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 140
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 143,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 143,
+            "prs": [
+              "volume"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Standing Donkey Kick",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 31,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 32,
+            "prs": [
+              "strength"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Standing Single-Leg Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 31
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 31
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 33,
+            "prs": [
+              "strength"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
