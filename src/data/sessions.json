@@ -5530,6 +5530,85 @@
     "notes": "Hip flexion block not set to alternating — ended up doing 5 reps each side as a single set instead of 3×5 per side. Forgot banded lateral walk (rest block finisher not obvious). Standing bicycle: held on with one hand for balance while the other arm crunched — good movement to continue building."
   },
   {
+    "date": "2026-06-27",
+    "workout": "Hip Thrust Snack",
+    "energy_level": null,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": 146,
+        "date": "2026-06-27"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes"
+    ],
+    "muscles_low_volume": [],
+    "timestamp": null,
+    "duration": null,
+    "total_volume": 2940,
+    "total_reps": 25,
+    "time_under_tension": null,
+    "total_work_kj": null,
+    "tonal_activity_id": null,
+    "shot_day": null,
+    "notes": "Back-logged from screenshot (session wasn't captured at the time). Single-movement snack session — Barbell Hip Thrust only. New all-time PR: 146 lbs (up from 120 lbs on 6/18), flagged VOLUME PR in-app on the final set.",
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 146
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 146
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 146,
+            "prs": [
+              "volume"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-07-05",
     "workout": "Heavy Express — Floor Bridge + Ankle Straps",
     "energy_level": 2,
