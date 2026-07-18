@@ -5820,7 +5820,14 @@
           {
             "reps": 12,
             "weight_lbs": 16,
-            "duration_sec": 40
+            "duration_sec": 40,
+            "note": "warmup set"
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 16,
+            "duration_sec": 40,
+            "note": "trainer modification: knees held up in dead-bug-style tabletop position during the press — noticeably harder"
           }
         ]
       },
@@ -5843,7 +5850,7 @@
     "time_under_tension": 4.95,
     "total_work_kj": 3,
     "tonal_activity_id": "65d9ca6e-90f3-4f64-a3b9-77676b7250dd",
-    "notes": "Energy 2, vibes 5 — First workout in weeks. Doctor cleared me to lift using my hands again (stop if it hurts), suggested trying padded weightlifting gloves. Got gloves with wrist support for carpal as well — https://a.co/d/0g614LfS — tried them out today in this quick fit session. Felt fully recovered going in (pre-readiness 100% across the board).",
+    "notes": "Energy 2, vibes 5 — First hands-on/upper-body session since the carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Kept up hands-free lower body work (Grip-Free Heavy Rotation) through Jul 5, then paused ~2 weeks — ran out of steam plus a heat wave. Surgeon cleared hands Jul 17; padded wrist-support gloves arrived same day — https://a.co/d/0g614LfS — tried them today. Felt fully recovered going in (pre-readiness 100% across the board). On Bench Press (2nd/working set), trainer added a modification: hold knees up in a dead-bug-style tabletop anti-extension position during the press — noticeably harder than the standard version.",
     "functional_strength": 34,
     "movement_quality": 18,
     "strength_overall": 523,
