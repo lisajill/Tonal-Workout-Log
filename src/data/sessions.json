@@ -5575,13 +5575,13 @@
       "glutes"
     ],
     "muscles_low_volume": [],
-    "timestamp": null,
-    "duration": null,
+    "timestamp": "2026-06-27T19:40:25.888033-04:00",
+    "duration": 8.42,
     "total_volume": 2940,
     "total_reps": 25,
-    "time_under_tension": null,
-    "total_work_kj": null,
-    "tonal_activity_id": null,
+    "time_under_tension": 1.53,
+    "total_work_kj": 3,
+    "tonal_activity_id": "de9b37c8-fa9e-4887-a6e2-b74adfd68771",
     "shot_day": null,
     "notes": "Back-logged from screenshot (session wasn't captured at the time). Single-movement snack session — Barbell Hip Thrust only. New all-time PR: 146 lbs (up from 120 lbs on 6/18), flagged VOLUME PR in-app on the final set.",
     "movements": [
@@ -5663,13 +5663,13 @@
       "hamstrings"
     ],
     "muscles_low_volume": [],
-    "timestamp": "2026-07-05T13:49:46-04:00",
-    "duration": 18.2,
+    "timestamp": "2026-07-05T13:49:46.753402-04:00",
+    "duration": 18.18,
     "total_volume": 4639,
-    "total_reps": 49,
-    "time_under_tension": null,
+    "total_reps": 73,
+    "time_under_tension": 4.75,
     "total_work_kj": 5,
-    "tonal_activity_id": null,
+    "tonal_activity_id": "9c56ff49-5aac-483e-b248-a756a4bd2892",
     "shot_day": false,
     "functional_strength": 100,
     "movement_quality": 41,
@@ -5750,5 +5750,99 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-07-18",
+    "workout": "Quick Fit: Sit and HIIT",
+    "energy_level": 2,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": null,
+    "calories": 47,
+    "avg_hr": 115,
+    "max_hr": 149,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 69,
+      "hamstrings": 99,
+      "quads": 70,
+      "calves": 100,
+      "abs": 98,
+      "obliques": 100,
+      "back": 100,
+      "chest": 74,
+      "shoulders": 77,
+      "biceps": 100,
+      "triceps": 89
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Goblet Squat to Bench",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 29,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Seated Alternating Overhead Press",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 8,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Bench Press",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 16,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Elevated Glute Bridge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-07-18T15:06:28.669-04:00",
+    "duration": 14.42,
+    "total_volume": 1196,
+    "total_reps": 62,
+    "time_under_tension": 4.95,
+    "total_work_kj": 3,
+    "tonal_activity_id": "65d9ca6e-90f3-4f64-a3b9-77676b7250dd",
+    "notes": "Energy 2, vibes 5 — First workout in weeks. Doctor cleared me to lift using my hands again (stop if it hurts), suggested trying padded weightlifting gloves. Got gloves with wrist support for carpal as well — https://a.co/d/0g614LfS — tried them out today in this quick fit session. Felt fully recovered going in (pre-readiness 100% across the board)."
   }
 ]

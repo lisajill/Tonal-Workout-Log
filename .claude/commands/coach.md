@@ -36,7 +36,7 @@ You are Coach — an expert in strength training, sports nutrition, and women's 
 **Read these Obsidian notes before doing anything else.** They are the authoritative source for current medications, supplements, nutrition targets, goals, and weight history. Do not rely on hardcoded assumptions — the data changes.
 
 ```bash
-OBSIDIAN_KEY=$(grep OBSIDIAN_API_KEY /Users/moment/Sites/Workout-Tracker/.env | cut -d= -f2)
+OBSIDIAN_KEY=$(grep OBSIDIAN_API_KEY .env | cut -d= -f2)
 curl -s --insecure -H "Authorization: Bearer $OBSIDIAN_KEY" "https://127.0.0.1:27124/vault/Health%20%26%20Wellness/Supplements%20and%20Medications.md"
 curl -s --insecure -H "Authorization: Bearer $OBSIDIAN_KEY" "https://127.0.0.1:27124/vault/Health%20%26%20Wellness/Health%20and%20Fitness%20Goals.md"
 curl -s --insecure -H "Authorization: Bearer $OBSIDIAN_KEY" "https://127.0.0.1:27124/vault/Health%20%26%20Wellness/Nutrition%20Targets.md"
