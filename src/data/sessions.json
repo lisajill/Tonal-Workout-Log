@@ -5857,7 +5857,7 @@
     "energy_level": 3,
     "phase": null,
     "subjective_rating": 3,
-    "sweat": null,
+    "sweat": "dry",
     "calories": 43,
     "avg_hr": 113,
     "max_hr": 150,
@@ -5893,8 +5893,13 @@
         "date": "2026-07-19"
       }
     },
-    "muscles_high_volume": [],
-    "muscles_low_volume": [],
+    "muscles_high_volume": [
+      "quads",
+      "abs"
+    ],
+    "muscles_low_volume": [
+      "glutes"
+    ],
     "timestamp": null,
     "duration": 12.72,
     "total_volume": 1116,
