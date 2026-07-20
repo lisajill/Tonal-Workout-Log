@@ -5850,5 +5850,112 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 616
+  },
+  {
+    "date": "2026-07-19",
+    "workout": "Quick Fit: Dynamic Core",
+    "energy_level": 3,
+    "phase": null,
+    "subjective_rating": 3,
+    "sweat": null,
+    "calories": 43,
+    "avg_hr": 113,
+    "max_hr": 150,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {
+      "resisted_dns_star": {
+        "weight": 20,
+        "date": "2026-07-19"
+      }
+    },
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "timestamp": null,
+    "duration": 12.72,
+    "total_volume": 1116,
+    "total_reps": 38,
+    "time_under_tension": 4.97,
+    "total_work_kj": 4,
+    "tonal_activity_id": null,
+    "shot_day": null,
+    "notes": "Energy 3, vibes 3. Two brand-new movements (Iso Split Squat Lift, Resisted DNS Star) — immediate PRs on first attempt, as expected for new movements. Performed Iso Split Squat Lift kneeling rather than the standard standing split-squat stance — knee-friendly modification.",
+    "movements": [
+      {
+        "name": "Iso Split Squat Lift",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 10
+          }
+        ]
+      },
+      {
+        "name": "Hip Raise",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 0,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0,
+            "duration_sec": 20
+          }
+        ]
+      },
+      {
+        "name": "Resisted DNS Star",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 20,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 20,
+            "prs": [
+              "volume"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
