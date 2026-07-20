@@ -5875,17 +5875,17 @@
       "triceps": null
     },
     "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
+      "glutes": 50,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
     },
     "prs": {
       "resisted_dns_star": {
