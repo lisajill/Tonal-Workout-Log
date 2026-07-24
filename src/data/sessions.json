@@ -5857,5 +5857,206 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 616
+  },
+  {
+    "date": "2026-07-19",
+    "workout": "Quick Fit: Dynamic Core",
+    "energy_level": null,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Iso Split Squat Lift",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 10
+          }
+        ]
+      },
+      {
+        "name": "Hip Raise",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 20
+          }
+        ]
+      },
+      {
+        "name": "Resisted DNS Star",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 20
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-07-19T20:10:10.865-04:00",
+    "duration": 12.72,
+    "total_volume": 1116,
+    "total_reps": 76,
+    "time_under_tension": 4.97,
+    "total_work_kj": 4,
+    "tonal_activity_id": "ed371c44-edc0-496a-8aef-f6006ce9e1ce"
+  },
+  {
+    "date": "2026-07-24",
+    "workout": "Quick Fit: Loaded Lower Body",
+    "energy_level": 1,
+    "phase": null,
+    "subjective_rating": 1,
+    "sweat": "dry",
+    "calories": 38,
+    "avg_hr": 106,
+    "max_hr": 138,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 63,
+      "hamstrings": 70,
+      "quads": 95,
+      "calves": 100,
+      "abs": 94,
+      "obliques": 98,
+      "back": 92,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Barbell Single-Leg RDL",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 21
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 21
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0
+          }
+        ]
+      },
+      {
+        "name": "Barbell Lying Glute Bridge",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 68.5
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-07-24T13:29:56.308-04:00",
+    "duration": 10.97,
+    "total_volume": 3140,
+    "total_reps": 52,
+    "time_under_tension": 4.42,
+    "total_work_kj": 4,
+    "tonal_activity_id": "18c57b5f-4f78-45e2-a8f4-086f9f131e81",
+    "notes": "Stopped ~2/3 through — real driver was grip/hand fatigue, not low energy or pain. On Barbell Single-Leg RDL, could no longer hold the bar (grip gave out) despite no pain — surgeon clearance is to lift and self-monitor, stop if it hurts, and this wasn't a pain stop. Programming lesson: starting the session with Single-Leg RDL (even kick-stand modified) was too aggressive for current hand-return status — sustained bar grip under single-leg balance demand exceeded current grip endurance. Also low energy/vibes (1/5 both) and very low pre-workout carb intake (~34g by session start) likely compounded. Assumed 100% recovered pre-workout.",
+    "functional_strength": 50,
+    "movement_quality": 24,
+    "strength_overall": 523,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 616
   }
 ]
