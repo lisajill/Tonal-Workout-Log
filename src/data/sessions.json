@@ -960,87 +960,6 @@
   {
     "date": "2026-04-25",
     "shot_day": true,
-    "workout": "Free Lift — Barbell Hip Thrust",
-    "bodymap": "/BodyMapApril25b.png",
-    "energy_level": 4,
-    "phase": "active",
-    "subjective_rating": 5,
-    "sweat": "light",
-    "calories": null,
-    "avg_hr": 94,
-    "max_hr": 114,
-    "pre_readiness": {
-      "glutes": 29,
-      "hamstrings": 52,
-      "quads": 96,
-      "calves": 100,
-      "abs": 93,
-      "obliques": 98,
-      "back": 85,
-      "chest": 100,
-      "shoulders": 100,
-      "biceps": 100,
-      "triceps": 100
-    },
-    "post_readiness": {
-      "glutes": 15,
-      "hamstrings": 50,
-      "quads": 100,
-      "calves": 100,
-      "abs": 100,
-      "obliques": 100,
-      "back": 100,
-      "chest": 100,
-      "shoulders": 100,
-      "biceps": 100,
-      "triceps": 100
-    },
-    "prs": {
-      "barbell_hip_thrust": {
-        "weight": 65,
-        "date": "2026-04-25"
-      }
-    },
-    "muscles_high_volume": [
-      "glutes"
-    ],
-    "muscles_low_volume": [
-      "hip_flexors",
-      "lower_back"
-    ],
-    "functional_strength": 126,
-    "movement_quality": 53,
-    "duration": 9.12,
-    "total_volume": 1246,
-    "total_reps": 21,
-    "time_under_tension": 1.72,
-    "total_work_kj": 1,
-    "tonal_activity_id": "084ab93a-fe9c-49f3-b773-78451edea6d6",
-    "timestamp": "2026-04-25T13:18:32.405-04:00",
-    "movements": [
-      {
-        "name": "Barbell Hip Thrust",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 6,
-            "weight_lbs": 20
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 25
-          },
-          {
-            "reps": 10,
-            "weight_lbs": 32.5
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "date": "2026-04-25",
-    "shot_day": true,
     "bodymap": "/BodyMapApril25.png",
     "workout": "Heavy Express — Floor Bridge + Ankle Straps",
     "energy_level": 4,
@@ -1244,6 +1163,145 @@
     ]
   },
   {
+    "date": "2026-04-25",
+    "shot_day": true,
+    "workout": "Free Lift — Barbell Hip Thrust",
+    "bodymap": "/BodyMapApril25b.png",
+    "energy_level": 4,
+    "phase": "active",
+    "subjective_rating": 5,
+    "sweat": "light",
+    "calories": null,
+    "avg_hr": 94,
+    "max_hr": 114,
+    "pre_readiness": {
+      "glutes": 29,
+      "hamstrings": 52,
+      "quads": 96,
+      "calves": 100,
+      "abs": 93,
+      "obliques": 98,
+      "back": 85,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 15,
+      "hamstrings": 50,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": 65,
+        "date": "2026-04-25"
+      }
+    },
+    "muscles_high_volume": [
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "lower_back"
+    ],
+    "functional_strength": 126,
+    "movement_quality": 53,
+    "duration": 9.12,
+    "total_volume": 1246,
+    "total_reps": 21,
+    "time_under_tension": 1.72,
+    "total_work_kj": 1,
+    "tonal_activity_id": "084ab93a-fe9c-49f3-b773-78451edea6d6",
+    "timestamp": "2026-04-25T13:18:32.405-04:00",
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 25
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 32.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2026-04-26",
+    "workout": "Free Lift — Barbell Hip Thrust",
+    "energy_level": 4,
+    "phase": "active",
+    "subjective_rating": null,
+    "sweat": "dry",
+    "calories": 5,
+    "avg_hr": 94,
+    "max_hr": 103,
+    "pre_readiness": {
+      "glutes": 21,
+      "hamstrings": 72,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {
+      "barbell_hip_thrust": {
+        "weight": null,
+        "date": null
+      }
+    },
+    "muscles_high_volume": [
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "hip_flexors",
+      "hamstrings"
+    ],
+    "duration": 1.5,
+    "total_volume": 440,
+    "total_reps": 10,
+    "time_under_tension": 0.67,
+    "total_work_kj": 1,
+    "tonal_activity_id": "6730f404-0d2f-4711-a7c5-cf150fa169c9",
+    "bodymap": "/BodyMapApril26HipThrust.png",
+    "timestamp": "2026-04-26T09:43:15.808735-04:00"
+  },
+  {
     "date": "2026-04-26",
     "workout": "Hamstring + Quad Strength",
     "energy_level": 4,
@@ -1413,64 +1471,6 @@
         ]
       }
     ]
-  },
-  {
-    "date": "2026-04-26",
-    "workout": "Free Lift — Barbell Hip Thrust",
-    "energy_level": 4,
-    "phase": "active",
-    "subjective_rating": null,
-    "sweat": "dry",
-    "calories": 5,
-    "avg_hr": 94,
-    "max_hr": 103,
-    "pre_readiness": {
-      "glutes": 21,
-      "hamstrings": 72,
-      "quads": 100,
-      "calves": 100,
-      "abs": 100,
-      "obliques": 100,
-      "back": 100,
-      "chest": 100,
-      "shoulders": 100,
-      "biceps": 100,
-      "triceps": 100
-    },
-    "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "prs": {
-      "barbell_hip_thrust": {
-        "weight": null,
-        "date": null
-      }
-    },
-    "muscles_high_volume": [
-      "glutes"
-    ],
-    "muscles_low_volume": [
-      "hip_flexors",
-      "hamstrings"
-    ],
-    "duration": 1.5,
-    "total_volume": 440,
-    "total_reps": 10,
-    "time_under_tension": 0.67,
-    "total_work_kj": 1,
-    "tonal_activity_id": "6730f404-0d2f-4711-a7c5-cf150fa169c9",
-    "bodymap": "/BodyMapApril26HipThrust.png",
-    "timestamp": "2026-04-26T09:43:15.808735-04:00"
   },
   {
     "date": "2026-04-29",
@@ -1749,74 +1749,6 @@
   },
   {
     "date": "2026-05-03",
-    "workout": "Free Lift",
-    "energy_level": 5,
-    "phase": "active",
-    "subjective_rating": 5,
-    "sweat": "dry",
-    "calories": 10,
-    "avg_hr": 123,
-    "max_hr": 138,
-    "pre_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "prs": {},
-    "muscles_high_volume": [],
-    "muscles_low_volume": [],
-    "movements": [
-      {
-        "name": "Farmer March",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 0,
-            "weight_lbs": 28,
-            "duration_sec": 30
-          },
-          {
-            "reps": 0,
-            "weight_lbs": 28,
-            "duration_sec": 30
-          }
-        ]
-      }
-    ],
-    "timestamp": "2026-05-03T09:40:18.764739-04:00",
-    "duration": 2.18,
-    "total_volume": 0,
-    "total_reps": null,
-    "time_under_tension": 1.02,
-    "total_work_kj": 0,
-    "tonal_activity_id": "e14b0170-141a-4d6e-a243-f3983650ff25",
-    "shot_day": false,
-    "notes": "Post-workout custom lift — 2 sets Farmer March, 28 lbs.",
-    "merged_into": "53adbfc8-8448-4abf-913e-a9ae9123553f"
-  },
-  {
-    "date": "2026-05-03",
     "workout": "Glute & Core",
     "energy_level": 5,
     "phase": "active",
@@ -2031,6 +1963,135 @@
     "movement_quality": 127,
     "movement_quality_delta": 83,
     "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs — strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked). Followed by 2×30s Farmer March free lift, 28 lbs."
+  },
+  {
+    "date": "2026-05-03",
+    "workout": "Free Lift",
+    "energy_level": 5,
+    "phase": "active",
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 10,
+    "avg_hr": 123,
+    "max_hr": 138,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Farmer March",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 28,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 28,
+            "duration_sec": 30
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-03T09:40:18.764739-04:00",
+    "duration": 2.18,
+    "total_volume": 0,
+    "total_reps": null,
+    "time_under_tension": 1.02,
+    "total_work_kj": 0,
+    "tonal_activity_id": "e14b0170-141a-4d6e-a243-f3983650ff25",
+    "shot_day": false,
+    "notes": "Post-workout custom lift — 2 sets Farmer March, 28 lbs.",
+    "merged_into": "53adbfc8-8448-4abf-913e-a9ae9123553f"
+  },
+  {
+    "date": "2026-05-07",
+    "workout": "Free Lift",
+    "energy_level": null,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Neutral Grip Deadlift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 43
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-07T08:58:09.364-04:00",
+    "duration": 0.78,
+    "total_volume": 344,
+    "total_reps": 4,
+    "time_under_tension": 0.28,
+    "total_work_kj": 1,
+    "tonal_activity_id": "b856210d-3b1a-4265-88f0-b24ad7c10f4d",
+    "merged_into": "931230ca-aef9-4fe3-9cce-f2a5d2dc4f21",
+    "name": "Lower Body Burnout"
   },
   {
     "date": "2026-05-07",
@@ -2248,67 +2309,6 @@
     "strength_core": 454,
     "strength_lower": 524,
     "notes": "Left hand grip limited — lowered weights asymmetrically on all movements. Bent knee calf raises (off-machine, 2 sets) during Farmer March rest. Short NRD pre-session warmup merged in."
-  },
-  {
-    "date": "2026-05-07",
-    "workout": "Free Lift",
-    "energy_level": null,
-    "phase": null,
-    "subjective_rating": null,
-    "sweat": null,
-    "calories": null,
-    "avg_hr": null,
-    "max_hr": null,
-    "pre_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "prs": {},
-    "muscles_high_volume": [],
-    "muscles_low_volume": [],
-    "movements": [
-      {
-        "name": "Neutral Grip Deadlift",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 4,
-            "weight_lbs": 43
-          }
-        ]
-      }
-    ],
-    "timestamp": "2026-05-07T08:58:09.364-04:00",
-    "duration": 0.78,
-    "total_volume": 344,
-    "total_reps": 4,
-    "time_under_tension": 0.28,
-    "total_work_kj": 1,
-    "tonal_activity_id": "b856210d-3b1a-4265-88f0-b24ad7c10f4d",
-    "merged_into": "931230ca-aef9-4fe3-9cce-f2a5d2dc4f21",
-    "name": "Lower Body Burnout"
   },
   {
     "date": "2026-05-08",
@@ -2591,114 +2591,6 @@
   },
   {
     "date": "2026-05-09",
-    "workout": "Free Lift",
-    "energy_level": null,
-    "phase": null,
-    "subjective_rating": null,
-    "sweat": null,
-    "calories": null,
-    "avg_hr": null,
-    "max_hr": null,
-    "pre_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
-    },
-    "prs": {},
-    "muscles_high_volume": [],
-    "muscles_low_volume": [],
-    "movements": [
-      {
-        "name": "Alternating Biceps Curl",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 6,
-            "weight_lbs": 15,
-            "prs": [
-              "strength",
-              "power"
-            ]
-          },
-          {
-            "reps": 6,
-            "weight_lbs": 10
-          },
-          {
-            "reps": 6,
-            "weight_lbs": 10
-          }
-        ]
-      },
-      {
-        "name": "Triceps Kickback",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 5,
-            "weight_lbs": 8
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 8
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 8
-          }
-        ]
-      },
-      {
-        "name": "Pull Through",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 5,
-            "weight_lbs": 30
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 35
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 40
-          }
-        ]
-      }
-    ],
-    "timestamp": "2026-05-09T11:00:40.141262-04:00",
-    "duration": 9.67,
-    "total_volume": 1002,
-    "total_reps": 48,
-    "time_under_tension": 3.25,
-    "total_work_kj": 2,
-    "tonal_activity_id": "8f68b8c3-5015-4b99-b90b-dd660a4c60be",
-    "merged_into": "d44eb4e1-ac92-4a69-a400-cd55702ad725"
-  },
-  {
-    "date": "2026-05-09",
     "workout": "Standing Push & Pull",
     "energy_level": 5,
     "phase": null,
@@ -2960,6 +2852,114 @@
     "strength_core": 456,
     "strength_lower": 535,
     "notes": "Standing-only due to hair dye (no bending/lying). First time on standing push movements. Hands tingling throughout but manageable with press movements. Then free lift: Alternating Biceps Curl (strength+power PR at 15 lbs, dropped to 10), Triceps Kickbacks 3×5@8, Pull Through progressive 30→35→40 lbs. Strong energy throughout."
+  },
+  {
+    "date": "2026-05-09",
+    "workout": "Free Lift",
+    "energy_level": null,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Alternating Biceps Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 15,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 10
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 10
+          }
+        ]
+      },
+      {
+        "name": "Triceps Kickback",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 8
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 8
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 8
+          }
+        ]
+      },
+      {
+        "name": "Pull Through",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 30
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 35
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 40
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-05-09T11:00:40.141262-04:00",
+    "duration": 9.67,
+    "total_volume": 1002,
+    "total_reps": 48,
+    "time_under_tension": 3.25,
+    "total_work_kj": 2,
+    "tonal_activity_id": "8f68b8c3-5015-4b99-b90b-dd660a4c60be",
+    "merged_into": "d44eb4e1-ac92-4a69-a400-cd55702ad725"
   },
   {
     "date": "2026-05-13",
@@ -5820,14 +5820,7 @@
           {
             "reps": 12,
             "weight_lbs": 16,
-            "duration_sec": 40,
-            "note": "warmup set"
-          },
-          {
-            "reps": 12,
-            "weight_lbs": 16,
-            "duration_sec": 40,
-            "note": "trainer modification: knees held up in dead-bug-style tabletop position during the press — noticeably harder"
+            "duration_sec": 40
           }
         ]
       },
@@ -5861,13 +5854,13 @@
   {
     "date": "2026-07-19",
     "workout": "Quick Fit: Dynamic Core",
-    "energy_level": null,
+    "energy_level": 3,
     "phase": null,
-    "subjective_rating": null,
-    "sweat": null,
-    "calories": null,
-    "avg_hr": null,
-    "max_hr": null,
+    "subjective_rating": 3,
+    "sweat": "dry",
+    "calories": 43,
+    "avg_hr": 113,
+    "max_hr": 150,
     "pre_readiness": {
       "glutes": null,
       "hamstrings": null,
@@ -5882,34 +5875,36 @@
       "triceps": null
     },
     "post_readiness": {
-      "glutes": null,
-      "hamstrings": null,
-      "quads": null,
-      "calves": null,
-      "abs": null,
-      "obliques": null,
-      "back": null,
-      "chest": null,
-      "shoulders": null,
-      "biceps": null,
-      "triceps": null
+      "glutes": 50,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
     },
-    "prs": {},
-    "muscles_high_volume": [],
-    "muscles_low_volume": [],
+    "prs": {
+      "resisted_dns_star": {
+        "weight": 20,
+        "date": "2026-07-19"
+      }
+    },
+    "muscles_high_volume": [
+      "quads",
+      "abs"
+    ],
+    "muscles_low_volume": [
+      "glutes"
+    ],
     "movements": [
       {
         "name": "Iso Split Squat Lift",
-        "warmup_sets": 2,
+        "warmup_sets": 1,
         "sets": [
-          {
-            "reps": 8,
-            "weight_lbs": 10
-          },
-          {
-            "reps": 8,
-            "weight_lbs": 10
-          },
           {
             "reps": 8,
             "weight_lbs": 10
@@ -5926,12 +5921,12 @@
         "sets": [
           {
             "reps": 0,
-            "weight_lbs": 5,
+            "weight_lbs": 0,
             "duration_sec": 20
           },
           {
             "reps": 0,
-            "weight_lbs": 5,
+            "weight_lbs": 0,
             "duration_sec": 20
           }
         ]
@@ -5942,19 +5937,18 @@
         "sets": [
           {
             "reps": 8,
-            "weight_lbs": 20
+            "weight_lbs": 20,
+            "prs": [
+              "strength",
+              "power"
+            ]
           },
           {
             "reps": 8,
-            "weight_lbs": 20
-          },
-          {
-            "reps": 8,
-            "weight_lbs": 20
-          },
-          {
-            "reps": 8,
-            "weight_lbs": 20
+            "weight_lbs": 20,
+            "prs": [
+              "volume"
+            ]
           }
         ]
       }
@@ -5962,10 +5956,12 @@
     "timestamp": "2026-07-19T20:10:10.865-04:00",
     "duration": 12.72,
     "total_volume": 1116,
-    "total_reps": 76,
+    "total_reps": 38,
     "time_under_tension": 4.97,
     "total_work_kj": 4,
-    "tonal_activity_id": "ed371c44-edc0-496a-8aef-f6006ce9e1ce"
+    "tonal_activity_id": "ed371c44-edc0-496a-8aef-f6006ce9e1ce",
+    "shot_day": null,
+    "notes": "Energy 3, vibes 3. Two brand-new movements (Iso Split Squat Lift, Resisted DNS Star) — immediate PRs on first attempt, as expected for new movements. Performed Iso Split Squat Lift kneeling rather than the standard standing split-squat stance — knee-friendly modification."
   },
   {
     "date": "2026-07-24",
