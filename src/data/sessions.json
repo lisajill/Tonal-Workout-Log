@@ -5956,7 +5956,7 @@
     "timestamp": "2026-07-19T20:10:10.865-04:00",
     "duration": 12.72,
     "total_volume": 1116,
-    "total_reps": 38,
+    "total_reps": 76,
     "time_under_tension": 4.97,
     "total_work_kj": 4,
     "tonal_activity_id": "ed371c44-edc0-496a-8aef-f6006ce9e1ce",
@@ -6054,5 +6054,129 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 616
+  },
+  {
+    "date": "2026-07-25",
+    "workout": "Quick Fit: Standing Six Pack",
+    "energy_level": 1,
+    "phase": null,
+    "subjective_rating": 4,
+    "sweat": "dry",
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": 88,
+      "hamstrings": 95,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "chest": 100,
+      "shoulders": 95,
+      "back": 100,
+      "triceps": 100,
+      "biceps": 100,
+      "abs": 83,
+      "obliques": 82,
+      "quads": 98,
+      "glutes": 84,
+      "hamstrings": 95,
+      "calves": 100
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Standing Chop",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 26,
+            "prs": [
+              "volume"
+            ]
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 24
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 24
+          }
+        ]
+      },
+      {
+        "name": "Suitcase March",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 20
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 20,
+            "note": "Had to break and regrip mid-set — left hand. No pain, no tingling; grip fatigue only, resolved."
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Standing Bicycle",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-07-25T13:37:00.131-04:00",
+    "duration": 13.07,
+    "total_volume": 896,
+    "total_reps": 36,
+    "time_under_tension": 6.42,
+    "total_work_kj": 5,
+    "tonal_activity_id": "889c1494-245a-44ce-9b89-d75b1134a4be",
+    "functional_strength": 99,
+    "movement_quality": 87,
+    "strength_overall": 523,
+    "strength_upper": 487,
+    "strength_core": 466,
+    "strength_lower": 616,
+    "notes": "Energy 1, vibes 4, sweat dry. Low energy but good vibes — opposite pattern from yesterday. PR (volume) on Standing Chop set 2. Had to break and regrip mid-set on Suitcase March (left hand) — no pain, no tingling, grip fatigue only, resolved immediately."
   }
 ]
