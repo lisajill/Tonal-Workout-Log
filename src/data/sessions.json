@@ -6182,10 +6182,10 @@
   {
     "date": "2026-07-26",
     "workout": "Quick Fit: Off-the-Floor Strength Circuit",
-    "energy_level": null,
+    "energy_level": 3,
     "phase": null,
-    "subjective_rating": null,
-    "sweat": null,
+    "subjective_rating": 4,
+    "sweat": "dry",
     "calories": 54,
     "avg_hr": 114,
     "max_hr": 149,
