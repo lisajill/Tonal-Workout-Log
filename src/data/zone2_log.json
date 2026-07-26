@@ -1776,5 +1776,26 @@
     "zone4_min": 0,
     "avg_hr": 114,
     "distance_mi": null
+  },
+  {
+    "uuid": "EC9637B2-B784-446D-BE93-96AC4A846110",
+    "date": "2026-07-26",
+    "timestamp": "2026-07-26T16:58:00Z",
+    "activity": "Rowing",
+    "duration_min": 5,
+    "zone1_min": 0,
+    "zone2_min": 5,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 114,
+    "distance_mi": null,
+    "rowing_program": "Just Row (grip-tolerance test, hand-recovery reintroduction)",
+    "rowing_distance_m": 677,
+    "rowing_duration_min": 5,
+    "rowing_avg_split": "3:41.5",
+    "rowing_stroke_rate_spm": 23,
+    "rowing_avg_watts": null,
+    "rowing_drag": 104,
+    "notes": "First Hydrow session in ~11 weeks (last: May 13, 2026) and first since carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Deliberate grip-tolerance test at 22-24 spm (mostly 23), HR 111-117 bpm. Hands felt great throughout, no problem opening them afterward — noticeably lighter grip demand than the Tonal arm bike. Session did not sync to Hydrow activity/Zones (subscription is paused, so Just Row mode does not save) — metrics manually transcribed from console screenshot + user report. Next time: start a Row workout in Apple Fitness to capture HR/activity properly."
   }
 ]
