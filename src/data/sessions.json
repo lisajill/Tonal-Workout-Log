@@ -6187,8 +6187,8 @@
     "subjective_rating": null,
     "sweat": null,
     "calories": 54,
-    "avg_hr": null,
-    "max_hr": null,
+    "avg_hr": 114,
+    "max_hr": 149,
     "pre_readiness": {
       "glutes": null,
       "hamstrings": null,
