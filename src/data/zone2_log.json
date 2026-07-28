@@ -1799,16 +1799,42 @@
     "notes": "First Hydrow session in ~11 weeks (last: May 13, 2026) and first since carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Deliberate grip-tolerance test at 22-24 spm (mostly 23), HR 111-117 bpm. Hands felt great throughout, no problem opening them afterward — noticeably lighter grip demand than the Tonal arm bike. Session did not sync to Hydrow activity/Zones (subscription is paused, so Just Row mode does not save) — metrics manually transcribed from console screenshot + user report. Next time: start a Row workout in Apple Fitness to capture HR/activity properly."
   },
   {
-    "uuid": "0E40A83E-C792-42CD-A6C5-C187488F796C",
-    "date": "2026-07-28",
-    "timestamp": "2026-07-28T20:50:00Z",
-    "activity": "Rowing",
-    "duration_min": 5,
-    "zone1_min": 2.5,
-    "zone2_min": 2.5,
+    "uuid": "5A354EBE-177B-498D-8589-4653543CABC3",
+    "date": "2026-07-26",
+    "timestamp": "2026-07-26T22:23:46Z",
+    "activity": "Walking",
+    "duration_min": 16.2,
+    "zone1_min": 11.8,
+    "zone2_min": 4.4,
     "zone3_min": 0,
     "zone4_min": 0,
-    "avg_hr": 105,
+    "avg_hr": 103,
+    "distance_mi": 0.59
+  },
+  {
+    "uuid": "CA056928-FA35-4B62-9460-DB46DEAE2C64",
+    "date": "2026-07-27",
+    "timestamp": "2026-07-27T23:06:57Z",
+    "activity": "Walking",
+    "duration_min": 25.4,
+    "zone1_min": 25.1,
+    "zone2_min": 0.3,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 94,
+    "distance_mi": 1.05
+  },
+  {
+    "uuid": "A98496C9-5635-4703-9256-B493DA6FDF57",
+    "date": "2026-07-28",
+    "timestamp": "2026-07-28T20:55:32Z",
+    "activity": "Rowing",
+    "duration_min": 5,
+    "zone1_min": 2.7,
+    "zone2_min": 2.3,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 104,
     "distance_mi": null,
     "rowing_program": "Skill Season Challenge: Baseline Row",
     "rowing_distance_m": 678,
@@ -1817,6 +1843,6 @@
     "rowing_stroke_rate_spm": 20,
     "rowing_avg_watts": 33,
     "rowing_drag": 104,
-    "notes": "Second Hydrow grip-tolerance session, every-other-day cadence as planned (first: Jul 26). Energy 3, vibes 4, sweat dry. Hands felt great, 0 pain. Period started today. HR climbed steadily 91 to ~112 over the 5 min (avg 105) — mostly Zone 1 with some Zone 2 near the end, estimated split. Hydrow subscription reactivated but still not syncing to Apple Health/Zones — data manually transcribed from in-app Workout Data screens."
+    "notes": "Second Hydrow grip-tolerance session, every-other-day cadence as planned (first: Jul 26). Energy 3, vibes 4, sweat dry. Hands felt great, 0 pain. Period started today. HR climbed steadily 91 to ~112 over the 5 min (avg 104 per Zones export) — 2.7 min Zone 1 / 2.3 min Zone 2 (47% Fat Burn / 53% Warm Up). Hydrow subscription reactivated but still not syncing to Apple Health directly — Zones for Training export came through separately. Rowing performance metrics (distance, split, spm, watts) manually transcribed from Hydrow in-app Workout Data screens."
   }
 ]
