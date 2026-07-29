@@ -1844,5 +1844,18 @@
     "rowing_avg_watts": 33,
     "rowing_drag": 104,
     "notes": "Second Hydrow grip-tolerance session, every-other-day cadence as planned (first: Jul 26). Energy 3, vibes 4, sweat dry. Hands felt great, 0 pain. Period started today. HR climbed steadily 91 to ~112 over the 5 min (avg 104 per Zones export) — 2.7 min Zone 1 / 2.3 min Zone 2 (47% Fat Burn / 53% Warm Up). Hydrow subscription reactivated but still not syncing to Apple Health directly — Zones for Training export came through separately. Rowing performance metrics (distance, split, spm, watts) manually transcribed from Hydrow in-app Workout Data screens."
+  },
+  {
+    "uuid": "EA23B8C9-A09C-4372-B549-AD7A46908579",
+    "date": "2026-07-28",
+    "timestamp": "2026-07-28T21:57:02Z",
+    "activity": "Walking",
+    "duration_min": 14.6,
+    "zone1_min": 14.6,
+    "zone2_min": 0,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 87,
+    "distance_mi": 0.53
   }
 ]
