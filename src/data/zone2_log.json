@@ -1898,6 +1898,19 @@
     "distance_mi": 0.94
   },
   {
+    "uuid": "9CBBF957-401B-45C1-B9A1-82A47E0F4ABF",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T14:20:49Z",
+    "activity": "Tonal",
+    "duration_min": 15.1,
+    "zone1_min": 6.6,
+    "zone2_min": 6.3,
+    "zone3_min": 2.2,
+    "zone4_min": 0,
+    "avg_hr": 110,
+    "distance_mi": null
+  },
+  {
     "uuid": "F1FB2893-D702-4AE5-83DC-AC2929CD6A5C",
     "date": "2026-08-01",
     "timestamp": "2026-08-01T14:37:10Z",
