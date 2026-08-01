@@ -148,5 +148,20 @@
       "shoulders": 2
     },
     "notes": null
+  },
+  {
+    "uuid": "F1FB2893-D702-4AE5-83DC-AC2929CD6A5C",
+    "date": "2026-08-01",
+    "activity": "Rowing",
+    "duration_min": 15,
+    "avg_hr": 129,
+    "muscles": {
+      "back": 4,
+      "abs": 3,
+      "hamstrings": 3,
+      "glutes": 3,
+      "shoulders": 2
+    },
+    "notes": null
   }
 ]
