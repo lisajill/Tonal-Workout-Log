@@ -1896,5 +1896,18 @@
     "zone4_min": 0,
     "avg_hr": 101,
     "distance_mi": 0.94
+  },
+  {
+    "uuid": "F1FB2893-D702-4AE5-83DC-AC2929CD6A5C",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T14:37:10Z",
+    "activity": "Rowing",
+    "duration_min": 15,
+    "zone1_min": 0.8,
+    "zone2_min": 8.8,
+    "zone3_min": 5.4,
+    "zone4_min": 0,
+    "avg_hr": 129,
+    "distance_mi": null
   }
 ]
