@@ -1,0 +1,78 @@
+{
+    "uuid": "F1FB2893-D702-4AE5-83DC-AC2929CD6A5C",
+    "name": "Rowing",
+    "activity": {
+        "name": "Rowing",
+        "type": 35
+    },
+    "startDate": "2026-08-01T14:37:10Z",
+    "endDate": "2026-08-01T14:52:10Z",
+    "source": "Hydrow",
+    "location": "Indoor",
+    "zones": {
+        "zone4": {
+            "name": "PEAK",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone3": {
+            "name": "CARDIO",
+            "rate": 0.35778,
+            "time": {
+                "value": 322,
+                "unit": "sec"
+            }
+        },
+        "zone2": {
+            "name": "FAT BURN",
+            "rate": 0.58889,
+            "time": {
+                "value": 530,
+                "unit": "sec"
+            }
+        },
+        "zone1": {
+            "name": "WARM UP",
+            "rate": 0.05333,
+            "time": {
+                "value": 48,
+                "unit": "sec"
+            }
+        }
+    },
+    "duration": {
+        "value": 900,
+        "unit": "sec"
+    },
+    "activeCalories": {
+        "value": 112,
+        "unit": "kcal"
+    },
+    "averageIntensity": {
+        "value": 72,
+        "unit": "%"
+    },
+    "minIntensity": {
+        "value": 54,
+        "unit": "%"
+    },
+    "maxIntensity": {
+        "value": 81,
+        "unit": "%"
+    },
+    "averageHeartRate": {
+        "value": 129,
+        "unit": "bpm"
+    },
+    "minHeartRate": {
+        "value": 97,
+        "unit": "bpm"
+    },
+    "maxHeartRate": {
+        "value": 146,
+        "unit": "bpm"
+    }
+}
