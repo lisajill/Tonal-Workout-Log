@@ -209,7 +209,7 @@ export default function Overview({ sessions, onSelectSession }) {
           <div className="space-y-2">
             <Goal icon="💪" text="Body recomposition on Tirzepatide — preserve and build muscle mass while losing fat. Protein target 125–130g/day." />
             <Goal icon="🐴" text="Riding on hold — Marley is lame. Building lower body strength in the meantime." />
-            <Goal icon="🤲" text="Grip-free strength program (GF1–GF4) — building lower body while bilateral carpal tunnel + ulnar neuropathy resolves (dx Jun 11, 2026)" />
+            <Goal icon="🤲" text="Hands cleared to lift (Jul 17, 2026) — rebuilding grip endurance and tolerance after bilateral carpal tunnel + ulnar neuropathy (dx Jun 11, 2026). Grip-Free program (GF1–GF4) now supplemented with graded hands-on reintroduction, including Hydrow." />
             <Goal icon="🦵" text="Right knee — pain on terminal extension under load (leg extension). Investigating cause; brace returned Jun 18." />
             <Goal icon="❤️" text="Zone 2 — 150 min/week (Rhonda Patrick protocol). Walking + Hydrow rowing. Heat (&gt;90°F) is current limiter." />
             <Goal icon="⚖️" text="Perimenopause-aware programming — bone density, tendon health, recovery-first when needed." />
@@ -218,7 +218,7 @@ export default function Overview({ sessions, onSelectSession }) {
         <div className="card">
           <div className="section-header"><h2 className="label">Training Context</h2></div>
           <div className="space-y-2">
-            <ContextItem label="Hand status"         value="Grip uncleared — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only, dx Jun 11, 2026). Running grip-free program." />
+            <ContextItem label="Hand status"         value="Cleared to lift (Jul 17, 2026) — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only, dx Jun 11, 2026), self-monitor and stop if it hurts. Actively reconditioning grip endurance; clean sessions across Tonal and Hydrow, wrist soreness at high stroke rate (26 spm) the one open thread." />
             <ContextItem label="Surgical history"   value="A1 pulley releases Feb + Mar 2026 (both hands) — recovered; upper body training resumed May 2, 2026" />
             <ContextItem label="Medication"         value="Compounded Tirzepatide 6.3mg weekly (GLP-1+GIP agonist) — shot day affects energy, appetite, and GI" />
             <ContextItem label="Life stage"         value="Perimenopause — training adapted for bone density, tendon health, and muscle preservation" />
@@ -244,6 +244,11 @@ export default function Overview({ sessions, onSelectSession }) {
               <ArcEvent date="Jun 13"       color="bg-emerald-400" text="Grip-Free program launched (GF1–GF4) — hip thrust 110 lbs, 4 PRs first session · 5/5" active />
               <ArcEvent date="Jun 2026"     color="bg-orange-400"  text="Riding on hold — Marley is lame" active />
               <ArcEvent date="Jun 18"       color="bg-orange-400"  text="Knee: patellar tracking brace trialed and returned — pain on terminal leg extension persists at end range. PT evaluation scheduled." active />
+              <ArcEvent date="Jul 17"       color="bg-emerald-400" text="Hands cleared to lift — self-monitor, stop if it hurts. Steroid injection into left-hand scar tissue same day." active />
+              <ArcEvent date="Jul 18"       color="bg-emerald-400" text="First hands-on session since diagnosis — wrist-support gloves debuted" active />
+              <ArcEvent date="Jul 24"       color="bg-orange-400"  text="Grip gave out on Single-Leg RDL, no pain — first real grip-endurance data point; session cut short" active />
+              <ArcEvent date="Jul 26"       color="bg-emerald-400" text="First Hydrow row since diagnosis (~11 weeks off) — hands felt better than the Tonal arm bike, no issues" active />
+              <ArcEvent date="Jul 28–Aug 1" color="bg-emerald-400" text="Hydrow reintroduction holds clean — 3 sessions, zero grip issues; first full-length row (15 min) surfaces wrist soreness specifically at 26 spm, isolated as a narrow thread to keep testing" active />
             </div>
           </div>
         </div>
