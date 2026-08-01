@@ -247,7 +247,7 @@ export default function Overview({ sessions, onSelectSession }) {
               <ArcEvent date="Jul 17"       color="bg-emerald-400" text="Hands cleared to lift — self-monitor, stop if it hurts. Steroid injection into left-hand scar tissue same day." active />
               <ArcEvent date="Jul 18"       color="bg-emerald-400" text="First hands-on session since diagnosis — wrist-support gloves debuted" active />
               <ArcEvent date="Jul 24"       color="bg-orange-400"  text="Grip gave out on Single-Leg RDL, no pain — first real grip-endurance data point; session cut short" active />
-              <ArcEvent date="Jul 26"       color="bg-emerald-400" text="First Hydrow row since diagnosis (~11 weeks off) — hands felt better than the Tonal arm bike, no issues" active />
+              <ArcEvent date="Jul 26"       color="bg-emerald-400" text="First Hydrow row since diagnosis (~11 weeks off) — hands felt better than the arm bike, no issues" active />
               <ArcEvent date="Jul 28–Aug 1" color="bg-emerald-400" text="Hydrow reintroduction holds clean — 3 sessions, zero grip issues; first full-length row (15 min) surfaces wrist soreness specifically at 26 spm, isolated as a narrow thread to keep testing" active />
             </div>
           </div>
