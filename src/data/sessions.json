@@ -6311,5 +6311,124 @@
     "strength_core": 466,
     "strength_lower": 616,
     "notes": "No hand issues today — about the right amount of hand-load work. Power PR on Goblet Squat to Bench, set 2 (6 reps @ 43 lbs)."
+  },
+  {
+    "date": "2026-08-01",
+    "workout": "Quick Fit: Core Coordination",
+    "energy_level": 4,
+    "phase": null,
+    "subjective_rating": 4,
+    "sweat": "dry",
+    "calories": 41,
+    "avg_hr": 110,
+    "max_hr": 150,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Iso Split Squat Lift",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 11
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 11
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 12,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 12
+          }
+        ]
+      },
+      {
+        "name": "Pillar Bridge with Row",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 11
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 11
+          }
+        ]
+      },
+      {
+        "name": "Resisted Dead Bug",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 6,
+            "duration_sec": 30
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 6,
+            "duration_sec": 35
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-08-01T10:20:49.598-04:00",
+    "duration": 15.07,
+    "total_volume": 916,
+    "total_reps": 90,
+    "time_under_tension": 5.55,
+    "total_work_kj": 4,
+    "tonal_activity_id": "d7cd236a-baa6-40e3-9e48-b29d79a05e64",
+    "functional_strength": 100,
+    "movement_quality": 64,
+    "strength_overall": 523,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 616,
+    "notes": "Energy 4, vibes 4, sweat dry (both Tonal and Hydrow today). Power PR on Iso Split Squat Lift, set 3 (8 reps @ 12 lbs). Tonal then Hydrow back-to-back. Hydrow row afterward (15 min, first full-length piece): hands felt fine, but wrists got sore during/after — first time wrist specifically (not grip) has been the limiting factor. Possibly duration or stacking with Tonal same-day; not yet isolated."
   }
 ]
