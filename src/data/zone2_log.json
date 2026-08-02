@@ -1930,5 +1930,18 @@
     "rowing_avg_watts": 43,
     "rowing_drag": 104,
     "notes": "Third Hydrow session, first back-to-back with a Tonal session same day. Energy 4, vibes 4, sweat dry. Distance/split up notably from the two prior 5-min tolerance tests (3:23.6/500m vs ~3:41/500m) — first session with real pace/duration since the hand-recovery reintroduction began."
+  },
+  {
+    "uuid": "B0A779D4-0D10-4B70-A55D-88D1699261D8",
+    "date": "2026-08-02",
+    "timestamp": "2026-08-02T14:14:25Z",
+    "activity": "Walking",
+    "duration_min": 15.7,
+    "zone1_min": 6,
+    "zone2_min": 9.7,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 110,
+    "distance_mi": 0.53
   }
 ]
