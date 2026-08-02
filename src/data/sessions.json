@@ -6430,5 +6430,107 @@
     "strength_core": 465,
     "strength_lower": 616,
     "notes": "Energy 4, vibes 4, sweat dry (both Tonal and Hydrow today). Power PR on Iso Split Squat Lift, set 3 (8 reps @ 12 lbs). Tonal then Hydrow back-to-back. Hydrow row afterward (15 min, first full-length piece): hands felt fine, but wrists got sore during/after — first time wrist specifically (not grip) has been the limiting factor. Possibly duration or stacking with Tonal same-day; not yet isolated."
+  },
+  {
+    "date": "2026-08-02",
+    "workout": "Quick Fit: Glutes Glow-Up 2",
+    "energy_level": 4,
+    "phase": null,
+    "subjective_rating": 4,
+    "sweat": "light",
+    "calories": 46,
+    "avg_hr": 118,
+    "max_hr": 154,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 99,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 27,
+      "hamstrings": 42,
+      "quads": 90,
+      "calves": 100,
+      "abs": 89,
+      "obliques": 99,
+      "back": 78,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 62.5
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 62.5,
+            "prs": [
+              "power"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Barbell RDL",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 28
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 25
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 0,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0,
+            "duration_sec": 10
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-08-02T13:00:11.284842-04:00",
+    "duration": 12.67,
+    "total_volume": 4651,
+    "total_reps": 56,
+    "time_under_tension": 3.87,
+    "total_work_kj": 8,
+    "tonal_activity_id": "e8d7305b-eec5-427c-a1d5-629907f46cd5",
+    "functional_strength": 144,
+    "movement_quality": 64,
+    "strength_overall": 523,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 618
   }
 ]

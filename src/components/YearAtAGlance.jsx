@@ -153,7 +153,9 @@ export default function YearAtAGlance({ sessions, onSelectSession }) {
                         aria-label={dateStr}
                       />
                       {day && (
-                        <div className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-1.5 hidden -translate-x-1/2 whitespace-nowrap rounded-lg border border-surface-3 bg-surface-2 px-2.5 py-1.5 text-left shadow-lg group-hover:block">
+                        <div className={`pointer-events-none absolute left-1/2 z-20 hidden -translate-x-1/2 whitespace-nowrap rounded-lg border border-surface-3 bg-surface-2 px-2.5 py-1.5 text-left shadow-lg group-hover:block ${
+                          dayNum <= 15 ? 'top-full mt-1.5' : 'bottom-full mb-1.5'
+                        }`}>
                           <p className="text-[11px] font-semibold text-zinc-100 mono-stat">{dateStr}</p>
                           {day.labels.slice(0, 4).map((l, i) => (
                             <p key={i} className="text-[11px] text-zinc-400">{l}</p>
