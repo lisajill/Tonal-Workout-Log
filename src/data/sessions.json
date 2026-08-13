@@ -6532,5 +6532,132 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 618
+  },
+  {
+    "date": "2026-08-13",
+    "workout": "Lower-Body Ladders with Ankle Straps",
+    "energy_level": 3,
+    "phase": null,
+    "subjective_rating": 3,
+    "sweat": "light",
+    "calories": 84,
+    "avg_hr": 121,
+    "max_hr": 149,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": 1,
+      "hamstrings": 38,
+      "quads": 94,
+      "calves": 100,
+      "abs": 91,
+      "obliques": 95,
+      "back": 63,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Standing Diagonal Glute Kickback",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 15,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 12,
+            "prs": [
+              "power",
+              "volume"
+            ]
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 13
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 14
+          }
+        ]
+      },
+      {
+        "name": "Standing Donkey Kick",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 28
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 28,
+            "prs": [
+              "volume"
+            ]
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 15,
+            "weight_lbs": 20
+          }
+        ],
+        "warmup_prs": [
+          "strength"
+        ]
+      }
+    ],
+    "timestamp": "2026-08-13T14:12:54.987092-04:00",
+    "duration": 25.32,
+    "total_volume": 3168,
+    "total_reps": 180,
+    "time_under_tension": 11,
+    "total_work_kj": 7,
+    "tonal_activity_id": "34a6ebd5-d34d-4a78-b3d6-ca8d8e050295",
+    "functional_strength": 76,
+    "movement_quality": 54,
+    "movement_quality_delta": -10,
+    "strength_overall": 523,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 618,
+    "notes": "Right leg felt weaker than left. Standing leg consistently felt like it was doing more work regardless of which side stood — matches known right hip stability imbalance."
   }
 ]
