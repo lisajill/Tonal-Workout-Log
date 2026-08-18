@@ -2034,5 +2034,18 @@
     "zone4_min": 0,
     "avg_hr": 107,
     "distance_mi": 0.99
+  },
+  {
+    "uuid": "9243B221-2C5A-45BF-A34B-453F2026BFCB",
+    "date": "2026-08-18",
+    "timestamp": "2026-08-18T11:40:55Z",
+    "activity": "Walking",
+    "duration_min": 28.9,
+    "zone1_min": 22.3,
+    "zone2_min": 6.6,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 102,
+    "distance_mi": 0.94
   }
 ]
