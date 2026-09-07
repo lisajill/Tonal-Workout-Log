@@ -500,7 +500,8 @@
     "rowing_avg_split": "3:10.5",
     "rowing_stroke_rate_spm": 23,
     "rowing_avg_watts": 57,
-    "rowing_drag": 104
+    "rowing_drag": 104,
+    "rowing_piece": "work"
   },
   {
     "uuid": "662BEEFE-3CF1-40A2-8B54-40A18000CA0A",
@@ -663,7 +664,8 @@
     "rowing_avg_split": "3:11.7",
     "rowing_stroke_rate_spm": 25,
     "rowing_avg_watts": 61,
-    "notes": "Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm, 22W) pending sync — merge when imported."
+    "notes": "Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm, 22W) pending sync — merge when imported.",
+    "rowing_piece": "work"
   },
   {
     "uuid": "EB7121D5-A80D-4A36-BD88-F211306A0FA2",
@@ -748,7 +750,8 @@
     "rowing_avg_split": "3:12",
     "rowing_stroke_rate_spm": 25,
     "rowing_avg_watts": 50,
-    "notes": "Concept2 at hotel gym. 2k in 12:48.2 (splits: 3:17.4 / 3:16.9 / 3:13.6 / 3:00.4 — strong negative split). Followed by 5:05 cooldown (513m, ~5:00/500m, 19 SPM). Sweat: moderate."
+    "notes": "Concept2 at hotel gym. 2k in 12:48.2 (splits: 3:17.4 / 3:16.9 / 3:13.6 / 3:00.4 — strong negative split). Followed by 5:05 cooldown (513m, ~5:00/500m, 19 SPM). Sweat: moderate.",
+    "rowing_piece": "work"
   },
   {
     "uuid": "3B7ADA5D-F346-412B-86BE-571ED550506E",
@@ -1796,7 +1799,8 @@
     "rowing_stroke_rate_spm": 23,
     "rowing_avg_watts": null,
     "rowing_drag": 104,
-    "notes": "First Hydrow session in ~11 weeks (last: May 13, 2026) and first since carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Deliberate grip-tolerance test at 22-24 spm (mostly 23), HR 111-117 bpm. Hands felt great throughout, no problem opening them afterward — noticeably lighter grip demand than the hand bike. Session did not sync to Hydrow activity/Zones (subscription is paused, so Just Row mode does not save) — metrics manually transcribed from console screenshot + user report. Next time: start a Row workout in Apple Fitness to capture HR/activity properly."
+    "notes": "First Hydrow session in ~11 weeks (last: May 13, 2026) and first since carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Deliberate grip-tolerance test at 22-24 spm (mostly 23), HR 111-117 bpm. Hands felt great throughout, no problem opening them afterward — noticeably lighter grip demand than the hand bike. Session did not sync to Hydrow activity/Zones (subscription is paused, so Just Row mode does not save) — metrics manually transcribed from console screenshot + user report. Next time: start a Row workout in Apple Fitness to capture HR/activity properly.",
+    "rowing_piece": "work"
   },
   {
     "uuid": "5A354EBE-177B-498D-8589-4653543CABC3",
@@ -1843,7 +1847,8 @@
     "rowing_stroke_rate_spm": 20,
     "rowing_avg_watts": 33,
     "rowing_drag": 104,
-    "notes": "Second Hydrow grip-tolerance session, every-other-day cadence as planned (first: Jul 26). Energy 3, vibes 4, sweat dry. Hands felt great, 0 pain. Period started today. HR climbed steadily 91 to ~112 over the 5 min (avg 104 per Zones export) — 2.7 min Zone 1 / 2.3 min Zone 2 (47% Fat Burn / 53% Warm Up). Hydrow subscription reactivated but still not syncing to Apple Health directly — Zones for Training export came through separately. Rowing performance metrics (distance, split, spm, watts) manually transcribed from Hydrow in-app Workout Data screens."
+    "notes": "Second Hydrow grip-tolerance session, every-other-day cadence as planned (first: Jul 26). Energy 3, vibes 4, sweat dry. Hands felt great, 0 pain. Period started today. HR climbed steadily 91 to ~112 over the 5 min (avg 104 per Zones export) — 2.7 min Zone 1 / 2.3 min Zone 2 (47% Fat Burn / 53% Warm Up). Hydrow subscription reactivated but still not syncing to Apple Health directly — Zones for Training export came through separately. Rowing performance metrics (distance, split, spm, watts) manually transcribed from Hydrow in-app Workout Data screens.",
+    "rowing_piece": "work"
   },
   {
     "uuid": "EA23B8C9-A09C-4372-B549-AD7A46908579",
@@ -1929,7 +1934,8 @@
     "rowing_stroke_rate_spm": 22,
     "rowing_avg_watts": 43,
     "rowing_drag": 104,
-    "notes": "Third Hydrow session, first back-to-back with a Tonal session same day. Energy 4, vibes 4, sweat dry. Distance/split up notably from the two prior 5-min tolerance tests (3:23.6/500m vs ~3:41/500m) — first session with real pace/duration since the hand-recovery reintroduction began."
+    "notes": "Third Hydrow session, first back-to-back with a Tonal session same day. Energy 4, vibes 4, sweat dry. Distance/split up notably from the two prior 5-min tolerance tests (3:23.6/500m vs ~3:41/500m) — first session with real pace/duration since the hand-recovery reintroduction began.",
+    "rowing_piece": "work"
   },
   {
     "uuid": "B0A779D4-0D10-4B70-A55D-88D1699261D8",
@@ -2353,7 +2359,8 @@
     "rowing_stroke_rate_spm": 22,
     "rowing_avg_watts": 49,
     "rowing_drag": 104,
-    "notes": "First row since the 14-day layoff for the hysteroscopy (last row Aug 1). Done immediately after a Tonal Quick Fit core session. Energy 5, vibes 5, moderate sweat after. 22 spm kept within the wrist-safe range (Aug 1 wrist soreness was at 26 spm). No hand/wrist issues. Pushed briefly into Z3/Z4 rather than strict Zone 2. Split up from Aug 1 (3:23.6), not yet back to the May peak (~3:11). Followed by a separate 5-min cooldown row (kept as its own entry, not merged)."
+    "notes": "First row since the 14-day layoff for the hysteroscopy (last row Aug 1). Done immediately after a Tonal Quick Fit core session. Energy 5, vibes 5, moderate sweat after. 22 spm kept within the wrist-safe range (Aug 1 wrist soreness was at 26 spm). No hand/wrist issues. Pushed briefly into Z3/Z4 rather than strict Zone 2. Split up from Aug 1 (3:23.6), not yet back to the May peak (~3:11). Followed by a separate 5-min cooldown row (kept as its own entry, not merged).",
+    "rowing_piece": "work"
   },
   {
     "uuid": "DB150D94-2DCF-4C88-B2B1-86A51EBD1A4F",
@@ -2374,6 +2381,7 @@
     "rowing_stroke_rate_spm": 15,
     "rowing_avg_watts": 28,
     "rowing_drag": 104,
-    "notes": "Cooldown row immediately after Back in Session Row (9/7). Kept as a separate entry — merging distorts HR/split/watts/drag on the work piece."
+    "notes": "Cooldown row immediately after Back in Session Row (9/7). Kept as a separate entry — merging distorts HR/split/watts/drag on the work piece.",
+    "rowing_piece": "cooldown"
   }
 ]

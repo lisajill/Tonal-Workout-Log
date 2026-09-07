@@ -4,7 +4,7 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer,
 } from 'recharts'
-import { AXIS, GRID, ChartTip } from './chartTheme.jsx'
+import { AXIS, GRID, ChartTip, linregFit } from './chartTheme.jsx'
 
 const CAT_ROWING = '#38bdf8' // sky-400 — rowing category color (design.md)
 const POWER = '#f59e0b'
@@ -28,8 +28,11 @@ function fmtSplit(secs) {
 }
 
 export default function RowingTracker() {
+  // Cooldown pieces are logged as their own Rowing entries — exclude them from
+  // the performance view so they don't drag the split/watts trend. They still
+  // count toward Zone 2 minutes on the Cardio tab.
   const sessions = [...cardioLog]
-    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split)
+    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split && s.rowing_piece !== 'cooldown')
     .sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
 
   if (sessions.length === 0) {
@@ -38,21 +41,34 @@ export default function RowingTracker() {
     )
   }
 
+  // Cooldown meters fold into per-session distance (total rowed that day),
+  // but never into split/watts/best — those stay work-piece only.
+  const cooldownDistByDate = {}
+  for (const s of cardioLog) {
+    if (s.activity === 'Rowing' && s.rowing_piece === 'cooldown')
+      cooldownDistByDate[s.date] = (cooldownDistByDate[s.date] ?? 0) + (s.rowing_distance_m ?? 0)
+  }
+
   const chartData = sessions.map(s => ({
     label: shortDate(s.date),
     date: s.date,
     split_sec: parseSplitSecs(s.rowing_avg_split),
     watts: s.rowing_avg_watts ?? null,
     distance: s.rowing_distance_m ?? null,
+    distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
     spm: s.rowing_stroke_rate_spm ?? null,
   }))
+
+  // Linear trend across all sessions — the "is my split coming down" line.
+  const splitTrend = linregFit(chartData.map(d => d.split_sec)).fit
+  chartData.forEach((d, i) => { d.split_trend = splitTrend[i] })
 
   const bestSplit = sessions.reduce((best, s) => {
     const sec = parseSplitSecs(s.rowing_avg_split)
     return (best === null || sec < best) ? sec : best
   }, null)
   const bestWatts = Math.max(...sessions.map(s => s.rowing_avg_watts ?? 0))
-  const totalDist = sessions.reduce((t, s) => t + (s.rowing_distance_m ?? 0), 0)
+  const totalDist = chartData.reduce((t, d) => t + d.distance_total, 0)
 
   return (
     <div className="space-y-5">
@@ -92,7 +108,7 @@ export default function RowingTracker() {
               <div className="section-header">
                 <div>
                   <h2 className="label">Split /500m</h2>
-                  <p className="text-xs text-zinc-500 mt-1">Goal: below 3:00 — axis flipped so up = improving</p>
+                  <p className="text-xs text-zinc-500 mt-1">Goal: below 3:00 — axis flipped so up = improving · dashed = trend</p>
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={180}>
@@ -106,8 +122,9 @@ export default function RowingTracker() {
                   <CartesianGrid {...GRID} />
                   <XAxis dataKey="label" {...AXIS} />
                   <YAxis {...AXIS} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
-                  <Tooltip content={<ChartTip names={{ split_sec: 'Avg Split' }} formats={{ split_sec: v => `${fmtSplit(v)} /500m` }} />} cursor={{ stroke: '#3f3f46' }} />
+                  <Tooltip content={<ChartTip names={{ split_sec: 'Avg Split', split_trend: 'Trend' }} formats={{ split_sec: v => `${fmtSplit(v)} /500m`, split_trend: v => `${fmtSplit(v)} /500m` }} />} cursor={{ stroke: '#3f3f46' }} />
                   <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradRowSplit)" dot={{ r: 3 }} activeDot={{ r: 4.5 }} />
+                  <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} legendType="none" />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -135,7 +152,7 @@ export default function RowingTracker() {
             <div className="section-header">
               <div>
                 <h2 className="label">Distance per Session</h2>
-                <p className="text-xs text-zinc-500 mt-1">Meters rowed — longer sessions or faster pace = more distance</p>
+                <p className="text-xs text-zinc-500 mt-1">Total meters rowed — work piece + cooldown</p>
               </div>
             </div>
             <ResponsiveContainer width="100%" height={180}>
@@ -149,8 +166,8 @@ export default function RowingTracker() {
                 <CartesianGrid {...GRID} />
                 <XAxis dataKey="label" {...AXIS} />
                 <YAxis {...AXIS} unit="m" domain={['auto', 'auto']} />
-                <Tooltip content={<ChartTip names={{ distance: 'Distance' }} formats={{ distance: v => `${v} m` }} />} cursor={{ fill: '#242428', opacity: 0.5 }} />
-                <Bar isAnimationActive={false} dataKey="distance" fill="url(#gradRowDist)" radius={[5, 5, 0, 0]} maxBarSize={48} />
+                <Tooltip content={<ChartTip names={{ distance_total: 'Distance' }} formats={{ distance_total: v => `${v} m total` }} />} cursor={{ fill: '#242428', opacity: 0.5 }} />
+                <Bar isAnimationActive={false} dataKey="distance_total" fill="url(#gradRowDist)" radius={[5, 5, 0, 0]} maxBarSize={48} />
               </BarChart>
             </ResponsiveContainer>
           </div>

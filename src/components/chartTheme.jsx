@@ -6,6 +6,22 @@ export const AXIS_TICK = { fill: '#71717a', fontSize: 10, fontFamily: '"JetBrain
 export const GRID = { stroke: '#232327', vertical: false }
 export const AXIS = { tick: AXIS_TICK, axisLine: false, tickLine: false }
 
+// Least-squares linear fit over y-values indexed 0..n-1 (nulls skipped in the fit,
+// but a null stays null in the output so gaps don't get a phantom trend point).
+// Returns { fit: (number|null)[], slope } — slope is per-index change.
+export function linregFit(ys) {
+  const pts = ys.map((y, i) => [i, y]).filter(([, y]) => y != null && !Number.isNaN(y))
+  const n = pts.length
+  if (n < 2) return { fit: ys.map(() => null), slope: 0 }
+  let sx = 0, sy = 0, sxx = 0, sxy = 0
+  for (const [x, y] of pts) { sx += x; sy += y; sxx += x * x; sxy += x * y }
+  const denom = n * sxx - sx * sx
+  if (denom === 0) return { fit: ys.map(() => null), slope: 0 }
+  const slope = (n * sxy - sx * sy) / denom
+  const intercept = (sy - slope * sx) / n
+  return { fit: ys.map((y, i) => (y == null ? null : intercept + slope * i)), slope }
+}
+
 // Generic dark tooltip. `names` maps dataKey → display name,
 // `formats` maps dataKey → value formatter.
 export function ChartTip({ active, payload, label, names = {}, formats = {} }) {

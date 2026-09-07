@@ -6,7 +6,6 @@ import SessionDetail from './components/SessionDetail.jsx'
 import PRTracker from './components/PRTracker.jsx'
 import MuscleHeatmap from './components/MuscleHeatmap.jsx'
 import Charts from './components/Charts.jsx'
-import BodyMaps from './components/BodyMaps.jsx'
 import MuscleMatrix from './components/MuscleMatrix.jsx'
 import StrengthScores from './components/StrengthScores.jsx'
 import CurrentReadiness from './components/CurrentReadiness.jsx'
@@ -31,7 +30,6 @@ const TAB_GROUPS = [
     tabs: [
       { id: 'log',      label: 'Tonal Sessions' },
       { id: 'sessions', label: 'Detail' },
-      { id: 'bodymaps', label: 'Body Maps' },
     ],
   },
   {
@@ -201,7 +199,6 @@ export default function App() {
         {tab === 'log'       && <SessionLog    sessions={sessions} onSelectSession={openSession} />}
         {tab === 'sessions'  && <SessionDetail key={activeSession} sessions={sessions} initialKey={activeSession} />}
         {tab === 'prs'       && <PRTracker     sessions={sessions} />}
-        {tab === 'bodymaps'  && <BodyMaps       sessions={sessions} />}
         {tab === 'matrix'    && <MuscleMatrix   sessions={sessions} />}
         {tab === 'heatmap'   && <MuscleHeatmap  sessions={sessions} />}
         {tab === 'charts'    && <Charts        sessions={sessions} />}

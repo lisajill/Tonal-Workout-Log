@@ -4,6 +4,7 @@ import {
   ResponsiveContainer, ReferenceLine, ReferenceArea,
 } from 'recharts'
 import cardioLog from '../data/zone2_log.json'
+import { linregFit } from './chartTheme.jsx'
 
 // Category coding (design.md): strength metrics in the violet family, rowing in sky
 const CAT_STRENGTH = '#a78bfa'
@@ -81,15 +82,20 @@ const FMT = {
   tut:         v => `${v} min`,
   avgVolume:   v => `${Math.round(v).toLocaleString()} lbs avg`,
   split_sec:   v => `${fmtSplit(v)} /500m`,
+  split_trend: v => `${fmtSplit(v)} /500m`,
   watts:       v => `${v} W`,
   distance:    v => `${v} m`,
+  distance_total: v => `${v} m total`,
+  weight:      v => `${v} lbs`,
+  trend:       v => `${Math.round(v)} lbs`,
 }
 
 const NAMES = {
   volume: 'Volume', ma3: 'Trend', prVol: 'PR', vol_per_min: 'Density',
   avg_hr: 'Avg HR', max_hr: 'Max HR', rating: 'Rating', reps: 'Reps',
   calories: 'Calories', kj: 'Work', duration: 'Duration', tut: 'TUT',
-  avgVolume: 'Avg volume', split_sec: 'Split', watts: 'Watts', distance: 'Distance',
+  avgVolume: 'Avg volume', split_sec: 'Split', split_trend: 'Trend', watts: 'Watts',
+  distance: 'Distance', distance_total: 'Distance', weight: 'Top set', trend: 'Trend',
 }
 
 function Tip({ active, payload, label, meta }) {
@@ -119,8 +125,16 @@ function Tip({ active, payload, label, meta }) {
 export default function Charts({ sessions: rawSessions }) {
   const sessions = [...rawSessions].sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
 
+  // Cooldown pieces are separate Rowing entries. They're excluded from the
+  // split/watts trend (they'd drag it), but their meters DO fold into the
+  // per-session distance bar — total distance rowed that day is a real stat.
+  const cooldownDistByDate = {}
+  for (const s of cardioLog) {
+    if (s.activity === 'Rowing' && s.rowing_piece === 'cooldown')
+      cooldownDistByDate[s.date] = (cooldownDistByDate[s.date] ?? 0) + (s.rowing_distance_m ?? 0)
+  }
   const rowingData = [...cardioLog]
-    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split)
+    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split && s.rowing_piece !== 'cooldown')
     .sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
     .map(s => ({
       label: shortDate(s.date),
@@ -128,7 +142,37 @@ export default function Charts({ sessions: rawSessions }) {
       split_sec: parseSplitSecs(s.rowing_avg_split),
       watts: s.rowing_avg_watts ?? null,
       distance: s.rowing_distance_m ?? null,
+      distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
     }))
+  {
+    const st = linregFit(rowingData.map(d => d.split_sec)).fit
+    rowingData.forEach((d, i) => { d.split_trend = st[i] })
+  }
+
+  // Working weight over time, per movement — the slow grind between PRs.
+  // Top working-set weight per session (skips warmups, mobility/hold sets).
+  const weightByMovement = {}
+  for (const s of sessions) {
+    for (const m of s.movements ?? []) {
+      const top = Math.max(0, ...(m.sets ?? [])
+        .filter(t => t.reps > 0 && t.weight_lbs > 5)
+        .map(t => t.weight_lbs))
+      if (top <= 0) continue
+      ;(weightByMovement[m.name] ??= []).push({ label: shortDate(s.date), date: s.date, weight: top })
+    }
+  }
+  const weightSeries = Object.entries(weightByMovement)
+    .map(([name, pts]) => {
+      pts.sort((a, b) => a.date.localeCompare(b.date))
+      const fit = linregFit(pts.map(p => p.weight)).fit
+      pts.forEach((p, i) => { p.trend = fit[i] })
+      const first = pts[0].weight
+      const last = pts[pts.length - 1].weight
+      return { name, pts, delta: last - first, pct: first ? Math.round(((last - first) / first) * 100) : 0 }
+    })
+    .filter(s => s.pts.length >= 3)
+    .sort((a, b) => b.pts.length - a.pts.length)
+    .slice(0, 12)
 
   const dateSeen = {}
   const data = sessions.map(s => {
@@ -450,7 +494,7 @@ export default function Charts({ sessions: rawSessions }) {
           </div>
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-            <ChartCard title="Split /500m" subtitle="Lower is faster — axis flipped so up = improving">
+            <ChartCard title="Split /500m" subtitle="Lower is faster — axis flipped so up = improving · dashed = trend">
               <ResponsiveContainer width="100%" height={200}>
                 <ComposedChart data={rowingData} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
                   <defs>
@@ -464,6 +508,7 @@ export default function Charts({ sessions: rawSessions }) {
                   <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
                   <Tooltip content={<Tip meta={Object.fromEntries(rowingData.map(d => [d.label, d]))} />} cursor={{ stroke: '#3f3f46' }} />
                   <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradSplit)" activeDot={{ r: 4 }} />
+                  <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} />
                 </ComposedChart>
               </ResponsiveContainer>
             </ChartCard>
@@ -481,7 +526,7 @@ export default function Charts({ sessions: rawSessions }) {
             </ChartCard>
           </div>
 
-          <ChartCard title="Rowing Distance" subtitle="Meters per session">
+          <ChartCard title="Rowing Distance" subtitle="Total meters per session — work piece + cooldown">
             <ResponsiveContainer width="100%" height={180}>
               <BarChart data={rowingData} margin={{ top: 8, right: 8, bottom: 0, left: -8 }} barCategoryGap="35%">
                 <defs>
@@ -494,10 +539,42 @@ export default function Charts({ sessions: rawSessions }) {
                 <XAxis dataKey="label" tick={AXIS_TICK} axisLine={false} tickLine={false} />
                 <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} unit="m" domain={['auto', 'auto']} />
                 <Tooltip content={<Tip meta={Object.fromEntries(rowingData.map(d => [d.label, d]))} />} cursor={{ fill: '#242428', opacity: 0.5 }} />
-                <Bar isAnimationActive={false} dataKey="distance" fill="url(#gradDist)" radius={[5, 5, 0, 0]} maxBarSize={48} />
+                <Bar isAnimationActive={false} dataKey="distance_total" fill="url(#gradDist)" radius={[5, 5, 0, 0]} maxBarSize={48} />
               </BarChart>
             </ResponsiveContainer>
           </ChartCard>
+        </>
+      )}
+
+      {/* Working weight over time, per movement — the grind between PRs */}
+      {weightSeries.length > 0 && (
+        <>
+          <div className="flex items-center gap-2 pt-2">
+            <span className="font-semibold text-xl" style={{ color: CAT_STRENGTH }}>Working Weight by Movement</span>
+            <div className="flex-1 h-px bg-surface-3" />
+          </div>
+          <p className="text-xs text-zinc-500 -mt-2">Top working-set weight each session · dashed = trend · movements with 3+ loaded sessions</p>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {weightSeries.map(s => (
+              <ChartCard
+                key={s.name}
+                title={s.name}
+                subtitle={`${s.pts[0].weight} → ${s.pts[s.pts.length - 1].weight} lbs · ${s.delta >= 0 ? '+' : ''}${s.delta} (${s.pct >= 0 ? '+' : ''}${s.pct}%)`}
+              >
+                <ResponsiveContainer width="100%" height={150}>
+                  <ComposedChart data={s.pts} margin={{ top: 8, right: 8, bottom: 0, left: -12 }}>
+                    <CartesianGrid {...GRID} />
+                    <XAxis dataKey="label" tick={AXIS_TICK} axisLine={false} tickLine={false} />
+                    <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} unit="" domain={['auto', 'auto']} width={34} />
+                    <Tooltip content={<Tip meta={Object.fromEntries(s.pts.map(p => [p.label, p]))} />} cursor={{ stroke: '#3f3f46' }} />
+                    <Line isAnimationActive={false} type="monotone" dataKey="weight" stroke={CAT_STRENGTH} strokeWidth={2} dot={{ r: 2.5 }} activeDot={{ r: 4 }} />
+                    <Line isAnimationActive={false} type="linear" dataKey="trend" stroke={CAT_STRENGTH} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.6} dot={false} activeDot={false} />
+                  </ComposedChart>
+                </ResponsiveContainer>
+              </ChartCard>
+            ))}
+          </div>
         </>
       )}
 
