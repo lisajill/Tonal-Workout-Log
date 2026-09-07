@@ -2385,5 +2385,18 @@
     "rowing_drag": 104,
     "notes": "Cooldown row immediately after Back in Session Row (9/7). Kept as a separate entry — merging distorts HR/split/watts/drag on the work piece.",
     "rowing_piece": "cooldown"
+  },
+  {
+    "uuid": "E886E228-FC72-4487-8318-D3CA1245CE41",
+    "date": "2026-09-07",
+    "timestamp": "2026-09-07T22:15:36Z",
+    "activity": "Walking",
+    "duration_min": 33.7,
+    "zone1_min": 18.1,
+    "zone2_min": 15.1,
+    "zone3_min": 0.4,
+    "zone4_min": 0,
+    "avg_hr": 106,
+    "distance_mi": 1.07
   }
 ]
