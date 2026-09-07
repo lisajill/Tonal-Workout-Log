@@ -6659,5 +6659,315 @@
     "strength_core": 465,
     "strength_lower": 618,
     "notes": "Right leg felt weaker than left. Standing leg consistently felt like it was doing more work regardless of which side stood — matches known right hip stability imbalance."
+  },
+  {
+    "date": "2026-09-06",
+    "workout": "Workout by Tia - 09/06",
+    "energy_level": 3,
+    "phase": null,
+    "subjective_rating": 4,
+    "sweat": "dry",
+    "calories": 90,
+    "avg_hr": 98,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 54,
+      "hamstrings": 69,
+      "quads": 65,
+      "calves": 100,
+      "abs": 94,
+      "obliques": 99,
+      "back": 74,
+      "chest": 83,
+      "shoulders": 95,
+      "biceps": 94,
+      "triceps": 95
+    },
+    "prs": {
+      "rdl": "power PR, sets 1 & 2"
+    },
+    "muscles_high_volume": [
+      "glutes",
+      "quads",
+      "hamstrings"
+    ],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Cat-Cow",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Bodyweight Squat",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Dead Bug",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Goblet Squat",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 32
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 32
+          }
+        ]
+      },
+      {
+        "name": "Seated Row",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 23
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 24
+          }
+        ]
+      },
+      {
+        "name": "RDL",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 39,
+            "prs": [
+              "power"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 40,
+            "prs": [
+              "power"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bench Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 38
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 38
+          }
+        ]
+      },
+      {
+        "name": "Bretzel Stretch",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Lying Hamstring Stretch",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-09-06T15:33:34.189259-04:00",
+    "duration": 16.75,
+    "total_volume": 3136,
+    "total_reps": 64,
+    "time_under_tension": 8.07,
+    "total_work_kj": 7,
+    "tonal_activity_id": "e8a3dc87-29b9-404f-80ba-5b4dbef41e92",
+    "strength_overall": 523,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 618,
+    "functional_strength": 36,
+    "movement_quality": 50,
+    "notes": "First workout back after hysteroscopy on 2026-08-23 (14 days prior). Lots of walking during recovery. Pre-workout readiness 100% across the board. Full-body restart (Workout by Tia): Goblet Squat 32 lb, Seated Row 23-24 lb, RDL 39-40 lb, Bench Press ~19 lb/cable, plus mobility (Cat-Cow, Dead Bug, Bretzel, hamstring stretch). Energy 3, vibes 4, sweat dry. 64 working reps, 16.75 min. Post-readiness: glutes 54 / quads 65 / hamstrings 69 / back 74 the biggest drops.",
+    "shot_day": false,
+    "movement_quality_delta": 50
+  },
+  {
+    "date": "2026-09-07",
+    "workout": "Quick Fit: Bench-Assisted Core",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 28,
+    "avg_hr": 114,
+    "max_hr": 135,
+    "pre_readiness": {
+      "glutes": 77,
+      "hamstrings": 92,
+      "quads": 88,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 96,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 77,
+      "hamstrings": 93,
+      "quads": 89,
+      "calves": 100,
+      "abs": 95,
+      "obliques": 84,
+      "back": 97,
+      "chest": 100,
+      "shoulders": 99,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {},
+    "muscles_high_volume": [
+      "obliques"
+    ],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Seated Pallof Press",
+        "warmup_sets": 2,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 15
+          }
+        ]
+      },
+      {
+        "name": "Incline Pillar Bridge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-09-07T13:51:34.838673-04:00",
+    "duration": 13.22,
+    "total_volume": 548,
+    "total_reps": 44,
+    "time_under_tension": 5.5,
+    "total_work_kj": 2,
+    "tonal_activity_id": "a1164e56-0650-4f69-bd38-39b83bfaf79c",
+    "shot_day": false,
+    "strength_overall": 523,
+    "strength_upper": 487,
+    "strength_core": 465,
+    "strength_lower": 618,
+    "functional_strength": 47,
+    "movement_quality": 57,
+    "movement_quality_delta": 7,
+    "notes": "Return-week session 2 (day after the 9/6 restart). Quick Fit: Seated Pallof Press (worked up to 15 lb, and that was a stretch — prior Pallof PR was 24 lb, so a clear post-layoff regression on anti-rotation) + Incline Pillar Bridge, forearms, 2x30s. 13 min, dry during the Tonal portion. Energy 5, vibes 5 — best-feeling session of the return so far. Rowed on the Hydrow immediately after (see zone2_log). Full high-fiber pre-workout meal ~10 min before. Deliberately kept off the posterior chain — 9/6 DOMS still moderate (glutes stuck at 77 pre and post)."
   }
 ]
