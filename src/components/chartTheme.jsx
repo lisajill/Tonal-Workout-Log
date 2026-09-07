@@ -22,6 +22,19 @@ export function linregFit(ys) {
   return { fit: ys.map((y, i) => (y == null ? null : intercept + slope * i)), slope }
 }
 
+// Trendline fit over a TRAILING window of the most recent `window` points, so
+// the line tracks the current trajectory instead of staying anchored to old
+// data as sessions accumulate. Count-based (not date-based) since sessions can
+// be sporadic. Returns a fit array aligned to the full series (null before the
+// window) plus the windowed slope.
+export function trailingFit(ys, { window = 6, minPoints = 3 } = {}) {
+  const n = ys.length
+  if (n < 2) return { fit: ys.map(() => null), slope: 0 }
+  const start = Math.max(0, n - Math.max(window, minPoints))
+  const { fit: winFit, slope } = linregFit(ys.slice(start))
+  return { fit: ys.map((_, i) => (i >= start ? winFit[i - start] : null)), slope, start }
+}
+
 // Generic dark tooltip. `names` maps dataKey → display name,
 // `formats` maps dataKey → value formatter.
 export function ChartTip({ active, payload, label, names = {}, formats = {} }) {

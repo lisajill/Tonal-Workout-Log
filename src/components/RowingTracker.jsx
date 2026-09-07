@@ -4,7 +4,7 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer,
 } from 'recharts'
-import { AXIS, GRID, ChartTip, linregFit } from './chartTheme.jsx'
+import { AXIS, GRID, ChartTip, trailingFit } from './chartTheme.jsx'
 
 const CAT_ROWING = '#38bdf8' // sky-400 — rowing category color (design.md)
 const POWER = '#f59e0b'
@@ -28,11 +28,12 @@ function fmtSplit(secs) {
 }
 
 export default function RowingTracker() {
-  // Cooldown pieces are logged as their own Rowing entries — exclude them from
-  // the performance view so they don't drag the split/watts trend. They still
-  // count toward Zone 2 minutes on the Cardio tab.
+  // Exclude from the performance view: cooldown pieces (drag the trend) and
+  // rowing_effort:"test" rows (grip-tolerance / warm-up-only rows that aren't
+  // real efforts). Both still count toward Zone 2 minutes on the Cardio tab.
   const sessions = [...cardioLog]
-    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split && s.rowing_piece !== 'cooldown')
+    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split
+      && s.rowing_piece !== 'cooldown' && s.rowing_effort !== 'test')
     .sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
 
   if (sessions.length === 0) {
@@ -59,9 +60,11 @@ export default function RowingTracker() {
     spm: s.rowing_stroke_rate_spm ?? null,
   }))
 
-  // Linear trend across all sessions — the "is my split coming down" line.
-  const splitTrend = linregFit(chartData.map(d => d.split_sec)).fit
-  chartData.forEach((d, i) => { d.split_trend = splitTrend[i] })
+  // Trendline over a trailing window — tracks the *current* trajectory rather
+  // than staying anchored to the fast May baseline.
+  const splitTrend = trailingFit(chartData.map(d => d.split_sec)).fit
+  const wattsTrend = trailingFit(chartData.map(d => d.watts)).fit
+  chartData.forEach((d, i) => { d.split_trend = splitTrend[i]; d.watts_trend = wattsTrend[i] })
 
   const bestSplit = sessions.reduce((best, s) => {
     const sec = parseSplitSecs(s.rowing_avg_split)
@@ -133,7 +136,7 @@ export default function RowingTracker() {
               <div className="section-header">
                 <div>
                   <h2 className="label">Avg Peak Power</h2>
-                  <p className="text-xs text-zinc-500 mt-1">Higher = more powerful</p>
+                  <p className="text-xs text-zinc-500 mt-1">Higher = more powerful · dashed = trend</p>
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={180}>
@@ -141,8 +144,9 @@ export default function RowingTracker() {
                   <CartesianGrid {...GRID} />
                   <XAxis dataKey="label" {...AXIS} />
                   <YAxis {...AXIS} unit="W" domain={['auto', 'auto']} />
-                  <Tooltip content={<ChartTip names={{ watts: 'Avg Peak Power' }} formats={{ watts: v => `${v} W` }} />} cursor={{ stroke: '#3f3f46' }} />
+                  <Tooltip content={<ChartTip names={{ watts: 'Avg Peak Power', watts_trend: 'Trend' }} formats={{ watts: v => `${v} W`, watts_trend: v => `${Math.round(v)} W` }} />} cursor={{ stroke: '#3f3f46' }} />
                   <Line isAnimationActive={false} type="monotone" dataKey="watts" stroke={POWER} strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 4.5 }} />
+                  <Line isAnimationActive={false} type="linear" dataKey="watts_trend" stroke={POWER} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.65} dot={false} activeDot={false} legendType="none" connectNulls />
                 </LineChart>
               </ResponsiveContainer>
             </div>

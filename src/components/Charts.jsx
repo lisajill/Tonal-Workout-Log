@@ -4,7 +4,7 @@ import {
   ResponsiveContainer, ReferenceLine, ReferenceArea,
 } from 'recharts'
 import cardioLog from '../data/zone2_log.json'
-import { linregFit } from './chartTheme.jsx'
+import { linregFit, trailingFit } from './chartTheme.jsx'
 
 // Category coding (design.md): strength metrics in the violet family, rowing in sky
 const CAT_STRENGTH = '#a78bfa'
@@ -84,6 +84,7 @@ const FMT = {
   split_sec:   v => `${fmtSplit(v)} /500m`,
   split_trend: v => `${fmtSplit(v)} /500m`,
   watts:       v => `${v} W`,
+  watts_trend: v => `${Math.round(v)} W`,
   distance:    v => `${v} m`,
   distance_total: v => `${v} m total`,
   weight:      v => `${v} lbs`,
@@ -95,7 +96,8 @@ const NAMES = {
   avg_hr: 'Avg HR', max_hr: 'Max HR', rating: 'Rating', reps: 'Reps',
   calories: 'Calories', kj: 'Work', duration: 'Duration', tut: 'TUT',
   avgVolume: 'Avg volume', split_sec: 'Split', split_trend: 'Trend', watts: 'Watts',
-  distance: 'Distance', distance_total: 'Distance', weight: 'Top set', trend: 'Trend',
+  watts_trend: 'Trend', distance: 'Distance', distance_total: 'Distance',
+  weight: 'Top set', trend: 'Trend',
 }
 
 function Tip({ active, payload, label, meta }) {
@@ -134,7 +136,8 @@ export default function Charts({ sessions: rawSessions }) {
       cooldownDistByDate[s.date] = (cooldownDistByDate[s.date] ?? 0) + (s.rowing_distance_m ?? 0)
   }
   const rowingData = [...cardioLog]
-    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split && s.rowing_piece !== 'cooldown')
+    .filter(s => s.activity === 'Rowing' && s.rowing_avg_split
+      && s.rowing_piece !== 'cooldown' && s.rowing_effort !== 'test')
     .sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
     .map(s => ({
       label: shortDate(s.date),
@@ -145,8 +148,10 @@ export default function Charts({ sessions: rawSessions }) {
       distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
     }))
   {
-    const st = linregFit(rowingData.map(d => d.split_sec)).fit
-    rowingData.forEach((d, i) => { d.split_trend = st[i] })
+    // Trailing-window trend — follows current trajectory, not the May baseline.
+    const st = trailingFit(rowingData.map(d => d.split_sec)).fit
+    const wt = trailingFit(rowingData.map(d => d.watts)).fit
+    rowingData.forEach((d, i) => { d.split_trend = st[i]; d.watts_trend = wt[i] })
   }
 
   // Working weight over time, per movement — the slow grind between PRs.
@@ -513,7 +518,7 @@ export default function Charts({ sessions: rawSessions }) {
               </ResponsiveContainer>
             </ChartCard>
 
-            <ChartCard title="Avg Peak Power" subtitle="Watts per rowing session">
+            <ChartCard title="Avg Peak Power" subtitle="Watts per rowing session · dashed = trend">
               <ResponsiveContainer width="100%" height={200}>
                 <LineChart data={rowingData} margin={{ top: 8, right: 8, bottom: 0, left: -8 }}>
                   <CartesianGrid {...GRID} />
@@ -521,6 +526,7 @@ export default function Charts({ sessions: rawSessions }) {
                   <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} unit="W" domain={['auto', 'auto']} />
                   <Tooltip content={<Tip meta={Object.fromEntries(rowingData.map(d => [d.label, d]))} />} cursor={{ stroke: '#3f3f46' }} />
                   <Line isAnimationActive={false} type="monotone" dataKey="watts" stroke="#f59e0b" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 4.5 }} />
+                  <Line isAnimationActive={false} type="linear" dataKey="watts_trend" stroke="#f59e0b" strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.65} dot={false} activeDot={false} connectNulls />
                 </LineChart>
               </ResponsiveContainer>
             </ChartCard>

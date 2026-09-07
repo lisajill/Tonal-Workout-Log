@@ -1800,7 +1800,8 @@
     "rowing_avg_watts": null,
     "rowing_drag": 104,
     "notes": "First Hydrow session in ~11 weeks (last: May 13, 2026) and first since carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Deliberate grip-tolerance test at 22-24 spm (mostly 23), HR 111-117 bpm. Hands felt great throughout, no problem opening them afterward — noticeably lighter grip demand than the hand bike. Session did not sync to Hydrow activity/Zones (subscription is paused, so Just Row mode does not save) — metrics manually transcribed from console screenshot + user report. Next time: start a Row workout in Apple Fitness to capture HR/activity properly.",
-    "rowing_piece": "work"
+    "rowing_piece": "work",
+    "rowing_effort": "test"
   },
   {
     "uuid": "5A354EBE-177B-498D-8589-4653543CABC3",
@@ -1848,7 +1849,8 @@
     "rowing_avg_watts": 33,
     "rowing_drag": 104,
     "notes": "Second Hydrow grip-tolerance session, every-other-day cadence as planned (first: Jul 26). Energy 3, vibes 4, sweat dry. Hands felt great, 0 pain. Period started today. HR climbed steadily 91 to ~112 over the 5 min (avg 104 per Zones export) — 2.7 min Zone 1 / 2.3 min Zone 2 (47% Fat Burn / 53% Warm Up). Hydrow subscription reactivated but still not syncing to Apple Health directly — Zones for Training export came through separately. Rowing performance metrics (distance, split, spm, watts) manually transcribed from Hydrow in-app Workout Data screens.",
-    "rowing_piece": "work"
+    "rowing_piece": "work",
+    "rowing_effort": "test"
   },
   {
     "uuid": "EA23B8C9-A09C-4372-B549-AD7A46908579",
