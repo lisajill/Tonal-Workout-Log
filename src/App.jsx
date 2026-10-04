@@ -28,7 +28,7 @@ const TAB_GROUPS = [
     label: 'Sessions',
     color: '#a78bfa', // cat-strength
     tabs: [
-      { id: 'log',      label: 'Tonal Sessions' },
+      { id: 'log',      label: 'Lifting' },
       { id: 'sessions', label: 'Detail' },
     ],
   },
