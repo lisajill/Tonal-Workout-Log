@@ -664,7 +664,7 @@
     "rowing_avg_split": "3:11.7",
     "rowing_stroke_rate_spm": 25,
     "rowing_avg_watts": 61,
-    "notes": "Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm, 22W) pending sync — merge when imported.",
+    "notes": "Cooldown (Cool Down with the Dolphins, 590m, 5min, 104bpm, 22W) pending sync \u2014 merge when imported.",
     "rowing_piece": "work"
   },
   {
@@ -744,13 +744,13 @@
     "zone4_min": 1.4,
     "avg_hr": 133,
     "distance_mi": null,
-    "rowing_program": "Free Row — 2k race piece + cooldown",
+    "rowing_program": "Free Row \u2014 2k race piece + cooldown",
     "rowing_distance_m": 2513,
     "rowing_duration_min": 19.9,
     "rowing_avg_split": "3:12",
     "rowing_stroke_rate_spm": 25,
     "rowing_avg_watts": 50,
-    "notes": "Concept2 at hotel gym. 2k in 12:48.2 (splits: 3:17.4 / 3:16.9 / 3:13.6 / 3:00.4 — strong negative split). Followed by 5:05 cooldown (513m, ~5:00/500m, 19 SPM). Sweat: moderate.",
+    "notes": "Concept2 at hotel gym. 2k in 12:48.2 (splits: 3:17.4 / 3:16.9 / 3:13.6 / 3:00.4 \u2014 strong negative split). Followed by 5:05 cooldown (513m, ~5:00/500m, 19 SPM). Sweat: moderate.",
     "rowing_piece": "work"
   },
   {
@@ -1799,7 +1799,7 @@
     "rowing_stroke_rate_spm": 23,
     "rowing_avg_watts": null,
     "rowing_drag": 104,
-    "notes": "First Hydrow session in ~11 weeks (last: May 13, 2026) and first since carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Deliberate grip-tolerance test at 22-24 spm (mostly 23), HR 111-117 bpm. Hands felt great throughout, no problem opening them afterward — noticeably lighter grip demand than the hand bike. Session did not sync to Hydrow activity/Zones (subscription is paused, so Just Row mode does not save) — metrics manually transcribed from console screenshot + user report. Next time: start a Row workout in Apple Fitness to capture HR/activity properly.",
+    "notes": "First Hydrow session in ~11 weeks (last: May 13, 2026) and first since carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Deliberate grip-tolerance test at 22-24 spm (mostly 23), HR 111-117 bpm. Hands felt great throughout, no problem opening them afterward \u2014 noticeably lighter grip demand than the hand bike. Session did not sync to Hydrow activity/Zones (subscription is paused, so Just Row mode does not save) \u2014 metrics manually transcribed from console screenshot + user report. Next time: start a Row workout in Apple Fitness to capture HR/activity properly.",
     "rowing_piece": "work",
     "rowing_effort": "test"
   },
@@ -1848,7 +1848,7 @@
     "rowing_stroke_rate_spm": 20,
     "rowing_avg_watts": 33,
     "rowing_drag": 104,
-    "notes": "Second Hydrow grip-tolerance session, every-other-day cadence as planned (first: Jul 26). Energy 3, vibes 4, sweat dry. Hands felt great, 0 pain. Period started today. HR climbed steadily 91 to ~112 over the 5 min (avg 104 per Zones export) — 2.7 min Zone 1 / 2.3 min Zone 2 (47% Fat Burn / 53% Warm Up). Hydrow subscription reactivated but still not syncing to Apple Health directly — Zones for Training export came through separately. Rowing performance metrics (distance, split, spm, watts) manually transcribed from Hydrow in-app Workout Data screens.",
+    "notes": "Second Hydrow grip-tolerance session, every-other-day cadence as planned (first: Jul 26). Energy 3, vibes 4, sweat dry. Hands felt great, 0 pain. Period started today. HR climbed steadily 91 to ~112 over the 5 min (avg 104 per Zones export) \u2014 2.7 min Zone 1 / 2.3 min Zone 2 (47% Fat Burn / 53% Warm Up). Hydrow subscription reactivated but still not syncing to Apple Health directly \u2014 Zones for Training export came through separately. Rowing performance metrics (distance, split, spm, watts) manually transcribed from Hydrow in-app Workout Data screens.",
     "rowing_piece": "work",
     "rowing_effort": "test"
   },
@@ -1936,7 +1936,7 @@
     "rowing_stroke_rate_spm": 22,
     "rowing_avg_watts": 43,
     "rowing_drag": 104,
-    "notes": "Third Hydrow session, first back-to-back with a Tonal session same day. Energy 4, vibes 4, sweat dry. Distance/split up notably from the two prior 5-min tolerance tests (3:23.6/500m vs ~3:41/500m) — first session with real pace/duration since the hand-recovery reintroduction began.",
+    "notes": "Third Hydrow session, first back-to-back with a Tonal session same day. Energy 4, vibes 4, sweat dry. Distance/split up notably from the two prior 5-min tolerance tests (3:23.6/500m vs ~3:41/500m) \u2014 first session with real pace/duration since the hand-recovery reintroduction began.",
     "rowing_piece": "work"
   },
   {
@@ -2383,7 +2383,7 @@
     "rowing_stroke_rate_spm": 15,
     "rowing_avg_watts": 28,
     "rowing_drag": 104,
-    "notes": "Cooldown row immediately after Back in Session Row (9/7). Kept as a separate entry — merging distorts HR/split/watts/drag on the work piece.",
+    "notes": "Cooldown row immediately after Back in Session Row (9/7). Kept as a separate entry \u2014 merging distorts HR/split/watts/drag on the work piece.",
     "rowing_piece": "cooldown"
   },
   {
@@ -2736,5 +2736,43 @@
     "zone4_min": 0,
     "avg_hr": 113,
     "distance_mi": null
+  },
+  {
+    "uuid": "29696418-1F92-43A4-874A-F7BFAD0D7FD6",
+    "date": "2026-10-04",
+    "timestamp": "2026-10-04T21:31:12Z",
+    "activity": "Rowing",
+    "duration_min": 10,
+    "zone1_min": 1.5,
+    "zone2_min": 6.2,
+    "zone3_min": 2.3,
+    "zone4_min": 0,
+    "avg_hr": 123,
+    "distance_mi": null,
+    "rowing_program": "Whale Sighting Row (with Mike, Seward)",
+    "rowing_distance_m": 1609,
+    "rowing_duration_min": 10,
+    "rowing_avg_split": "3:06.5",
+    "rowing_stroke_rate_spm": 25,
+    "rowing_avg_watts": 58
+  },
+  {
+    "uuid": "12CADF35-C89F-4D26-B417-E01DAD4E233A",
+    "date": "2026-10-04",
+    "timestamp": "2026-10-04T21:42:50Z",
+    "activity": "Rowing",
+    "duration_min": 5,
+    "zone1_min": 0,
+    "zone2_min": 5,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 109,
+    "distance_mi": null,
+    "rowing_program": "Drive Progression Cool-Down (with James, Lake Lure)",
+    "rowing_distance_m": 540,
+    "rowing_duration_min": 5,
+    "rowing_avg_split": "4:37.6",
+    "rowing_stroke_rate_spm": 18,
+    "rowing_avg_watts": 18
   }
 ]

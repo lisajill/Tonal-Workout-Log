@@ -211,5 +211,35 @@
       "back": 2
     },
     "notes": "Bodyweight circuit: squats to couch, bicycle crunches, bird dog/dead bug/clamshell/crunches/glute raises, pancake + L stretch (hamstring focus)"
+  },
+  {
+    "uuid": "29696418-1F92-43A4-874A-F7BFAD0D7FD6",
+    "date": "2026-10-04",
+    "activity": "Rowing",
+    "duration_min": 10,
+    "avg_hr": 123,
+    "muscles": {
+      "back": 4,
+      "abs": 3,
+      "hamstrings": 3,
+      "glutes": 3,
+      "shoulders": 2
+    },
+    "notes": null
+  },
+  {
+    "uuid": "12CADF35-C89F-4D26-B417-E01DAD4E233A",
+    "date": "2026-10-04",
+    "activity": "Rowing",
+    "duration_min": 5,
+    "avg_hr": 109,
+    "muscles": {
+      "back": 4,
+      "abs": 3,
+      "hamstrings": 3,
+      "glutes": 3,
+      "shoulders": 2
+    },
+    "notes": null
   }
 ]
