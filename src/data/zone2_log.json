@@ -2754,7 +2754,9 @@
     "rowing_duration_min": 10,
     "rowing_avg_split": "3:06.5",
     "rowing_stroke_rate_spm": 25,
-    "rowing_avg_watts": 58
+    "rowing_avg_watts": 58,
+    "rowing_drag": 104,
+    "rowing_piece": "work"
   },
   {
     "uuid": "12CADF35-C89F-4D26-B417-E01DAD4E233A",
@@ -2773,6 +2775,8 @@
     "rowing_duration_min": 5,
     "rowing_avg_split": "4:37.6",
     "rowing_stroke_rate_spm": 18,
-    "rowing_avg_watts": 18
+    "rowing_avg_watts": 18,
+    "rowing_drag": 104,
+    "rowing_piece": "cooldown"
   }
 ]
