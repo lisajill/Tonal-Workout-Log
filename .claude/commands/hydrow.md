@@ -28,47 +28,38 @@ Drag is fixed at 104 — no need to ask or record.
 
 Also check Zone2Sessions/ for Zones export JSONs for this date. Hydrow JSONs have `"source": "Hydrow"` and `"activity": {"type": 35}` (HKWorkoutActivityType.rowing). The import script maps them to activity "Rowing". If present and not yet imported, run:
 ```bash
-cd /Users/moment/Sites/Workout-Tracker && npm run import-zone2
+cd <repo root> && npm run import-zone2
 ```
 
 Then find the matching entry in `src/data/zone2_log.json` (match by date + "Rowing" activity and source UUID).
 
 **Do NOT mistake morning Tonal sessions (source: "Tonal", type 50) for Hydrow rowing sessions.** Check source field in the JSON before assuming any session is the row.
 
-## Step 2 — Detect and confirm cooldown merge
+## Step 2 — Detect cooldowns — NEVER merge them
 
 After import, scan `zone2_log.json` for any same-day "Rowing" entries that follow the main session and look like a cooldown:
 - Duration ≤ 5 min
 - `avg_hr` lower than the main session's `avg_hr`, OR a short burst that's coming down (high Z1, low Z3/Z4)
 - Start time within ~15 min of the main session's end time
 
-If a cooldown candidate is found, ask:
-> "Found a short follow-on session (X min, avg HR Y bpm). Merge it into the main rowing entry as a cooldown?"
+**Per CLAUDE.md: cooldowns are never merged into the main entry — merging distorts the work piece's avg HR, split, watts, and drag.** Keep each as its own `zone2_log` entry. Tell the user a cooldown was found and kept separate; no confirmation needed, this is a settled project policy, not a judgment call.
 
-Only proceed with the merge if the user confirms.
+## Step 3 — Add rowing fields to BOTH entries
 
-## Step 3 — Merge Zones + erg data
+Add the schema below to the main entry AND to the cooldown entry (each with its own numbers) — do not combine them into one entry.
 
-If two separate Zones entries exist for the session (main + cooldown), combine them:
-- Total `duration_min`, `zone*_min` by summing raw seconds, then converting to minutes
-- Weighted avg HR: `(hr1 * sec1 + hr2 * sec2) / (sec1 + sec2)`, rounded to nearest int
-- Use the earlier entry's UUID and timestamp; delete or archive the second entry
-- Move the cooldown JSON to `Zone2Sessions/merged/` to prevent re-import
-
-Update the entry:
-- `activity`: "Rowing"
-- Add structured rowing fields (see schema below)
-- Update `notes` with the program name and "first session in X weeks" context if applicable
-
-### Rowing performance schema (add to zone2_log entry):
+### Rowing performance schema (add to each zone2_log entry):
 ```json
 "rowing_program": "...",
 "rowing_distance_m": <number>,
 "rowing_duration_min": <number>,
 "rowing_avg_split": "M:SS.s",
 "rowing_stroke_rate_spm": <number>,
-"rowing_avg_watts": <number>
+"rowing_avg_watts": <number>,
+"rowing_drag": 104,
+"rowing_piece": "work"
 ```
+Use `"rowing_piece": "cooldown"` on the cooldown entry instead of `"work"`. **This field is required, not optional** — `Charts.jsx`'s split/watts/power trend charts filter on `rowing_piece !== 'cooldown'` to exclude cooldowns from performance trends. Omitting it makes a cooldown's slow recovery-pace split plot as if it were a real effort data point, showing a fake performance crash on that date.
 
 ## Step 4 — Create Obsidian note
 
@@ -138,7 +129,7 @@ Goal direction: lower split = faster, higher watts = more powerful.
 ## Step 6 — Commit and push
 
 ```bash
-cd /Users/moment/Sites/Workout-Tracker
+cd <repo root>
 git add src/data/zone2_log.json
 git commit -m "Log rowing session YYYY-MM-DD: <distance>m, <split>/500m, <watts>W"
 git pull --rebase origin main && git push origin main
