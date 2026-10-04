@@ -2710,5 +2710,31 @@
     "zone4_min": 0,
     "avg_hr": 100,
     "distance_mi": 1.03
+  },
+  {
+    "uuid": "E3015A1F-5B7B-44E2-9836-E6596294A183",
+    "date": "2026-10-04",
+    "timestamp": "2026-10-04T19:22:03Z",
+    "activity": "Functional Strength Training",
+    "duration_min": 20.8,
+    "zone1_min": 13.3,
+    "zone2_min": 7.4,
+    "zone3_min": 0.1,
+    "zone4_min": 0,
+    "avg_hr": 105,
+    "distance_mi": null
+  },
+  {
+    "uuid": "DB4159E3-BE16-4AE8-AC99-CFD7F2214741",
+    "date": "2026-10-04",
+    "timestamp": "2026-10-04T20:15:02Z",
+    "activity": "Tonal",
+    "duration_min": 10.9,
+    "zone1_min": 4.9,
+    "zone2_min": 4,
+    "zone3_min": 2,
+    "zone4_min": 0,
+    "avg_hr": 113,
+    "distance_mi": null
   }
 ]

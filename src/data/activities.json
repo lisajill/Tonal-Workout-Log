@@ -193,5 +193,23 @@
       "shoulders": 2
     },
     "notes": null
+  },
+  {
+    "uuid": "E3015A1F-5B7B-44E2-9836-E6596294A183",
+    "date": "2026-10-04",
+    "activity": "Functional Strength Training",
+    "duration_min": 20.8,
+    "avg_hr": 105,
+    "muscles": {
+      "glutes": 4,
+      "hamstrings": 4,
+      "quads": 4,
+      "abs": 4,
+      "obliques": 2,
+      "hip_flexors": 2,
+      "adductors": 2,
+      "back": 2
+    },
+    "notes": "Bodyweight circuit: squats to couch, bicycle crunches, bird dog/dead bug/clamshell/crunches/glute raises, pancake + L stretch (hamstring focus)"
   }
 ]

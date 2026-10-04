@@ -147,7 +147,9 @@ async function main() {
   for (const s of existing) {
     if (s.tonal_activity_id) byActivityId.set(s.tonal_activity_id, s)
     byDateAndName.set(`${s.date}::${s.workout}`, s)
-    byDate.set(s.date, s)
+    // Manual (off-Tonal) entries are already-resolved events from another source —
+    // never let a real Tonal activity fall back onto one via date-only matching.
+    if (!s.tonal_activity_id?.startsWith('manual')) byDate.set(s.date, s)
   }
 
   const merged: SessionEntry[] = []
