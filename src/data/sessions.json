@@ -7397,7 +7397,12 @@
     "time_under_tension": 4.87,
     "duration": 10.88,
     "total_work_kj": 5,
-    "prs": {},
+    "prs": {
+      "standing_overhead_press": {
+        "weight": 12,
+        "date": "2026-10-04"
+      }
+    },
     "muscles_high_volume": [
       "chest",
       "shoulders"
@@ -7446,7 +7451,10 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 12
+            "weight_lbs": 12,
+            "prs": [
+              "power"
+            ]
           }
         ]
       },
