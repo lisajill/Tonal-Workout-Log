@@ -2791,5 +2791,52 @@
     "rowing_avg_watts": 18,
     "rowing_drag": 104,
     "rowing_piece": "cooldown"
+  },
+  {
+    "uuid": "B52A512F-635C-4E48-A52A-DB7C244D14EC",
+    "date": "2026-10-05",
+    "timestamp": "2026-10-05T11:22:47Z",
+    "activity": "Tonal",
+    "duration_min": 16.3,
+    "zone1_min": 7.5,
+    "zone2_min": 8.2,
+    "zone3_min": 0.6,
+    "zone4_min": 0,
+    "avg_hr": 110,
+    "distance_mi": null
+  },
+  {
+    "uuid": "999C4F68-9FD8-433C-B433-7EF27284FAE1",
+    "date": "2026-10-05",
+    "timestamp": "2026-10-05T11:41:24Z",
+    "activity": "Rowing",
+    "duration_min": 10,
+    "zone1_min": 0.3,
+    "zone2_min": 6.5,
+    "zone3_min": 3.3,
+    "zone4_min": 0,
+    "avg_hr": 130,
+    "distance_mi": null,
+    "rowing_program": "10 min Make the Leap Row (Breathe, with Mac Evans, Lake Lure)",
+    "rowing_distance_m": 1476,
+    "rowing_duration_min": 10,
+    "rowing_avg_split": "3:23.2",
+    "rowing_stroke_rate_spm": 22,
+    "rowing_avg_watts": 46,
+    "rowing_drag": 104,
+    "rowing_piece": "work"
+  },
+  {
+    "uuid": "CE2D28FA-8D67-4113-BA92-3AA5485A6235",
+    "date": "2026-10-05",
+    "timestamp": "2026-10-05T12:01:28Z",
+    "activity": "Walking",
+    "duration_min": 26.9,
+    "zone1_min": 10.5,
+    "zone2_min": 15,
+    "zone3_min": 1.4,
+    "zone4_min": 0,
+    "avg_hr": 111,
+    "distance_mi": 0.95
   }
 ]
