@@ -36,4 +36,17 @@ jobs:
           git add src/data/zone2_log.json src/data/activities.json
           git diff --cached --quiet && echo "Nothing new to import" && exit 0
           git commit -m "Import Zone2 session from phone"
-          git push
+          # Retry push on transient failures (e.g. GitHub 500s) so a single
+          # infra hiccup can't strand the pending file unprocessed. Rebase
+          # onto any commits that landed in between attempts.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed, retrying in 10s..."
+            sleep 10
+            git fetch origin main
+            git rebase origin/main
+          done
+          echo "::error::Push failed after 5 attempts"
+          exit 1

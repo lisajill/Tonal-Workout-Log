@@ -7642,5 +7642,236 @@
     "total_work_kj": 6,
     "tonal_activity_id": "c98a7fcd-6187-436a-bf07-69b96b939297",
     "notes": "First run of \"Upper A \u2014 Push\" from the new Heavy Six rotation (custom-built today). Bench Press 3x4 (20/22/20 lb), Lateral Raise 3x5 (6/7/7 lb \u2014 swapped in for Standing Overhead Press since that pattern was already hit yesterday), Half Kneeling Single-Arm Pulldown (Contralateral) 3x5/side (24/24/30/30/30/30 lb). 100% movement target, 0 coaching cues. Followed immediately by a 10-min Breathe row (\"Make the Leap Row\" with Mac Evans) rather than adding a 4th movement \u2014 complementary volume instead of piling more onto chest/shoulders/triceps. Post-readiness reflects both pieces combined. Pre-readiness not captured before this session."
+  },
+  {
+    "date": "2026-10-06",
+    "workout": "Beginner Basics Pilates",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": 89,
+    "avg_hr": 94,
+    "max_hr": 120,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 78,
+      "shoulders": 84,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 71,
+      "hamstrings": 69,
+      "quads": 81,
+      "calves": 100,
+      "abs": 81,
+      "obliques": 98,
+      "back": 92,
+      "chest": 72,
+      "shoulders": 72,
+      "biceps": 95,
+      "triceps": 84
+    },
+    "prs": {},
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings"
+    ],
+    "muscles_low_volume": [
+      "quads",
+      "abs",
+      "triceps"
+    ],
+    "movements": [
+      {
+        "name": "Roll Down",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Supine Arms with C-Curve",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 9,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          }
+        ]
+      },
+      {
+        "name": "Feet in Straps Frog Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 7,
+            "weight_lbs": 5,
+            "duration_sec": 50
+          }
+        ]
+      },
+      {
+        "name": "The Hundred",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 50
+          }
+        ]
+      },
+      {
+        "name": "Half Roll Down with Wide Row",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Draw a Sword",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Single-Leg Circles",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Side Lying Leg Sweep",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          },
+          {
+            "reps": 7,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Side Lying Leg Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          },
+          {
+            "reps": 7,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Hip Lift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 3,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Leg Circles",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 3,
+            "weight_lbs": 5,
+            "duration_sec": 50
+          }
+        ]
+      },
+      {
+        "name": "Serve a Tray",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 7,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Pulling Straps Triceps Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 13,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          }
+        ]
+      },
+      {
+        "name": "Teaser",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 1,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-10-06T07:48:11.038-04:00",
+    "duration": 34.05,
+    "total_volume": 2111,
+    "total_reps": 105,
+    "time_under_tension": 20.62,
+    "total_work_kj": 6,
+    "tonal_activity_id": "ed4ebfad-fa62-4427-a303-7ba140d29d34",
+    "notes": "Rest-day pick: Tonal's \"Beginner Basics Pilates\" guided class (light 5 lb resistance throughout, not bodyweight-only like the manual routine originally planned). 34 min, 2,111 lb volume, 105 reps, 20.6 min TUT, 89 kcal, HR 94/120 avg/max. Hip/leg-focused moves (Frog Press, Side Lying Leg Sweep/Press, Hip Lift, Single-Leg Circles) hit glutes and hamstrings harder than expected for a \"gentle\" session (71%/69% post-readiness) \u2014 outer and inner thigh soreness reported, inner-thigh/adductor work being a nice incidental bonus given Tonal doesn't otherwise track adductors. Chest/shoulders (still recovering from Monday's Upper A) stayed essentially untouched (72/72, barely below the 78/84 pre-readiness) \u2014 correctly avoided stacking on the muscles that needed the rest. Teaser done on bench with bent knees (beginner-friendly variant). Energy 5, vibes 5, sweat dry."
   }
 ]
