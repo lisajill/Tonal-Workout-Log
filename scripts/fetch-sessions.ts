@@ -147,9 +147,14 @@ async function main() {
   for (const s of existing) {
     if (s.tonal_activity_id) byActivityId.set(s.tonal_activity_id, s)
     byDateAndName.set(`${s.date}::${s.workout}`, s)
-    // Manual (off-Tonal) entries are already-resolved events from another source —
-    // never let a real Tonal activity fall back onto one via date-only matching.
-    if (!s.tonal_activity_id?.startsWith('manual')) byDate.set(s.date, s)
+    // Date-only fallback is only safe for entries with NO tonal_activity_id at all —
+    // i.e. genuinely legacy rows never tied to a real API activity. Any entry that
+    // already has an ID (manual-* or a real Tonal UUID) is already fully resolved to
+    // its own specific session and must never be a date-only match target for a
+    // *different* activity — multiple real sessions on the same day are now routine
+    // (2+ Tonal workouts/day), and this fallback previously let a second same-day
+    // activity silently overwrite the first one's identity and numbers.
+    if (!s.tonal_activity_id) byDate.set(s.date, s)
   }
 
   const merged: SessionEntry[] = []
