@@ -7873,5 +7873,179 @@
     "total_work_kj": 6,
     "tonal_activity_id": "ed4ebfad-fa62-4427-a303-7ba140d29d34",
     "notes": "Rest-day pick: Tonal's \"Beginner Basics Pilates\" guided class (light 5 lb resistance throughout, not bodyweight-only like the manual routine originally planned). 34 min, 2,111 lb volume, 105 reps, 20.6 min TUT, 89 kcal, HR 94/120 avg/max. Hip/leg-focused moves (Frog Press, Side Lying Leg Sweep/Press, Hip Lift, Single-Leg Circles) hit glutes and hamstrings harder than expected for a \"gentle\" session (71%/69% post-readiness) \u2014 outer and inner thigh soreness reported, inner-thigh/adductor work being a nice incidental bonus given Tonal doesn't otherwise track adductors. Chest/shoulders (still recovering from Monday's Upper A) stayed essentially untouched (72/72, barely below the 78/84 pre-readiness) \u2014 correctly avoided stacking on the muscles that needed the rest. Teaser done on bench with bent knees (beginner-friendly variant). Energy 5, vibes 5, sweat dry."
+  },
+  {
+    "date": "2026-10-07",
+    "workout": "Upper B \u2014 Pull",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": 95,
+      "hamstrings": 92,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 97,
+      "shoulders": 97,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 95,
+      "hamstrings": 91,
+      "quads": 100,
+      "calves": 100,
+      "abs": 93,
+      "obliques": 82,
+      "back": 75,
+      "chest": 98,
+      "shoulders": 97,
+      "biceps": 92,
+      "triceps": 81
+    },
+    "prs": {},
+    "muscles_high_volume": [
+      "back",
+      "obliques"
+    ],
+    "muscles_low_volume": [
+      "triceps",
+      "abs",
+      "biceps"
+    ],
+    "movements": [
+      {
+        "name": "Bent Over Row",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 23
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 24
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 24
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 120
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 90
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 90
+          }
+        ]
+      },
+      {
+        "name": "Reverse Grip Barbell Triceps Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 14
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 15
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 15
+          }
+        ]
+      },
+      {
+        "name": "Standing Chop",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 26
+          }
+        ]
+      },
+      {
+        "name": "Half Kneeling Pallof Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 17
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 17
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 16
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 16
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 12
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-10-07T07:58:46.36-04:00",
+    "duration": 32.45,
+    "total_volume": 2744,
+    "total_reps": 95,
+    "time_under_tension": 11.87,
+    "total_work_kj": 9,
+    "tonal_activity_id": "29fd1f2b-1df0-4c5a-852f-38572cc9b11a",
+    "notes": "Upper B debut, with Half-Kneeling Pallof Press added as a core finisher after Standing Chop (anti-rotation complement to Chop's rotational pattern). Bent Over Row 3x4 (23/24/24 lb). Reverse Grip Triceps Extension 3x5 (14/15/15 lb). Standing Chop 3x5/side (26 lb). Pallof Press was genuinely brutal \u2014 true failure on the first rep (4/5 reps at 17 lb), had to reduce weight twice across the 3 rounds (17\u219216\u219212 lb) to complete the set. Max effort, energy 5, vibes 5. Hips/legs correctly left untouched (glutes/hamstrings/quads flat from pre to post) \u2014 protected the tissue still recovering from Tuesday's Pilates, as planned. Back and obliques took the real hit (75%, 82%)."
   }
 ]
