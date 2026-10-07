@@ -7664,7 +7664,8 @@
       "chest": 78,
       "shoulders": 84,
       "biceps": 100,
-      "triceps": 100
+      "triceps": 100,
+      "adductors": 100
     },
     "post_readiness": {
       "glutes": 71,
@@ -7677,7 +7678,8 @@
       "chest": 72,
       "shoulders": 72,
       "biceps": 95,
-      "triceps": 84
+      "triceps": 84,
+      "adductors": 58
     },
     "prs": {},
     "muscles_high_volume": [
@@ -7872,7 +7874,7 @@
     "time_under_tension": 20.62,
     "total_work_kj": 6,
     "tonal_activity_id": "ed4ebfad-fa62-4427-a303-7ba140d29d34",
-    "notes": "Rest-day pick: Tonal's \"Beginner Basics Pilates\" guided class (light 5 lb resistance throughout, not bodyweight-only like the manual routine originally planned). 34 min, 2,111 lb volume, 105 reps, 20.6 min TUT, 89 kcal, HR 94/120 avg/max. Hip/leg-focused moves (Frog Press, Side Lying Leg Sweep/Press, Hip Lift, Single-Leg Circles) hit glutes and hamstrings harder than expected for a \"gentle\" session (71%/69% post-readiness) \u2014 outer and inner thigh soreness reported, inner-thigh/adductor work being a nice incidental bonus given Tonal doesn't otherwise track adductors. Chest/shoulders (still recovering from Monday's Upper A) stayed essentially untouched (72/72, barely below the 78/84 pre-readiness) \u2014 correctly avoided stacking on the muscles that needed the rest. Teaser done on bench with bent knees (beginner-friendly variant). Energy 5, vibes 5, sweat dry."
+    "notes": "Rest-day pick: Tonal's \"Beginner Basics Pilates\" guided class (light 5 lb resistance throughout, not bodyweight-only like the manual routine originally planned). 34 min, 2,111 lb volume, 105 reps, 20.6 min TUT, 89 kcal, HR 94/120 avg/max. Hip/leg-focused moves (Frog Press, Side Lying Leg Sweep/Press, Hip Lift, Single-Leg Circles) hit glutes and hamstrings harder than expected for a \"gentle\" session (71%/69% post-readiness) \u2014 outer and inner thigh soreness reported, inner-thigh/adductor work being a nice incidental bonus given Tonal doesn't otherwise track adductors. Chest/shoulders (still recovering from Monday's Upper A) stayed essentially untouched (72/72, barely below the 78/84 pre-readiness) \u2014 correctly avoided stacking on the muscles that needed the rest. Teaser done on bench with bent knees (beginner-friendly variant). Energy 5, vibes 5, sweat dry. Adductors (not tracked by Tonal's readiness API) estimated manually via the off-Tonal role\u00d7exposure rubric: Feet in Straps Frog Press as primary mover, reinforced by secondary adduction/crossing-pattern involvement in Single-Leg Circles, Leg Circles, and Side Lying Leg Press \u2014 primary-mover-in-1-2-exercises bucket, \u221242, post_readiness \u2248 58%. Confirmed by self-reported inner-thigh soreness the next day."
   },
   {
     "date": "2026-10-07",
