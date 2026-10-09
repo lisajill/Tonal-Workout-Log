@@ -42,7 +42,7 @@ No test suite. No linter configured.
 - `sweat` — text label: `dry` / `light` / `moderate` / `heavy`. Never a number.
 - `shot_day` — boolean, true on GLP-1 injection days
 - `notes` — free text for session observations: form issues, pain/discomfort, fatigue, anything worth tracking. Always populate when there's something notable. Displayed in amber in the Session Log.
-- `functional_strength`, `movement_quality`, `movement_quality_delta` — from Tonal Goal Progress screen (manual entry)
+- `functional_strength`, `movement_quality`, `movement_quality_delta` — auto-fetched by `npm run fetch` via `client.getMetricScores()` (metric IDs: FS `e46f85cf-a9bc-42b4-836e-52c6621e7481`, MQ `5b8646fd-1df0-4b19-8c5b-72f8ad816955`). **Important: these are WEEKLY cumulative totals, not per-session values** — the number reflects the running total across every session so far that week, not what any single session alone contributed. `movement_quality_delta` is computed as this week's score minus last week's. The fetch script applies the latest known week's score to every session touched in that run (matching how it was always hand-entered — "whatever the screen shows as of now"). Target ranges for these are available via `client.getTargetScores()` if ever needed. `getGoalMetrics()` also exposes Volume, Work, Strength Sets, Power Reps, and Endurance Sets by the same weekly-cumulative mechanism, not yet wired into fetch.
 - `strength_overall`, `strength_upper`, `strength_core`, `strength_lower` — from Tonal Strength Score screen (manual entry). Stored in both sessions.json and Obsidian frontmatter. Also add a new entry to the `HISTORY` array in `StrengthScores.jsx` after each session.
 
 **Tailwind design tokens** (defined in `tailwind.config.js`):

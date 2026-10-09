@@ -397,7 +397,7 @@
       "calves"
     ],
     "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0",
-    "notes": "Right knee discomfort on Standing Leg Extension \u2014 monitor",
+    "notes": "Right knee discomfort on Standing Leg Extension — monitor",
     "timestamp": "2026-04-05T10:22:44.845581-04:00",
     "movements": [
       {
@@ -550,7 +550,7 @@
     "date": "2026-04-18",
     "shot_day": true,
     "bodymap": "/BodyMapApril18.png",
-    "workout": "Heavy Express \u2014 Hip Thrust + Hamstring",
+    "workout": "Heavy Express — Hip Thrust + Hamstring",
     "energy_level": 1,
     "phase": "recovery",
     "subjective_rating": 4.5,
@@ -761,7 +761,7 @@
   {
     "date": "2026-04-19",
     "bodymap": "/BodyMapApril19.png",
-    "workout": "Heavy Express \u2014 Glute Bridge + Hamstring + Quad",
+    "workout": "Heavy Express — Glute Bridge + Hamstring + Quad",
     "energy_level": 1,
     "phase": "active",
     "subjective_rating": 5,
@@ -852,7 +852,7 @@
       "calves"
     ],
     "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421",
-    "notes": "Right knee twinge at 80\u201390\u00b0 on leg extension \u2014 not pain, held weight steady",
+    "notes": "Right knee twinge at 80–90° on leg extension — not pain, held weight steady",
     "timestamp": "2026-04-19T09:50:34.720644-04:00",
     "movements": [
       {
@@ -961,7 +961,7 @@
     "date": "2026-04-25",
     "shot_day": true,
     "bodymap": "/BodyMapApril25.png",
-    "workout": "Heavy Express \u2014 Floor Bridge + Ankle Straps",
+    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": 4,
@@ -1165,7 +1165,7 @@
   {
     "date": "2026-04-25",
     "shot_day": true,
-    "workout": "Free Lift \u2014 Barbell Hip Thrust",
+    "workout": "Free Lift — Barbell Hip Thrust",
     "bodymap": "/BodyMapApril25b.png",
     "energy_level": 4,
     "phase": "active",
@@ -1245,7 +1245,7 @@
   },
   {
     "date": "2026-04-26",
-    "workout": "Free Lift \u2014 Barbell Hip Thrust",
+    "workout": "Free Lift — Barbell Hip Thrust",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": null,
@@ -1371,7 +1371,7 @@
     "total_work_kj": 7,
     "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
     "bodymap": "/BodyMapApril26.png",
-    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80\u00b0 knee flexion where twitch/pain occurs",
+    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80° knee flexion where twitch/pain occurs",
     "timestamp": "2026-04-26T09:45:11.54657-04:00",
     "movements": [
       {
@@ -1622,7 +1622,7 @@
     "time_under_tension": 3.3,
     "total_work_kj": 4,
     "tonal_activity_id": "dc8ec760-817d-458e-9758-fc33a09c5874",
-    "notes": "Dizziness on last 2 leg extension sets \u2014 monitor. Strong otherwise.",
+    "notes": "Dizziness on last 2 leg extension sets — monitor. Strong otherwise.",
     "strength_overall": 468,
     "strength_upper": 461,
     "strength_core": 450,
@@ -1744,7 +1744,7 @@
     "strength_upper": 461,
     "strength_core": 450,
     "strength_lower": 494,
-    "notes": "Tonal crashed mid-workout during bench press sets 2\u20133. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs \u00d7 10), seated lat pulldown 1 set (25 lbs \u00d7 5). Neutral lat pulldown not reached.",
+    "notes": "Tonal crashed mid-workout during bench press sets 2–3. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs × 10), seated lat pulldown 1 set (25 lbs × 5). Neutral lat pulldown not reached.",
     "shot_day": true
   },
   {
@@ -1962,7 +1962,7 @@
     "functional_strength": 244,
     "movement_quality": 127,
     "movement_quality_delta": 83,
-    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs \u2014 strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked). Followed by 2\u00d730s Farmer March free lift, 28 lbs."
+    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs — strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked). Followed by 2×30s Farmer March free lift, 28 lbs."
   },
   {
     "date": "2026-05-03",
@@ -2029,7 +2029,7 @@
     "total_work_kj": 0,
     "tonal_activity_id": "e14b0170-141a-4d6e-a243-f3983650ff25",
     "shot_day": false,
-    "notes": "Post-workout custom lift \u2014 2 sets Farmer March, 28 lbs.",
+    "notes": "Post-workout custom lift — 2 sets Farmer March, 28 lbs.",
     "merged_into": "53adbfc8-8448-4abf-913e-a9ae9123553f"
   },
   {
@@ -2308,11 +2308,11 @@
     "strength_upper": 462,
     "strength_core": 454,
     "strength_lower": 524,
-    "notes": "Left hand grip limited \u2014 lowered weights asymmetrically on all movements. Bent knee calf raises (off-machine, 2 sets) during Farmer March rest. Short NRD pre-session warmup merged in."
+    "notes": "Left hand grip limited — lowered weights asymmetrically on all movements. Bent knee calf raises (off-machine, 2 sets) during Farmer March rest. Short NRD pre-session warmup merged in."
   },
   {
     "date": "2026-05-08",
-    "workout": "Hip Thrust \u2014 Ankle Strap & Grip",
+    "workout": "Hip Thrust — Ankle Strap & Grip",
     "energy_level": 5,
     "phase": "active",
     "subjective_rating": 5,
@@ -2587,7 +2587,7 @@
     "strength_core": 454,
     "strength_lower": 534,
     "shot_day": false,
-    "notes": "Hands tingling throughout; reduced pulldown weight progressively (43\u219238\u219234 lbs) and hammer curl dropped to 30 lbs on set 3 due to hand/arm fatigue. Energy 5/5 despite fatigued glutes and hamstrings going in."
+    "notes": "Hands tingling throughout; reduced pulldown weight progressively (43→38→34 lbs) and hammer curl dropped to 30 lbs on set 3 due to hand/arm fatigue. Energy 5/5 despite fatigued glutes and hamstrings going in."
   },
   {
     "date": "2026-05-09",
@@ -2851,7 +2851,7 @@
     "strength_upper": 487,
     "strength_core": 456,
     "strength_lower": 535,
-    "notes": "Standing-only due to hair dye (no bending/lying). First time on standing push movements. Hands tingling throughout but manageable with press movements. Then free lift: Alternating Biceps Curl (strength+power PR at 15 lbs, dropped to 10), Triceps Kickbacks 3\u00d75@8, Pull Through progressive 30\u219235\u219240 lbs. Strong energy throughout."
+    "notes": "Standing-only due to hair dye (no bending/lying). First time on standing push movements. Hands tingling throughout but manageable with press movements. Then free lift: Alternating Biceps Curl (strength+power PR at 15 lbs, dropped to 10), Triceps Kickbacks 3×5@8, Pull Through progressive 30→35→40 lbs. Strong energy throughout."
   },
   {
     "date": "2026-05-09",
@@ -2963,7 +2963,7 @@
   },
   {
     "date": "2026-05-13",
-    "workout": "Hotel Gym \u2014 Life Fitness Circuit",
+    "workout": "Hotel Gym — Life Fitness Circuit",
     "tonal_activity_id": "manual-hotel-gym-20260513",
     "timestamp": "2026-05-13T06:00:00-04:00",
     "energy_level": 5,
@@ -3113,7 +3113,7 @@
         ]
       }
     ],
-    "notes": "Hotel gym (Life Fitness machines), circuit format 3\u20134 rounds. Leg extension: right knee pain R1 at 70 lbs; dropped to 50 lbs R2\u20133, bilateral knee pain on descent past ~30 deg. Chest press: dropped to 50 lbs for last 2 reps in R2\u20133. Finished with 3\u00d75 goblet squat and 3\u00d78 hip thrust (40 lb DB). 20 min sauna post-workout."
+    "notes": "Hotel gym (Life Fitness machines), circuit format 3–4 rounds. Leg extension: right knee pain R1 at 70 lbs; dropped to 50 lbs R2–3, bilateral knee pain on descent past ~30 deg. Chest press: dropped to 50 lbs for last 2 reps in R2–3. Finished with 3×5 goblet squat and 3×8 hip thrust (40 lb DB). 20 min sauna post-workout."
   },
   {
     "date": "2026-05-22",
@@ -3420,7 +3420,7 @@
     "strength_upper": 487,
     "strength_core": 456,
     "strength_lower": 435,
-    "notes": "Adductors and inner thighs still sore from first equestrian session (May 22) \u2014 not in readiness schema. Upper-body pull focus; no lower body work.",
+    "notes": "Adductors and inner thighs still sore from first equestrian session (May 22) — not in readiness schema. Upper-body pull focus; no lower body work.",
     "program": "Triple Threat: Dynamic Gains"
   },
   {
@@ -3661,7 +3661,7 @@
     "functional_strength": 100,
     "movement_quality": 64,
     "movement_quality_delta": -33,
-    "notes": "Heavy lower body on equestrian soreness \u2014 glutes and quads already compromised going in. Assisted Reverse Lunge substituted for Resisted Lunge. Got dizzy and nauseated mid-session, thought had a fever (no fever) \u2014 3 days into Xyzal after doc switched from Zyrtec; dizziness consistent with antihistamine transition side effects, not GI. Pre-workout: 3 eggs, 100g egg whites, green tea, Yogi spiced vanilla tea, 20g creatine 15 min before. Energy 1 but subjective 3; lower strength score jumped 435\u2192536."
+    "notes": "Heavy lower body on equestrian soreness — glutes and quads already compromised going in. Assisted Reverse Lunge substituted for Resisted Lunge. Got dizzy and nauseated mid-session, thought had a fever (no fever) — 3 days into Xyzal after doc switched from Zyrtec; dizziness consistent with antihistamine transition side effects, not GI. Pre-workout: 3 eggs, 100g egg whites, green tea, Yogi spiced vanilla tea, 20g creatine 15 min before. Energy 1 but subjective 3; lower strength score jumped 435→536."
   },
   {
     "date": "2026-05-27",
@@ -3862,7 +3862,7 @@
     "strength_upper": 486,
     "strength_core": 465,
     "strength_lower": 536,
-    "notes": "Energy 5, felt great. Rope handle on Rotational Lift rests on lower knuckle (MCP joint) of both thumbs \u2014 went down in weight due to discomfort. Concern given bilateral hand surgery history. Consider alternative attachment for this movement."
+    "notes": "Energy 5, felt great. Rope handle on Rotational Lift rests on lower knuckle (MCP joint) of both thumbs — went down in weight due to discomfort. Concern given bilateral hand surgery history. Consider alternative attachment for this movement."
   },
   {
     "date": "2026-05-28",
@@ -4112,7 +4112,7 @@
         ]
       }
     ],
-    "notes": "First session using Polar H10 chest strap \u2014 Apple Watch left off due to D-Moose hooks on both wrists."
+    "notes": "First session using Polar H10 chest strap — Apple Watch left off due to D-Moose hooks on both wrists."
   },
   {
     "date": "2026-05-31",
@@ -4366,7 +4366,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 536,
-    "notes": "Knee strap worn (patellar tendon strap) \u2014 minimal relief, likely needs full sleeve per PT consult. Energy 5/5, best session yet on this program. No PRs flagged."
+    "notes": "Knee strap worn (patellar tendon strap) — minimal relief, likely needs full sleeve per PT consult. Energy 5/5, best session yet on this program. No PRs flagged."
   },
   {
     "date": "2026-06-07",
@@ -4542,7 +4542,7 @@
   },
   {
     "date": "2026-06-13",
-    "workout": "Grip-Free 1 \u2014 Hip Power",
+    "workout": "Grip-Free 1 — Hip Power",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": 5,
@@ -4775,11 +4775,11 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 553,
-    "notes": "First GF1 session \u2014 new PRs across the board: Hip Thrust 110 lbs, Kickback 27 lbs, Hip Abduction 20 lbs. Unusually strong. Ankle Strap adduction: only did 2 sets (API logged 3); started 20 lbs, dropped to 15 (too many reps at 20). Next: 5 reps/side. Wore knee support brace \u2014 seemed to help. Rest fillers: clamshells 2\u00d715/side; bent-knee calf raises 2\u00d730s. Pre-workout: collagen + Vit C ~1hr before (Baar protocol). Ferritin at 6am, no Vit C, 2hr fast after (iron absorption protocol). Post-workout: Premier Protein shake. Sleep severely disrupted night before \u2014 woke every 15 min with heavy burping (GI distress). Shot day was Thu Jun 12 at new titrated dose 6.3mg; suspect last 2 shots were partial doses (air in pen) so may have hit a full dose after 2 weeks under-dosing. Strong performance despite this."
+    "notes": "First GF1 session — new PRs across the board: Hip Thrust 110 lbs, Kickback 27 lbs, Hip Abduction 20 lbs. Unusually strong. Ankle Strap adduction: only did 2 sets (API logged 3); started 20 lbs, dropped to 15 (too many reps at 20). Next: 5 reps/side. Wore knee support brace — seemed to help. Rest fillers: clamshells 2×15/side; bent-knee calf raises 2×30s. Pre-workout: collagen + Vit C ~1hr before (Baar protocol). Ferritin at 6am, no Vit C, 2hr fast after (iron absorption protocol). Post-workout: Premier Protein shake. Sleep severely disrupted night before — woke every 15 min with heavy burping (GI distress). Shot day was Thu Jun 12 at new titrated dose 6.3mg; suspect last 2 shots were partial doses (air in pen) so may have hit a full dose after 2 weeks under-dosing. Strong performance despite this."
   },
   {
     "date": "2026-06-14",
-    "workout": "Grip-Free 2 \u2014 Hamstring Burnout",
+    "workout": "Grip-Free 2 — Hamstring Burnout",
     "energy_level": 3,
     "phase": "active",
     "subjective_rating": 5,
@@ -4999,7 +4999,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 570,
-    "notes": "Energy 3 (home at 1am from Indigo Girls show). Rating 5 despite fatigue \u2014 glutes at 53% pre. Actively pushed above Smart Flex on all movements \u2014 manually added weight on top of SF bumps throughout. PRs on all 3 main movements reflect combined SF + user-directed progression. Prone SL hamstring curl: knees on bench (confirmed safer than hanging). All-time PRs: glute bridge 137 lbs, SL hamstring curl 31 lbs, bilateral hamstring curl 30 lbs. Warmup power PR at 75 lbs on bridge. Dry sweat. Tirzepatide still suppressing."
+    "notes": "Energy 3 (home at 1am from Indigo Girls show). Rating 5 despite fatigue — glutes at 53% pre. Actively pushed above Smart Flex on all movements — manually added weight on top of SF bumps throughout. PRs on all 3 main movements reflect combined SF + user-directed progression. Prone SL hamstring curl: knees on bench (confirmed safer than hanging). All-time PRs: glute bridge 137 lbs, SL hamstring curl 31 lbs, bilateral hamstring curl 30 lbs. Warmup power PR at 75 lbs on bridge. Dry sweat. Tirzepatide still suppressing."
   },
   {
     "date": "2026-06-18",
@@ -5295,11 +5295,11 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 605,
-    "notes": "Shot day (6.3mg tirzepatide). Hip thrust PRs on all 3 working sets \u2014 exceeded GF3 moderate target, beat GF1 PR of 110 lbs (new: 120 lbs). Prone bench hamstring curl: drop sets \u2014 started at 31 lbs, lowered to 27 then 25 for full ROM, working to failure. Standing leg extension: right knee pain even with brace, stopping before 80\u00b0 \u2014 brace being returned. Returning the brace."
+    "notes": "Shot day (6.3mg tirzepatide). Hip thrust PRs on all 3 working sets — exceeded GF3 moderate target, beat GF1 PR of 110 lbs (new: 120 lbs). Prone bench hamstring curl: drop sets — started at 31 lbs, lowered to 27 then 25 for full ROM, working to failure. Standing leg extension: right knee pain even with brace, stopping before 80° — brace being returned. Returning the brace."
   },
   {
     "date": "2026-06-19",
-    "workout": "GF \u2014 Bridge, Hip Flexors + Diagonal",
+    "workout": "GF — Bridge, Hip Flexors + Diagonal",
     "energy_level": 2,
     "phase": null,
     "subjective_rating": 3,
@@ -5527,7 +5527,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 606,
-    "notes": "Hip flexion block not set to alternating \u2014 ended up doing 5 reps each side as a single set instead of 3\u00d75 per side. Forgot banded lateral walk (rest block finisher not obvious). Standing bicycle: held on with one hand for balance while the other arm crunched \u2014 good movement to continue building."
+    "notes": "Hip flexion block not set to alternating — ended up doing 5 reps each side as a single set instead of 3×5 per side. Forgot banded lateral walk (rest block finisher not obvious). Standing bicycle: held on with one hand for balance while the other arm crunched — good movement to continue building."
   },
   {
     "date": "2026-06-27",
@@ -5583,7 +5583,7 @@
     "total_work_kj": 3,
     "tonal_activity_id": "de9b37c8-fa9e-4887-a6e2-b74adfd68771",
     "shot_day": null,
-    "notes": "Back-logged from screenshot (session wasn't captured at the time). Single-movement snack session \u2014 Barbell Hip Thrust only. New all-time PR: 146 lbs (up from 120 lbs on 6/18), flagged VOLUME PR in-app on the final set.",
+    "notes": "Back-logged from screenshot (session wasn't captured at the time). Single-movement snack session — Barbell Hip Thrust only. New all-time PR: 146 lbs (up from 120 lbs on 6/18), flagged VOLUME PR in-app on the final set.",
     "movements": [
       {
         "name": "Barbell Hip Thrust",
@@ -5610,7 +5610,7 @@
   },
   {
     "date": "2026-07-05",
-    "workout": "Heavy Express \u2014 Floor Bridge + Ankle Straps",
+    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
     "energy_level": 2,
     "phase": "active",
     "subjective_rating": 3,
@@ -5677,7 +5677,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 616,
-    "notes": "Energy 2, vibes 3 \u2014 Zepbound titration side effects. Skipped the 4th movement in the session (workout listed 4 movements total) due to titration side effects; did the 3 logged. Titrating to 7.5mg dose Thursday. Glutes/hamstrings still recovering (50%) going into this session; new PRs on all 3 logged movements (glute bridge 143 lbs strength+volume, donkey kick 32 lbs strength, hamstring curl 33 lbs strength).",
+    "notes": "Energy 2, vibes 3 — Zepbound titration side effects. Skipped the 4th movement in the session (workout listed 4 movements total) due to titration side effects; did the 3 logged. Titrating to 7.5mg dose Thursday. Glutes/hamstrings still recovering (50%) going into this session; new PRs on all 3 logged movements (glute bridge 143 lbs strength+volume, donkey kick 32 lbs strength, hamstring curl 33 lbs strength).",
     "movements": [
       {
         "name": "Barbell Lying Glute Bridge",
@@ -5843,7 +5843,7 @@
     "time_under_tension": 4.95,
     "total_work_kj": 3,
     "tonal_activity_id": "65d9ca6e-90f3-4f64-a3b9-77676b7250dd",
-    "notes": "Energy 2, vibes 5 \u2014 First hands-on/upper-body session since the carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Kept up hands-free lower body work (Grip-Free Heavy Rotation) through Jul 5, then paused ~2 weeks \u2014 ran out of steam plus a heat wave. Surgeon cleared hands Jul 17; padded wrist-support gloves arrived same day \u2014 https://a.co/d/0g614LfS \u2014 tried them today. Felt fully recovered going in (pre-readiness 100% across the board). On Bench Press (2nd/working set), trainer added a modification: hold knees up in a dead-bug-style tabletop anti-extension position during the press \u2014 noticeably harder than the standard version.",
+    "notes": "Energy 2, vibes 5 — First hands-on/upper-body session since the carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Kept up hands-free lower body work (Grip-Free Heavy Rotation) through Jul 5, then paused ~2 weeks — ran out of steam plus a heat wave. Surgeon cleared hands Jul 17; padded wrist-support gloves arrived same day — https://a.co/d/0g614LfS — tried them today. Felt fully recovered going in (pre-readiness 100% across the board). On Bench Press (2nd/working set), trainer added a modification: hold knees up in a dead-bug-style tabletop anti-extension position during the press — noticeably harder than the standard version.",
     "functional_strength": 34,
     "movement_quality": 18,
     "strength_overall": 523,
@@ -5961,7 +5961,7 @@
     "total_work_kj": 4,
     "tonal_activity_id": "ed371c44-edc0-496a-8aef-f6006ce9e1ce",
     "shot_day": null,
-    "notes": "Energy 3, vibes 3. Two brand-new movements (Iso Split Squat Lift, Resisted DNS Star) \u2014 immediate PRs on first attempt, as expected for new movements. Performed Iso Split Squat Lift kneeling rather than the standard standing split-squat stance \u2014 knee-friendly modification."
+    "notes": "Energy 3, vibes 3. Two brand-new movements (Iso Split Squat Lift, Resisted DNS Star) — immediate PRs on first attempt, as expected for new movements. Performed Iso Split Squat Lift kneeling rather than the standard standing split-squat stance — knee-friendly modification."
   },
   {
     "date": "2026-07-24",
@@ -6047,7 +6047,7 @@
     "time_under_tension": 4.42,
     "total_work_kj": 4,
     "tonal_activity_id": "18c57b5f-4f78-45e2-a8f4-086f9f131e81",
-    "notes": "Stopped ~2/3 through \u2014 real driver was grip/hand fatigue, not low energy or pain. On Barbell Single-Leg RDL, could no longer hold the bar (grip gave out) despite no pain \u2014 surgeon clearance is to lift and self-monitor, stop if it hurts, and this wasn't a pain stop. Programming lesson: starting the session with Single-Leg RDL (even kick-stand modified) was too aggressive for current hand-return status \u2014 sustained bar grip under single-leg balance demand exceeded current grip endurance. Also low energy/vibes (1/5 both) and very low pre-workout carb intake (~34g by session start) likely compounded. Assumed 100% recovered pre-workout.",
+    "notes": "Stopped ~2/3 through — real driver was grip/hand fatigue, not low energy or pain. On Barbell Single-Leg RDL, could no longer hold the bar (grip gave out) despite no pain — surgeon clearance is to lift and self-monitor, stop if it hurts, and this wasn't a pain stop. Programming lesson: starting the session with Single-Leg RDL (even kick-stand modified) was too aggressive for current hand-return status — sustained bar grip under single-leg balance demand exceeded current grip endurance. Also low energy/vibes (1/5 both) and very low pre-workout carb intake (~34g by session start) likely compounded. Assumed 100% recovered pre-workout.",
     "functional_strength": 50,
     "movement_quality": 24,
     "strength_overall": 523,
@@ -6133,7 +6133,7 @@
             "reps": 0,
             "weight_lbs": 40,
             "duration_sec": 20,
-            "note": "Had to break and regrip mid-set \u2014 left hand. No pain, no tingling; grip fatigue only, resolved."
+            "note": "Had to break and regrip mid-set — left hand. No pain, no tingling; grip fatigue only, resolved."
           },
           {
             "reps": 0,
@@ -6177,7 +6177,7 @@
     "strength_upper": 487,
     "strength_core": 466,
     "strength_lower": 616,
-    "notes": "Energy 1, vibes 3, sweat dry. Low energy but good vibes \u2014 still notably better vibes than yesterday. PR (volume) on Standing Chop set 2. Had to break and regrip mid-set on Suitcase March (left hand) \u2014 no pain, no tingling, grip fatigue only, resolved immediately."
+    "notes": "Energy 1, vibes 3, sweat dry. Low energy but good vibes — still notably better vibes than yesterday. PR (volume) on Standing Chop set 2. Had to break and regrip mid-set on Suitcase March (left hand) — no pain, no tingling, grip fatigue only, resolved immediately."
   },
   {
     "date": "2026-07-26",
@@ -6310,7 +6310,7 @@
     "strength_upper": 487,
     "strength_core": 466,
     "strength_lower": 616,
-    "notes": "No hand issues today \u2014 about the right amount of hand-load work. Power PR on Goblet Squat to Bench, set 2 (6 reps @ 43 lbs)."
+    "notes": "No hand issues today — about the right amount of hand-load work. Power PR on Goblet Squat to Bench, set 2 (6 reps @ 43 lbs)."
   },
   {
     "date": "2026-08-01",
@@ -6429,7 +6429,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 616,
-    "notes": "Energy 4, vibes 4, sweat dry (both Tonal and Hydrow today). Power PR on Iso Split Squat Lift, set 3 (8 reps @ 12 lbs). Tonal then Hydrow back-to-back. Hydrow row afterward (15 min, first full-length piece): hands felt fine, but wrists got sore during/after \u2014 first time wrist specifically (not grip) has been the limiting factor. Possibly duration or stacking with Tonal same-day; not yet isolated."
+    "notes": "Energy 4, vibes 4, sweat dry (both Tonal and Hydrow today). Power PR on Iso Split Squat Lift, set 3 (8 reps @ 12 lbs). Tonal then Hydrow back-to-back. Hydrow row afterward (15 min, first full-length piece): hands felt fine, but wrists got sore during/after — first time wrist specifically (not grip) has been the limiting factor. Possibly duration or stacking with Tonal same-day; not yet isolated."
   },
   {
     "date": "2026-08-02",
@@ -6658,7 +6658,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 618,
-    "notes": "Right leg felt weaker than left. Standing leg consistently felt like it was doing more work regardless of which side stood \u2014 matches known right hip stability imbalance."
+    "notes": "Right leg felt weaker than left. Standing leg consistently felt like it was doing more work regardless of which side stood — matches known right hip stability imbalance."
   },
   {
     "date": "2026-09-06",
@@ -6866,11 +6866,11 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 618,
-    "functional_strength": 36,
-    "movement_quality": 50,
+    "functional_strength": 310,
+    "movement_quality": 263,
     "notes": "First workout back after hysteroscopy on 2026-08-23 (14 days prior). Lots of walking during recovery. Pre-workout readiness 100% across the board. Full-body restart (Workout by Tia): Goblet Squat 32 lb, Seated Row 23-24 lb, RDL 39-40 lb, Bench Press ~19 lb/cable, plus mobility (Cat-Cow, Dead Bug, Bretzel, hamstring stretch). Energy 3, vibes 4, sweat dry. 64 working reps, 16.75 min. Post-readiness: glutes 54 / quads 65 / hamstrings 69 / back 74 the biggest drops.",
     "shot_day": false,
-    "movement_quality_delta": 50
+    "movement_quality_delta": 263
   },
   {
     "date": "2026-09-07",
@@ -6965,10 +6965,10 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 618,
-    "functional_strength": 47,
-    "movement_quality": 57,
-    "movement_quality_delta": 7,
-    "notes": "Return-week session 2 (day after the 9/6 restart). Quick Fit: Seated Pallof Press (worked up to 15 lb, and that was a stretch \u2014 prior Pallof PR was 24 lb, so a clear post-layoff regression on anti-rotation) + Incline Pillar Bridge, forearms, 2x30s. 13 min, dry during the Tonal portion. Energy 5, vibes 5 \u2014 best-feeling session of the return so far. Rowed on the Hydrow immediately after (see zone2_log). Full high-fiber pre-workout meal ~10 min before. Deliberately kept off the posterior chain \u2014 9/6 DOMS still moderate (glutes stuck at 77 pre and post)."
+    "functional_strength": 310,
+    "movement_quality": 263,
+    "movement_quality_delta": 263,
+    "notes": "Return-week session 2 (day after the 9/6 restart). Quick Fit: Seated Pallof Press (worked up to 15 lb, and that was a stretch — prior Pallof PR was 24 lb, so a clear post-layoff regression on anti-rotation) + Incline Pillar Bridge, forearms, 2x30s. 13 min, dry during the Tonal portion. Energy 5, vibes 5 — best-feeling session of the return so far. Rowed on the Hydrow immediately after (see zone2_log). Full high-fiber pre-workout meal ~10 min before. Deliberately kept off the posterior chain — 9/6 DOMS still moderate (glutes stuck at 77 pre and post)."
   },
   {
     "date": "2026-09-13",
@@ -7130,9 +7130,9 @@
     "strength_upper": 486,
     "strength_core": 465,
     "strength_lower": 618,
-    "functional_strength": 119,
-    "movement_quality": 80,
-    "movement_quality_delta": 23,
+    "functional_strength": 310,
+    "movement_quality": 263,
+    "movement_quality_delta": 263,
     "notes": "Quick Fit: Intro to Circuit Training - first full-body circuit of the return block. 15 min, 2,172 lb volume, 84 reps, 7.2 min TUT, 6 kJ, 63 kcal, HR 128/162. Every set was duration-capped (30s / 20s blocks), so no PRs - load was whatever fit the clock. Energy 2, vibes 3, PMS. Felt feverish partway through and shut it down: the planned Hydrow row was cancelled and she was exhausted after. Cardiovascular cost was way out of line with the loads - 5.9 min Zone 3 + 1.4 min Zone 4 out of 15 min, max 162, on a 40 lb goblet squat and 11 lb overhead press. Pre-readiness was a clean 100 across all 11 muscles (fully rested); post dropped hard on glutes (32), quads (64), shoulders (66) and back (74). Treat the feverish feeling as a possible illness signal, not just PMS fatigue - hold intensity until it clears."
   },
   {
@@ -7255,7 +7255,10 @@
     "calories": 28,
     "avg_hr": 113,
     "max_hr": 147,
-    "notes": "Second session of the day, upper-body push-pull, coached by Kristina. 10:53 duration, 1,802 lb volume, 64 reps, 4:52 TUT, 5.3 kJ, 100% movement target, 2 coaching cues. Bench Press 6@16/6@17 (1 warmup set), Bent Over Row 2x8@20, Standing Overhead Press 2x6@12, Incline Chest Fly 2x8@8. HR 113/147 avg/max (Zones/Tonal source), 28 kcal. Energy 5, vibes 5, sweat mild \u2014 user described it as a tough session (\"that sucked\") despite good energy/vibes going in. Done ~1 hour after the morning bodyweight circuit; chest/shoulders readiness dropped hardest (61/69), consistent with bench press + overhead press being the primary loaded movements."
+    "notes": "Second session of the day, upper-body push-pull, coached by Kristina. 10:53 duration, 1,802 lb volume, 64 reps, 4:52 TUT, 5.3 kJ, 100% movement target, 2 coaching cues. Bench Press 6@16/6@17 (1 warmup set), Bent Over Row 2x8@20, Standing Overhead Press 2x6@12, Incline Chest Fly 2x8@8. HR 113/147 avg/max (Zones/Tonal source), 28 kcal. Energy 5, vibes 5, sweat mild — user described it as a tough session (\"that sucked\") despite good energy/vibes going in. Done ~1 hour after the morning bodyweight circuit; chest/shoulders readiness dropped hardest (61/69), consistent with bench press + overhead press being the primary loaded movements.",
+    "functional_strength": 310,
+    "movement_quality": 263,
+    "movement_quality_delta": 263
   },
   {
     "date": "2026-10-04",
@@ -7473,7 +7476,7 @@
         ]
       }
     ],
-    "notes": "Off-Tonal day by choice \u2014 skipped the machine to watch leadership videos while moving instead. Full bodyweight circuit: 3x10 squats to couch; 3x30s standing bicycle crunches; 3 rounds of bird dog (on fists, not palms, due to a carpal issue), dead bug, lying side clamshell, crunches, and glute raises (30s each); finished with 3x30s pancake stretch and L-stretch (active flex/tense) targeting hamstring release and strength. Energy 4, vibes 5, mostly dry. Tracked via Zones/Apple Watch (Functional Strength Training): 20.8 min, HR 105/136 avg/max, 44 kcal, 7.4 min Z2. TUT (13 min) is an estimate from set structure, not device-measured. Post-readiness is a reasoning-based estimate (no Tonal readiness API available off-Tonal), scaled against pre-readiness of 100 across all muscles.",
+    "notes": "Off-Tonal day by choice — skipped the machine to watch leadership videos while moving instead. Full bodyweight circuit: 3x10 squats to couch; 3x30s standing bicycle crunches; 3 rounds of bird dog (on fists, not palms, due to a carpal issue), dead bug, lying side clamshell, crunches, and glute raises (30s each); finished with 3x30s pancake stretch and L-stretch (active flex/tense) targeting hamstring release and strength. Energy 4, vibes 5, mostly dry. Tracked via Zones/Apple Watch (Functional Strength Training): 20.8 min, HR 105/136 avg/max, 44 kcal, 7.4 min Z2. TUT (13 min) is an estimate from set structure, not device-measured. Post-readiness is a reasoning-based estimate (no Tonal readiness API available off-Tonal), scaled against pre-readiness of 100 across all muscles.",
     "calories": 44,
     "avg_hr": 105,
     "max_hr": 136,
@@ -7506,7 +7509,7 @@
   },
   {
     "date": "2026-10-05",
-    "workout": "Upper A \u2014 Push",
+    "workout": "Upper A — Push",
     "energy_level": 5,
     "phase": null,
     "subjective_rating": 5,
@@ -7641,7 +7644,10 @@
     "time_under_tension": 4.88,
     "total_work_kj": 6,
     "tonal_activity_id": "c98a7fcd-6187-436a-bf07-69b96b939297",
-    "notes": "First run of \"Upper A \u2014 Push\" from the new Heavy Six rotation (custom-built today). Bench Press 3x4 (20/22/20 lb), Lateral Raise 3x5 (6/7/7 lb \u2014 swapped in for Standing Overhead Press since that pattern was already hit yesterday), Half Kneeling Single-Arm Pulldown (Contralateral) 3x5/side (24/24/30/30/30/30 lb). 100% movement target, 0 coaching cues. Followed immediately by a 10-min Breathe row (\"Make the Leap Row\" with Mac Evans) rather than adding a 4th movement \u2014 complementary volume instead of piling more onto chest/shoulders/triceps. Post-readiness reflects both pieces combined. Pre-readiness not captured before this session."
+    "notes": "First run of \"Upper A — Push\" from the new Heavy Six rotation (custom-built today). Bench Press 3x4 (20/22/20 lb), Lateral Raise 3x5 (6/7/7 lb — swapped in for Standing Overhead Press since that pattern was already hit yesterday), Half Kneeling Single-Arm Pulldown (Contralateral) 3x5/side (24/24/30/30/30/30 lb). 100% movement target, 0 coaching cues. Followed immediately by a 10-min Breathe row (\"Make the Leap Row\" with Mac Evans) rather than adding a 4th movement — complementary volume instead of piling more onto chest/shoulders/triceps. Post-readiness reflects both pieces combined. Pre-readiness not captured before this session.",
+    "functional_strength": 310,
+    "movement_quality": 263,
+    "movement_quality_delta": 263
   },
   {
     "date": "2026-10-06",
@@ -7874,11 +7880,14 @@
     "time_under_tension": 20.62,
     "total_work_kj": 6,
     "tonal_activity_id": "ed4ebfad-fa62-4427-a303-7ba140d29d34",
-    "notes": "Rest-day pick: Tonal's \"Beginner Basics Pilates\" guided class (light 5 lb resistance throughout, not bodyweight-only like the manual routine originally planned). 34 min, 2,111 lb volume, 105 reps, 20.6 min TUT, 89 kcal, HR 94/120 avg/max. Hip/leg-focused moves (Frog Press, Side Lying Leg Sweep/Press, Hip Lift, Single-Leg Circles) hit glutes and hamstrings harder than expected for a \"gentle\" session (71%/69% post-readiness) \u2014 outer and inner thigh soreness reported, inner-thigh/adductor work being a nice incidental bonus given Tonal doesn't otherwise track adductors. Chest/shoulders (still recovering from Monday's Upper A) stayed essentially untouched (72/72, barely below the 78/84 pre-readiness) \u2014 correctly avoided stacking on the muscles that needed the rest. Teaser done on bench with bent knees (beginner-friendly variant). Energy 5, vibes 5, sweat dry. Adductors (not tracked by Tonal's readiness API) estimated manually via the off-Tonal role\u00d7exposure rubric: Feet in Straps Frog Press as primary mover, reinforced by secondary adduction/crossing-pattern involvement in Single-Leg Circles, Leg Circles, and Side Lying Leg Press \u2014 primary-mover-in-1-2-exercises bucket, \u221242, post_readiness \u2248 58%. Confirmed by self-reported inner-thigh soreness the next day."
+    "notes": "Rest-day pick: Tonal's \"Beginner Basics Pilates\" guided class (light 5 lb resistance throughout, not bodyweight-only like the manual routine originally planned). 34 min, 2,111 lb volume, 105 reps, 20.6 min TUT, 89 kcal, HR 94/120 avg/max. Hip/leg-focused moves (Frog Press, Side Lying Leg Sweep/Press, Hip Lift, Single-Leg Circles) hit glutes and hamstrings harder than expected for a \"gentle\" session (71%/69% post-readiness) — outer and inner thigh soreness reported, inner-thigh/adductor work being a nice incidental bonus given Tonal doesn't otherwise track adductors. Chest/shoulders (still recovering from Monday's Upper A) stayed essentially untouched (72/72, barely below the 78/84 pre-readiness) — correctly avoided stacking on the muscles that needed the rest. Teaser done on bench with bent knees (beginner-friendly variant). Energy 5, vibes 5, sweat dry. Adductors (not tracked by Tonal's readiness API) estimated manually via the off-Tonal role×exposure rubric: Feet in Straps Frog Press as primary mover, reinforced by secondary adduction/crossing-pattern involvement in Single-Leg Circles, Leg Circles, and Side Lying Leg Press — primary-mover-in-1-2-exercises bucket, −42, post_readiness ≈ 58%. Confirmed by self-reported inner-thigh soreness the next day.",
+    "functional_strength": 310,
+    "movement_quality": 263,
+    "movement_quality_delta": 263
   },
   {
     "date": "2026-10-07",
-    "workout": "Lower A \u2014 Posterior Chain",
+    "workout": "Lower A — Posterior Chain",
     "energy_level": null,
     "phase": null,
     "subjective_rating": null,
@@ -8011,11 +8020,14 @@
     "time_under_tension": 5.37,
     "total_work_kj": 5,
     "tonal_activity_id": "b901893b-8a5c-4d45-9f37-a969270f6d6b",
-    "notes": "Lower A debut. Hip Thrust warmup felt hard; first working set dropped to 100 lb (app-displayed) vs a prior regular working weight of 136 lb \u2014 real, expected detraining after the layoff, not a technique problem. Pushed through it across the block: 100\u2192110\u2192115 lb across the 3 working sets, improving each set rather than grinding a single fixed weight. Used a form adaptation for bar stability: bracing arms spread on the bench instead of gripping the bar directly \u2014 more stable and keeps load off the wrists (carpal/ulnar history). Also worked 10 bodyweight squats and 10 bodyweight step-ups into rest periods during this morning's Upper B session \u2014 both unloaded, fine per her knee protocol (only resisted/loaded lunges and step-ups are flagged unsafe). Glutes took the real hit post-session (42%), hamstrings moderate (68%), quads barely touched (98%) \u2014 matches Hip Thrust/kickback-pattern loading being glute-dominant. Second real session of the day (after this morning's Upper B); back/triceps/obliques readiness barely moved, confirming zero muscle overlap between the two sessions as planned. An ~8 min Zoom call interrupted the Hip Thrust block (vs. the programmed 2 min rest) \u2014 close to full ATP-PC recovery, so the 100\u2192110\u2192115 lb climb across sets reflects near-fresh attempts each time more than pushing through accumulating fatigue. Not directly comparable to a normal-rest progression."
+    "notes": "Lower A debut. Hip Thrust warmup felt hard; first working set dropped to 100 lb (app-displayed) vs a prior regular working weight of 136 lb — real, expected detraining after the layoff, not a technique problem. Pushed through it across the block: 100→110→115 lb across the 3 working sets, improving each set rather than grinding a single fixed weight. Used a form adaptation for bar stability: bracing arms spread on the bench instead of gripping the bar directly — more stable and keeps load off the wrists (carpal/ulnar history). Also worked 10 bodyweight squats and 10 bodyweight step-ups into rest periods during this morning's Upper B session — both unloaded, fine per her knee protocol (only resisted/loaded lunges and step-ups are flagged unsafe). Glutes took the real hit post-session (42%), hamstrings moderate (68%), quads barely touched (98%) — matches Hip Thrust/kickback-pattern loading being glute-dominant. Second real session of the day (after this morning's Upper B); back/triceps/obliques readiness barely moved, confirming zero muscle overlap between the two sessions as planned. An ~8 min Zoom call interrupted the Hip Thrust block (vs. the programmed 2 min rest) — close to full ATP-PC recovery, so the 100→110→115 lb climb across sets reflects near-fresh attempts each time more than pushing through accumulating fatigue. Not directly comparable to a normal-rest progression.",
+    "functional_strength": 310,
+    "movement_quality": 263,
+    "movement_quality_delta": 263
   },
   {
     "date": "2026-10-07",
-    "workout": "Upper B \u2014 Pull",
+    "workout": "Upper B — Pull",
     "energy_level": 5,
     "phase": null,
     "subjective_rating": 5,
@@ -8203,13 +8215,14 @@
     "time_under_tension": 11.87,
     "total_work_kj": 9,
     "tonal_activity_id": "29fd1f2b-1df0-4c5a-852f-38572cc9b11a",
-    "notes": "Upper B debut, with Half-Kneeling Pallof Press added as a core finisher after Standing Chop (anti-rotation complement to Chop's rotational pattern). Bent Over Row 3x4 (23/24/24 lb). Reverse Grip Triceps Extension 3x5 (14/15/15 lb) \u2014 true failure here, ground out the last rep. Standing Chop 3x5/side (26 lb). Pallof Press: no strength failure, but form broke down on set 3 (leaning the torso over to muscle the rep through instead of staying upright/kneeling tall) \u2014 correctly dropped weight twice (17\u219216\u219212 lb) to protect form rather than grind reps with bad mechanics, since leaning defeats the anti-rotation point of the exercise entirely. Worth dialing in a true working weight next time that holds form through all 3 rounds rather than needing the drop. Max effort, energy 5, vibes 5. Hips/legs correctly left untouched (glutes/hamstrings/quads flat from pre to post) \u2014 protected the tissue still recovering from Tuesday's Pilates, as planned. Back and obliques took the real hit (75%, 82%). Power PR on Bent Over Row set 3 (24 lb). Volume PR on Pallof Press set 3 (12 lb) despite the reduced weight \u2014 reps/control held even as load dropped, which is what pushed total volume past the prior best. Wrist accommodations used (carpal/ulnar history): slight elbow bend on Standing Chop and a wider grip on Triceps Extension, both to reduce wrist angle strain \u2014 standard setup for these two going forward, not a form issue to correct. Also worked in 10 bodyweight squats between one set and 10 bodyweight step-ups between another \u2014 both unloaded, fine per her own knee protocol (only resisted/loaded lunges and step-ups are flagged unsafe; bodyweight variations are explicitly cleared).",
-    "functional_strength": 186,
-    "movement_quality": 147,
+    "notes": "Upper B debut, with Half-Kneeling Pallof Press added as a core finisher after Standing Chop (anti-rotation complement to Chop's rotational pattern). Bent Over Row 3x4 (23/24/24 lb). Reverse Grip Triceps Extension 3x5 (14/15/15 lb) — true failure here, ground out the last rep. Standing Chop 3x5/side (26 lb). Pallof Press: no strength failure, but form broke down on set 3 (leaning the torso over to muscle the rep through instead of staying upright/kneeling tall) — correctly dropped weight twice (17→16→12 lb) to protect form rather than grind reps with bad mechanics, since leaning defeats the anti-rotation point of the exercise entirely. Worth dialing in a true working weight next time that holds form through all 3 rounds rather than needing the drop. Max effort, energy 5, vibes 5. Hips/legs correctly left untouched (glutes/hamstrings/quads flat from pre to post) — protected the tissue still recovering from Tuesday's Pilates, as planned. Back and obliques took the real hit (75%, 82%). Power PR on Bent Over Row set 3 (24 lb). Volume PR on Pallof Press set 3 (12 lb) despite the reduced weight — reps/control held even as load dropped, which is what pushed total volume past the prior best. Wrist accommodations used (carpal/ulnar history): slight elbow bend on Standing Chop and a wider grip on Triceps Extension, both to reduce wrist angle strain — standard setup for these two going forward, not a form issue to correct. Also worked in 10 bodyweight squats between one set and 10 bodyweight step-ups between another — both unloaded, fine per her own knee protocol (only resisted/loaded lunges and step-ups are flagged unsafe; bodyweight variations are explicitly cleared).",
+    "functional_strength": 310,
+    "movement_quality": 263,
     "strength_overall": 525,
     "strength_upper": 490,
     "strength_core": 467,
-    "strength_lower": 618
+    "strength_lower": 618,
+    "movement_quality_delta": 263
   },
   {
     "date": "2026-10-09",
@@ -8439,9 +8452,13 @@
     "time_under_tension": 11.53,
     "total_work_kj": 7,
     "tonal_activity_id": "a3f0e1c7-ab71-4b39-be6c-9230b38b711c",
-    "notes": "Did Tonal's AI-generated \"Lisa's Daily Lift\" instead of the planned off-Tonal circuit \u2014 back/biceps-dominant (Bent Over Row, Seated Row, Lat Pulldown, Straight Arm Pulldown, Biceps Curl), hit back hard (41% post) and biceps too (53%). Chest/quads/hamstrings barely touched. Plank Walk Out done on palms (mechanically needs flat hands to slide through the motion, fists not practical). Bear Hold done on palms but hands positioned further out than a strict 90-degree under-shoulders setup, reducing wrist extension angle \u2014 smart modification even while on palms. Runner's Lunge was bodyweight/dynamic (bend back knee, straighten, repeat), not loaded \u2014 falls under her cleared \"bodyweight lunge variation\" category, not the flagged resisted-lunge one. More flat-palm time than usual today (Plank Walk Out + wider Bear Hold) \u2014 watch for any tingling/numbness over the next day as a data point, nothing currently concerning. Done on very little/fragmented sleep (midnight-8:30am, up and down, real sleep didn't start until ~4am) \u2014 energy 1, vibes 3. Liked the active-rest pattern (Floor Slide paired into Biceps Curl's rest periods) specifically because it was gentle mobility for the same/adjacent region as the working muscle, not just any non-competing movement \u2014 felt great on the shoulders. Added 10 unloaded Hip Raises during the final Floor Slide set as a bonus combo (arms up + hips up together). RPE: most sets 6-8 (2-4 from failure), last Biceps Curl set 8-9 (1-2 from failure) \u2014 no true failure, but squarely in effective-reps stimulus range despite the low energy. Wants to build same-region active-rest pairing into the Heavy Six customs: Floor Slide for upper-body rest periods, Leg Circles/Single-Leg Circles (from Tuesday's Pilates) for lower-body ones. FS target range was 48-64 (hit 310), MQ target range was 46-62 (hit 263) \u2014 well above target on both.",
+    "notes": "Did Tonal's AI-generated \"Lisa's Daily Lift\" instead of the planned off-Tonal circuit — back/biceps-dominant (Bent Over Row, Seated Row, Lat Pulldown, Straight Arm Pulldown, Biceps Curl), hit back hard (41% post) and biceps too (53%). Chest/quads/hamstrings barely touched. Plank Walk Out done on palms (mechanically needs flat hands to slide through the motion, fists not practical). Bear Hold done on palms but hands positioned further out than a strict 90-degree under-shoulders setup, reducing wrist extension angle — smart modification even while on palms. Runner's Lunge was bodyweight/dynamic (bend back knee, straighten, repeat), not loaded — falls under her cleared \"bodyweight lunge variation\" category, not the flagged resisted-lunge one. More flat-palm time than usual today (Plank Walk Out + wider Bear Hold) — watch for any tingling/numbness over the next day as a data point, nothing currently concerning. Done on very little/fragmented sleep (midnight-8:30am, up and down, real sleep didn't start until ~4am) — energy 1, vibes 3. Liked the active-rest pattern (Floor Slide paired into Biceps Curl's rest periods) specifically because it was gentle mobility for the same/adjacent region as the working muscle, not just any non-competing movement — felt great on the shoulders. Added 10 unloaded Hip Raises during the final Floor Slide set as a bonus combo (arms up + hips up together). RPE: most sets 6-8 (2-4 from failure), last Biceps Curl set 8-9 (1-2 from failure) — no true failure, but squarely in effective-reps stimulus range despite the low energy. Wants to build same-region active-rest pairing into the Heavy Six customs: Floor Slide for upper-body rest periods, Leg Circles/Single-Leg Circles (from Tuesday's Pilates) for lower-body ones. FS target range was 48-64 (hit 310), MQ target range was 46-62 (hit 263) — well above target on both.",
     "functional_strength": 310,
     "movement_quality": 263,
-    "movement_quality_delta": 116
+    "movement_quality_delta": 263,
+    "strength_overall": 525,
+    "strength_upper": 490,
+    "strength_core": 468,
+    "strength_lower": 618
   }
 ]

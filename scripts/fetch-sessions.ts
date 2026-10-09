@@ -137,6 +137,28 @@ async function main() {
   const activities = allActivities.filter((a: any) => a.activityType === 'Internal')
   console.log(`Got ${activities.length} Tonal workouts (${allActivities.length} total activities).`)
 
+  // Functional Strength / Movement Quality — these are WEEKLY cumulative scores
+  // (goalId metrics from the Goal Progress screen), not per-session. We attach the
+  // current week's running total to every session touched in this run, matching
+  // how it's always been hand-entered (whatever the screen shows "as of now").
+  console.log('Fetching FS/MQ scores...')
+  const FS_METRIC_ID = 'e46f85cf-a9bc-42b4-836e-52c6621e7481'
+  const MQ_METRIC_ID = '5b8646fd-1df0-4b19-8c5b-72f8ad816955'
+  let currentFS: number | null = null
+  let currentMQ: number | null = null
+  let mqDelta: number | null = null
+  try {
+    const metricScores = await client.getMetricScores()
+    const fsScores = (metricScores[FS_METRIC_ID] ?? []).sort((a, b) => b.weekNumber - a.weekNumber)
+    const mqScores = (metricScores[MQ_METRIC_ID] ?? []).sort((a, b) => b.weekNumber - a.weekNumber)
+    if (fsScores[0]) currentFS = Math.round(fsScores[0].score)
+    if (mqScores[0]) currentMQ = Math.round(mqScores[0].score)
+    if (mqScores[0] && mqScores[1]) mqDelta = Math.round(mqScores[0].score - mqScores[1].score)
+    console.log(`FS: ${currentFS} | MQ: ${currentMQ} (delta ${mqDelta})`)
+  } catch (e: any) {
+    console.log('FS/MQ fetch failed (non-fatal):', e.message)
+  }
+
   const existing: SessionEntry[] = JSON.parse(readFileSync(SESSIONS_PATH, 'utf-8'))
 
   // Three-level lookup: activity ID > exact date+name > date only
@@ -176,6 +198,9 @@ async function main() {
     const apiFields = {
       workout: existing_entry?.workout ?? apiName, // prefer existing name if we matched
       timestamp: activity.localTimestamp,
+      ...(currentFS !== null ? { functional_strength: currentFS } : {}),
+      ...(currentMQ !== null ? { movement_quality: currentMQ } : {}),
+      ...(mqDelta !== null ? { movement_quality_delta: mqDelta } : {}),
       duration: toMinutes(activity.duration),
       total_volume: activity.totalVolume,
       total_reps: activity.totalReps || null,
