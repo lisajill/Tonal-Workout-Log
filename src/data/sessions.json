@@ -8214,9 +8214,9 @@
   {
     "date": "2026-10-09",
     "workout": "Lisa's Daily Lift",
-    "energy_level": null,
+    "energy_level": 1,
     "phase": null,
-    "subjective_rating": null,
+    "subjective_rating": 3,
     "sweat": null,
     "calories": 86,
     "avg_hr": 111,
@@ -8438,6 +8438,7 @@
     "total_reps": 102,
     "time_under_tension": 11.53,
     "total_work_kj": 7,
-    "tonal_activity_id": "a3f0e1c7-ab71-4b39-be6c-9230b38b711c"
+    "tonal_activity_id": "a3f0e1c7-ab71-4b39-be6c-9230b38b711c",
+    "notes": "Did Tonal's AI-generated \"Lisa's Daily Lift\" instead of the planned off-Tonal circuit \u2014 back/biceps-dominant (Bent Over Row, Seated Row, Lat Pulldown, Straight Arm Pulldown, Biceps Curl), hit back hard (41% post) and biceps too (53%). Chest/quads/hamstrings barely touched. Plank Walk Out done on palms (mechanically needs flat hands to slide through the motion, fists not practical). Bear Hold done on palms but hands positioned further out than a strict 90-degree under-shoulders setup, reducing wrist extension angle \u2014 smart modification even while on palms. Runner's Lunge was bodyweight/dynamic (bend back knee, straighten, repeat), not loaded \u2014 falls under her cleared \"bodyweight lunge variation\" category, not the flagged resisted-lunge one. More flat-palm time than usual today (Plank Walk Out + wider Bear Hold) \u2014 watch for any tingling/numbness over the next day as a data point, nothing currently concerning. Done on very little/fragmented sleep (midnight-8:30am, up and down, real sleep didn't start until ~4am) \u2014 energy 1, vibes 3."
   }
 ]
