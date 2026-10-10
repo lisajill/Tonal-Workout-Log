@@ -8464,10 +8464,10 @@
   {
     "date": "2026-10-10",
     "workout": "Core \u2014 Anti-Rotation & Carries",
-    "energy_level": null,
+    "energy_level": 3.5,
     "phase": null,
-    "subjective_rating": null,
-    "sweat": null,
+    "subjective_rating": 4,
+    "sweat": "dry",
     "calories": 97,
     "avg_hr": null,
     "max_hr": null,
