@@ -7137,131 +7137,6 @@
   },
   {
     "date": "2026-10-04",
-    "workout": "Quick Fit: Upper-Body Push-Pull Gains",
-    "tonal_activity_id": "ef4d8211-92f9-40e0-a1c7-19cadb5a5d44",
-    "timestamp": "2026-10-04T16:15:02.09-04:00",
-    "energy_level": 5,
-    "phase": null,
-    "subjective_rating": 5,
-    "sweat": "mild",
-    "shot_day": false,
-    "total_volume": 1802,
-    "total_reps": 64,
-    "time_under_tension": 4.87,
-    "duration": 10.88,
-    "total_work_kj": 5,
-    "prs": {
-      "standing_overhead_press": {
-        "weight": 12,
-        "date": "2026-10-04"
-      }
-    },
-    "muscles_high_volume": [
-      "chest",
-      "shoulders"
-    ],
-    "muscles_low_volume": [
-      "back",
-      "triceps",
-      "biceps"
-    ],
-    "movements": [
-      {
-        "name": "Bench Press",
-        "warmup_sets": 1,
-        "sets": [
-          {
-            "reps": 6,
-            "weight_lbs": 16
-          },
-          {
-            "reps": 6,
-            "weight_lbs": 17
-          }
-        ]
-      },
-      {
-        "name": "Bent Over Row",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 8,
-            "weight_lbs": 20
-          },
-          {
-            "reps": 8,
-            "weight_lbs": 20
-          }
-        ]
-      },
-      {
-        "name": "Standing Overhead Press",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 6,
-            "weight_lbs": 12
-          },
-          {
-            "reps": 6,
-            "weight_lbs": 12,
-            "prs": [
-              "power"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Incline Chest Fly",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 8,
-            "weight_lbs": 8
-          },
-          {
-            "reps": 8,
-            "weight_lbs": 8
-          }
-        ]
-      }
-    ],
-    "pre_readiness": {
-      "glutes": 100,
-      "hamstrings": 100,
-      "quads": 100,
-      "calves": 100,
-      "abs": 100,
-      "obliques": 100,
-      "back": 100,
-      "chest": 100,
-      "shoulders": 100,
-      "biceps": 100,
-      "triceps": 100
-    },
-    "post_readiness": {
-      "glutes": 100,
-      "hamstrings": 99,
-      "quads": 100,
-      "calves": 100,
-      "abs": 97,
-      "obliques": 100,
-      "back": 82,
-      "chest": 61,
-      "shoulders": 69,
-      "biceps": 94,
-      "triceps": 87
-    },
-    "calories": 28,
-    "avg_hr": 113,
-    "max_hr": 147,
-    "notes": "Second session of the day, upper-body push-pull, coached by Kristina. 10:53 duration, 1,802 lb volume, 64 reps, 4:52 TUT, 5.3 kJ, 100% movement target, 2 coaching cues. Bench Press 6@16/6@17 (1 warmup set), Bent Over Row 2x8@20, Standing Overhead Press 2x6@12, Incline Chest Fly 2x8@8. HR 113/147 avg/max (Zones/Tonal source), 28 kcal. Energy 5, vibes 5, sweat mild \u2014 user described it as a tough session (\"that sucked\") despite good energy/vibes going in. Done ~1 hour after the morning bodyweight circuit; chest/shoulders readiness dropped hardest (61/69), consistent with bench press + overhead press being the primary loaded movements.",
-    "functional_strength": 392,
-    "movement_quality": 336,
-    "movement_quality_delta": 336
-  },
-  {
-    "date": "2026-10-04",
     "workout": "Home Bodyweight Circuit (off-Tonal)",
     "tonal_activity_id": "manual-bodyweight-20261004",
     "timestamp": "2026-10-04T15:22:03-04:00",
@@ -7506,6 +7381,131 @@
       "biceps": 100,
       "triceps": 97
     }
+  },
+  {
+    "date": "2026-10-04",
+    "workout": "Quick Fit: Upper-Body Push-Pull Gains",
+    "tonal_activity_id": "ef4d8211-92f9-40e0-a1c7-19cadb5a5d44",
+    "timestamp": "2026-10-04T16:15:02.09-04:00",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "mild",
+    "shot_day": false,
+    "total_volume": 1802,
+    "total_reps": 64,
+    "time_under_tension": 4.87,
+    "duration": 10.88,
+    "total_work_kj": 5,
+    "prs": {
+      "standing_overhead_press": {
+        "weight": 12,
+        "date": "2026-10-04"
+      }
+    },
+    "muscles_high_volume": [
+      "chest",
+      "shoulders"
+    ],
+    "muscles_low_volume": [
+      "back",
+      "triceps",
+      "biceps"
+    ],
+    "movements": [
+      {
+        "name": "Bench Press",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 16
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 17
+          }
+        ]
+      },
+      {
+        "name": "Bent Over Row",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 20
+          }
+        ]
+      },
+      {
+        "name": "Standing Overhead Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 12
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 12,
+            "prs": [
+              "power"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Incline Chest Fly",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 8
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 8
+          }
+        ]
+      }
+    ],
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 100,
+      "hamstrings": 99,
+      "quads": 100,
+      "calves": 100,
+      "abs": 97,
+      "obliques": 100,
+      "back": 82,
+      "chest": 61,
+      "shoulders": 69,
+      "biceps": 94,
+      "triceps": 87
+    },
+    "calories": 28,
+    "avg_hr": 113,
+    "max_hr": 147,
+    "notes": "Second session of the day, upper-body push-pull, coached by Kristina. 10:53 duration, 1,802 lb volume, 64 reps, 4:52 TUT, 5.3 kJ, 100% movement target, 2 coaching cues. Bench Press 6@16/6@17 (1 warmup set), Bent Over Row 2x8@20, Standing Overhead Press 2x6@12, Incline Chest Fly 2x8@8. HR 113/147 avg/max (Zones/Tonal source), 28 kcal. Energy 5, vibes 5, sweat mild \u2014 user described it as a tough session (\"that sucked\") despite good energy/vibes going in. Done ~1 hour after the morning bodyweight circuit; chest/shoulders readiness dropped hardest (61/69), consistent with bench press + overhead press being the primary loaded movements.",
+    "functional_strength": 392,
+    "movement_quality": 336,
+    "movement_quality_delta": 336
   },
   {
     "date": "2026-10-05",
@@ -7887,146 +7887,6 @@
   },
   {
     "date": "2026-10-07",
-    "workout": "Lower A \u2014 Posterior Chain",
-    "energy_level": null,
-    "phase": null,
-    "subjective_rating": null,
-    "sweat": null,
-    "calories": 73,
-    "avg_hr": 103,
-    "max_hr": null,
-    "pre_readiness": {
-      "glutes": 100,
-      "hamstrings": 100,
-      "quads": 100,
-      "calves": 100,
-      "abs": 100,
-      "obliques": 91,
-      "back": 84,
-      "chest": 100,
-      "shoulders": 100,
-      "biceps": 100,
-      "triceps": 90
-    },
-    "post_readiness": {
-      "glutes": 42,
-      "hamstrings": 68,
-      "quads": 98,
-      "calves": 100,
-      "abs": 92,
-      "obliques": 89,
-      "back": 77,
-      "chest": 100,
-      "shoulders": 100,
-      "biceps": 100,
-      "triceps": 91
-    },
-    "prs": {},
-    "muscles_high_volume": [
-      "glutes",
-      "hamstrings"
-    ],
-    "muscles_low_volume": [
-      "quads"
-    ],
-    "movements": [
-      {
-        "name": "Barbell Hip Thrust",
-        "warmup_sets": 1,
-        "sets": [
-          {
-            "reps": 4,
-            "weight_lbs": 100
-          },
-          {
-            "reps": 4,
-            "weight_lbs": 110
-          },
-          {
-            "reps": 4,
-            "weight_lbs": 115
-          }
-        ]
-      },
-      {
-        "name": "Rest",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 0,
-            "weight_lbs": 5,
-            "duration_sec": 120
-          },
-          {
-            "reps": 0,
-            "weight_lbs": 5,
-            "duration_sec": 90
-          }
-        ]
-      },
-      {
-        "name": "Prone Bench Hamstring Curl",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 4,
-            "weight_lbs": 17
-          },
-          {
-            "reps": 4,
-            "weight_lbs": 20
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 30
-          }
-        ]
-      },
-      {
-        "name": "Standing Hip Abduction",
-        "warmup_sets": 0,
-        "sets": [
-          {
-            "reps": 5,
-            "weight_lbs": 18
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 18
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 18
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 18
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 18
-          },
-          {
-            "reps": 5,
-            "weight_lbs": 18
-          }
-        ]
-      }
-    ],
-    "timestamp": "2026-10-07T17:01:42.143-04:00",
-    "duration": 34.15,
-    "total_volume": 3267,
-    "total_reps": 63,
-    "time_under_tension": 5.37,
-    "total_work_kj": 5,
-    "tonal_activity_id": "b901893b-8a5c-4d45-9f37-a969270f6d6b",
-    "notes": "Lower A debut. Hip Thrust warmup felt hard; first working set dropped to 100 lb (app-displayed) vs a prior regular working weight of 136 lb \u2014 real, expected detraining after the layoff, not a technique problem. Pushed through it across the block: 100\u2192110\u2192115 lb across the 3 working sets, improving each set rather than grinding a single fixed weight. Used a form adaptation for bar stability: bracing arms spread on the bench instead of gripping the bar directly \u2014 more stable and keeps load off the wrists (carpal/ulnar history). Also worked 10 bodyweight squats and 10 bodyweight step-ups into rest periods during this morning's Upper B session \u2014 both unloaded, fine per her knee protocol (only resisted/loaded lunges and step-ups are flagged unsafe). Glutes took the real hit post-session (42%), hamstrings moderate (68%), quads barely touched (98%) \u2014 matches Hip Thrust/kickback-pattern loading being glute-dominant. Second real session of the day (after this morning's Upper B); back/triceps/obliques readiness barely moved, confirming zero muscle overlap between the two sessions as planned. An ~8 min Zoom call interrupted the Hip Thrust block (vs. the programmed 2 min rest) \u2014 close to full ATP-PC recovery, so the 100\u2192110\u2192115 lb climb across sets reflects near-fresh attempts each time more than pushing through accumulating fatigue. Not directly comparable to a normal-rest progression.",
-    "functional_strength": 392,
-    "movement_quality": 336,
-    "movement_quality_delta": 336
-  },
-  {
-    "date": "2026-10-07",
     "workout": "Upper B \u2014 Pull",
     "energy_level": 5,
     "phase": null,
@@ -8222,6 +8082,146 @@
     "strength_upper": 490,
     "strength_core": 467,
     "strength_lower": 618,
+    "movement_quality_delta": 336
+  },
+  {
+    "date": "2026-10-07",
+    "workout": "Lower A \u2014 Posterior Chain",
+    "energy_level": null,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": 73,
+    "avg_hr": 103,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 91,
+      "back": 84,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 90
+    },
+    "post_readiness": {
+      "glutes": 42,
+      "hamstrings": 68,
+      "quads": 98,
+      "calves": 100,
+      "abs": 92,
+      "obliques": 89,
+      "back": 77,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 91
+    },
+    "prs": {},
+    "muscles_high_volume": [
+      "glutes",
+      "hamstrings"
+    ],
+    "muscles_low_volume": [
+      "quads"
+    ],
+    "movements": [
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 100
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 110
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 115
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 120
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 90
+          }
+        ]
+      },
+      {
+        "name": "Prone Bench Hamstring Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 4,
+            "weight_lbs": 17
+          },
+          {
+            "reps": 4,
+            "weight_lbs": 20
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 30
+          }
+        ]
+      },
+      {
+        "name": "Standing Hip Abduction",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 18
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 18
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 18
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 18
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 18
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 18
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-10-07T17:01:42.143-04:00",
+    "duration": 34.15,
+    "total_volume": 3267,
+    "total_reps": 63,
+    "time_under_tension": 5.37,
+    "total_work_kj": 5,
+    "tonal_activity_id": "b901893b-8a5c-4d45-9f37-a969270f6d6b",
+    "notes": "Lower A debut. Hip Thrust warmup felt hard; first working set dropped to 100 lb (app-displayed) vs a prior regular working weight of 136 lb \u2014 real, expected detraining after the layoff, not a technique problem. Pushed through it across the block: 100\u2192110\u2192115 lb across the 3 working sets, improving each set rather than grinding a single fixed weight. Used a form adaptation for bar stability: bracing arms spread on the bench instead of gripping the bar directly \u2014 more stable and keeps load off the wrists (carpal/ulnar history). Also worked 10 bodyweight squats and 10 bodyweight step-ups into rest periods during this morning's Upper B session \u2014 both unloaded, fine per her knee protocol (only resisted/loaded lunges and step-ups are flagged unsafe). Glutes took the real hit post-session (42%), hamstrings moderate (68%), quads barely touched (98%) \u2014 matches Hip Thrust/kickback-pattern loading being glute-dominant. Second real session of the day (after this morning's Upper B); back/triceps/obliques readiness barely moved, confirming zero muscle overlap between the two sessions as planned. An ~8 min Zoom call interrupted the Hip Thrust block (vs. the programmed 2 min rest) \u2014 close to full ATP-PC recovery, so the 100\u2192110\u2192115 lb climb across sets reflects near-fresh attempts each time more than pushing through accumulating fatigue. Not directly comparable to a normal-rest progression.",
+    "functional_strength": 392,
+    "movement_quality": 336,
     "movement_quality_delta": 336
   },
   {
@@ -8635,5 +8635,124 @@
     "total_work_kj": 1.4,
     "tonal_activity_id": "fdd81d08-fc36-4b3d-a505-0ffd34ba27a6",
     "notes": "Designed collaboratively to avoid stacking on Friday's back/biceps fatigue (62%/75% pre) while still including a compound (Alternating Bench Press, handles to match the rest of the session's equipment) per her stated preference to always include one. Core block was deliberately built without repeating Chop/Pallof from this week: Resisted Dead Bug, Suitcase March, Farmer March. Dead Bug set 1 cut short at 2/8 reps (7 lb) to reposition the handles mid-set, not a strength issue \u2014 made up for it with 8 bonus reps at 5 lb worked in during the rest period after set 3 (same active-rest pattern as Friday's bonus Hip Raises during Floor Slide) \u2014 not part of the programmed set itself. Suitcase March 40-42 lb, Farmer March 25-30 lb \u2014 real loaded carries. Back dipped further than intended (62%\u219250%) despite not being a target \u2014 bench stabilization + carry posture isn't zero-cost, just much lighter than a real pull session. Decided against a Drive row afterward: heavy grip loading from both carries left nothing for sustained rowing grip, plus back wasn't fully recovered anyway \u2014 moved Drive to tomorrow instead (also gives more distance from Thursday's shot and lets back fully recover per the ~48hr curve)."
+  },
+  {
+    "date": "2026-10-10",
+    "workout": "Bonus Bodyweight Glutes/Quads (off-Tonal)",
+    "tonal_activity_id": "manual-bodyweight-20261010",
+    "timestamp": "2026-10-10T10:00:00-04:00",
+    "energy_level": null,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "shot_day": false,
+    "total_volume": 0,
+    "total_reps": 50,
+    "time_under_tension": 7.0,
+    "prs": {},
+    "muscles_high_volume": [
+      "glutes",
+      "quads"
+    ],
+    "muscles_low_volume": [
+      "hamstrings"
+    ],
+    "movements": [
+      {
+        "name": "Glute Raises",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 0
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 0
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 0
+          }
+        ]
+      },
+      {
+        "name": "Wall Sit",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 0,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 0,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Bodyweight Squat to Bench",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 0
+          }
+        ]
+      },
+      {
+        "name": "Single-Leg Glute Raise",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 5,
+            "weight_lbs": 0
+          },
+          {
+            "reps": 5,
+            "weight_lbs": 0
+          }
+        ]
+      }
+    ],
+    "pre_readiness": {
+      "glutes": 93,
+      "hamstrings": 99,
+      "quads": 99,
+      "calves": 99,
+      "abs": 77,
+      "obliques": 81,
+      "back": 50,
+      "chest": 87,
+      "shoulders": 79,
+      "biceps": 76,
+      "triceps": 96
+    },
+    "post_readiness": {
+      "glutes": 43,
+      "hamstrings": 79,
+      "quads": 59,
+      "calves": 99,
+      "abs": 77,
+      "obliques": 81,
+      "back": 50,
+      "chest": 87,
+      "shoulders": 79,
+      "biceps": 76,
+      "triceps": 96
+    },
+    "notes": "Bonus off-Tonal bodyweight session right after today's Tonal workout (Core/Bench). 3x10 Glute Raises, 4x30s Wall Sits, 10 Bodyweight Squats to Bench, 10 Single-Leg Glute Raises (5/side). All lower-body bodyweight, landed on already-fresh tissue (glutes/quads/hamstrings were barely touched by the Tonal session). Off-Tonal readiness estimated via the role\u00d7exposure rubric: glutes primary mover across 3 exercises (-50), quads primary in 2 (-40), hamstrings secondary only (-20)."
   }
 ]
