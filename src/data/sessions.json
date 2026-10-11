@@ -8683,8 +8683,8 @@
     "phase": null,
     "subjective_rating": 5,
     "sweat": "mild",
-    "calories": null,
-    "avg_hr": null,
+    "calories": 32,
+    "avg_hr": 113,
     "max_hr": null,
     "pre_readiness": {
       "chest": 100,
