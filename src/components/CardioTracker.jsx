@@ -52,9 +52,22 @@ function activityIcon(activity) {
   return '💪'
 }
 
-const tonalVolumeByDate = rawSessions
-  .filter(s => !s.merged_into && s.total_volume != null)
-  .reduce((acc, s) => { acc[s.date] = (acc[s.date] ?? 0) + s.total_volume; return acc }, {})
+const tonalSessionsWithVolume = rawSessions
+  .filter(s => !s.merged_into && s.total_volume != null && s.timestamp)
+  .map(s => ({ date: s.date, time: new Date(s.timestamp).getTime(), volume: s.total_volume }))
+
+// Multiple Tonal entries can land on the same date (false starts, 2+ real sessions/day) —
+// match each cardio-log row to its own nearest session by timestamp rather than summing
+// every session on the date, which previously showed the same total on every same-day row.
+function tonalVolumeFor(cardioEntry) {
+  const candidates = tonalSessionsWithVolume.filter(s => s.date === cardioEntry.date)
+  if (candidates.length === 0) return null
+  const entryTime = new Date(cardioEntry.timestamp ?? cardioEntry.date).getTime()
+  const closest = candidates.reduce((best, s) =>
+    Math.abs(s.time - entryTime) < Math.abs(best.time - entryTime) ? s : best
+  )
+  return closest.volume
+}
 
 export default function CardioTracker() {
   const isEmpty = cardioLog.length === 0
@@ -287,7 +300,7 @@ export default function CardioTracker() {
                         <td className="py-2.5 pr-4 text-zinc-400 mono-stat text-right">{s.avg_hr ? `${s.avg_hr}` : '—'}</td>
                         <td className="py-2.5 pr-5 text-zinc-400 mono-stat text-right">
                           {s.activity === 'Tonal'
-                            ? (tonalVolumeByDate[s.date] ? `${tonalVolumeByDate[s.date].toLocaleString()} lbs` : '—')
+                            ? (tonalVolumeFor(s) ? `${tonalVolumeFor(s).toLocaleString()} lbs` : '—')
                             : s.distance_mi != null ? `${s.distance_mi}mi`
                             : s.rowing_distance_m != null ? `${s.rowing_distance_m}m`
                             : '—'}

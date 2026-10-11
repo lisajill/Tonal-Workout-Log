@@ -155,7 +155,7 @@ export default function SessionDetail({ sessions, initialKey: initialKeyProp }) 
       {session.notes && (
         <div className="rounded-lg bg-amber-950/30 border border-amber-900/40 border-l-[3px] border-l-amber-400 px-4 py-3">
           <p className="label !text-[10px] !text-amber-400/80 mb-1">Notes</p>
-          <p className="text-sm text-amber-200/90 leading-relaxed">{session.notes}</p>
+          <p className="text-sm text-amber-200/90 leading-relaxed whitespace-pre-line">{session.notes}</p>
         </div>
       )}
 
