@@ -144,19 +144,41 @@ async function main() {
   console.log('Fetching FS/MQ scores...')
   const FS_METRIC_ID = 'e46f85cf-a9bc-42b4-836e-52c6621e7481'
   const MQ_METRIC_ID = '5b8646fd-1df0-4b19-8c5b-72f8ad816955'
+  const VOLUME_METRIC_ID = '2a2f499e-ae13-45d1-b501-aa1d25ff6a4a'
+  const WORK_METRIC_ID = '2b09a416-3950-4695-8ee0-7a26498ca11c'
+  const STRENGTH_SETS_METRIC_ID = '81f42024-999a-4878-b593-3c001d98c874'
+  const POWER_REPS_METRIC_ID = 'a354b978-a53c-4481-bd43-97fc40acf60b'
+  const ENDURANCE_SETS_METRIC_ID = 'b9bb5c52-a6d4-48ed-bbc5-3a645bb89e15'
   let currentFS: number | null = null
   let currentMQ: number | null = null
   let mqDelta: number | null = null
+  let currentVolumeScore: number | null = null
+  let currentWorkScore: number | null = null
+  let currentStrengthSets: number | null = null
+  let currentPowerReps: number | null = null
+  let currentEnduranceSets: number | null = null
   try {
     const metricScores = await client.getMetricScores()
-    const fsScores = (metricScores[FS_METRIC_ID] ?? []).sort((a, b) => b.weekNumber - a.weekNumber)
-    const mqScores = (metricScores[MQ_METRIC_ID] ?? []).sort((a, b) => b.weekNumber - a.weekNumber)
+    const latest = (id: string) => (metricScores[id] ?? []).sort((a, b) => b.weekNumber - a.weekNumber)
+    const fsScores = latest(FS_METRIC_ID)
+    const mqScores = latest(MQ_METRIC_ID)
+    const volumeScores = latest(VOLUME_METRIC_ID)
+    const workScores = latest(WORK_METRIC_ID)
+    const strengthSetsScores = latest(STRENGTH_SETS_METRIC_ID)
+    const powerRepsScores = latest(POWER_REPS_METRIC_ID)
+    const enduranceSetsScores = latest(ENDURANCE_SETS_METRIC_ID)
     if (fsScores[0]) currentFS = Math.round(fsScores[0].score)
     if (mqScores[0]) currentMQ = Math.round(mqScores[0].score)
     if (mqScores[0] && mqScores[1]) mqDelta = Math.round(mqScores[0].score - mqScores[1].score)
+    if (volumeScores[0]) currentVolumeScore = Math.round(volumeScores[0].score)
+    if (workScores[0]) currentWorkScore = Math.round(workScores[0].score)
+    if (strengthSetsScores[0]) currentStrengthSets = Math.round(strengthSetsScores[0].score)
+    if (powerRepsScores[0]) currentPowerReps = Math.round(powerRepsScores[0].score)
+    if (enduranceSetsScores[0]) currentEnduranceSets = Math.round(enduranceSetsScores[0].score)
     console.log(`FS: ${currentFS} | MQ: ${currentMQ} (delta ${mqDelta})`)
+    console.log(`Volume: ${currentVolumeScore} | Work: ${currentWorkScore} | Strength Sets: ${currentStrengthSets} | Power Reps: ${currentPowerReps} | Endurance Sets: ${currentEnduranceSets}`)
   } catch (e: any) {
-    console.log('FS/MQ fetch failed (non-fatal):', e.message)
+    console.log('Goal metrics fetch failed (non-fatal):', e.message)
   }
 
   const existing: SessionEntry[] = JSON.parse(readFileSync(SESSIONS_PATH, 'utf-8'))
@@ -201,6 +223,11 @@ async function main() {
       ...(currentFS !== null ? { functional_strength: currentFS } : {}),
       ...(currentMQ !== null ? { movement_quality: currentMQ } : {}),
       ...(mqDelta !== null ? { movement_quality_delta: mqDelta } : {}),
+      ...(currentVolumeScore !== null ? { volume_score: currentVolumeScore } : {}),
+      ...(currentWorkScore !== null ? { work_score: currentWorkScore } : {}),
+      ...(currentStrengthSets !== null ? { strength_sets: currentStrengthSets } : {}),
+      ...(currentPowerReps !== null ? { power_reps: currentPowerReps } : {}),
+      ...(currentEnduranceSets !== null ? { endurance_sets: currentEnduranceSets } : {}),
       duration: toMinutes(activity.duration),
       total_volume: activity.totalVolume,
       total_reps: activity.totalReps || null,

@@ -55,6 +55,7 @@ const HISTORY = [
   { date: '2026-09-07', overall: 523, upper: 487, lower: 618, core: 465 },
   { date: '2026-10-07', overall: 525, upper: 490, lower: 618, core: 467 },
   { date: '2026-10-09', overall: 525, upper: 490, lower: 618, core: 468 },
+  { date: '2026-10-11', overall: 525, upper: 490, lower: 618, core: 467 },
 ]
 
 function shortDate(d) {

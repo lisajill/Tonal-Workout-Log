@@ -2994,5 +2994,31 @@
     "zone4_min": 0,
     "avg_hr": 109,
     "distance_mi": 2.03
+  },
+  {
+    "uuid": "3352A5CF-3E20-4EA1-90B2-D3B1CFFE59D7",
+    "date": "2026-10-11",
+    "timestamp": "2026-10-11T15:59:32Z",
+    "activity": "Tonal",
+    "duration_min": 5.1,
+    "zone1_min": 6.8,
+    "zone2_min": 0.8,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 96,
+    "distance_mi": null
+  },
+  {
+    "uuid": "4F38F2C2-0E57-45D2-B9B3-35E1CF7B15A6",
+    "date": "2026-10-11",
+    "timestamp": "2026-10-11T16:07:31Z",
+    "activity": "Tonal",
+    "duration_min": 24.4,
+    "zone1_min": 3.7,
+    "zone2_min": 13.4,
+    "zone3_min": 6.7,
+    "zone4_min": 1.1,
+    "avg_hr": 127,
+    "distance_mi": null
   }
 ]
