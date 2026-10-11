@@ -22,6 +22,7 @@
 - **No drop sets** under any circumstances
 - **Smart Flex:** ON for all working blocks (`flex: true` in API). OFF for warmup sets.
 - **No squats, no lunges** — right knee injury (sharp pain on downward phase)
+- **Step-ups: direction matters.** Confirmed Oct 11, 2026 — side/lateral-loaded step-ups (e.g. Resisted Step Up) hurt the knee and were stopped mid-set; bodyweight **front** step-ups (10/side, holding the Tonal frame with both hands for balance only) were pain-free. Front step-ups are a safe substitution; lateral/side step-up patterns are not, regardless of load.
 - **Monitor Standing Leg Extension** carefully — right leg self-limits to ~27 lbs with reduced ROM, stopping before 80° knee flexion where twitch/pain occurs. Left leg can go heavier. Do not let Smart Flex push right leg past comfortable ROM.
 - **Hand status: UNCLEARED as of Jun 11, 2026** — bilateral carpal tunnel + ulnar nerve neuropathy (mild, sensory only). Supersedes the May 2 clearance. No sustained grip under load, no cubital-tunnel pressure (no Zercher holds), no wrist-extension weight bearing (no quadruped/pushups). OK: ankle straps, hip-resting barbell (hands steady only), Pilates loops on open/extended hand, light frame touch for balance. Tingling/numbness = stop. Active programming: the **Grip-Free Heavy Rotation** (5 workouts created Jun 12, 2026 — see Obsidian `Health & Wellness/Tonal/Grip-Free Heavy Rotation.md`).
 
@@ -115,6 +116,7 @@ Both hands cleared as of May 2, 2026. Full upper body and compound movements now
 - **`getActivitySummaries()` returns max 50 entries** across all activity types — mostly Apple Watch entries. Only ~4 Tonal workouts visible in recent history.
 - **`calories` and heart rate** are NOT available in activity summaries for Tonal workouts. Manual entry only.
 - **`name` field on activities** may differ from manually-entered workout names (e.g. API returns "Hands Free", manual was "Hands Free Lower Body"). Merge by `tonal_activity_id` first, then `date::workout`, then `date` only.
+- **Putting different movements in one `blockNumber` (alternating `movementId` across sets) does NOT run as a circuit/superset in the app.** Confirmed Oct 11, 2026 — tried via the createWorkout API and via editing the workout directly in the Tonal app; both times it only displayed/ran a single exercise for that block. The underlying mechanism for a true superset in the app (if one exists) is still unknown. Don't attempt the alternating-movementId-in-one-block pattern again without new evidence — build multi-movement sessions as separate sequential blocks instead.
 
 ---
 
