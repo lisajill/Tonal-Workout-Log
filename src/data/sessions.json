@@ -9269,7 +9269,10 @@
         "sets": [
           {
             "reps": 10,
-            "weight_lbs": 44
+            "weight_lbs": 44,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 18,
