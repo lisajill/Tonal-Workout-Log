@@ -9202,8 +9202,8 @@
     "phase": null,
     "subjective_rating": 5,
     "sweat": "mild",
-    "calories": null,
-    "avg_hr": null,
+    "calories": 43,
+    "avg_hr": 112,
     "max_hr": null,
     "pre_readiness": {
       "chest": 100,
@@ -9307,6 +9307,6 @@
     "time_under_tension": 8.45,
     "total_work_kj": 9,
     "tonal_activity_id": "56f7ee2a-8b8d-42de-acc9-43a0737fb62d",
-    "notes": "\u2022 First drop sets since early in the year \u2014 re-tried them and liked them again; realized heavier starting weight \u2014 more pre-fatigue for the drop.\n\u2022 Struggled hard enough on one rep that Tonal's auto-unload kicked in and cut resistance to zero \u2014 genuine failure, not a glitch.\n\u2022 Bench Press and Standing Face Pull drops both ran long (20 and 18 reps on the drop) \u2014 ~59 total reps across the session by feel."
+    "notes": "\u2022 First drop sets since early in the year \u2014 re-tried them and liked them again; realized heavier starting weight \u2014 more pre-fatigue for the drop.\n\u2022 Struggled hard enough on one rep that Tonal's auto-unload kicked in and cut resistance to zero \u2014 genuine failure, not a glitch.\n\u2022 Bench Press and Standing Face Pull drops both ran long (20 and 18 reps on the drop) \u2014 ~59 total reps across the session by feel.\n\u2022 Drop sets are back in rotation going forward \u2014 confirmed she likes them again."
   }
 ]
