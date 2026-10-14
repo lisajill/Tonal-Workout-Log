@@ -1,0 +1,82 @@
+{
+    "uuid": "808F7DCA-8275-4B90-B828-39C5C76AB6CC",
+    "name": "Tonal",
+    "activity": {
+        "name": "Preparation And Recovery",
+        "type": 33
+    },
+    "startDate": "2026-10-14T15:23:26Z",
+    "endDate": "2026-10-14T15:42:32Z",
+    "source": "Tonal",
+    "location": "Indoor",
+    "zones": {
+        "zone4": {
+            "name": "PEAK",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone3": {
+            "name": "CARDIO",
+            "rate": 0.06461,
+            "time": {
+                "value": 74,
+                "unit": "sec"
+            }
+        },
+        "zone2": {
+            "name": "FAT BURN",
+            "rate": 0.57003,
+            "time": {
+                "value": 652,
+                "unit": "sec"
+            }
+        },
+        "zone1": {
+            "name": "WARM UP",
+            "rate": 0.36537,
+            "time": {
+                "value": 418,
+                "unit": "sec"
+            }
+        }
+    },
+    "duration": {
+        "value": 1145,
+        "unit": "sec"
+    },
+    "activeCalories": {
+        "value": 83,
+        "unit": "kcal"
+    },
+    "averageIntensity": {
+        "value": 63,
+        "unit": "%"
+    },
+    "minIntensity": {
+        "value": 43,
+        "unit": "%"
+    },
+    "maxIntensity": {
+        "value": 80,
+        "unit": "%"
+    },
+    "averageHeartRate": {
+        "value": 113,
+        "unit": "bpm"
+    },
+    "minHeartRate": {
+        "value": 78,
+        "unit": "bpm"
+    },
+    "maxHeartRate": {
+        "value": 144,
+        "unit": "bpm"
+    },
+    "device": {
+        "name": "Tonal",
+        "manufacturer": "Tonal Systems, Inc."
+    }
+}
