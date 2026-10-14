@@ -7130,15 +7130,15 @@
     "strength_upper": 486,
     "strength_core": 465,
     "strength_lower": 618,
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
     "notes": "\u2022 Shut the session down early \u2014 felt feverish partway through, not just PMS fatigue; planned Hydrow row cancelled.\n\u2022 Cardiovascular cost was way out of proportion to the load (5.9 min Z3 + 1.4 min Z4 on just a 40 lb squat/11 lb press) \u2014 possible illness signal.\n\u2022 Glutes/quads/shoulders took the readiness hit despite the short session.",
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-04",
@@ -7261,14 +7261,14 @@
     "avg_hr": 113,
     "max_hr": 147,
     "notes": "\u2022 Second session of the day, ~1hr after the morning bodyweight circuit \u2014 chest/shoulders took the hardest readiness hit (61/69) as expected.\n\u2022 Described as a tough session despite good energy/vibes going in (\"that sucked\").",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-04",
@@ -7655,14 +7655,14 @@
     "total_work_kj": 6,
     "tonal_activity_id": "c98a7fcd-6187-436a-bf07-69b96b939297",
     "notes": "\u2022 First run of the new Heavy Six \"Upper A \u2014 Push\". Lateral Raise swapped in for Overhead Press since that pattern was already hit the day before.\n\u2022 Followed by a 10-min Breathe row instead of a 4th lifting movement \u2014 complementary volume rather than piling onto chest/shoulders/triceps.",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-06",
@@ -7896,14 +7896,14 @@
     "total_work_kj": 6,
     "tonal_activity_id": "ed4ebfad-fa62-4427-a303-7ba140d29d34",
     "notes": "\u2022 Guided class with light 5 lb resistance (not bodyweight-only as planned); hip/leg moves hit glutes/hamstrings harder than expected (71%/69% post).\n\u2022 Incidental adductor work (untracked by Tonal) \u2014 inner-thigh soreness reported next day, consistent with the manual readiness estimate (~58%).\n\u2022 Chest/shoulders correctly left untouched, still recovering from Monday's Upper A.",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-07",
@@ -8041,14 +8041,14 @@
     "total_work_kj": 5,
     "tonal_activity_id": "b901893b-8a5c-4d45-9f37-a969270f6d6b",
     "notes": "\u2022 Hip Thrust showed real detraining \u2014 dropped to 100 lb from a prior 136 lb working weight, climbed 100\u2192110\u2192115 across sets.\n\u2022 Bar-stability fix: bracing arms on the bench instead of gripping the bar directly \u2014 more stable, wrist-friendly.\n\u2022 Second session of the day (after Upper B) \u2014 zero muscle overlap confirmed by readiness.\n\u2022 An 8-min Zoom call interrupted the rest period \u2014 near-fresh reattempts each set, not a standard-rest progression.",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-07",
@@ -8241,18 +8241,18 @@
     "total_work_kj": 9,
     "tonal_activity_id": "29fd1f2b-1df0-4c5a-852f-38572cc9b11a",
     "notes": "\u2022 Power PR Bent Over Row (24 lb); Volume PR Pallof Press (12 lb) \u2014 held reps/control even after dropping weight twice to protect form.\n\u2022 Pallof Press form broke down on set 3 (leaning instead of staying upright) \u2014 correctly dropped weight rather than grind bad reps.\n\u2022 Wrist accommodations (elbow bend on Chop, wider grip on Triceps Extension) \u2014 standard setup going forward.\n\u2022 Hips/legs correctly left untouched to protect Tuesday's Pilates recovery.",
-    "functional_strength": 7,
-    "movement_quality": 0,
+    "functional_strength": 63,
+    "movement_quality": 42,
     "strength_overall": 525,
     "strength_upper": 490,
     "strength_core": 467,
     "strength_lower": 618,
-    "movement_quality_delta": -394,
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "movement_quality_delta": -352,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-09",
@@ -8483,18 +8483,18 @@
     "total_work_kj": 7,
     "tonal_activity_id": "a3f0e1c7-ab71-4b39-be6c-9230b38b711c",
     "notes": "\u2022 Did Tonal's AI-generated session instead of the planned off-Tonal circuit; very fragmented sleep (real sleep didn't start until ~4am), energy 1, vibes 3.\n\u2022 Liked the active-rest pairing (Floor Slide during Biceps Curl rest) \u2014 want this pattern built into the Heavy Six customs going forward.\n\u2022 More flat-palm time than usual (Plank Walk Out, wider Bear Hold) \u2014 watch for tingling/numbness as a data point.\n\u2022 FS 310 (target 48-64) and MQ 263 (target 46-62) \u2014 well above target on both.",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
     "strength_overall": 525,
     "strength_upper": 490,
     "strength_core": 468,
     "strength_lower": 618,
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-10",
@@ -8660,9 +8660,9 @@
       }
     ],
     "timestamp": "2026-10-10T09:18:18.923161-04:00",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
     "duration": 22.52,
     "total_volume": 550,
     "total_reps": 38,
@@ -8670,11 +8670,11 @@
     "total_work_kj": 1,
     "tonal_activity_id": "fdd81d08-fc36-4b3d-a505-0ffd34ba27a6",
     "notes": "\u2022 Dead Bug set 1 cut short (2/8 reps) to reposition handles, not a strength issue \u2014 made up with 8 bonus reps during the rest after set 3.\n\u2022 Suitcase March 40-42 lb, Farmer March 25-30 lb \u2014 real loaded carries. Skipped the planned Drive row after: grip was cooked from the carries, moved it to the next day.\n\u2022 Substantial bodyweight work folded into rest periods (3\u00d710 Glute Raises, 4\u00d730s Wall Sits, 10 Bodyweight Squats, 10 Single-Leg Glute Raises) \u2014 not in the Tonal movements list since it's off-Tonal.\n\u2022 Two real limiters: grip (from the carries) and Bench Press, which hit true failure at 24-25 lb and dropped to 22 lb to finish. Bench reps logged as 4/set are 2/side alternating, not 4 total.",
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-11",
@@ -8781,14 +8781,14 @@
       }
     ],
     "timestamp": "2026-10-11T18:10:16.077619-04:00",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14,
+    "endurance_sets": 16,
     "duration": 15.02,
     "total_volume": 1117,
     "total_reps": 104,
@@ -8980,9 +8980,9 @@
       }
     ],
     "timestamp": "2026-10-11T12:07:31.040966-04:00",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
     "duration": 24.42,
     "total_volume": 4648,
     "total_reps": 92,
@@ -8990,11 +8990,11 @@
     "total_work_kj": 6,
     "tonal_activity_id": "cc33bed0-ce9d-4072-88d7-1250ade0fb6a",
     "notes": "\u2022 Resisted Step Up hurt the knee (side/lateral loading) \u2014 swapped live to bodyweight Front Step Up, 10/side \u00d7 3, both hands on frame for balance only. Front step-ups are knee-safe.\n\u2022 Glute Bridge set 3: failed 150 and 141 lb before landing the real ceiling at 140 \u2014 rep 5 close to failure.\n\u2022 First loaded Lateral Bridge with Row \u2014 Strength+Power PR (16 lb), Power PR (19 lb).",
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14,
+    "endurance_sets": 16,
     "strength_overall": 525,
     "strength_upper": 490,
     "strength_core": 467,
@@ -9179,9 +9179,9 @@
       }
     ],
     "timestamp": "2026-10-11T11:59:32.444487-04:00",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
     "duration": 5.1,
     "total_volume": 1285,
     "total_reps": 13,
@@ -9189,11 +9189,11 @@
     "total_work_kj": 1,
     "tonal_activity_id": "044f4403-e4a3-4da1-ab8f-c3e2d9c2f822",
     "merged_into": "cc33bed0-ce9d-4072-88d7-1250ade0fb6a",
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14
+    "endurance_sets": 16
   },
   {
     "date": "2026-10-12",
@@ -9296,14 +9296,14 @@
       }
     ],
     "timestamp": "2026-10-12T18:28:46.702-04:00",
-    "functional_strength": 7,
-    "movement_quality": 0,
-    "movement_quality_delta": -394,
-    "volume_score": 3105,
-    "work_score": 9010,
-    "strength_sets": 2,
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
     "power_reps": 16,
-    "endurance_sets": 14,
+    "endurance_sets": 16,
     "duration": 19.93,
     "total_volume": 3105,
     "total_reps": 115,
@@ -9311,5 +9311,137 @@
     "total_work_kj": 9,
     "tonal_activity_id": "56f7ee2a-8b8d-42de-acc9-43a0737fb62d",
     "notes": "\u2022 First drop sets since early in the year \u2014 re-tried them and liked them again; realized heavier starting weight \u2014 more pre-fatigue for the drop.\n\u2022 Struggled hard enough on one rep that Tonal's auto-unload kicked in and cut resistance to zero \u2014 genuine failure, not a glitch.\n\u2022 Bench Press and Standing Face Pull drops both ran long (20 and 18 reps on the drop) \u2014 ~59 total reps across the session by feel.\n\u2022 Drop sets are back in rotation going forward \u2014 confirmed she likes them again."
+  },
+  {
+    "date": "2026-10-14",
+    "workout": "Mind and Body Recovery",
+    "energy_level": 1,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "mild",
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "chest": 100,
+      "shoulders": 100,
+      "back": 86,
+      "triceps": 87,
+      "biceps": 100,
+      "abs": 100,
+      "obliques": 100,
+      "quads": 100,
+      "glutes": 100,
+      "hamstrings": 100,
+      "calves": 100
+    },
+    "post_readiness": {
+      "chest": 100,
+      "shoulders": 78,
+      "back": 60,
+      "triceps": 83,
+      "biceps": 96,
+      "abs": 86,
+      "obliques": 97,
+      "quads": 68,
+      "glutes": 70,
+      "hamstrings": 73,
+      "calves": 99
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Single-Arm Squat with Row",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 17
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 17
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 17
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 17
+          }
+        ]
+      },
+      {
+        "name": "Standing Overhead Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 9
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 6
+          }
+        ]
+      },
+      {
+        "name": "Single-Arm Deadlift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 41
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 41
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 41
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 41
+          }
+        ]
+      },
+      {
+        "name": "Resisted Leg Lowering",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 10,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 10,
+            "duration_sec": 30
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-10-14T11:23:26.709-04:00",
+    "functional_strength": 63,
+    "movement_quality": 42,
+    "movement_quality_delta": -352,
+    "volume_score": 5725,
+    "work_score": 15918,
+    "strength_sets": 4,
+    "power_reps": 16,
+    "endurance_sets": 16,
+    "duration": 19.08,
+    "total_volume": 2620,
+    "total_reps": 100,
+    "time_under_tension": 7.93,
+    "total_work_kj": 7,
+    "tonal_activity_id": "208ca385-3749-4ff3-ba58-52134531034c",
+    "notes": "\u2022 Illness-adjacent day (called in sick, worsening fatigue, ear pain, sore throat) \u2014 skipped planned Hip Thrust drop sets, did this gentle Recovery Mode session instead once feeling improved.\n\u2022 First time using Tonal's Recovery Mode (80% of suggested weight) \u2014 really liked it as a low-energy-day option: real training stimulus without pushing through depletion. Likely go-to for future low-energy days.\n\u2022 Worked out useful form adjustments on Single-Arm Deadlift during this session.\n\u2022 Standing Overhead Press dropped 9\u21926 lb on set 2 \u2014 self-regulated down given energy 1/5."
   }
 ]
