@@ -3082,6 +3082,32 @@
     "distance_mi": null
   },
   {
+    "uuid": "49DAB45E-BCBD-48BD-A5D3-CF6FBAD76EB1",
+    "date": "2026-10-13",
+    "timestamp": "2026-10-13T13:09:30Z",
+    "activity": "Walking",
+    "duration_min": 21.2,
+    "zone1_min": 13.3,
+    "zone2_min": 7.6,
+    "zone3_min": 0.4,
+    "zone4_min": 0,
+    "avg_hr": 108,
+    "distance_mi": 0.9
+  },
+  {
+    "uuid": "F7A577D6-348C-4D54-A7A0-0DE8F6778F91",
+    "date": "2026-10-13",
+    "timestamp": "2026-10-13T20:40:29Z",
+    "activity": "Walking",
+    "duration_min": 24.8,
+    "zone1_min": 21,
+    "zone2_min": 3.9,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 101,
+    "distance_mi": 1.01
+  },
+  {
     "uuid": "C8A4D9BE-30F5-4903-9748-2A20190AD8E1",
     "date": "2026-10-14",
     "timestamp": "2026-10-14T14:33:48Z",
