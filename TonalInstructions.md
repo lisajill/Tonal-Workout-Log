@@ -116,7 +116,10 @@ Both hands cleared as of May 2, 2026. Full upper body and compound movements now
 - **`getActivitySummaries()` returns max 50 entries** across all activity types — mostly Apple Watch entries. Only ~4 Tonal workouts visible in recent history.
 - **`calories` and heart rate** are NOT available in activity summaries for Tonal workouts. Manual entry only.
 - **`name` field on activities** may differ from manually-entered workout names (e.g. API returns "Hands Free", manual was "Hands Free Lower Body"). Merge by `tonal_activity_id` first, then `date::workout`, then `date` only.
-- **Putting different movements in one `blockNumber` (alternating `movementId` across sets) does NOT run as a circuit/superset in the app.** Confirmed Oct 11, 2026 — tried via the createWorkout API and via editing the workout directly in the Tonal app; both times it only displayed/ran a single exercise for that block. The underlying mechanism for a true superset in the app (if one exists) is still unknown. Don't attempt the alternating-movementId-in-one-block pattern again without new evidence — build multi-movement sessions as separate sequential blocks instead.
+- **Circuit/superset behavior within one `blockNumber` depends on the exact structure — two different patterns were tested with opposite results:**
+  - **Does NOT work:** multiple *repeated rounds* of alternating movement pairs crammed into one block (e.g. A→B→A→B→A→B via `repetition`/`round` fields, all same `blockNumber`). Confirmed Oct 11, 2026 — only displayed/ran a single exercise for that block, both via createWorkout and via editing directly in the app.
+  - **DOES work (circuits correctly):** a single pass through different movements grouped once each in one block (e.g. A→B→C, no repeats, all same `blockNumber`, only the first set has `blockStart: true`). Confirmed Oct 16, 2026, via editing a workout directly in the app (Hip Thrust + Biceps Curl + Assisted Reverse Lunge grouped in one block) — user confirmed this circuits properly when run.
+  - Not yet tested: whether a single-pass multi-movement block (A→B→C once each) built via the **createWorkout API** (rather than hand-edited in-app) also circuits correctly, or whether the working/non-working distinction is about round-repetition specifically rather than API-vs-manual-edit. Test via API before assuming.
 
 ---
 
