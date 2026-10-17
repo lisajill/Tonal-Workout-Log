@@ -9610,7 +9610,16 @@
       "hamstrings": 99,
       "calves": 100
     },
-    "prs": {},
+    "prs": {
+      "rotational_row": {
+        "weight": 15,
+        "date": "2026-10-17"
+      },
+      "seated_row": {
+        "weight": 26,
+        "date": "2026-10-17"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -9668,12 +9677,18 @@
           {
             "reps": 12,
             "weight_lbs": 14,
-            "duration_sec": 35
+            "duration_sec": 35,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 12,
             "weight_lbs": 15,
-            "duration_sec": 35
+            "duration_sec": 35,
+            "prs": [
+              "volume"
+            ]
           },
           {
             "reps": 12,
@@ -9699,7 +9714,10 @@
           {
             "reps": 8,
             "weight_lbs": 26,
-            "duration_sec": 30
+            "duration_sec": 30,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 6,
@@ -9729,6 +9747,6 @@
     "time_under_tension": 10.15,
     "total_work_kj": 13,
     "tonal_activity_id": "6cf36c03-1f6a-4c15-bae6-d18dfbbc1022",
-    "notes": "\u2022 First session of \"20-in-20: Spiced-Up Sets\" (pre-fatigue structure).\n\u2022 Block 1: real early failure. Bench Press 6\u21923\u21924 reps, cut 22\u219218 lb.\n\u2022 Block 2 (rows) held up fine, full reps.\n\u2022 Glutes and quads protected, saved for tomorrow."
+    "notes": "\u2022 First session of \"20-in-20: Spiced-Up Sets\" (pre-fatigue structure).\n\u2022 Block 1: real early failure. Bench Press 6\u21923\u21924 reps, cut 22\u219218 lb.\n\u2022 Block 2 (rows) held up fine, full reps.\n\u2022 Glutes and quads protected, saved for tomorrow.\n\u2022 PRs: Strength PR (Rotational Row set 2), Volume PR (Rotational Row set 3), 1RM increase (Seated Row set 1, 26lb)."
   }
 ]
