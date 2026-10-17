@@ -126,7 +126,7 @@ export default function SessionLog({ sessions, onSelectSession }) {
                   <td className="py-3 pr-5 text-zinc-400 mono-stat text-xs whitespace-nowrap">{s.date}</td>
                   <td className="py-3 pr-5 max-w-[260px]">
                     <span className="font-medium text-zinc-100 group-hover:text-accent-hover transition-colors">{s.workout}</span>
-                    {s.notes && <p className="text-[11px] text-amber-400/80 mt-0.5 leading-snug">{s.notes}</p>}
+                    {s.notes && <p className="text-[11px] text-amber-400/80 mt-0.5 leading-snug whitespace-pre-line">{s.notes}</p>}
                     {prEntries.length > 0 && (
                       <p className="mt-1 flex flex-wrap gap-1">
                         {prEntries.map(([k, pr]) => (
