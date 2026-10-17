@@ -3160,6 +3160,19 @@
     "distance_mi": 1.03
   },
   {
+    "uuid": "B423AE6F-1D6A-4C0F-B84D-D96CA62E959E",
+    "date": "2026-10-16",
+    "timestamp": "2026-10-16T15:48:17Z",
+    "activity": "Walking",
+    "duration_min": 24.3,
+    "zone1_min": 21,
+    "zone2_min": 3.3,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 97,
+    "distance_mi": 0.93
+  },
+  {
     "uuid": "E4E4C5BC-BB0E-4055-A468-EE29D62F3F1F",
     "date": "2026-10-16",
     "timestamp": "2026-10-16T21:32:45Z",
