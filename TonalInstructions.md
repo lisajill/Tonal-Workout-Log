@@ -1,6 +1,8 @@
 # Tonal Instructions
 *Reference this document before building any workout. Updated as new information is discovered.*
 
+**Full movement catalog:** `reference/tonal-exercises-complete.csv` — 281 movements (Exercise, Body Region, Primary/Secondary Muscle, Difficulty, Exercise Type, Attachment, Description columns). User-compiled, not a direct Tonal export — structural columns (names, attachment, muscles) are reliable, but description text is often generic/placeholder rather than real Tonal instructional copy. For an actual movement's real description/ID, prefer the live API (`.cache/movements.json` or a fresh `getMovements()` call) over this file's Description column.
+
 ---
 
 ## Rules Before Building Any Workout
