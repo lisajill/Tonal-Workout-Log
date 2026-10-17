@@ -591,7 +591,7 @@
     },
     "prs": {
       "barbell_hip_thrust": {
-        "weight": 56,
+        "weight": 28,
         "date": "2026-04-18"
       },
       "barbell_lying_glute_bridge": {
@@ -629,6 +629,10 @@
       "standing_straight_leg_glute_kickback": {
         "weight": null,
         "date": null
+      },
+      "standing_single_leg_hamstring_curl": {
+        "weight": 25,
+        "date": "2026-04-18"
       }
     },
     "muscles_high_volume": [
@@ -662,7 +666,10 @@
           },
           {
             "reps": 4,
-            "weight_lbs": 28
+            "weight_lbs": 28,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },
@@ -688,7 +695,10 @@
           },
           {
             "reps": 4,
-            "weight_lbs": 25
+            "weight_lbs": 25,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 4,
@@ -710,7 +720,10 @@
           },
           {
             "reps": 5,
-            "weight_lbs": 14
+            "weight_lbs": 14,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 5,
@@ -736,7 +749,10 @@
           },
           {
             "reps": 14,
-            "weight_lbs": 20
+            "weight_lbs": 20,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 14,
@@ -806,7 +822,7 @@
         "date": null
       },
       "barbell_lying_glute_bridge": {
-        "weight": 120,
+        "weight": 60,
         "date": "2026-04-19"
       },
       "prone_bench_hamstring_curl": {
@@ -873,7 +889,10 @@
           },
           {
             "reps": 8,
-            "weight_lbs": 60
+            "weight_lbs": 60,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },
@@ -905,7 +924,10 @@
           },
           {
             "reps": 5,
-            "weight_lbs": 28
+            "weight_lbs": 28,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 5,
@@ -923,7 +945,10 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 29
+            "weight_lbs": 29,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 6,
@@ -1011,6 +1036,10 @@
       "standing_hip_abduction": {
         "weight": 16,
         "date": "2026-04-25"
+      },
+      "standing_single_leg_hamstring_curl": {
+        "weight": 27,
+        "date": "2026-04-25"
       }
     },
     "muscles_high_volume": [
@@ -1076,7 +1105,10 @@
         "sets": [
           {
             "reps": 4,
-            "weight_lbs": 30
+            "weight_lbs": 30,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 4,
@@ -1106,7 +1138,10 @@
         "sets": [
           {
             "reps": 4,
-            "weight_lbs": 27
+            "weight_lbs": 27,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 4,
@@ -1152,7 +1187,10 @@
           },
           {
             "reps": 4,
-            "weight_lbs": 16
+            "weight_lbs": 16,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 4,
@@ -1202,7 +1240,7 @@
     },
     "prs": {
       "barbell_hip_thrust": {
-        "weight": 65,
+        "weight": 32.5,
         "date": "2026-04-25"
       }
     },
@@ -1237,7 +1275,10 @@
           },
           {
             "reps": 10,
-            "weight_lbs": 32.5
+            "weight_lbs": 32.5,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       }
@@ -1345,6 +1386,10 @@
       "standing_leg_extension": {
         "weight": 35,
         "date": "2026-04-26"
+      },
+      "prone_bench_single_leg_hamstring_curl": {
+        "weight": 25,
+        "date": "2026-04-26"
       }
     },
     "muscles_high_volume": [
@@ -1432,7 +1477,10 @@
           },
           {
             "reps": 5,
-            "weight_lbs": 25
+            "weight_lbs": 25,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 5,
@@ -1458,7 +1506,10 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 35
+            "weight_lbs": 35,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 6,
@@ -1510,15 +1561,15 @@
     },
     "prs": {
       "barbell_hip_thrust": {
-        "weight": 45.5,
+        "weight": 45,
         "date": "2026-04-29"
       },
       "standing_hip_abduction": {
-        "weight": 17,
+        "weight": 18,
         "date": "2026-04-29"
       },
       "standing_leg_extension": {
-        "weight": 27,
+        "weight": 40,
         "date": "2026-04-29"
       }
     },
@@ -1581,7 +1632,10 @@
           },
           {
             "reps": 4,
-            "weight_lbs": 18
+            "weight_lbs": 18,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 4,
@@ -1602,7 +1656,10 @@
           },
           {
             "reps": 4,
-            "weight_lbs": 40
+            "weight_lbs": 40,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 4,
@@ -1814,7 +1871,10 @@
           },
           {
             "reps": 5,
-            "weight_lbs": 127
+            "weight_lbs": 127,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 5,
@@ -2455,7 +2515,8 @@
             "reps": 4,
             "weight_lbs": 20,
             "prs": [
-              "power"
+              "power",
+              "strength"
             ]
           },
           {
@@ -2489,7 +2550,10 @@
           },
           {
             "reps": 4,
-            "weight_lbs": 29
+            "weight_lbs": 29,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 4,
@@ -3970,7 +4034,7 @@
     },
     "prs": {
       "barbell_chinup": {
-        "weight": 60,
+        "weight": 59,
         "date": "2026-05-30"
       },
       "bench_chest_fly": {
@@ -3979,6 +4043,10 @@
       },
       "barbell_seated_lat_pulldown": {
         "weight": 65,
+        "date": "2026-05-30"
+      },
+      "standing_overhead_press": {
+        "weight": 12,
         "date": "2026-05-30"
       }
     },
@@ -4006,7 +4074,8 @@
             "reps": 5,
             "weight_lbs": 65,
             "prs": [
-              "power"
+              "power",
+              "strength"
             ]
           },
           {
@@ -4047,7 +4116,10 @@
         "sets": [
           {
             "reps": 8,
-            "weight_lbs": 59
+            "weight_lbs": 59,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 6,
@@ -4107,7 +4179,10 @@
           },
           {
             "reps": 2,
-            "weight_lbs": 12
+            "weight_lbs": 12,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       }
@@ -4161,6 +4236,10 @@
       },
       "rdl": {
         "weight": 35,
+        "date": "2026-05-31"
+      },
+      "resisted_calf_raise": {
+        "weight": 20,
         "date": "2026-05-31"
       }
     },
@@ -4310,7 +4389,10 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 64
+            "weight_lbs": 64,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 6,
@@ -4346,7 +4428,10 @@
           },
           {
             "reps": 10,
-            "weight_lbs": 20
+            "weight_lbs": 20,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       }
@@ -4714,7 +4799,8 @@
             "reps": 5,
             "weight_lbs": 20,
             "prs": [
-              "power"
+              "power",
+              "strength"
             ]
           },
           {
@@ -5426,7 +5512,10 @@
         "sets": [
           {
             "reps": 5,
-            "weight_lbs": 29
+            "weight_lbs": 29,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 5,
@@ -5467,7 +5556,10 @@
           },
           {
             "reps": 5,
-            "weight_lbs": 15
+            "weight_lbs": 15,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 5,
@@ -6091,7 +6183,12 @@
       "hamstrings": 95,
       "calves": 100
     },
-    "prs": {},
+    "prs": {
+      "standing_chop": {
+        "weight": 26,
+        "date": "2026-07-25"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -6101,7 +6198,10 @@
         "sets": [
           {
             "reps": 8,
-            "weight_lbs": 26
+            "weight_lbs": 26,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 8,
@@ -6215,7 +6315,12 @@
       "biceps": null,
       "triceps": null
     },
-    "prs": {},
+    "prs": {
+      "goblet_squat_to_bench": {
+        "weight": 39,
+        "date": "2026-07-26"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -6242,7 +6347,10 @@
           {
             "reps": 10,
             "weight_lbs": 39,
-            "duration_sec": 30
+            "duration_sec": 30,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 6,
@@ -6348,7 +6456,12 @@
       "biceps": null,
       "triceps": null
     },
-    "prs": {},
+    "prs": {
+      "iso_split_squat_lift": {
+        "weight": 12,
+        "date": "2026-08-01"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -6368,7 +6481,8 @@
             "reps": 8,
             "weight_lbs": 12,
             "prs": [
-              "power"
+              "power",
+              "strength"
             ]
           },
           {
@@ -6569,7 +6683,16 @@
       "biceps": 100,
       "triceps": 100
     },
-    "prs": {},
+    "prs": {
+      "standing_diagonal_glute_kickback": {
+        "weight": 14,
+        "date": "2026-08-13"
+      },
+      "standing_donkey_kick": {
+        "weight": 28,
+        "date": "2026-08-13"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -6599,7 +6722,10 @@
           },
           {
             "reps": 10,
-            "weight_lbs": 14
+            "weight_lbs": 14,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 10,
@@ -6613,7 +6739,10 @@
         "sets": [
           {
             "reps": 10,
-            "weight_lbs": 28
+            "weight_lbs": 28,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 10,
@@ -7553,7 +7682,12 @@
       "biceps": 94,
       "triceps": 93
     },
-    "prs": {},
+    "prs": {
+      "lateral_raise": {
+        "weight": 7,
+        "date": "2026-10-05"
+      }
+    },
     "muscles_high_volume": [
       "chest",
       "shoulders"
@@ -7608,7 +7742,10 @@
           },
           {
             "reps": 5,
-            "weight_lbs": 7
+            "weight_lbs": 7,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 5,
@@ -8094,6 +8231,10 @@
       "half_kneeling_pallof_press": {
         "weight": 12,
         "date": "2026-10-07"
+      },
+      "reverse_grip_barbell_triceps_extension": {
+        "weight": 15,
+        "date": "2026-10-07"
       }
     },
     "muscles_high_volume": [
@@ -8162,7 +8303,10 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 15
+            "weight_lbs": 15,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },
@@ -8290,7 +8434,12 @@
       "biceps": null,
       "triceps": null
     },
-    "prs": {},
+    "prs": {
+      "seated_lat_pulldown": {
+        "weight": 26,
+        "date": "2026-10-09"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -8405,7 +8554,10 @@
         "sets": [
           {
             "reps": 12,
-            "weight_lbs": 26
+            "weight_lbs": 26,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },
@@ -8712,7 +8864,12 @@
       "hamstrings": 73,
       "calves": 100
     },
-    "prs": {},
+    "prs": {
+      "seated_alternating_overhead_press": {
+        "weight": 9,
+        "date": "2026-10-11"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -8723,7 +8880,10 @@
           {
             "reps": 18,
             "weight_lbs": 9,
-            "duration_sec": 50
+            "duration_sec": 50,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 14,
@@ -8841,6 +9001,10 @@
       "lateral_bridge_with_row": {
         "weight": 19,
         "date": "2026-10-11"
+      },
+      "standing_single_arm_row": {
+        "weight": 25,
+        "date": "2026-10-11"
       }
     },
     "muscles_high_volume": [],
@@ -8889,7 +9053,8 @@
             "reps": 5,
             "weight_lbs": 73,
             "prs": [
-              "power"
+              "power",
+              "strength"
             ]
           }
         ]
@@ -8919,7 +9084,10 @@
           },
           {
             "reps": 5,
-            "weight_lbs": 25
+            "weight_lbs": 25,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 5,
@@ -9231,7 +9399,20 @@
       "hamstrings": 98,
       "calves": 100
     },
-    "prs": {},
+    "prs": {
+      "seated_biceps_curl": {
+        "weight": 9,
+        "date": "2026-10-12"
+      },
+      "bench_press": {
+        "weight": 19,
+        "date": "2026-10-12"
+      },
+      "standing_face_pull": {
+        "weight": 47,
+        "date": "2026-10-12"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -9245,7 +9426,10 @@
           },
           {
             "reps": 20,
-            "weight_lbs": 19
+            "weight_lbs": 19,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },
@@ -9255,11 +9439,17 @@
         "sets": [
           {
             "reps": 17,
-            "weight_lbs": 7
+            "weight_lbs": 7,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 14,
-            "weight_lbs": 9
+            "weight_lbs": 9,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },
@@ -9276,7 +9466,10 @@
           },
           {
             "reps": 18,
-            "weight_lbs": 47
+            "weight_lbs": 47,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },

@@ -98,6 +98,8 @@ Both hands cleared as of May 2, 2026. Full upper body and compound movements now
 | Resisted Glute Bridge | `93457225-18db-41bc-974e-e874fb4d07d1` | Glutes, Abs, Hamstrings | Mat | Uses **handles** — NOT hands-free. Exclude. |
 | Barbell RDL | `ef5f1802-a99e-4e56-b473-32bbf353fb73` | Hamstrings, Glutes, Abs | Straight Bar | Standing hip hinge, hands-free. Knee-monitored-safe per training profile. **API weight is per-cable (half of app-displayed total)** — confirmed Oct 11: API returned 36.5 lbs when app showed 73 lbs (Power PR). Always store the app-displayed (doubled) weight in sessions.json, same as Glute Bridge and Hip Thrust. |
 
+**Dual-cable (per-cable API weight) also confirmed for:** Barbell Seated Lat Pulldown, Barbell Chinup, Reverse Grip Barbell Triceps Extension — found via the Oct 2026 historical PR scan (API baseWeight exactly half the stored app-displayed weight on matching reps). Any movement using the barbell attachment appears to pull from both cables — check for "Barbell" in the name as the heuristic, but verify against a known app-displayed weight before trusting it blindly, since not every historical session in sessions.json stored weights the same way (some older entries still hold the raw, undoubled API value).
+
 ---
 
 ## Special Movement IDs
