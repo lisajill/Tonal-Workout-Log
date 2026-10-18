@@ -232,7 +232,7 @@ async function main() {
       total_volume: activity.totalVolume,
       total_reps: activity.totalReps || null,
       time_under_tension: toMinutes(activity.timeUnderTension),
-      total_work_kj: Math.round(activity.totalWork / 1000),
+      total_work_kj: Math.round(activity.totalWork / 100) / 10,
       tonal_activity_id: activity.id,
     }
 
