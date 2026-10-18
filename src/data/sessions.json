@@ -9951,7 +9951,7 @@
     "sweat": "dry",
     "calories": 81,
     "avg_hr": 107,
-    "max_hr": null,
+    "max_hr": 143,
     "pre_readiness": {
       "glutes": 51,
       "hamstrings": 100,
@@ -10096,6 +10096,10 @@
     "total_reps": 56,
     "time_under_tension": 7.5,
     "total_work_kj": 6,
-    "tonal_activity_id": "d538b0aa-87a8-48cd-a592-95442f4ac58c"
+    "tonal_activity_id": "d538b0aa-87a8-48cd-a592-95442f4ac58c",
+    "strength_overall": 529,
+    "strength_upper": 502,
+    "strength_core": 467,
+    "strength_lower": 618
   }
 ]
