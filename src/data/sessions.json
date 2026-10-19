@@ -10162,7 +10162,20 @@
       "biceps": null,
       "triceps": null
     },
-    "prs": {},
+    "prs": {
+      "standing_face_pull": {
+        "weight": 49,
+        "date": "2026-10-19"
+      },
+      "overhead_triceps_extension": {
+        "weight": 28,
+        "date": "2026-10-19"
+      },
+      "lying_face_curl": {
+        "weight": 7,
+        "date": "2026-10-19"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -10173,17 +10186,28 @@
           {
             "reps": 12,
             "weight_lbs": 42,
-            "duration_sec": 40
+            "duration_sec": 40,
+            "prs": [
+              "strength",
+              "power"
+            ]
           },
           {
             "reps": 12,
             "weight_lbs": 44,
-            "duration_sec": 35
+            "duration_sec": 35,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 8,
             "weight_lbs": 49,
-            "duration_sec": 30
+            "duration_sec": 30,
+            "prs": [
+              "power",
+              "volume"
+            ]
           }
         ]
       },
@@ -10194,17 +10218,27 @@
           {
             "reps": 12,
             "weight_lbs": 26,
-            "duration_sec": 40
+            "duration_sec": 40,
+            "prs": [
+              "strength",
+              "power"
+            ]
           },
           {
             "reps": 10,
             "weight_lbs": 28,
-            "duration_sec": 35
+            "duration_sec": 35,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 8,
             "weight_lbs": 26,
-            "duration_sec": 30
+            "duration_sec": 30,
+            "prs": [
+              "volume"
+            ]
           }
         ]
       },
@@ -10225,7 +10259,10 @@
           {
             "reps": 10,
             "weight_lbs": 7,
-            "duration_sec": 30
+            "duration_sec": 30,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },
