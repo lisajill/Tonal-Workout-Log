@@ -397,7 +397,7 @@
       "calves"
     ],
     "tonal_activity_id": "00341bc1-7c4d-4713-9f63-8bce102fa9b0",
-    "notes": "Right knee discomfort on Standing Leg Extension — monitor",
+    "notes": "Right knee discomfort on Standing Leg Extension \u2014 monitor",
     "timestamp": "2026-04-05T10:22:44.845581-04:00",
     "movements": [
       {
@@ -550,7 +550,7 @@
     "date": "2026-04-18",
     "shot_day": true,
     "bodymap": "/BodyMapApril18.png",
-    "workout": "Heavy Express — Hip Thrust + Hamstring",
+    "workout": "Heavy Express \u2014 Hip Thrust + Hamstring",
     "energy_level": 1,
     "phase": "recovery",
     "subjective_rating": 4.5,
@@ -777,7 +777,7 @@
   {
     "date": "2026-04-19",
     "bodymap": "/BodyMapApril19.png",
-    "workout": "Heavy Express — Glute Bridge + Hamstring + Quad",
+    "workout": "Heavy Express \u2014 Glute Bridge + Hamstring + Quad",
     "energy_level": 1,
     "phase": "active",
     "subjective_rating": 5,
@@ -868,7 +868,7 @@
       "calves"
     ],
     "tonal_activity_id": "e6b7b607-d8c0-49ec-8614-09ad03577421",
-    "notes": "Right knee twinge at 80–90° on leg extension — not pain, held weight steady",
+    "notes": "Right knee twinge at 80\u201390\u00b0 on leg extension \u2014 not pain, held weight steady",
     "timestamp": "2026-04-19T09:50:34.720644-04:00",
     "movements": [
       {
@@ -986,7 +986,7 @@
     "date": "2026-04-25",
     "shot_day": true,
     "bodymap": "/BodyMapApril25.png",
-    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
+    "workout": "Heavy Express \u2014 Floor Bridge + Ankle Straps",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": 4,
@@ -1203,7 +1203,7 @@
   {
     "date": "2026-04-25",
     "shot_day": true,
-    "workout": "Free Lift — Barbell Hip Thrust",
+    "workout": "Free Lift \u2014 Barbell Hip Thrust",
     "bodymap": "/BodyMapApril25b.png",
     "energy_level": 4,
     "phase": "active",
@@ -1286,7 +1286,7 @@
   },
   {
     "date": "2026-04-26",
-    "workout": "Free Lift — Barbell Hip Thrust",
+    "workout": "Free Lift \u2014 Barbell Hip Thrust",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": null,
@@ -1416,7 +1416,7 @@
     "total_work_kj": 7,
     "tonal_activity_id": "db03899d-36f9-46a7-b51c-c34cb53ab5bb",
     "bodymap": "/BodyMapApril26.png",
-    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80° knee flexion where twitch/pain occurs",
+    "notes": "Right leg on leg extension: self-limited to ~27 lbs, stops before 80\u00b0 knee flexion where twitch/pain occurs",
     "timestamp": "2026-04-26T09:45:11.54657-04:00",
     "movements": [
       {
@@ -1679,7 +1679,7 @@
     "time_under_tension": 3.3,
     "total_work_kj": 4,
     "tonal_activity_id": "dc8ec760-817d-458e-9758-fc33a09c5874",
-    "notes": "Dizziness on last 2 leg extension sets — monitor. Strong otherwise.",
+    "notes": "Dizziness on last 2 leg extension sets \u2014 monitor. Strong otherwise.",
     "strength_overall": 468,
     "strength_upper": 461,
     "strength_core": 450,
@@ -1801,7 +1801,7 @@
     "strength_upper": 461,
     "strength_core": 450,
     "strength_lower": 494,
-    "notes": "Tonal crashed mid-workout during bench press sets 2–3. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs × 10), seated lat pulldown 1 set (25 lbs × 5). Neutral lat pulldown not reached.",
+    "notes": "Tonal crashed mid-workout during bench press sets 2\u20133. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs \u00d7 10), seated lat pulldown 1 set (25 lbs \u00d7 5). Neutral lat pulldown not reached.",
     "shot_day": true
   },
   {
@@ -2022,7 +2022,7 @@
     "functional_strength": 244,
     "movement_quality": 127,
     "movement_quality_delta": 83,
-    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs — strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked). Followed by 2×30s Farmer March free lift, 28 lbs."
+    "notes": "Exhausted day (CBTI sleep restriction). Glute Bridge: Smart Flex +32, hit 127 lbs \u2014 strength PRs all 3 working sets. Standing Chop PRs at 23 lbs. Added 2 sets of bent-knee calf raises between sets (off-machine, not tracked). Followed by 2\u00d730s Farmer March free lift, 28 lbs."
   },
   {
     "date": "2026-05-03",
@@ -2089,7 +2089,7 @@
     "total_work_kj": 0,
     "tonal_activity_id": "e14b0170-141a-4d6e-a243-f3983650ff25",
     "shot_day": false,
-    "notes": "Post-workout custom lift — 2 sets Farmer March, 28 lbs.",
+    "notes": "Post-workout custom lift \u2014 2 sets Farmer March, 28 lbs.",
     "merged_into": "53adbfc8-8448-4abf-913e-a9ae9123553f"
   },
   {
@@ -2368,11 +2368,11 @@
     "strength_upper": 462,
     "strength_core": 454,
     "strength_lower": 524,
-    "notes": "Left hand grip limited — lowered weights asymmetrically on all movements. Bent knee calf raises (off-machine, 2 sets) during Farmer March rest. Short NRD pre-session warmup merged in."
+    "notes": "Left hand grip limited \u2014 lowered weights asymmetrically on all movements. Bent knee calf raises (off-machine, 2 sets) during Farmer March rest. Short NRD pre-session warmup merged in."
   },
   {
     "date": "2026-05-08",
-    "workout": "Hip Thrust — Ankle Strap & Grip",
+    "workout": "Hip Thrust \u2014 Ankle Strap & Grip",
     "energy_level": 5,
     "phase": "active",
     "subjective_rating": 5,
@@ -2651,7 +2651,7 @@
     "strength_core": 454,
     "strength_lower": 534,
     "shot_day": false,
-    "notes": "Hands tingling throughout; reduced pulldown weight progressively (43→38→34 lbs) and hammer curl dropped to 30 lbs on set 3 due to hand/arm fatigue. Energy 5/5 despite fatigued glutes and hamstrings going in."
+    "notes": "Hands tingling throughout; reduced pulldown weight progressively (43\u219238\u219234 lbs) and hammer curl dropped to 30 lbs on set 3 due to hand/arm fatigue. Energy 5/5 despite fatigued glutes and hamstrings going in."
   },
   {
     "date": "2026-05-09",
@@ -2915,7 +2915,7 @@
     "strength_upper": 487,
     "strength_core": 456,
     "strength_lower": 535,
-    "notes": "Standing-only due to hair dye (no bending/lying). First time on standing push movements. Hands tingling throughout but manageable with press movements. Then free lift: Alternating Biceps Curl (strength+power PR at 15 lbs, dropped to 10), Triceps Kickbacks 3×5@8, Pull Through progressive 30→35→40 lbs. Strong energy throughout."
+    "notes": "Standing-only due to hair dye (no bending/lying). First time on standing push movements. Hands tingling throughout but manageable with press movements. Then free lift: Alternating Biceps Curl (strength+power PR at 15 lbs, dropped to 10), Triceps Kickbacks 3\u00d75@8, Pull Through progressive 30\u219235\u219240 lbs. Strong energy throughout."
   },
   {
     "date": "2026-05-09",
@@ -3027,7 +3027,7 @@
   },
   {
     "date": "2026-05-13",
-    "workout": "Hotel Gym — Life Fitness Circuit",
+    "workout": "Hotel Gym \u2014 Life Fitness Circuit",
     "tonal_activity_id": "manual-hotel-gym-20260513",
     "timestamp": "2026-05-13T06:00:00-04:00",
     "energy_level": 5,
@@ -3177,7 +3177,7 @@
         ]
       }
     ],
-    "notes": "Hotel gym (Life Fitness machines), circuit format 3–4 rounds. Leg extension: right knee pain R1 at 70 lbs; dropped to 50 lbs R2–3, bilateral knee pain on descent past ~30 deg. Chest press: dropped to 50 lbs for last 2 reps in R2–3. Finished with 3×5 goblet squat and 3×8 hip thrust (40 lb DB). 20 min sauna post-workout."
+    "notes": "Hotel gym (Life Fitness machines), circuit format 3\u20134 rounds. Leg extension: right knee pain R1 at 70 lbs; dropped to 50 lbs R2\u20133, bilateral knee pain on descent past ~30 deg. Chest press: dropped to 50 lbs for last 2 reps in R2\u20133. Finished with 3\u00d75 goblet squat and 3\u00d78 hip thrust (40 lb DB). 20 min sauna post-workout."
   },
   {
     "date": "2026-05-22",
@@ -3484,7 +3484,7 @@
     "strength_upper": 487,
     "strength_core": 456,
     "strength_lower": 435,
-    "notes": "Adductors and inner thighs still sore from first equestrian session (May 22) — not in readiness schema. Upper-body pull focus; no lower body work.",
+    "notes": "Adductors and inner thighs still sore from first equestrian session (May 22) \u2014 not in readiness schema. Upper-body pull focus; no lower body work.",
     "program": "Triple Threat: Dynamic Gains"
   },
   {
@@ -3725,7 +3725,7 @@
     "functional_strength": 100,
     "movement_quality": 64,
     "movement_quality_delta": -33,
-    "notes": "• Got dizzy/nauseated mid-session (no fever) — traced to being 3 days into switching antihistamines (Zyrtec→Xyzal), not a training or GI issue.\n• Lower strength score jumped 435→536 despite low energy (1/5) — heavy lower body stacked on existing equestrian soreness."
+    "notes": "\u2022 Got dizzy/nauseated mid-session (no fever) \u2014 traced to being 3 days into switching antihistamines (Zyrtec\u2192Xyzal), not a training or GI issue.\n\u2022 Lower strength score jumped 435\u2192536 despite low energy (1/5) \u2014 heavy lower body stacked on existing equestrian soreness."
   },
   {
     "date": "2026-05-27",
@@ -3926,7 +3926,7 @@
     "strength_upper": 486,
     "strength_core": 465,
     "strength_lower": 536,
-    "notes": "Energy 5, felt great. Rope handle on Rotational Lift rests on lower knuckle (MCP joint) of both thumbs — went down in weight due to discomfort. Concern given bilateral hand surgery history. Consider alternative attachment for this movement."
+    "notes": "Energy 5, felt great. Rope handle on Rotational Lift rests on lower knuckle (MCP joint) of both thumbs \u2014 went down in weight due to discomfort. Concern given bilateral hand surgery history. Consider alternative attachment for this movement."
   },
   {
     "date": "2026-05-28",
@@ -4187,7 +4187,7 @@
         ]
       }
     ],
-    "notes": "First session using Polar H10 chest strap — Apple Watch left off due to D-Moose hooks on both wrists."
+    "notes": "First session using Polar H10 chest strap \u2014 Apple Watch left off due to D-Moose hooks on both wrists."
   },
   {
     "date": "2026-05-31",
@@ -4451,7 +4451,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 536,
-    "notes": "Knee strap worn (patellar tendon strap) — minimal relief, likely needs full sleeve per PT consult. Energy 5/5, best session yet on this program. No PRs flagged."
+    "notes": "Knee strap worn (patellar tendon strap) \u2014 minimal relief, likely needs full sleeve per PT consult. Energy 5/5, best session yet on this program. No PRs flagged."
   },
   {
     "date": "2026-06-07",
@@ -4627,7 +4627,7 @@
   },
   {
     "date": "2026-06-13",
-    "workout": "Grip-Free 1 — Hip Power",
+    "workout": "Grip-Free 1 \u2014 Hip Power",
     "energy_level": 4,
     "phase": "active",
     "subjective_rating": 5,
@@ -4861,11 +4861,11 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 553,
-    "notes": "• New PRs across the board (Hip Thrust 110 lb, Kickback 27 lb, Hip Abduction 20 lb) despite a rough night — woke every 15 min with GI burping.\n• Suspected partial-dose shots the prior 2 weeks (air in pen) — may have hit a full tirzepatide dose for the first time in a while, possibly explaining the strong performance.\n• Ankle Strap adduction: dropped from 20→15 lb mid-set, too many reps at 20 — next time 5 reps/side."
+    "notes": "\u2022 New PRs across the board (Hip Thrust 110 lb, Kickback 27 lb, Hip Abduction 20 lb) despite a rough night \u2014 woke every 15 min with GI burping.\n\u2022 Suspected partial-dose shots the prior 2 weeks (air in pen) \u2014 may have hit a full tirzepatide dose for the first time in a while, possibly explaining the strong performance.\n\u2022 Ankle Strap adduction: dropped from 20\u219215 lb mid-set, too many reps at 20 \u2014 next time 5 reps/side."
   },
   {
     "date": "2026-06-14",
-    "workout": "Grip-Free 2 — Hamstring Burnout",
+    "workout": "Grip-Free 2 \u2014 Hamstring Burnout",
     "energy_level": 3,
     "phase": "active",
     "subjective_rating": 5,
@@ -5085,7 +5085,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 570,
-    "notes": "• Manually pushed weight above Smart Flex's suggestions on all movements — PRs reflect combined SF + self-directed progression, not SF alone.\n• All-time PRs: Glute Bridge 137 lb, SL Hamstring Curl 31 lb, bilateral Hamstring Curl 30 lb."
+    "notes": "\u2022 Manually pushed weight above Smart Flex's suggestions on all movements \u2014 PRs reflect combined SF + self-directed progression, not SF alone.\n\u2022 All-time PRs: Glute Bridge 137 lb, SL Hamstring Curl 31 lb, bilateral Hamstring Curl 30 lb."
   },
   {
     "date": "2026-06-18",
@@ -5381,11 +5381,11 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 605,
-    "notes": "Shot day (6.3mg tirzepatide). Hip thrust PRs on all 3 working sets — exceeded GF3 moderate target, beat GF1 PR of 110 lbs (new: 120 lbs). Prone bench hamstring curl: drop sets — started at 31 lbs, lowered to 27 then 25 for full ROM, working to failure. Standing leg extension: right knee pain even with brace, stopping before 80° — brace being returned. Returning the brace."
+    "notes": "Shot day (6.3mg tirzepatide). Hip thrust PRs on all 3 working sets \u2014 exceeded GF3 moderate target, beat GF1 PR of 110 lbs (new: 120 lbs). Prone bench hamstring curl: drop sets \u2014 started at 31 lbs, lowered to 27 then 25 for full ROM, working to failure. Standing leg extension: right knee pain even with brace, stopping before 80\u00b0 \u2014 brace being returned. Returning the brace."
   },
   {
     "date": "2026-06-19",
-    "workout": "GF — Bridge, Hip Flexors + Diagonal",
+    "workout": "GF \u2014 Bridge, Hip Flexors + Diagonal",
     "energy_level": 2,
     "phase": null,
     "subjective_rating": 3,
@@ -5619,7 +5619,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 606,
-    "notes": "Hip flexion block not set to alternating — ended up doing 5 reps each side as a single set instead of 3×5 per side. Forgot banded lateral walk (rest block finisher not obvious). Standing bicycle: held on with one hand for balance while the other arm crunched — good movement to continue building."
+    "notes": "Hip flexion block not set to alternating \u2014 ended up doing 5 reps each side as a single set instead of 3\u00d75 per side. Forgot banded lateral walk (rest block finisher not obvious). Standing bicycle: held on with one hand for balance while the other arm crunched \u2014 good movement to continue building."
   },
   {
     "date": "2026-06-27",
@@ -5675,7 +5675,7 @@
     "total_work_kj": 3,
     "tonal_activity_id": "de9b37c8-fa9e-4887-a6e2-b74adfd68771",
     "shot_day": null,
-    "notes": "Back-logged from screenshot (session wasn't captured at the time). Single-movement snack session — Barbell Hip Thrust only. New all-time PR: 146 lbs (up from 120 lbs on 6/18), flagged VOLUME PR in-app on the final set.",
+    "notes": "Back-logged from screenshot (session wasn't captured at the time). Single-movement snack session \u2014 Barbell Hip Thrust only. New all-time PR: 146 lbs (up from 120 lbs on 6/18), flagged VOLUME PR in-app on the final set.",
     "movements": [
       {
         "name": "Barbell Hip Thrust",
@@ -5702,7 +5702,7 @@
   },
   {
     "date": "2026-07-05",
-    "workout": "Heavy Express — Floor Bridge + Ankle Straps",
+    "workout": "Heavy Express \u2014 Floor Bridge + Ankle Straps",
     "energy_level": 2,
     "phase": "active",
     "subjective_rating": 3,
@@ -5769,7 +5769,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 616,
-    "notes": "Energy 2, vibes 3 — Zepbound titration side effects. Skipped the 4th movement in the session (workout listed 4 movements total) due to titration side effects; did the 3 logged. Titrating to 7.5mg dose Thursday. Glutes/hamstrings still recovering (50%) going into this session; new PRs on all 3 logged movements (glute bridge 143 lbs strength+volume, donkey kick 32 lbs strength, hamstring curl 33 lbs strength).",
+    "notes": "Energy 2, vibes 3 \u2014 Zepbound titration side effects. Skipped the 4th movement in the session (workout listed 4 movements total) due to titration side effects; did the 3 logged. Titrating to 7.5mg dose Thursday. Glutes/hamstrings still recovering (50%) going into this session; new PRs on all 3 logged movements (glute bridge 143 lbs strength+volume, donkey kick 32 lbs strength, hamstring curl 33 lbs strength).",
     "movements": [
       {
         "name": "Barbell Lying Glute Bridge",
@@ -5935,7 +5935,7 @@
     "time_under_tension": 4.95,
     "total_work_kj": 3,
     "tonal_activity_id": "65d9ca6e-90f3-4f64-a3b9-77676b7250dd",
-    "notes": "• First hands-on/upper-body session since the carpal tunnel/ulnar neuropathy diagnosis — surgeon cleared hands the day before, wrist-support gloves debuted.\n• Trainer added a dead-bug-style anti-extension hold during Bench Press — noticeably harder than standard.",
+    "notes": "\u2022 First hands-on/upper-body session since the carpal tunnel/ulnar neuropathy diagnosis \u2014 surgeon cleared hands the day before, wrist-support gloves debuted.\n\u2022 Trainer added a dead-bug-style anti-extension hold during Bench Press \u2014 noticeably harder than standard.",
     "functional_strength": 34,
     "movement_quality": 18,
     "strength_overall": 523,
@@ -6053,7 +6053,7 @@
     "total_work_kj": 4,
     "tonal_activity_id": "ed371c44-edc0-496a-8aef-f6006ce9e1ce",
     "shot_day": null,
-    "notes": "Energy 3, vibes 3. Two brand-new movements (Iso Split Squat Lift, Resisted DNS Star) — immediate PRs on first attempt, as expected for new movements. Performed Iso Split Squat Lift kneeling rather than the standard standing split-squat stance — knee-friendly modification."
+    "notes": "Energy 3, vibes 3. Two brand-new movements (Iso Split Squat Lift, Resisted DNS Star) \u2014 immediate PRs on first attempt, as expected for new movements. Performed Iso Split Squat Lift kneeling rather than the standard standing split-squat stance \u2014 knee-friendly modification."
   },
   {
     "date": "2026-07-24",
@@ -6139,7 +6139,7 @@
     "time_under_tension": 4.42,
     "total_work_kj": 4,
     "tonal_activity_id": "18c57b5f-4f78-45e2-a8f4-086f9f131e81",
-    "notes": "• Stopped ~2/3 through — grip gave out on Barbell Single-Leg RDL, not pain (surgeon's stop criteria is pain, not fatigue).\n• Programming lesson: leading the session with Single-Leg RDL was too aggressive for grip endurance at the time — save grip-plus-balance combos for later in a session.\n• Low pre-workout carbs (~34g) and low energy/vibes (1/5) likely compounded.",
+    "notes": "\u2022 Stopped ~2/3 through \u2014 grip gave out on Barbell Single-Leg RDL, not pain (surgeon's stop criteria is pain, not fatigue).\n\u2022 Programming lesson: leading the session with Single-Leg RDL was too aggressive for grip endurance at the time \u2014 save grip-plus-balance combos for later in a session.\n\u2022 Low pre-workout carbs (~34g) and low energy/vibes (1/5) likely compounded.",
     "functional_strength": 50,
     "movement_quality": 24,
     "strength_overall": 523,
@@ -6233,7 +6233,7 @@
             "reps": 0,
             "weight_lbs": 40,
             "duration_sec": 20,
-            "note": "Had to break and regrip mid-set — left hand. No pain, no tingling; grip fatigue only, resolved."
+            "note": "Had to break and regrip mid-set \u2014 left hand. No pain, no tingling; grip fatigue only, resolved."
           },
           {
             "reps": 0,
@@ -6277,7 +6277,7 @@
     "strength_upper": 487,
     "strength_core": 466,
     "strength_lower": 616,
-    "notes": "Energy 1, vibes 3, sweat dry. Low energy but good vibes — still notably better vibes than yesterday. PR (volume) on Standing Chop set 2. Had to break and regrip mid-set on Suitcase March (left hand) — no pain, no tingling, grip fatigue only, resolved immediately."
+    "notes": "Energy 1, vibes 3, sweat dry. Low energy but good vibes \u2014 still notably better vibes than yesterday. PR (volume) on Standing Chop set 2. Had to break and regrip mid-set on Suitcase March (left hand) \u2014 no pain, no tingling, grip fatigue only, resolved immediately."
   },
   {
     "date": "2026-07-26",
@@ -6418,7 +6418,7 @@
     "strength_upper": 487,
     "strength_core": 466,
     "strength_lower": 616,
-    "notes": "No hand issues today — about the right amount of hand-load work. Power PR on Goblet Squat to Bench, set 2 (6 reps @ 43 lbs)."
+    "notes": "No hand issues today \u2014 about the right amount of hand-load work. Power PR on Goblet Squat to Bench, set 2 (6 reps @ 43 lbs)."
   },
   {
     "date": "2026-08-01",
@@ -6543,7 +6543,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 616,
-    "notes": "Energy 4, vibes 4, sweat dry (both Tonal and Hydrow today). Power PR on Iso Split Squat Lift, set 3 (8 reps @ 12 lbs). Tonal then Hydrow back-to-back. Hydrow row afterward (15 min, first full-length piece): hands felt fine, but wrists got sore during/after — first time wrist specifically (not grip) has been the limiting factor. Possibly duration or stacking with Tonal same-day; not yet isolated."
+    "notes": "Energy 4, vibes 4, sweat dry (both Tonal and Hydrow today). Power PR on Iso Split Squat Lift, set 3 (8 reps @ 12 lbs). Tonal then Hydrow back-to-back. Hydrow row afterward (15 min, first full-length piece): hands felt fine, but wrists got sore during/after \u2014 first time wrist specifically (not grip) has been the limiting factor. Possibly duration or stacking with Tonal same-day; not yet isolated."
   },
   {
     "date": "2026-08-02",
@@ -6787,7 +6787,7 @@
     "strength_upper": 487,
     "strength_core": 465,
     "strength_lower": 618,
-    "notes": "Right leg felt weaker than left. Standing leg consistently felt like it was doing more work regardless of which side stood — matches known right hip stability imbalance."
+    "notes": "Right leg felt weaker than left. Standing leg consistently felt like it was doing more work regardless of which side stood \u2014 matches known right hip stability imbalance."
   },
   {
     "date": "2026-09-06",
@@ -7097,7 +7097,7 @@
     "functional_strength": 392,
     "movement_quality": 336,
     "movement_quality_delta": 336,
-    "notes": "• Best-feeling session of the return so far (energy 5, vibes 5), but Pallof Press showed a clear post-layoff regression (15 lb vs. a prior 24 lb PR).\n• Deliberately avoided posterior chain — glutes still DOMS-stuck at 77 from the day before."
+    "notes": "\u2022 Best-feeling session of the return so far (energy 5, vibes 5), but Pallof Press showed a clear post-layoff regression (15 lb vs. a prior 24 lb PR).\n\u2022 Deliberately avoided posterior chain \u2014 glutes still DOMS-stuck at 77 from the day before."
   },
   {
     "date": "2026-09-13",
@@ -7262,7 +7262,7 @@
     "functional_strength": 63,
     "movement_quality": 42,
     "movement_quality_delta": -352,
-    "notes": "• Shut the session down early — felt feverish partway through, not just PMS fatigue; planned Hydrow row cancelled.\n• Cardiovascular cost was way out of proportion to the load (5.9 min Z3 + 1.4 min Z4 on just a 40 lb squat/11 lb press) — possible illness signal.\n• Glutes/quads/shoulders took the readiness hit despite the short session.",
+    "notes": "\u2022 Shut the session down early \u2014 felt feverish partway through, not just PMS fatigue; planned Hydrow row cancelled.\n\u2022 Cardiovascular cost was way out of proportion to the load (5.9 min Z3 + 1.4 min Z4 on just a 40 lb squat/11 lb press) \u2014 possible illness signal.\n\u2022 Glutes/quads/shoulders took the readiness hit despite the short session.",
     "volume_score": 5725,
     "work_score": 15918,
     "strength_sets": 4,
@@ -7389,15 +7389,15 @@
     "calories": 28,
     "avg_hr": 113,
     "max_hr": 147,
-    "notes": "• Second session of the day, ~1hr after the morning bodyweight circuit — chest/shoulders took the hardest readiness hit (61/69) as expected.\n• Described as a tough session despite good energy/vibes going in (\"that sucked\").",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36
+    "notes": "\u2022 Second session of the day, ~1hr after the morning bodyweight circuit \u2014 chest/shoulders took the hardest readiness hit (61/69) as expected.\n\u2022 Described as a tough session despite good energy/vibes going in (\"that sucked\").",
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10
   },
   {
     "date": "2026-10-04",
@@ -7615,7 +7615,7 @@
         ]
       }
     ],
-    "notes": "• Off-Tonal by choice — skipped the machine to watch leadership videos while moving instead. Bird dog done on fists (not palms) for the carpal issue.\n• Energy 4, vibes 5. Post-readiness is a reasoning-based estimate (no Tonal API available off-machine).",
+    "notes": "\u2022 Off-Tonal by choice \u2014 skipped the machine to watch leadership videos while moving instead. Bird dog done on fists (not palms) for the carpal issue.\n\u2022 Energy 4, vibes 5. Post-readiness is a reasoning-based estimate (no Tonal API available off-machine).",
     "calories": 44,
     "avg_hr": 105,
     "max_hr": 136,
@@ -7648,7 +7648,7 @@
   },
   {
     "date": "2026-10-05",
-    "workout": "Upper A — Push",
+    "workout": "Upper A \u2014 Push",
     "energy_level": 5,
     "phase": null,
     "subjective_rating": 5,
@@ -7791,15 +7791,15 @@
     "time_under_tension": 4.88,
     "total_work_kj": 5.7,
     "tonal_activity_id": "c98a7fcd-6187-436a-bf07-69b96b939297",
-    "notes": "• First run of the new Heavy Six \"Upper A — Push\". Lateral Raise swapped in for Overhead Press since that pattern was already hit the day before.\n• Followed by a 10-min Breathe row instead of a 4th lifting movement — complementary volume rather than piling onto chest/shoulders/triceps.",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36
+    "notes": "\u2022 First run of the new Heavy Six \"Upper A \u2014 Push\". Lateral Raise swapped in for Overhead Press since that pattern was already hit the day before.\n\u2022 Followed by a 10-min Breathe row instead of a 4th lifting movement \u2014 complementary volume rather than piling onto chest/shoulders/triceps.",
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10
   },
   {
     "date": "2026-10-06",
@@ -8032,19 +8032,19 @@
     "time_under_tension": 20.62,
     "total_work_kj": 6,
     "tonal_activity_id": "ed4ebfad-fa62-4427-a303-7ba140d29d34",
-    "notes": "• Guided class with light 5 lb resistance (not bodyweight-only as planned); hip/leg moves hit glutes/hamstrings harder than expected (71%/69% post).\n• Incidental adductor work (untracked by Tonal) — inner-thigh soreness reported next day, consistent with the manual readiness estimate (~58%).\n• Chest/shoulders correctly left untouched, still recovering from Monday's Upper A.",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36
+    "notes": "\u2022 Guided class with light 5 lb resistance (not bodyweight-only as planned); hip/leg moves hit glutes/hamstrings harder than expected (71%/69% post).\n\u2022 Incidental adductor work (untracked by Tonal) \u2014 inner-thigh soreness reported next day, consistent with the manual readiness estimate (~58%).\n\u2022 Chest/shoulders correctly left untouched, still recovering from Monday's Upper A.",
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10
   },
   {
     "date": "2026-10-07",
-    "workout": "Lower A — Posterior Chain",
+    "workout": "Lower A \u2014 Posterior Chain",
     "energy_level": null,
     "phase": null,
     "subjective_rating": null,
@@ -8177,19 +8177,19 @@
     "time_under_tension": 5.37,
     "total_work_kj": 4.7,
     "tonal_activity_id": "b901893b-8a5c-4d45-9f37-a969270f6d6b",
-    "notes": "• Hip Thrust showed real detraining — dropped to 100 lb from a prior 136 lb working weight, climbed 100→110→115 across sets.\n• Bar-stability fix: bracing arms on the bench instead of gripping the bar directly — more stable, wrist-friendly.\n• Second session of the day (after Upper B) — zero muscle overlap confirmed by readiness.\n• An 8-min Zoom call interrupted the rest period — near-fresh reattempts each set, not a standard-rest progression.",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36
+    "notes": "\u2022 Hip Thrust showed real detraining \u2014 dropped to 100 lb from a prior 136 lb working weight, climbed 100\u2192110\u2192115 across sets.\n\u2022 Bar-stability fix: bracing arms on the bench instead of gripping the bar directly \u2014 more stable, wrist-friendly.\n\u2022 Second session of the day (after Upper B) \u2014 zero muscle overlap confirmed by readiness.\n\u2022 An 8-min Zoom call interrupted the rest period \u2014 near-fresh reattempts each set, not a standard-rest progression.",
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10
   },
   {
     "date": "2026-10-07",
-    "workout": "Upper B — Pull",
+    "workout": "Upper B \u2014 Pull",
     "energy_level": 5,
     "phase": null,
     "subjective_rating": 5,
@@ -8384,19 +8384,19 @@
     "time_under_tension": 11.87,
     "total_work_kj": 9.4,
     "tonal_activity_id": "29fd1f2b-1df0-4c5a-852f-38572cc9b11a",
-    "notes": "• Power PR Bent Over Row (24 lb); Volume PR Pallof Press (12 lb) — held reps/control even after dropping weight twice to protect form.\n• Pallof Press form broke down on set 3 (leaning instead of staying upright) — correctly dropped weight rather than grind bad reps.\n• Wrist accommodations (elbow bend on Chop, wider grip on Triceps Extension) — standard setup going forward.\n• Hips/legs correctly left untouched to protect Tuesday's Pilates recovery.",
-    "functional_strength": 152,
-    "movement_quality": 129,
+    "notes": "\u2022 Power PR Bent Over Row (24 lb); Volume PR Pallof Press (12 lb) \u2014 held reps/control even after dropping weight twice to protect form.\n\u2022 Pallof Press form broke down on set 3 (leaning instead of staying upright) \u2014 correctly dropped weight rather than grind bad reps.\n\u2022 Wrist accommodations (elbow bend on Chop, wider grip on Triceps Extension) \u2014 standard setup going forward.\n\u2022 Hips/legs correctly left untouched to protect Tuesday's Pilates recovery.",
+    "functional_strength": 45,
+    "movement_quality": 38,
     "strength_overall": 525,
     "strength_upper": 490,
     "strength_core": 467,
     "strength_lower": 618,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10
   },
   {
     "date": "2026-10-09",
@@ -8634,23 +8634,23 @@
     "time_under_tension": 11.53,
     "total_work_kj": 7,
     "tonal_activity_id": "a3f0e1c7-ab71-4b39-be6c-9230b38b711c",
-    "notes": "• Did Tonal's AI-generated session instead of the planned off-Tonal circuit; very fragmented sleep (real sleep didn't start until ~4am), energy 1, vibes 3.\n• Liked the active-rest pairing (Floor Slide during Biceps Curl rest) — want this pattern built into the Heavy Six customs going forward.\n• More flat-palm time than usual (Plank Walk Out, wider Bear Hold) — watch for tingling/numbness as a data point.\n• FS 310 (target 48-64) and MQ 263 (target 46-62) — well above target on both.",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
+    "notes": "\u2022 Did Tonal's AI-generated session instead of the planned off-Tonal circuit; very fragmented sleep (real sleep didn't start until ~4am), energy 1, vibes 3.\n\u2022 Liked the active-rest pairing (Floor Slide during Biceps Curl rest) \u2014 want this pattern built into the Heavy Six customs going forward.\n\u2022 More flat-palm time than usual (Plank Walk Out, wider Bear Hold) \u2014 watch for tingling/numbness as a data point.\n\u2022 FS 310 (target 48-64) and MQ 263 (target 46-62) \u2014 well above target on both.",
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
     "strength_overall": 525,
     "strength_upper": 490,
     "strength_core": 468,
     "strength_lower": 618,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10
   },
   {
     "date": "2026-10-10",
-    "workout": "Core — Anti-Rotation & Carries",
+    "workout": "Core \u2014 Anti-Rotation & Carries",
     "energy_level": 3.5,
     "phase": null,
     "subjective_rating": 4,
@@ -8812,21 +8812,21 @@
       }
     ],
     "timestamp": "2026-10-10T09:18:18.923161-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
     "duration": 22.52,
     "total_volume": 550,
     "total_reps": 38,
     "time_under_tension": 6.83,
     "total_work_kj": 1.4,
     "tonal_activity_id": "fdd81d08-fc36-4b3d-a505-0ffd34ba27a6",
-    "notes": "• Dead Bug set 1 cut short (2/8 reps) to reposition handles, not a strength issue — made up with 8 bonus reps during the rest after set 3.\n• Suitcase March 40-42 lb, Farmer March 25-30 lb — real loaded carries. Skipped the planned Drive row after: grip was cooked from the carries, moved it to the next day.\n• Substantial bodyweight work folded into rest periods (3×10 Glute Raises, 4×30s Wall Sits, 10 Bodyweight Squats, 10 Single-Leg Glute Raises) — not in the Tonal movements list since it's off-Tonal.\n• Two real limiters: grip (from the carries) and Bench Press, which hit true failure at 24-25 lb and dropped to 22 lb to finish. Bench reps logged as 4/set are 2/side alternating, not 4 total.",
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36
+    "notes": "\u2022 Dead Bug set 1 cut short (2/8 reps) to reposition handles, not a strength issue \u2014 made up with 8 bonus reps during the rest after set 3.\n\u2022 Suitcase March 40-42 lb, Farmer March 25-30 lb \u2014 real loaded carries. Skipped the planned Drive row after: grip was cooked from the carries, moved it to the next day.\n\u2022 Substantial bodyweight work folded into rest periods (3\u00d710 Glute Raises, 4\u00d730s Wall Sits, 10 Bodyweight Squats, 10 Single-Leg Glute Raises) \u2014 not in the Tonal movements list since it's off-Tonal.\n\u2022 Two real limiters: grip (from the carries) and Bench Press, which hit true failure at 24-25 lb and dropped to 22 lb to finish. Bench reps logged as 4/set are 2/side alternating, not 4 total.",
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10
   },
   {
     "date": "2026-10-11",
@@ -8941,21 +8941,21 @@
       }
     ],
     "timestamp": "2026-10-11T18:10:16.077619-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10,
     "duration": 15.02,
     "total_volume": 1117,
     "total_reps": 104,
     "time_under_tension": 6.58,
     "total_work_kj": 3.1,
     "tonal_activity_id": "ace23a26-d937-45e6-b3e9-81b764dc4345",
-    "notes": "• Second session of the day, evening Quick Fit after rain cancelled the walk — wanted to move.\n• Triceps Kickback started at 6 lb, dropped to 5 — triceps were the hardest part by far, matching the biggest readiness drop (100→57%).\n• Felt real relief in the lower back when engaging the core during the seated sets — likely counteracting some of the morning's back fatigue."
+    "notes": "\u2022 Second session of the day, evening Quick Fit after rain cancelled the walk \u2014 wanted to move.\n\u2022 Triceps Kickback started at 6 lb, dropped to 5 \u2014 triceps were the hardest part by far, matching the biggest readiness drop (100\u219257%).\n\u2022 Felt real relief in the lower back when engaging the core during the seated sets \u2014 likely counteracting some of the morning's back fatigue."
   },
   {
     "date": "2026-10-11",
@@ -9148,21 +9148,21 @@
       }
     ],
     "timestamp": "2026-10-11T12:07:31.040966-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
     "duration": 24.42,
     "total_volume": 4648,
     "total_reps": 92,
     "time_under_tension": 6.02,
     "total_work_kj": 6.3,
     "tonal_activity_id": "cc33bed0-ce9d-4072-88d7-1250ade0fb6a",
-    "notes": "• Resisted Step Up hurt the knee (side/lateral loading) — swapped live to bodyweight Front Step Up, 10/side × 3, both hands on frame for balance only. Front step-ups are knee-safe.\n• Glute Bridge set 3: failed 150 and 141 lb before landing the real ceiling at 140 — rep 5 close to failure.\n• First loaded Lateral Bridge with Row — Strength+Power PR (16 lb), Power PR (19 lb).",
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36,
+    "notes": "\u2022 Resisted Step Up hurt the knee (side/lateral loading) \u2014 swapped live to bodyweight Front Step Up, 10/side \u00d7 3, both hands on frame for balance only. Front step-ups are knee-safe.\n\u2022 Glute Bridge set 3: failed 150 and 141 lb before landing the real ceiling at 140 \u2014 rep 5 close to failure.\n\u2022 First loaded Lateral Bridge with Row \u2014 Strength+Power PR (16 lb), Power PR (19 lb).",
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10,
     "strength_overall": 525,
     "strength_upper": 490,
     "strength_core": 467,
@@ -9347,9 +9347,9 @@
       }
     ],
     "timestamp": "2026-10-11T11:59:32.444487-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
     "duration": 5.1,
     "total_volume": 1285,
     "total_reps": 13,
@@ -9357,11 +9357,11 @@
     "total_work_kj": 0.9,
     "tonal_activity_id": "044f4403-e4a3-4da1-ab8f-c3e2d9c2f822",
     "merged_into": "cc33bed0-ce9d-4072-88d7-1250ade0fb6a",
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10
   },
   {
     "date": "2026-10-12",
@@ -9489,21 +9489,21 @@
       }
     ],
     "timestamp": "2026-10-12T18:28:46.702-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10,
     "duration": 19.93,
     "total_volume": 3105,
     "total_reps": 115,
     "time_under_tension": 8.45,
     "total_work_kj": 9,
     "tonal_activity_id": "56f7ee2a-8b8d-42de-acc9-43a0737fb62d",
-    "notes": "• First drop sets since early in the year — re-tried them and liked them again; realized heavier starting weight — more pre-fatigue for the drop.\n• Struggled hard enough on one rep that Tonal's auto-unload kicked in and cut resistance to zero — genuine failure, not a glitch.\n• Bench Press and Standing Face Pull drops both ran long (20 and 18 reps on the drop) — ~59 total reps across the session by feel.\n• Drop sets are back in rotation going forward — confirmed she likes them again."
+    "notes": "\u2022 First drop sets since early in the year \u2014 re-tried them and liked them again; realized heavier starting weight \u2014 more pre-fatigue for the drop.\n\u2022 Struggled hard enough on one rep that Tonal's auto-unload kicked in and cut resistance to zero \u2014 genuine failure, not a glitch.\n\u2022 Bench Press and Standing Face Pull drops both ran long (20 and 18 reps on the drop) \u2014 ~59 total reps across the session by feel.\n\u2022 Drop sets are back in rotation going forward \u2014 confirmed she likes them again."
   },
   {
     "date": "2026-10-14",
@@ -9621,21 +9621,21 @@
       }
     ],
     "timestamp": "2026-10-14T11:23:26.709-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10,
     "duration": 19.08,
     "total_volume": 2620,
     "total_reps": 100,
     "time_under_tension": 7.93,
     "total_work_kj": 6.9,
     "tonal_activity_id": "208ca385-3749-4ff3-ba58-52134531034c",
-    "notes": "• Illness-adjacent day (called in sick, worsening fatigue, ear pain, sore throat) — skipped planned Hip Thrust drop sets, did this gentle Recovery Mode session instead once feeling improved.\n• First time using Tonal's Recovery Mode (80% of suggested weight) — really liked it as a low-energy-day option: real training stimulus without pushing through depletion. Likely go-to for future low-energy days.\n• Worked out useful form adjustments on Single-Arm Deadlift during this session.\n• Standing Overhead Press dropped 9→6 lb on set 2 — self-regulated down given energy 1/5.\n• Unusually high cardio response for the load (HR 113 avg, 10.9/19.1 min in Z2) despite coach-led slow/mindful tempo — slow pacing should've kept HR lower, not higher, so likely illness-driven rather than workout-structure-driven.\n• Both knees felt weary/sore on bending (not sharp, not the usual right-knee pattern) — reduced squat depth on Single-Arm Squat with Row, stopped before provoking real pain. Bilateral + dull quality reads as general illness-related joint achiness, distinct from the tracked mechanical right-knee issue."
+    "notes": "\u2022 Illness-adjacent day (called in sick, worsening fatigue, ear pain, sore throat) \u2014 skipped planned Hip Thrust drop sets, did this gentle Recovery Mode session instead once feeling improved.\n\u2022 First time using Tonal's Recovery Mode (80% of suggested weight) \u2014 really liked it as a low-energy-day option: real training stimulus without pushing through depletion. Likely go-to for future low-energy days.\n\u2022 Worked out useful form adjustments on Single-Arm Deadlift during this session.\n\u2022 Standing Overhead Press dropped 9\u21926 lb on set 2 \u2014 self-regulated down given energy 1/5.\n\u2022 Unusually high cardio response for the load (HR 113 avg, 10.9/19.1 min in Z2) despite coach-led slow/mindful tempo \u2014 slow pacing should've kept HR lower, not higher, so likely illness-driven rather than workout-structure-driven.\n\u2022 Both knees felt weary/sore on bending (not sharp, not the usual right-knee pattern) \u2014 reduced squat depth on Single-Arm Squat with Row, stopped before provoking real pain. Bilateral + dull quality reads as general illness-related joint achiness, distinct from the tracked mechanical right-knee issue."
   },
   {
     "date": "2026-10-16",
@@ -9751,21 +9751,21 @@
       }
     ],
     "timestamp": "2026-10-16T18:45:42.087-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10,
     "duration": 12.78,
     "total_volume": 5157,
     "total_reps": 60,
     "time_under_tension": 6.8,
     "total_work_kj": 6.5,
     "tonal_activity_id": "a280b3f1-4839-4152-a40e-bd5ebe9a4ee9",
-    "notes": "• Wrist/elbow/arm soreness today — picked low-grip movements.\n• 3-block circuit (Hip Thrust+Curl+Lunge), built via API.\n• App preview showed only Hip Thrust, looked broken — deleted a working hand-edited version by mistake (lost). Confirmed after: preview was wrong, circuit ran fine.\n• Glutes hammered 99%→12% from the drop set.\n• Vibes 3 = frustration with the saga, not the training.\n• Reverse Lunge hurt knees even unweighted — was safe in May. Stopped short of full depth. Maybe tied to the 10/14 knee weariness, still unresolved.\n• Curls kept light on purpose to save energy for Hip Thrust."
+    "notes": "\u2022 Wrist/elbow/arm soreness today \u2014 picked low-grip movements.\n\u2022 3-block circuit (Hip Thrust+Curl+Lunge), built via API.\n\u2022 App preview showed only Hip Thrust, looked broken \u2014 deleted a working hand-edited version by mistake (lost). Confirmed after: preview was wrong, circuit ran fine.\n\u2022 Glutes hammered 99%\u219212% from the drop set.\n\u2022 Vibes 3 = frustration with the saga, not the training.\n\u2022 Reverse Lunge hurt knees even unweighted \u2014 was safe in May. Stopped short of full depth. Maybe tied to the 10/14 knee weariness, still unresolved.\n\u2022 Curls kept light on purpose to save energy for Hip Thrust."
   },
   {
     "date": "2026-10-17",
@@ -9926,21 +9926,21 @@
       }
     ],
     "timestamp": "2026-10-17T10:05:59.05-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10,
     "duration": 24.5,
     "total_volume": 3444,
     "total_reps": 135,
     "time_under_tension": 10.15,
     "total_work_kj": 13.2,
     "tonal_activity_id": "6cf36c03-1f6a-4c15-bae6-d18dfbbc1022",
-    "notes": "• First session of \"20-in-20: Spiced-Up Sets\" (pre-fatigue structure).\n• Block 1: real early failure. Bench Press 6→3→4 reps, cut 22→18 lb.\n• Block 2 (rows) held up fine, full reps.\n• Glutes and quads protected, saved for tomorrow.\n• PRs: Strength PR (Rotational Row set 2), Volume PR (Rotational Row set 3), 1RM increase (Seated Row set 1, 26lb)."
+    "notes": "\u2022 First session of \"20-in-20: Spiced-Up Sets\" (pre-fatigue structure).\n\u2022 Block 1: real early failure. Bench Press 6\u21923\u21924 reps, cut 22\u219218 lb.\n\u2022 Block 2 (rows) held up fine, full reps.\n\u2022 Glutes and quads protected, saved for tomorrow.\n\u2022 PRs: Strength PR (Rotational Row set 2), Volume PR (Rotational Row set 3), 1RM increase (Seated Row set 1, 26lb)."
   },
   {
     "date": "2026-10-18",
@@ -10107,14 +10107,14 @@
       }
     ],
     "timestamp": "2026-10-18T09:26:18.774859-04:00",
-    "functional_strength": 152,
-    "movement_quality": 129,
-    "movement_quality_delta": -265,
-    "volume_score": 17340,
-    "work_score": 41299,
-    "strength_sets": 17,
-    "power_reps": 110,
-    "endurance_sets": 36,
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10,
     "duration": 22.35,
     "total_volume": 3014,
     "total_reps": 56,
@@ -10125,5 +10125,168 @@
     "strength_upper": 502,
     "strength_core": 467,
     "strength_lower": 618
+  },
+  {
+    "date": "2026-10-19",
+    "workout": "20-in-20: Spiced-Up Sets",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "light",
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "post_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": null,
+      "chest": null,
+      "shoulders": null,
+      "biceps": null,
+      "triceps": null
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Standing Face Pull",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 42,
+            "duration_sec": 40
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 44,
+            "duration_sec": 35
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 49,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Overhead Triceps Extension",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 26,
+            "duration_sec": 40
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 28,
+            "duration_sec": 35
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 26,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Lying Face Curl",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 7,
+            "duration_sec": 40
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 7,
+            "duration_sec": 35
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 7,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Sprinter Crunch",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 35
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Resisted Dead Bug",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 5,
+            "duration_sec": 40
+          },
+          {
+            "reps": 11,
+            "weight_lbs": 5,
+            "duration_sec": 35
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-10-19T09:51:40.571-04:00",
+    "functional_strength": 45,
+    "movement_quality": 38,
+    "movement_quality_delta": -91,
+    "volume_score": 2825,
+    "work_score": 8278,
+    "strength_sets": 2,
+    "power_reps": 38,
+    "endurance_sets": 10,
+    "duration": 25.85,
+    "total_volume": 2825,
+    "total_reps": 123,
+    "time_under_tension": 10.62,
+    "total_work_kj": 8,
+    "tonal_activity_id": "b7d5b706-d4b4-4719-8ab6-f398bbab0310",
+    "notes": "Swapped Sprinter Crunch for Pilates rollups off-Tonal. Rollups caused pressure (not stretch) on lower back - same region stressed by compensatory loading from rowing slide-shooting the night before. Worth watching: mentioned that spot is also sensitive to massage."
   }
 ]
