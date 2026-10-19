@@ -301,5 +301,35 @@
       "shoulders": 2
     },
     "notes": null
+  },
+  {
+    "uuid": "D3560F29-FA6D-426B-A56B-7CE2225B9798",
+    "date": "2026-10-19",
+    "activity": "Rowing",
+    "duration_min": 10,
+    "avg_hr": 122,
+    "muscles": {
+      "back": 4,
+      "abs": 3,
+      "hamstrings": 3,
+      "glutes": 3,
+      "shoulders": 2
+    },
+    "notes": null
+  },
+  {
+    "uuid": "E52AE17D-8BFF-4787-A02C-C5F74EC92AC0",
+    "date": "2026-10-19",
+    "activity": "Rowing",
+    "duration_min": 5,
+    "avg_hr": 115,
+    "muscles": {
+      "back": 4,
+      "abs": 3,
+      "hamstrings": 3,
+      "glutes": 3,
+      "shoulders": 2
+    },
+    "notes": null
   }
 ]
