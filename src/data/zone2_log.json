@@ -3359,5 +3359,18 @@
     "rowing_avg_watts": 31,
     "rowing_drag": 104,
     "rowing_piece": "cooldown"
+  },
+  {
+    "uuid": "637067BE-49CB-43DE-9CBD-291AC57D4ADD",
+    "date": "2026-10-19",
+    "timestamp": "2026-10-19T21:14:42Z",
+    "activity": "Walking",
+    "duration_min": 37.1,
+    "zone1_min": 32.5,
+    "zone2_min": 4.7,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 100,
+    "distance_mi": 1.53
   }
 ]
