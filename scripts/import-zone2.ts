@@ -5,14 +5,45 @@ import path from 'path'
 const ZONE2_DIR    = process.env.ZONE2_SOURCE_DIR ?? path.join(process.env.HOME!, 'Documents/Claude/Zone2Sessions')
 const CARDIO_FILE  = path.join(process.cwd(), 'src/data/zone2_log.json')
 const ACTIVITY_FILE = path.join(process.cwd(), 'src/data/activities.json')
+const SESSIONS_FILE = path.join(process.cwd(), 'src/data/sessions.json')
 
 // Activities excluded from activities.json — either cardio-only or tracked separately (Tonal uses sessions.json)
-const SKIP_ACTIVITIES = new Set(['Walking', 'Outdoor Walk', 'Indoor Walk', 'Running', 'Outdoor Run', 'Indoor Run', 'Cycling', 'Outdoor Cycling', 'Tonal', 'Traditional Strength Training'])
+const SKIP_ACTIVITIES = new Set(['Walking', 'Outdoor Walk', 'Indoor Walk', 'Running', 'Outdoor Run', 'Indoor Run', 'Cycling', 'Outdoor Cycling', 'Tonal', 'Tonal - Lift', 'Tonal - Pilates', 'Tonal - Recovery', 'Traditional Strength Training'])
+
+// Classify a Tonal-sourced session into Lift/Pilates/Recovery by matching its workout
+// title in sessions.json (by date + nearest timestamp) — more reliable than the raw
+// HealthKit activity name, which Tonal doesn't consistently vary by workout type.
+const sessionsForMatch: { date: string; time: number; workout: string }[] = (() => {
+  try {
+    const raw: any[] = JSON.parse(fs.readFileSync(SESSIONS_FILE, 'utf8'))
+    return raw
+      .filter(s => s.tonal_activity_id && !s.merged_into && s.timestamp)
+      .map(s => ({ date: s.date, time: new Date(s.timestamp).getTime(), workout: s.workout ?? '' }))
+  } catch { return [] }
+})()
+
+function classifyTonalActivity(date: string, timestamp: string | null): string {
+  const candidates = sessionsForMatch.filter(s => s.date === date)
+  let workout = ''
+  if (candidates.length > 0) {
+    const entryTime = new Date(timestamp ?? date).getTime()
+    const nearest = candidates.reduce((best, s) =>
+      Math.abs(s.time - entryTime) < Math.abs(best.time - entryTime) ? s : best)
+    workout = nearest.workout
+  }
+  const w = workout.toLowerCase()
+  if (w.includes('pilates')) return 'Tonal - Pilates'
+  if (w.includes('recovery') || w.includes('mobility')) return 'Tonal - Recovery'
+  return 'Tonal - Lift'
+}
 
 // Default muscle effort maps by HealthKit activity name (effort 1–5 per muscle)
 // Built lazily — new types added here when first seen in real exports
 const MUSCLE_DEFAULTS: Record<string, Record<string, number>> = {
   'Tonal':                          { glutes: 3, hamstrings: 3, quads: 3, abs: 2, back: 2 },
+  'Tonal - Lift':                   { glutes: 3, hamstrings: 3, quads: 3, abs: 2, back: 2 },
+  'Tonal - Pilates':                { abs: 4, obliques: 4, hip_flexors: 3, back: 2, glutes: 2 },
+  'Tonal - Recovery':               { abs: 2, back: 1, hip_flexors: 1 },
   'Traditional Strength Training':  { glutes: 3, hamstrings: 3, quads: 3, abs: 2, back: 2 },
   'Functional Strength Training':   { abs: 4, obliques: 3, hip_flexors: 3, glutes: 2, back: 2 },
   'Pilates':                        { abs: 4, obliques: 4, hip_flexors: 3, back: 2, glutes: 2 },
@@ -79,7 +110,7 @@ for (const file of files) {
 
   const date = data.startDate?.slice(0, 10) ?? 'unknown'
   const toMin = (sec: number) => Math.round((sec / 60) * 10) / 10
-  const rawActivity = data.source === 'Tonal' ? 'Tonal' : (data.activity?.name ?? data.name ?? 'Unknown')
+  const rawActivity = data.source === 'Tonal' ? classifyTonalActivity(date, data.startDate ?? null) : (data.activity?.name ?? data.name ?? 'Unknown')
   const activity = rawActivity === 'Indoor Walk' ? 'Treadmill'
     : rawActivity === 'Hydrow' ? 'Rowing'
     : rawActivity

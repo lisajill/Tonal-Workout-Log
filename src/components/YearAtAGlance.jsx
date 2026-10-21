@@ -50,7 +50,7 @@ export default function YearAtAGlance({ sessions, onSelectSession }) {
     for (const e of zone2Log) {
       const day = get(e.date)
       // Zones-exported Tonal sessions are strength workouts already in sessions.json
-      if (e.activity === 'Tonal') { day.hasStrength = true; continue }
+      if (e.activity.startsWith('Tonal')) { day.hasStrength = true; continue }
       if (e.activity === 'Rowing') day.hasRowing = true
       else day.hasCardio = true
       day.labels.push(`${e.activity} · ${Math.round(e.duration_min ?? 0)}m`)

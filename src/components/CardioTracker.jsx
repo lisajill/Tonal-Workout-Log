@@ -299,7 +299,7 @@ export default function CardioTracker() {
                         </td>
                         <td className="py-2.5 pr-4 text-zinc-400 mono-stat text-right">{s.avg_hr ? `${s.avg_hr}` : '—'}</td>
                         <td className="py-2.5 pr-5 text-zinc-400 mono-stat text-right">
-                          {s.activity === 'Tonal'
+                          {s.activity.startsWith('Tonal')
                             ? (tonalVolumeFor(s) ? `${tonalVolumeFor(s).toLocaleString()} lbs` : '—')
                             : s.distance_mi != null ? `${s.distance_mi}mi`
                             : s.rowing_distance_m != null ? `${s.rowing_distance_m}m`

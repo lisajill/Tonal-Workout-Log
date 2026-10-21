@@ -90,7 +90,7 @@ export default function Overview({ sessions, onSelectSession }) {
     for (const s of sessions) if (s.date === d) types.add('strength')
     for (const e of zone2Log) {
       if (e.date !== d) continue
-      if (e.activity === 'Tonal') types.add('strength')
+      if (e.activity.startsWith('Tonal')) types.add('strength')
       else if (e.activity === 'Rowing') types.add('rowing')
       else types.add('cardio')
     }
