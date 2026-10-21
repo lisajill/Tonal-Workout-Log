@@ -10333,8 +10333,8 @@
     "phase": null,
     "subjective_rating": 3,
     "sweat": "dry",
-    "calories": null,
-    "avg_hr": null,
+    "calories": 45,
+    "avg_hr": 91,
     "max_hr": null,
     "pre_readiness": {
       "glutes": null,
@@ -10496,8 +10496,8 @@
     "phase": null,
     "subjective_rating": 3,
     "sweat": "dry",
-    "calories": null,
-    "avg_hr": null,
+    "calories": 49,
+    "avg_hr": 104,
     "max_hr": null,
     "pre_readiness": {
       "glutes": null,
