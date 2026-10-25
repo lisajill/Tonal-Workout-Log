@@ -12,6 +12,7 @@ import CurrentReadiness from './components/CurrentReadiness.jsx'
 import CardioTracker from './components/CardioTracker.jsx'
 import RowingTracker from './components/RowingTracker.jsx'
 import YearAtAGlance from './components/YearAtAGlance.jsx'
+import MonthReview from './components/MonthReview.jsx'
 import rawSessions from './data/sessions.json'
 const sessions = rawSessions.filter(s => !s.merged_into)
 
@@ -24,6 +25,7 @@ const TAB_GROUPS = [
       { id: 'overview',  label: 'Overview' },
       { id: 'strength',  label: 'Strength Scores' },
       { id: 'calendar',  label: 'Month Review' },
+      { id: 'year',      label: 'Year Overview' },
     ],
   },
   {
@@ -198,7 +200,8 @@ export default function App() {
 
       <main className="px-3 py-4 sm:px-6 sm:py-6 max-w-7xl mx-auto">
         {tab === 'overview'  && <Overview      sessions={sessions} onSelectSession={openSession} />}
-        {tab === 'calendar'  && <YearAtAGlance sessions={sessions} onSelectSession={openSession} />}
+        {tab === 'calendar'  && <MonthReview   sessions={sessions} onSelectSession={openSession} />}
+        {tab === 'year'      && <YearAtAGlance sessions={sessions} onSelectSession={openSession} />}
         {tab === 'log'       && <SessionLog    sessions={sessions} onSelectSession={openSession} />}
         {tab === 'sessions'  && <SessionDetail key={activeSession} sessions={sessions} initialKey={activeSession} />}
         {tab === 'prs'       && <PRTracker     sessions={sessions} />}
