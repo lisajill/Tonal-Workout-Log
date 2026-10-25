@@ -10907,7 +10907,7 @@
     "subjective_rating": 5,
     "sweat": "dry",
     "calories": null,
-    "avg_hr": null,
+    "avg_hr": 126,
     "max_hr": null,
     "pre_readiness": {
       "glutes": null,
