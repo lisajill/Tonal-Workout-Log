@@ -95,6 +95,18 @@ The `/coach` skill (`.claude/commands/coach.md`) reads live health data from Obs
 
 **Keep Obsidian notes current.** When the user changes supplements, doses, or goals mid-conversation, update the relevant Obsidian note via PUT so future `/coach` sessions have accurate context.
 
+## Session Logging — Completeness Checklist (read this every time you log a session)
+
+**Why this section exists:** across Oct 18–25, 2026, readiness was fetched and shown in chat for several sessions but never written to `sessions.json`; Obsidian notes stopped being created for six sessions in a row without ever being flagged as dropped; and session `notes` quietly reverted from short bullets back to prose paragraphs. All three were caught by the user, not self-corrected — each time mid-conversation, where the visible/conversational part of a task (showing a number, writing a sentence) got done but the actual persistence step silently didn't. Readiness especially is **not recoverable later** — Tonal's API only exposes current state, not history — so a skipped write is often a permanent data loss, not something to "get to later."
+
+**Every time you fetch or log anything for a session, write it to the file in the same tool call/turn — never defer "I'll save that after we finish discussing it."** Specifically:
+
+- [ ] `npx tsx scripts/get-readiness.ts` output goes into `sessions.json`'s `pre_readiness`/`post_readiness` **immediately**, not just displayed in chat.
+- [ ] Every real Tonal session gets an Obsidian note in `Health & Wellness/Tonal/Sessions/` (and every Zone2/cardio/rowing entry a note in `Health & Wellness/Cardio/Sessions/`) **in the same turn** it's logged to `sessions.json`/`zone2_log.json` — not "later," not "once the conversation settles down."
+- [ ] `notes` fields are short bullet points (`• ...`), never prose paragraphs — see any session from Oct 17 as the reference format.
+- [ ] energy_level, subjective_rating, sweat — don't leave a session half-logged waiting for these; ask if not given.
+- [ ] After logging, **periodically spot-check a few recent sessions against this checklist** (fields present? Obsidian note exists? notes bulleted?) — don't just trust that past-you did it right, especially after a long stretch of conversation. A quick `python3` audit comparing `sessions.json` fields across the last ~2 weeks is cheap insurance against exactly this failure mode recurring silently again.
+
 ## Tonal Workout Building
 
 Before building any workout, read `TonalInstructions.md`. It contains movement UUIDs, the set object schema, block structure template, API quirks, and user training profile. Use the `/tonal-workout` Claude skill (`.claude/commands/tonal-workout.md`) for end-to-end workout creation.
