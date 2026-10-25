@@ -3538,6 +3538,19 @@
     "distance_mi": null
   },
   {
+    "uuid": "3C468E54-6221-4317-A5BF-8950A719FD0B",
+    "date": "2026-10-25",
+    "timestamp": "2026-10-25T14:17:34Z",
+    "activity": "Walking",
+    "duration_min": 28.9,
+    "zone1_min": 25.6,
+    "zone2_min": 3.3,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": 101,
+    "distance_mi": 0.94
+  },
+  {
     "uuid": "23D363FB-E7F7-43D7-9303-869B32122627",
     "date": "2026-10-25",
     "timestamp": "2026-10-25T18:03:24Z",
