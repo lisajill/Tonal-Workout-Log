@@ -295,6 +295,19 @@ function MovementBlock({ movement: m }) {
               </td>
             ))}
           </tr>
+          {m.sets.some(s => s.one_rep_max != null) && (
+            <tr>
+              <td className="label !text-[9px] pr-2">EST 1RM</td>
+              {hasWarmup && <td className="text-center text-xs text-zinc-600 px-1.5 py-1">·</td>}
+              {m.sets.map((s, j) => (
+                <td key={j} className="text-center px-1.5 py-1">
+                  <span className="mono-stat text-xs text-zinc-500">
+                    {s.one_rep_max ?? '—'}
+                  </span>
+                </td>
+              ))}
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

@@ -10959,6 +10959,7 @@
             "reps": 10,
             "weight_lbs": 10,
             "duration_sec": 40,
+            "one_rep_max": 14.4,
             "prs": [
               "strength"
             ]
@@ -10972,7 +10973,8 @@
           {
             "reps": 8,
             "weight_lbs": 6,
-            "duration_sec": 30
+            "duration_sec": 30,
+            "one_rep_max": 6.6
           }
         ]
       },
@@ -10995,6 +10997,7 @@
             "reps": 8,
             "weight_lbs": 17.5,
             "duration_sec": 30,
+            "one_rep_max": 23.4,
             "prs": [
               "strength"
             ]
@@ -11003,6 +11006,7 @@
             "reps": 6,
             "weight_lbs": 18.5,
             "duration_sec": 30,
+            "one_rep_max": 23,
             "prs": [
               "power"
             ]
@@ -11011,6 +11015,7 @@
             "reps": 6,
             "weight_lbs": 18.5,
             "duration_sec": 30,
+            "one_rep_max": 23,
             "prs": [
               "power"
             ]
@@ -11018,7 +11023,8 @@
           {
             "reps": 6,
             "weight_lbs": 20,
-            "duration_sec": 30
+            "duration_sec": 30,
+            "one_rep_max": 24.9
           }
         ]
       }
@@ -11076,7 +11082,12 @@
       "biceps": 100,
       "triceps": 100
     },
-    "prs": {},
+    "prs": {
+      "barbell_rdl": {
+        "weight": 59,
+        "date": "2026-10-25"
+      }
+    },
     "muscles_high_volume": [],
     "muscles_low_volume": [],
     "movements": [
@@ -11144,23 +11155,30 @@
         "sets": [
           {
             "reps": 7,
-            "weight_lbs": 59,
-            "duration_sec": 30
+            "weight_lbs": 59.0,
+            "duration_sec": 30,
+            "one_rep_max": 76.2,
+            "prs": [
+              "strength"
+            ]
           },
           {
             "reps": 6,
-            "weight_lbs": 61,
-            "duration_sec": 30
+            "weight_lbs": 61.0,
+            "duration_sec": 30,
+            "one_rep_max": 76
           },
           {
             "reps": 6,
-            "weight_lbs": 61,
-            "duration_sec": 30
+            "weight_lbs": 61.0,
+            "duration_sec": 30,
+            "one_rep_max": 76
           },
           {
             "reps": 6,
-            "weight_lbs": 61,
-            "duration_sec": 30
+            "weight_lbs": 61.0,
+            "duration_sec": 30,
+            "one_rep_max": 76
           }
         ]
       }

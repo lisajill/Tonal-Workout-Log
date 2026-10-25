@@ -10,6 +10,7 @@ interface MovementSet {
   reps: number
   weight_lbs: number
   duration_sec?: number
+  one_rep_max?: number
   prs?: string[]
 }
 
@@ -97,6 +98,9 @@ async function main() {
         const entry = byMovement.get(mid)!
         const set: MovementSet = { reps: s.repCount ?? 0, weight_lbs: s.baseWeight ?? 0 }
         if (s.prescribedDuration) set.duration_sec = s.prescribedDuration
+        // oneRepMax is a meaningless floor value (~5) for bodyweight/isometric sets with
+        // no real weight or reps - only keep it where it's actually a computed estimate.
+        if (s.oneRepMax != null && s.baseWeight && s.repCount) set.one_rep_max = Math.round(s.oneRepMax * 10) / 10
         if (s.warmUp) entry.warmupSets.push(set)
         else entry.workingSets.push(set)
       }
