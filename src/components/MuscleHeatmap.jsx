@@ -33,7 +33,7 @@ export default function MuscleHeatmap({ sessions }) {
       >
         {sessions.map((s, i) => (
           <option key={i} value={i}>
-            {s.date}{sessions.filter(x => x.date === s.date).length > 1 ? ` · ${s.workout}` : ''}
+            {s.date} · {s.workout}
           </option>
         ))}
       </select>
