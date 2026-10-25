@@ -10942,6 +10942,10 @@
       "barbell_bench_press": {
         "weight": 18.5,
         "date": "2026-10-25"
+      },
+      "half_kneeling_overhead_press": {
+        "weight": 10,
+        "date": "2026-10-25"
       }
     },
     "muscles_high_volume": [],
@@ -10954,7 +10958,10 @@
           {
             "reps": 10,
             "weight_lbs": 10,
-            "duration_sec": 40
+            "duration_sec": 40,
+            "prs": [
+              "strength"
+            ]
           }
         ]
       },
@@ -11031,7 +11038,7 @@
     "time_under_tension": 3.7,
     "total_work_kj": 3.4,
     "tonal_activity_id": "c4520b9a-df0f-4c9f-ace3-46f7d391509c",
-    "notes": "\u2022 First workout of The Functional 5, switched from Spiced-Up Sets after its timed-set injury mechanism\n\u2022 Real rep-based RDL within a 30sec/6-rep window, not open-ended timed\n\u2022 Found a trick: starting reps before the on-screen timer officially begins gives real buffer - hit 7 reps on set 1\n\u2022 Done at FULL load despite Athlytic 28% recovery and low glute/hamstring pre-readiness (45%/63%) - no moderation, went full effort, felt great, no pain\n\u2022 Post-readiness showed genuine full fatigue (glutes to 0, hamstrings to 12) - real work, not watered down\n\u2022 Real lesson: tempo control was the fix, not load reduction - same as the rowing slide-shooting fix"
+    "notes": "\u2022 Second workout of the day (Workout 2 of The Functional 5) - felt wonderful\n\u2022 Upper body: overhead press, dead bug, v-up, bench press\n\u2022 Strength PR on Half Kneeling Overhead Press (10lb, true working set after warmup)\n\u2022 Bench Press: 1RM increase set 1 (17.5lb), power PRs sets 2-3 (18.5lb)\n\u2022 Strength Sets now at 20 for the week, within the 16-22 target range\n\u2022 Caught and fixed a real fetch-sessions.ts bug today: this session initially inherited Workout 1's movements due to a date+name matching collision, not its own bench/overhead press data"
   },
   {
     "date": "2026-10-25",
