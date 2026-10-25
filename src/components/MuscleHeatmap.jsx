@@ -18,7 +18,23 @@ function emoji(val) {
   return          { icon: '✨', bg: 'bg-emerald-950/60', text: 'text-emerald-300', tip: `${val}% — Fresh` }
 }
 
-export default function MuscleHeatmap({ sessions }) {
+export default function MuscleHeatmap({ sessions: rawSessions }) {
+  // Raw array order follows whenever entries were merged into sessions.json, not
+  // chronological order — always sort by timestamp ?? date before display/selection.
+  const sessions = [...rawSessions].sort((a, b) => (a.timestamp ?? a.date).localeCompare(b.timestamp ?? b.date))
+
+  // Disambiguate same-date-same-workout entries (e.g. two "Workout N" sessions from
+  // the same program in one day) with a (1)/(2) suffix in chronological order.
+  const dateWorkoutCounts = {}
+  for (const s of sessions) dateWorkoutCounts[`${s.date}::${s.workout}`] = (dateWorkoutCounts[`${s.date}::${s.workout}`] ?? 0) + 1
+  const seenSoFar = {}
+  const labels = sessions.map(s => {
+    const key = `${s.date}::${s.workout}`
+    if (dateWorkoutCounts[key] <= 1) return `${s.date} · ${s.workout}`
+    seenSoFar[key] = (seenSoFar[key] ?? 0) + 1
+    return `${s.date} · ${s.workout} (${seenSoFar[key]})`
+  })
+
   const [selectedIdx, setSelectedIdx] = useState(sessions.length - 1)
   const session = sessions[selectedIdx]
 
@@ -33,7 +49,7 @@ export default function MuscleHeatmap({ sessions }) {
       >
         {sessions.map((s, i) => (
           <option key={i} value={i}>
-            {s.date} · {s.workout}
+            {labels[i]}
           </option>
         ))}
       </select>
