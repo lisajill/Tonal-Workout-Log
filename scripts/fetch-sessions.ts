@@ -190,15 +190,18 @@ async function main() {
 
   for (const s of existing) {
     if (s.tonal_activity_id) byActivityId.set(s.tonal_activity_id, s)
-    byDateAndName.set(`${s.date}::${s.workout}`, s)
-    // Date-only fallback is only safe for entries with NO tonal_activity_id at all —
-    // i.e. genuinely legacy rows never tied to a real API activity. Any entry that
-    // already has an ID (manual-* or a real Tonal UUID) is already fully resolved to
-    // its own specific session and must never be a date-only match target for a
-    // *different* activity — multiple real sessions on the same day are now routine
-    // (2+ Tonal workouts/day), and this fallback previously let a second same-day
-    // activity silently overwrite the first one's identity and numbers.
-    if (!s.tonal_activity_id) byDate.set(s.date, s)
+    // Date+name fallback has the exact same vulnerability as date-only (see below):
+    // only safe for entries with NO tonal_activity_id yet. Two same-day activities
+    // routinely share an identical API name (e.g. two "Workout 2" sessions from the
+    // same program both report as "20-in-20: The Functional 5") — if both lookups
+    // aren't ID-gated, a second same-day activity with a matching name silently
+    // inherits the first one's already-fetched movements instead of getting its own
+    // (confirmed bug, Oct 25 2026: a 2nd Functional-5 workout that day inherited the
+    // 1st one's RDL/Glute Bridge movements instead of its own bench/overhead press).
+    if (!s.tonal_activity_id) {
+      byDateAndName.set(`${s.date}::${s.workout}`, s)
+      byDate.set(s.date, s)
+    }
   }
 
   const merged: SessionEntry[] = []
