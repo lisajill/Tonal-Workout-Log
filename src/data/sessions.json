@@ -11155,7 +11155,7 @@
         "sets": [
           {
             "reps": 7,
-            "weight_lbs": 59.0,
+            "weight_lbs": 59,
             "duration_sec": 30,
             "one_rep_max": 76.2,
             "prs": [
@@ -11164,19 +11164,19 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 61.0,
+            "weight_lbs": 61,
             "duration_sec": 30,
             "one_rep_max": 76
           },
           {
             "reps": 6,
-            "weight_lbs": 61.0,
+            "weight_lbs": 61,
             "duration_sec": 30,
             "one_rep_max": 76
           },
           {
             "reps": 6,
-            "weight_lbs": 61.0,
+            "weight_lbs": 61,
             "duration_sec": 30,
             "one_rep_max": 76
           }
@@ -11199,5 +11199,218 @@
     "total_work_kj": 3.6,
     "tonal_activity_id": "01072e12-3cd3-4182-91e8-f2817bec5ac1",
     "notes": "\u2022 First workout of The Functional 5, switched from Spiced-Up Sets after its timed-set injury mechanism\n\u2022 Real rep-based RDL within a 30sec/6-rep window, not open-ended timed\n\u2022 Found a trick: starting reps before the on-screen timer officially begins gives real buffer - hit 7 reps on set 1\n\u2022 Done at FULL load despite Athlytic 28% recovery and low glute/hamstring pre-readiness (45%/63%) - no moderation, went full effort, felt great, no pain\n\u2022 Post-readiness showed genuine full fatigue (glutes to 0, hamstrings to 12) - real work, not watered down\n\u2022 Real lesson: tempo control was the fix, not load reduction - same as the rowing slide-shooting fix"
+  },
+  {
+    "date": "2026-10-28",
+    "workout": "Backpack Front-Loaded Squats (off-Tonal)",
+    "tonal_activity_id": "manual-bodyweight-20261028",
+    "timestamp": "2026-10-28T12:00:00-04:00",
+    "energy_level": 4,
+    "phase": null,
+    "subjective_rating": 3,
+    "sweat": "dry",
+    "shot_day": false,
+    "total_volume": 150,
+    "total_reps": 30,
+    "prs": {},
+    "muscles_high_volume": [
+      "quads",
+      "glutes"
+    ],
+    "muscles_low_volume": [
+      "hamstrings",
+      "abs",
+      "back"
+    ],
+    "movements": [
+      {
+        "name": "Backpack Front-Loaded Squat",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 5
+          },
+          {
+            "reps": 10,
+            "weight_lbs": 5
+          }
+        ]
+      }
+    ],
+    "notes": "\u2022 Off-Tonal: 3x10 front-loaded squats, ~5 lb backpack held in front (mostly bodyweight)\n\u2022 Tirzepatide side effects day \u2014 moved to work them off\n\u2022 No HR; pre/post readiness not captured",
+    "pre_readiness": null,
+    "post_readiness": null,
+    "duration": 10
+  },
+  {
+    "date": "2026-10-30",
+    "workout": "20-in-20: The Functional 5",
+    "energy_level": 2,
+    "phase": null,
+    "subjective_rating": 4,
+    "sweat": "dry",
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 100,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "chest": 100,
+      "shoulders": 88,
+      "back": 99,
+      "triceps": 99,
+      "biceps": 100,
+      "abs": 89,
+      "obliques": 95,
+      "quads": 26,
+      "glutes": 43,
+      "hamstrings": 98,
+      "calves": 67
+    },
+    "prs": {
+      "mini_sumo_squat": {
+        "weight": 55,
+        "date": "2026-10-30"
+      }
+    },
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Pillar Bridge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Racked Squat to Bench",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 22,
+            "duration_sec": 30,
+            "one_rep_max": 27.6
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 22,
+            "duration_sec": 30,
+            "one_rep_max": 27.6
+          }
+        ]
+      },
+      {
+        "name": "Resisted Calf Raise",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 19,
+            "duration_sec": 30,
+            "one_rep_max": 26.8,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 20,
+            "duration_sec": 30,
+            "one_rep_max": 28.2
+          }
+        ]
+      },
+      {
+        "name": "Mini Sumo Squat",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 46,
+            "duration_sec": 30,
+            "one_rep_max": 61.6,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 50,
+            "duration_sec": 30,
+            "one_rep_max": 66.9,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 55,
+            "duration_sec": 30,
+            "one_rep_max": 68.6,
+            "prs": [
+              "strength",
+              "power"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 55,
+            "duration_sec": 30,
+            "one_rep_max": 73.5,
+            "prs": [
+              "strength",
+              "volume"
+            ]
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-10-30T16:54:49.018-04:00",
+    "functional_strength": 58,
+    "movement_quality": 17,
+    "movement_quality_delta": -197,
+    "volume_score": 3319,
+    "work_score": 5210,
+    "strength_sets": 4,
+    "power_reps": 60,
+    "endurance_sets": 9,
+    "duration": 14.83,
+    "total_volume": 3319,
+    "total_reps": 70,
+    "time_under_tension": 5.08,
+    "total_work_kj": 5.2,
+    "tonal_activity_id": "ecc12709-e3f8-49a2-b71b-bdcebdf6405f",
+    "notes": "\u2022 Functional 5 workout, but swapped nearly every movement\n\u2022 Lower-body focus: racked squat to bench, mini sumo squat, calf raise, pillar bridge\n\u2022 Mini Sumo Squat: 1RM increases sets 1-3, power PR set 3, strength + volume PR set 4 (55 lb)\n\u2022 Resisted Calf Raise: 1RM increase set 1",
+    "strength_overall": 533,
+    "strength_upper": 519,
+    "strength_core": 465,
+    "strength_lower": 615
   }
 ]
