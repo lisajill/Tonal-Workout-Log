@@ -3588,5 +3588,18 @@
     "zone4_min": 0,
     "avg_hr": 84,
     "distance_mi": 1.07
+  },
+  {
+    "uuid": "72376DC2-0242-43BF-A96D-6662083FCE6D",
+    "date": "2026-10-30",
+    "timestamp": "2026-10-30T20:54:49Z",
+    "activity": "Tonal - Lift",
+    "duration_min": 14.8,
+    "zone1_min": 6.5,
+    "zone2_min": 11.4,
+    "zone3_min": 1,
+    "zone4_min": 0,
+    "avg_hr": 108,
+    "distance_mi": null
   }
 ]
