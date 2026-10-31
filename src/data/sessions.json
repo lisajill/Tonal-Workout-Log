@@ -11509,27 +11509,27 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 28,
+            "weight_lbs": 56,
             "duration_sec": 30,
-            "one_rep_max": 34.9
+            "one_rep_max": 69.8
           },
           {
             "reps": 6,
-            "weight_lbs": 28,
+            "weight_lbs": 56,
             "duration_sec": 30,
-            "one_rep_max": 34.9
+            "one_rep_max": 69.8
           },
           {
             "reps": 6,
-            "weight_lbs": 28,
+            "weight_lbs": 56,
             "duration_sec": 30,
-            "one_rep_max": 34.9
+            "one_rep_max": 69.8
           },
           {
             "reps": 6,
-            "weight_lbs": 28,
+            "weight_lbs": 56,
             "duration_sec": 30,
-            "one_rep_max": 34.9
+            "one_rep_max": 69.8
           }
         ]
       }
@@ -11549,6 +11549,6 @@
     "time_under_tension": 5.22,
     "total_work_kj": 7.1,
     "tonal_activity_id": "c74aef33-82ba-4d99-b173-2636adc16475",
-    "notes": "\u2022 Workout 4 of The Functional 5 (upper): straight-arm march, W-hold, straight-arm pulldown, barbell chin-up\n\u2022 Barbell Chinup: 4 sets x 6 @ 28 lb\n\u2022 Pre-readiness missed; upper-body values (100) are user recall, not device-measured; lower-body unknown\n\u2022 Bench press not done this session"
+    "notes": "\u2022 Workout 4 of The Functional 5 (upper): straight-arm march, W-hold, straight-arm pulldown, barbell chin-up\n\u2022 Barbell Chinup: 4 sets x 6 @ 56 lb (app-displayed; API reports 28 per cable)\n\u2022 Pre-readiness missed; upper-body values (100) are user recall, not device-measured; lower-body unknown\n\u2022 Bench press not done this session"
   }
 ]
