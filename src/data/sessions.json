@@ -11415,6 +11415,150 @@
   },
   {
     "date": "2026-10-31",
+    "workout": "Barbell Bench Press Snack",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": null,
+    "avg_hr": 96,
+    "max_hr": null,
+    "pre_readiness": {
+      "chest": 100,
+      "shoulders": 97,
+      "back": 32,
+      "triceps": 92,
+      "biceps": 73,
+      "abs": 83,
+      "obliques": 94,
+      "quads": 43,
+      "glutes": 59,
+      "hamstrings": 100,
+      "calves": 85
+    },
+    "post_readiness": {
+      "chest": 63,
+      "shoulders": 88,
+      "back": 9,
+      "triceps": 82,
+      "biceps": 66,
+      "abs": 82,
+      "obliques": 95,
+      "quads": 44,
+      "glutes": 60,
+      "hamstrings": 99,
+      "calves": 85
+    },
+    "prs": {
+      "barbell_seated_lat_pulldown": {
+        "weight": 68,
+        "date": "2026-10-31"
+      }
+    },
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Barbell Bench Press",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 21,
+            "one_rep_max": 24.7
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 21.5,
+            "one_rep_max": 30.3
+          },
+          {
+            "reps": 9,
+            "weight_lbs": 20.5,
+            "one_rep_max": 26.5
+          }
+        ]
+      },
+      {
+        "name": "Rest",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 60
+          }
+        ]
+      },
+      {
+        "name": "Barbell Seated Lat Pulldown",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 53.0,
+            "one_rep_max": 62.4
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 68,
+            "one_rep_max": 80,
+            "prs": [
+              "strength"
+            ]
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 64,
+            "one_rep_max": 80.2
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-10-31T11:34:55.254-04:00",
+    "functional_strength": 81,
+    "movement_quality": 99,
+    "movement_quality_delta": -114,
+    "volume_score": 7683,
+    "work_score": 19036,
+    "strength_sets": 13,
+    "power_reps": 87,
+    "endurance_sets": 20,
+    "duration": 13.28,
+    "total_volume": 2476,
+    "total_reps": 53,
+    "time_under_tension": 3.98,
+    "total_work_kj": 6.7,
+    "tonal_activity_id": "76e56e9d-5716-4b93-bc32-74e8f0cb0fa8",
+    "notes": "\u2022 Second session of the day (custom): bench press + barbell seated lat pulldown, after Functional 5 Workout 4\n\u2022 Pre-readiness is Workout 4's post reading (~1h earlier), used as proxy - not captured right before this session\n\u2022 Lat pulldown: 53 / 68 / 64 lb (app-displayed, dual-cable doubled); strength PR on set 2 (68 lb)\n\u2022 Bench: 12 reps @ 21.5 lb, est 1RM 30.3 (prev best 24.9)"
+  },
+  {
+    "date": "2026-10-31",
     "workout": "20-in-20: The Functional 5",
     "energy_level": 5,
     "phase": null,
@@ -11499,7 +11643,7 @@
             "reps": 8,
             "weight_lbs": 28,
             "duration_sec": 30,
-            "one_rep_max": 35.0
+            "one_rep_max": 35
           }
         ]
       },
