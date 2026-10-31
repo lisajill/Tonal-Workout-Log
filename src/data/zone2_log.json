@@ -3590,6 +3590,20 @@
     "distance_mi": 1.07
   },
   {
+    "uuid": "manual-walk-20261028",
+    "date": "2026-10-28",
+    "timestamp": "2026-10-28T11:00:00Z",
+    "activity": "Walking",
+    "duration_min": 42,
+    "zone1_min": 0,
+    "zone2_min": 42,
+    "zone3_min": 0,
+    "zone4_min": 0,
+    "avg_hr": null,
+    "distance_mi": 1.9,
+    "notes": "NYC ruck, 5-8 lb backpack, flat, ~6,700 steps, 7-8am. Manually logged; not watch-recorded — zone 2 per user report, no HR data."
+  },
+  {
     "uuid": "72376DC2-0242-43BF-A96D-6662083FCE6D",
     "date": "2026-10-30",
     "timestamp": "2026-10-30T20:54:49Z",
