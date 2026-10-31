@@ -11420,9 +11420,9 @@
     "phase": null,
     "subjective_rating": 5,
     "sweat": "dry",
-    "calories": null,
+    "calories": 61,
     "avg_hr": 96,
-    "max_hr": null,
+    "max_hr": 122,
     "pre_readiness": {
       "chest": 100,
       "shoulders": 97,
