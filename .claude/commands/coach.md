@@ -53,7 +53,7 @@ From these notes, extract and hold in context:
 - Known GLP-1 triggers and mitigations
 
 **Fixed facts not in Obsidian:**
-- Right knee injury: no squats, no lunges. Monitor knee extension carefully.
+- Right knee injury: squats are OK with care (confirmed 2026-10-30; racked squat to bench, mini sumo, front-loaded squats all tolerated); no lunges yet. Monitor knee extension carefully.
 - CBTI sleep restriction protocol active — flag on restriction days for reduced CNS output, GH release, and mood
 - Zone 2 target: 150 min/week (Rhonda Patrick protocol)
 - No gallbladder (cholecystectomy, 2006) — no gallstone risk from GLP-1 weight loss, but greasy/fried/high-fat meals are a bile acid diarrhea trigger (continuous bile flow, no gallbladder to buffer release). Risk is dose-dependent — worse in the first 1–2 weeks after a titration step-up. Sulfur burps + diarrhea after a fatty meal fits this pattern, not gallbladder strain.

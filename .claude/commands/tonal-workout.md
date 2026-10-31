@@ -44,7 +44,7 @@ Using TonalInstructions.md and the Obsidian context as the guide:
 - Smart Flex ON (flex: true) for all working sets
 - 1 warmup set for compound anchor only (warmUp: true, flex: false)
 - Rest blocks: 2 min after compound, 90 sec between isolations
-- No drop sets, no squats, no lunges
+- No lunges yet; squats OK with care (confirmed 2026-10-30)
 - Both hands cleared as of May 2, 2026 — upper body and compound movements available. Still read Hand Recovery Gates.md to catch any regression.
 - If today is an injection day (check Zepbound tracker), note it as a flag — may affect energy
 

@@ -11412,5 +11412,143 @@
     "strength_upper": 519,
     "strength_core": 465,
     "strength_lower": 615
+  },
+  {
+    "date": "2026-10-31",
+    "workout": "20-in-20: The Functional 5",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": null,
+    "avg_hr": 110,
+    "max_hr": null,
+    "pre_readiness": {
+      "glutes": null,
+      "hamstrings": null,
+      "quads": null,
+      "calves": null,
+      "abs": null,
+      "obliques": null,
+      "back": 100,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "chest": 100,
+      "shoulders": 97,
+      "back": 32,
+      "triceps": 92,
+      "biceps": 73,
+      "abs": 83,
+      "obliques": 94,
+      "quads": 43,
+      "glutes": 59,
+      "hamstrings": 100,
+      "calves": 85
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Barbell Straight Arm March",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 11,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 15,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "W-Hold",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Barbell Straight Arm Pulldown",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 13,
+            "duration_sec": 30,
+            "one_rep_max": 16.3
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 14,
+            "duration_sec": 30,
+            "one_rep_max": 17.5
+          }
+        ]
+      },
+      {
+        "name": "Barbell Chinup",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 28,
+            "duration_sec": 30,
+            "one_rep_max": 34.9
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 28,
+            "duration_sec": 30,
+            "one_rep_max": 34.9
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 28,
+            "duration_sec": 30,
+            "one_rep_max": 34.9
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 28,
+            "duration_sec": 30,
+            "one_rep_max": 34.9
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-10-31T10:09:18.576-04:00",
+    "functional_strength": 81,
+    "movement_quality": 80,
+    "movement_quality_delta": -134,
+    "volume_score": 5207,
+    "work_score": 12291,
+    "strength_sets": 9,
+    "power_reps": 81,
+    "endurance_sets": 14,
+    "duration": 16.52,
+    "total_volume": 1888,
+    "total_reps": 40,
+    "time_under_tension": 5.22,
+    "total_work_kj": 7.1,
+    "tonal_activity_id": "c74aef33-82ba-4d99-b173-2636adc16475",
+    "notes": "\u2022 Workout 4 of The Functional 5 (upper): straight-arm march, W-hold, straight-arm pulldown, barbell chin-up\n\u2022 Barbell Chinup: 4 sets x 6 @ 28 lb\n\u2022 Pre-readiness missed; upper-body values (100) are user recall, not device-measured; lower-body unknown\n\u2022 Bench press not done this session"
   }
 ]
