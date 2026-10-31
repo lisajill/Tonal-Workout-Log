@@ -11555,7 +11555,7 @@
     "time_under_tension": 3.98,
     "total_work_kj": 6.7,
     "tonal_activity_id": "76e56e9d-5716-4b93-bc32-74e8f0cb0fa8",
-    "notes": "\u2022 Second session of the day (custom): bench press + barbell seated lat pulldown, after Functional 5 Workout 4\n\u2022 Pre-readiness is Workout 4's post reading (~1h earlier), used as proxy - not captured right before this session\n\u2022 Lat pulldown: 53 / 68 / 64 lb (app-displayed, dual-cable doubled); strength PR on set 2 (68 lb)\n\u2022 Bench: 12 reps @ 21.5 lb, est 1RM 30.3 (prev best 24.9)\n\u2022 Took both bench and lat pulldown to failure"
+    "notes": "\u2022 Second session of the day (custom): bench press + barbell seated lat pulldown, after Functional 5 Workout 4\n\u2022 Pre-readiness is Workout 4's post reading (~1h earlier), used as proxy - not captured right before this session\n\u2022 Lat pulldown: 53 / 68 / 64 lb (app-displayed, dual-cable doubled); strength PR on set 2 (68 lb)\n\u2022 Bench: 12 reps @ 21.5 lb, est 1RM 30.3 (prev best 24.9)\n\u2022 Drop sets on both bench and lat pulldown, taken to failure (no Smart Flex)\n\u2022 Bench est 1RM jump may be inflated if API rep count includes post-drop reps"
   },
   {
     "date": "2026-10-31",
