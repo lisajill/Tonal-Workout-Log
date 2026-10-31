@@ -11549,7 +11549,7 @@
     "time_under_tension": 5.22,
     "total_work_kj": 7.1,
     "tonal_activity_id": "c74aef33-82ba-4d99-b173-2636adc16475",
-    "notes": "\u2022 Workout 4 of The Functional 5 (upper): straight-arm march, W-hold, straight-arm pulldown, barbell chin-up\n\u2022 Barbell Chinup: 4 sets x 6 @ 56 lb (app-displayed; API reports 28 per cable)\n\u2022 Pre-readiness missed; upper-body values (100) are user recall, not device-measured; lower-body unknown\n\u2022 Bench press not done this session\n\u2022 Straight Arm March: 22 then 30 lb (30 was hard); Straight Arm Pulldown: 26 then 28 lb (app-displayed, doubled from per-cable API)",
+    "notes": "\u2022 Workout 4 of The Functional 5 (upper): straight-arm march, W-hold, straight-arm pulldown, barbell chin-up\n\u2022 Barbell Chinup: 4 sets x 6 @ 56 lb (app-displayed; API reports 28 per cable)\n\u2022 Pre-readiness missed; upper-body values (100) are user recall, not device-measured; lower-body unknown\n\u2022 Bench press not done this session\n\u2022 Straight Arm March: 22 then 30 lb (30 was hard); Straight Arm Pulldown: 26 then 28 lb (app-displayed, doubled from per-cable API)\n\u2022 Chin-ups felt ~RPE 4-5 (hard but not near failure); form was rough, posterior pelvic tilt kept creeping in",
     "strength_overall": 533,
     "strength_upper": 519,
     "strength_core": 465,
