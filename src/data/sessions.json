@@ -663,7 +663,7 @@
           {
             "reps": 4,
             "weight_lbs": 48,
-            "one_rep_max": 53.0
+            "one_rep_max": 53
           },
           {
             "reps": 4,
@@ -1247,7 +1247,7 @@
     },
     "prs": {
       "barbell_hip_thrust": {
-        "weight": 65.0,
+        "weight": 65,
         "date": "2026-04-25"
       }
     },
@@ -1284,8 +1284,8 @@
           },
           {
             "reps": 10,
-            "weight_lbs": 65.0,
-            "one_rep_max": 101.0,
+            "weight_lbs": 65,
+            "one_rep_max": 101,
             "prs": [
               "strength"
             ]
@@ -1571,7 +1571,7 @@
     },
     "prs": {
       "barbell_hip_thrust": {
-        "weight": 91.0,
+        "weight": 91,
         "date": "2026-04-29"
       },
       "standing_hip_abduction": {
@@ -1599,7 +1599,7 @@
         "sets": [
           {
             "reps": 4,
-            "weight_lbs": 89.0,
+            "weight_lbs": 89,
             "one_rep_max": 102.6,
             "prs": [
               "strength",
@@ -1617,8 +1617,8 @@
           },
           {
             "reps": 4,
-            "weight_lbs": 91.0,
-            "one_rep_max": 105.0,
+            "weight_lbs": 91,
+            "one_rep_max": 105,
             "prs": [
               "strength"
             ]
@@ -2454,18 +2454,18 @@
         "sets": [
           {
             "reps": 4,
-            "weight_lbs": 95.0,
+            "weight_lbs": 95,
             "one_rep_max": 109.6
           },
           {
             "reps": 4,
-            "weight_lbs": 95.0,
+            "weight_lbs": 95,
             "one_rep_max": 109.6
           },
           {
             "reps": 4,
-            "weight_lbs": 105.0,
-            "one_rep_max": 121.0,
+            "weight_lbs": 105,
+            "one_rep_max": 121,
             "prs": [
               "strength",
               "power"
@@ -5167,7 +5167,7 @@
         "sets": [
           {
             "reps": 5,
-            "weight_lbs": 111.0,
+            "weight_lbs": 111,
             "one_rep_max": 133.4,
             "prs": [
               "strength",
@@ -5177,7 +5177,7 @@
           {
             "reps": 5,
             "weight_lbs": 114,
-            "one_rep_max": 137.0,
+            "one_rep_max": 137,
             "prs": [
               "strength",
               "power"
@@ -6614,12 +6614,12 @@
         "sets": [
           {
             "reps": 8,
-            "weight_lbs": 125.0,
+            "weight_lbs": 125,
             "one_rep_max": 166.8
           },
           {
             "reps": 8,
-            "weight_lbs": 125.0,
+            "weight_lbs": 125,
             "one_rep_max": 166.8,
             "prs": [
               "power"
@@ -8124,11 +8124,11 @@
           {
             "reps": 4,
             "weight_lbs": 110,
-            "one_rep_max": 127.0
+            "one_rep_max": 127
           },
           {
             "reps": 4,
-            "weight_lbs": 115.0,
+            "weight_lbs": 115,
             "one_rep_max": 132.7
           }
         ]
@@ -9716,12 +9716,12 @@
           },
           {
             "reps": 14,
-            "weight_lbs": 99.0,
+            "weight_lbs": 99,
             "one_rep_max": 158.5
           },
           {
             "reps": 12,
-            "weight_lbs": 99.0,
+            "weight_lbs": 99,
             "one_rep_max": 149.7
           }
         ]
@@ -10858,17 +10858,17 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 113.0,
+            "weight_lbs": 113,
             "one_rep_max": 133.1
           },
           {
             "reps": 6,
-            "weight_lbs": 113.0,
+            "weight_lbs": 113,
             "one_rep_max": 133.1
           },
           {
             "reps": 6,
-            "weight_lbs": 113.0,
+            "weight_lbs": 113,
             "one_rep_max": 133.1
           }
         ]
@@ -11552,7 +11552,7 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 53.0,
+            "weight_lbs": 53,
             "one_rep_max": 62.4
           },
           {
@@ -11729,5 +11729,181 @@
     "strength_upper": 519,
     "strength_core": 465,
     "strength_lower": 615
+  },
+  {
+    "date": "2026-11-01",
+    "workout": "20-in-20: The Functional 5",
+    "energy_level": null,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": 71,
+    "avg_hr": 120,
+    "max_hr": null,
+    "pre_readiness": {
+      "chest": 84,
+      "shoulders": 100,
+      "back": 31,
+      "triceps": 100,
+      "biceps": 88,
+      "abs": 100,
+      "obliques": 100,
+      "quads": 66,
+      "glutes": 82,
+      "hamstrings": 100,
+      "calves": 100
+    },
+    "post_readiness": {
+      "chest": 86,
+      "shoulders": 97,
+      "back": 17,
+      "triceps": 100,
+      "biceps": 86,
+      "abs": 82,
+      "obliques": 88,
+      "quads": 62,
+      "glutes": 29,
+      "hamstrings": 72,
+      "calves": 100
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Single-Arm Single-Leg RDL",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 24,
+            "duration_sec": 30,
+            "one_rep_max": 30.1
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 24,
+            "duration_sec": 30,
+            "one_rep_max": 30.1
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 24,
+            "duration_sec": 30,
+            "one_rep_max": 30.1
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 24,
+            "duration_sec": 30,
+            "one_rep_max": 30.1
+          }
+        ]
+      },
+      {
+        "name": "Bird Dog with Row",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 15,
+            "duration_sec": 30,
+            "one_rep_max": 18.8
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 15,
+            "duration_sec": 30,
+            "one_rep_max": 18.8
+          }
+        ]
+      },
+      {
+        "name": "Rotational Lift",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 17,
+            "duration_sec": 30,
+            "one_rep_max": 21.3
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 17,
+            "duration_sec": 30,
+            "one_rep_max": 21.3
+          }
+        ]
+      },
+      {
+        "name": "Single-Leg Dead Bug",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Rolling Pillar Bridge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Barbell Hip Thrust",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 109.0,
+            "duration_sec": 30,
+            "one_rep_max": 135.8
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 112,
+            "duration_sec": 30,
+            "one_rep_max": 139.6
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 115.0,
+            "duration_sec": 30,
+            "one_rep_max": 143.4
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 115.0,
+            "duration_sec": 30,
+            "one_rep_max": 143.4
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-11-01T08:41:20.978497-05:00",
+    "functional_strength": 179,
+    "movement_quality": 149,
+    "movement_quality_delta": -64,
+    "volume_score": 11894,
+    "work_score": 27344,
+    "strength_sets": 19,
+    "power_reps": 110,
+    "endurance_sets": 23,
+    "duration": 20.83,
+    "total_volume": 4211,
+    "total_reps": 88,
+    "time_under_tension": 6.72,
+    "total_work_kj": 8.3,
+    "tonal_activity_id": "cc13889a-bfe3-4801-b78b-4cc4b6bc0768",
+    "notes": "\u2022 Workout 5 of The Functional 5: single-arm single-leg RDL, bird dog with row, rotational lift, barbell hip thrust\n\u2022 Hip thrust (bar weight): 109 / 112 / 115 / 115 x 6\n\u2022 Pre-readiness from 07:46 reading (~1h before, walk in between)\n\u2022 Strength Sets hit 19 for the week (target 16-22)\n\u2022 250th Tonal workout milestone"
   }
 ]
