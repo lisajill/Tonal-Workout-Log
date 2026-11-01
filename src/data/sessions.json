@@ -11733,10 +11733,10 @@
   {
     "date": "2026-11-01",
     "workout": "20-in-20: The Functional 5",
-    "energy_level": null,
+    "energy_level": 5,
     "phase": null,
-    "subjective_rating": null,
-    "sweat": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
     "calories": 71,
     "avg_hr": 120,
     "max_hr": 145,
@@ -11913,6 +11913,6 @@
     "time_under_tension": 6.72,
     "total_work_kj": 8.3,
     "tonal_activity_id": "cc13889a-bfe3-4801-b78b-4cc4b6bc0768",
-    "notes": "\u2022 Workout 5 of The Functional 5: single-arm single-leg RDL, bird dog with row, rotational lift, barbell hip thrust\n\u2022 Single-Leg RDL: power + volume PR on set 2\n\u2022 Round 1 (bird dog with row + rotational lift) was hard on her back; round 2 swapped to single-leg dead bug + rolling pillar bridge\n\u2022 Hip thrust (bar weight): 109 / 112 / 115 / 115 x 6\n\u2022 Pre-readiness from 07:46 reading (~1h before, walk in between)\n\u2022 Strength Sets hit 19 for the week (target 16-22)\n\u2022 250th Tonal workout milestone\n\u2022 Skipped planned Free Lift hip thrust drop set - gassed"
+    "notes": "\u2022 Workout 5 of The Functional 5: single-arm single-leg RDL, bird dog with row, rotational lift, barbell hip thrust\n\u2022 Single-Leg RDL: power + volume PR on set 2\n\u2022 Round 1 (bird dog with row + rotational lift) was hard on her back; round 2 swapped to single-leg dead bug + rolling pillar bridge\n\u2022 Hip thrust (bar weight): 109 / 112 / 115 / 115 x 6\n\u2022 Pre-readiness from 07:46 reading (~1h before, walk in between)\n\u2022 Strength Sets hit 19 for the week (target 16-22)\n\u2022 250th Tonal workout milestone\n\u2022 Skipped planned Free Lift hip thrust drop set - gassed\n\u2022 Energy 5 going in, completely drained afterward"
   }
 ]
