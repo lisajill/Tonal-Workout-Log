@@ -103,6 +103,7 @@ The `/coach` skill (`.claude/commands/coach.md`) reads live health data from Obs
 
 - [ ] `npx tsx scripts/get-readiness.ts` output goes into `sessions.json`'s `pre_readiness`/`post_readiness` **immediately**, not just displayed in chat.
 - [ ] Every real Tonal session gets an Obsidian note in `Health & Wellness/Tonal/Sessions/` (and every Zone2/cardio/rowing entry a note in `Health & Wellness/Cardio/Sessions/`) **in the same turn** it's logged to `sessions.json`/`zone2_log.json` — not "later," not "once the conversation settles down."
+- [ ] Bump the `updated:` frontmatter date in `Health & Wellness/Tonal/Workout Log.md` (its tables are dynamic Dataview, but `updated` is static and goes stale otherwise; user caught it 2026-11-02 still saying 04/18).
 - [ ] `notes` fields are short bullet points (`• ...`), never prose paragraphs — see any session from Oct 17 as the reference format.
 - [ ] energy_level, subjective_rating, sweat — don't leave a session half-logged waiting for these; ask if not given.
 - [ ] After logging, **periodically spot-check a few recent sessions against this checklist** (fields present? Obsidian note exists? notes bulleted?) — don't just trust that past-you did it right, especially after a long stretch of conversation. A quick `python3` audit comparing `sessions.json` fields across the last ~2 weeks is cheap insurance against exactly this failure mode recurring silently again.
