@@ -11922,9 +11922,9 @@
     "phase": null,
     "subjective_rating": 5,
     "sweat": "dry",
-    "calories": null,
-    "avg_hr": null,
-    "max_hr": null,
+    "calories": 37,
+    "avg_hr": 107,
+    "max_hr": 127,
     "pre_readiness": {
       "chest": 100,
       "shoulders": 100,
@@ -12041,6 +12041,6 @@
     "time_under_tension": 4.37,
     "total_work_kj": 3.7,
     "tonal_activity_id": "a8ba64c1-1402-47cd-96c7-270ea169e489",
-    "notes": "\u2022 Workout 7 of The Functional 5 (done out of order: W7 before W6 to spare back after 11/1 hinge day)\n\u2022 Bench (bar weight): 21 / 21 / 22 / 22 x 6 \u2014 22 is heaviest bench yet (prev 21.5 on 10/31)\n\u2022 Back readiness 41 going in; braced, no hard arch\n\u2022 Breakfast before: 2 eggs + Carb Balance tortilla, coffee"
+    "notes": "\u2022 Workout 7 of The Functional 5 (done out of order: W7 before W6 to spare back after 11/1 hinge day)\n\u2022 Bench (bar weight): 21 / 21 / 22 / 22 x 6 \u2014 22 is heaviest bench yet (prev 21.5 on 10/31)\n\u2022 Back readiness 41 going in; braced, no hard arch\n\u2022 Breakfast before: 2 eggs + Carb Balance tortilla, coffee\n\u2022 Bench not to failure, but last rep at 22 was very shaky (near-max)"
   }
 ]
