@@ -346,7 +346,7 @@ Each cell reflects the **primary workout type** for that day. When multiple sess
 cat-strength  violet-400  #a78bfa   Tonal strength session
 cat-cardio    emerald-400 #34d399   Zone 2 cardio (walk, bike, etc.)
 cat-rowing    sky-400     #38bdf8   Hydrow / erg rowing
-cat-mixed     indigo-400  #818cf8   Strength + cardio same day
+cat-mixed     yellow-300  #fde047   Strength + cardio same day (indigo was indistinguishable from violet strength)
 cat-rest      surface-2   #242428   Explicit rest day (no session)
 empty         surface-0   #0f0f11   No data / future
 ```

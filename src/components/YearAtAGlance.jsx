@@ -6,7 +6,7 @@ const CAT_COLORS = {
   strength: '#a78bfa',
   cardio:   '#34d399',
   rowing:   '#38bdf8',
-  mixed:    '#818cf8',
+  mixed:    '#fde047',
 }
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']

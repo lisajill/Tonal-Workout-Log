@@ -23,7 +23,7 @@ export default {
           recovery: '#fb923c', // orange-400 — readiness / recovery
           pr: '#f472b6',       // pink-400 — PRs / bests
           body: '#a3e635',     // lime-400 — body maps / muscle state
-          mixed: '#818cf8',    // indigo-400 — strength + cardio same day
+          mixed: '#fde047',    // yellow-300 — strength + cardio same day (was indigo-400; too close to violet strength)
         },
       },
       fontFamily: {

@@ -6,7 +6,7 @@ const CAT = {
   strength: '#a78bfa',
   cardio:   '#34d399',
   rowing:   '#38bdf8',
-  mixed:    '#818cf8',
+  mixed:    '#fde047',
   recovery: '#fb923c',
   pr:       '#f472b6',
 }
