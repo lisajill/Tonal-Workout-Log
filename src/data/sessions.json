@@ -10971,7 +10971,7 @@
     },
     "prs": {
       "barbell_bench_press": {
-        "weight": 18.5,
+        "weight": 37.0,
         "date": "2026-10-25"
       },
       "half_kneeling_overhead_press": {
@@ -11026,36 +11026,36 @@
         "sets": [
           {
             "reps": 8,
-            "weight_lbs": 17.5,
+            "weight_lbs": 35.0,
             "duration_sec": 30,
-            "one_rep_max": 23.4,
+            "one_rep_max": 46.8,
             "prs": [
               "strength"
             ]
           },
           {
             "reps": 6,
-            "weight_lbs": 18.5,
+            "weight_lbs": 37.0,
             "duration_sec": 30,
-            "one_rep_max": 23,
+            "one_rep_max": 46,
             "prs": [
               "power"
             ]
           },
           {
             "reps": 6,
-            "weight_lbs": 18.5,
+            "weight_lbs": 37.0,
             "duration_sec": 30,
-            "one_rep_max": 23,
+            "one_rep_max": 46,
             "prs": [
               "power"
             ]
           },
           {
             "reps": 6,
-            "weight_lbs": 20,
+            "weight_lbs": 40,
             "duration_sec": 30,
-            "one_rep_max": 24.9
+            "one_rep_max": 49.8
           }
         ]
       }
@@ -11075,7 +11075,7 @@
     "time_under_tension": 3.7,
     "total_work_kj": 3.4,
     "tonal_activity_id": "c4520b9a-df0f-4c9f-ace3-46f7d391509c",
-    "notes": "\u2022 Second workout of the day (Workout 2 of The Functional 5) - felt wonderful\n\u2022 Upper body: overhead press, dead bug, v-up, bench press\n\u2022 Strength PR on Half Kneeling Overhead Press (10lb, true working set after warmup)\n\u2022 Bench Press: 1RM increase set 1 (17.5lb), power PRs sets 2-3 (18.5lb)\n\u2022 Strength Sets now at 20 for the week, within the 16-22 target range"
+    "notes": "\u2022 Second workout of the day (Workout 2 of The Functional 5) - felt wonderful\n\u2022 Upper body: overhead press, dead bug, v-up, bench press\n\u2022 Strength PR on Half Kneeling Overhead Press (10lb, true working set after warmup)\n\u2022 Bench Press (bar weight): 1RM increase set 1 (35lb), power PRs sets 2-3 (37lb)\n\u2022 Strength Sets now at 20 for the week, within the 16-22 target range"
   },
   {
     "date": "2026-10-25",
@@ -11495,18 +11495,18 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 21,
-            "one_rep_max": 24.7
+            "weight_lbs": 42,
+            "one_rep_max": 49.4
           },
           {
             "reps": 12,
-            "weight_lbs": 21.5,
-            "one_rep_max": 30.3
+            "weight_lbs": 43.0,
+            "one_rep_max": 60.6
           },
           {
             "reps": 9,
-            "weight_lbs": 20.5,
-            "one_rep_max": 26.5
+            "weight_lbs": 41.0,
+            "one_rep_max": 53.0
           }
         ]
       },
@@ -11586,7 +11586,7 @@
     "time_under_tension": 3.98,
     "total_work_kj": 6.7,
     "tonal_activity_id": "76e56e9d-5716-4b93-bc32-74e8f0cb0fa8",
-    "notes": "\u2022 Second session of the day (custom): bench press + barbell seated lat pulldown, after Functional 5 Workout 4\n\u2022 Pre-readiness is Workout 4's post reading (~1h earlier), used as proxy - not captured right before this session\n\u2022 Lat pulldown: 53 / 68 / 64 lb (app-displayed, dual-cable doubled); strength PR on set 2 (68 lb)\n\u2022 Bench: 12 reps @ 21.5 lb, est 1RM 30.3 (prev best 24.9)\n\u2022 Drop sets on both bench and lat pulldown, taken to failure (no Smart Flex)\n\u2022 Bench est 1RM jump may be inflated if API rep count includes post-drop reps\n\u2022 Lat pulldown set 1 (53 lb) was way too light; manually raised weight on set 2 until the machine flagged a PR\n\u2022 Form stayed solid through the drop sets\n\u2022 Arms sore and a bit trembly afterward"
+    "notes": "\u2022 Second session of the day (custom): bench press + barbell seated lat pulldown, after Functional 5 Workout 4\n\u2022 Pre-readiness is Workout 4's post reading (~1h earlier), used as proxy - not captured right before this session\n\u2022 Lat pulldown: 53 / 68 / 64 lb (app-displayed, dual-cable doubled); strength PR on set 2 (68 lb)\n\u2022 Bench (bar weight): 12 reps @ 43 lb, est 1RM 60.6 (prev best 49.8)\n\u2022 Drop sets on both bench and lat pulldown, taken to failure (no Smart Flex)\n\u2022 Bench est 1RM jump may be inflated if API rep count includes post-drop reps\n\u2022 Lat pulldown set 1 (53 lb) was way too light; manually raised weight on set 2 until the machine flagged a PR\n\u2022 Form stayed solid through the drop sets\n\u2022 Arms sore and a bit trembly afterward"
   },
   {
     "date": "2026-10-31",
@@ -11953,7 +11953,7 @@
     },
     "prs": {
       "barbell_bench_press": {
-        "weight": 22,
+        "weight": 44,
         "date": "2026-11-02"
       }
     },
@@ -12010,27 +12010,27 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 21,
+            "weight_lbs": 42,
             "duration_sec": 30,
-            "one_rep_max": 26.2
+            "one_rep_max": 52.4
           },
           {
             "reps": 6,
-            "weight_lbs": 21,
+            "weight_lbs": 42,
             "duration_sec": 30,
-            "one_rep_max": 26.2
+            "one_rep_max": 52.4
           },
           {
             "reps": 6,
-            "weight_lbs": 22,
+            "weight_lbs": 44,
             "duration_sec": 30,
-            "one_rep_max": 27.4
+            "one_rep_max": 54.8
           },
           {
             "reps": 6,
-            "weight_lbs": 22,
+            "weight_lbs": 44,
             "duration_sec": 30,
-            "one_rep_max": 27.4
+            "one_rep_max": 54.8
           }
         ]
       }
@@ -12050,6 +12050,6 @@
     "time_under_tension": 4.37,
     "total_work_kj": 3.7,
     "tonal_activity_id": "a8ba64c1-1402-47cd-96c7-270ea169e489",
-    "notes": "\u2022 Workout 7 of The Functional 5 (done out of order: W7 before W6 to spare back after 11/1 hinge day)\n\u2022 Bench (bar weight): 21 / 21 / 22 / 22 x 6 \u2014 22 is heaviest bench since tracking began Apr 2026 (prev 21.5 on 10/31); all-time best 57 lb on 6/15/2023\n\u2022 Back readiness 41 going in; braced, no hard arch\n\u2022 Breakfast before: 2 eggs + Carb Balance tortilla, coffee\n\u2022 Bench not to failure, but last rep at 22 was very shaky (near-max)\n\u2022 Half-kneeling OHP: 1RM increase / strength PR on set 2 (working set after warm-up), 12 @ 10, est 1RM 15.3 (prev 14.4)\n\u2022 Resisted dead bug: 1RM increase on both sets (warm-up + working 10 @ 6)"
+    "notes": "\u2022 Workout 7 of The Functional 5 (done out of order: W7 before W6 to spare back after 11/1 hinge day)\n\u2022 Bench (bar weight): 42 / 42 / 44 / 44 x 6, chains +11 (55 at top of rep) \u2014 44 is heaviest since tracking began Apr 2026 (prev 43 on 10/31); all-time best 57 lb on 6/15/2023\n\u2022 Back readiness 41 going in; braced, no hard arch\n\u2022 Breakfast before: 2 eggs + Carb Balance tortilla, coffee\n\u2022 Bench not to failure, but last rep at 44 was very shaky (near-max)\n\u2022 Half-kneeling OHP: 1RM increase / strength PR on set 2 (working set after warm-up), 12 @ 10, est 1RM 15.3 (prev 14.4)\n\u2022 Resisted dead bug: 1RM increase on both sets (warm-up + working 10 @ 6)"
   }
 ]
