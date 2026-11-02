@@ -11873,7 +11873,7 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 109.0,
+            "weight_lbs": 109,
             "duration_sec": 30,
             "one_rep_max": 135.8
           },
@@ -11885,13 +11885,13 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 115.0,
+            "weight_lbs": 115,
             "duration_sec": 30,
             "one_rep_max": 143.4
           },
           {
             "reps": 6,
-            "weight_lbs": 115.0,
+            "weight_lbs": 115,
             "duration_sec": 30,
             "one_rep_max": 143.4
           }
@@ -11914,5 +11914,133 @@
     "total_work_kj": 8.3,
     "tonal_activity_id": "cc13889a-bfe3-4801-b78b-4cc4b6bc0768",
     "notes": "\u2022 Workout 5 of The Functional 5: single-arm single-leg RDL, bird dog with row, rotational lift, barbell hip thrust\n\u2022 Single-Leg RDL: power + volume PR on set 2\n\u2022 Round 1 (bird dog with row + rotational lift) was hard on her back; round 2 swapped to single-leg dead bug + rolling pillar bridge\n\u2022 Hip thrust (bar weight): 109 / 112 / 115 / 115 x 6\n\u2022 Pre-readiness from 07:46 reading (~1h before, walk in between)\n\u2022 Strength Sets hit 19 for the week (target 16-22)\n\u2022 250th Tonal workout milestone\n\u2022 Skipped planned Free Lift hip thrust drop set - gassed\n\u2022 Energy 5 going in, completely drained afterward"
+  },
+  {
+    "date": "2026-11-02",
+    "workout": "20-in-20: The Functional 5",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "dry",
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "chest": 100,
+      "shoulders": 100,
+      "back": 41,
+      "triceps": 100,
+      "biceps": 100,
+      "abs": 100,
+      "obliques": 100,
+      "quads": 84,
+      "glutes": 52,
+      "hamstrings": 94,
+      "calves": 100
+    },
+    "post_readiness": {
+      "chest": 72,
+      "shoulders": 66,
+      "back": 38,
+      "triceps": 87,
+      "biceps": 100,
+      "abs": 87,
+      "obliques": 96,
+      "quads": 83,
+      "glutes": 53,
+      "hamstrings": 95,
+      "calves": 100
+    },
+    "prs": {
+      "barbell_bench_press": {
+        "weight": 22,
+        "date": "2026-11-02"
+      }
+    },
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Half Kneeling Overhead Press",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 10,
+            "duration_sec": 40,
+            "one_rep_max": 15.3
+          }
+        ]
+      },
+      {
+        "name": "Resisted Dead Bug",
+        "warmup_sets": 1,
+        "sets": [
+          {
+            "reps": 10,
+            "weight_lbs": 6,
+            "duration_sec": 30,
+            "one_rep_max": 6.8
+          }
+        ]
+      },
+      {
+        "name": "V-Up",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Barbell Bench Press",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 21,
+            "duration_sec": 30,
+            "one_rep_max": 26.2
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 21,
+            "duration_sec": 30,
+            "one_rep_max": 26.2
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 22,
+            "duration_sec": 30,
+            "one_rep_max": 27.4
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 22,
+            "duration_sec": 30,
+            "one_rep_max": 27.4
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-11-02T08:01:54.490673-05:00",
+    "functional_strength": 27,
+    "movement_quality": 22,
+    "movement_quality_delta": -128,
+    "volume_score": 1598,
+    "work_score": 3665,
+    "strength_sets": 5,
+    "power_reps": 8,
+    "endurance_sets": 6,
+    "duration": 17.48,
+    "total_volume": 1598,
+    "total_reps": 62,
+    "time_under_tension": 4.37,
+    "total_work_kj": 3.7,
+    "tonal_activity_id": "a8ba64c1-1402-47cd-96c7-270ea169e489",
+    "notes": "\u2022 Workout 7 of The Functional 5 (done out of order: W7 before W6 to spare back after 11/1 hinge day)\n\u2022 Bench (bar weight): 21 / 21 / 22 / 22 x 6 \u2014 22 is heaviest bench yet (prev 21.5 on 10/31)\n\u2022 Back readiness 41 going in; braced, no hard arch\n\u2022 Breakfast before: 2 eggs + Carb Balance tortilla, coffee"
   }
 ]
