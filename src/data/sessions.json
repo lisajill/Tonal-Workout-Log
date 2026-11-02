@@ -1783,7 +1783,7 @@
           },
           {
             "reps": 10,
-            "weight_lbs": 20
+            "weight_lbs": 40
           }
         ]
       },
@@ -1812,7 +1812,7 @@
     "strength_upper": 461,
     "strength_core": 450,
     "strength_lower": 494,
-    "notes": "Tonal crashed mid-workout during bench press sets 2\u20133. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (20 lbs \u00d7 10), seated lat pulldown 1 set (25 lbs \u00d7 5). Neutral lat pulldown not reached.",
+    "notes": "Tonal crashed mid-workout during bench press sets 2\u20133. Completed: hip thrust warmup + 2 work sets (62 lbs strength + power PR, 56 lbs), bench press warmup (35 lbs) + 1 work set (40 lbs \u00d7 10), seated lat pulldown 1 set (25 lbs \u00d7 5). Neutral lat pulldown not reached.",
     "shot_day": true
   },
   {
@@ -5934,7 +5934,7 @@
         "sets": [
           {
             "reps": 12,
-            "weight_lbs": 16,
+            "weight_lbs": 32,
             "duration_sec": 40
           }
         ]
@@ -7331,11 +7331,11 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 16
+            "weight_lbs": 32
           },
           {
             "reps": 6,
-            "weight_lbs": 17
+            "weight_lbs": 34
           }
         ]
       },
@@ -7729,15 +7729,15 @@
         "sets": [
           {
             "reps": 4,
-            "weight_lbs": 20
+            "weight_lbs": 40
           },
           {
             "reps": 4,
-            "weight_lbs": 22
+            "weight_lbs": 44
           },
           {
             "reps": 4,
-            "weight_lbs": 20
+            "weight_lbs": 40
           }
         ]
       },
@@ -9433,7 +9433,7 @@
         "date": "2026-10-12"
       },
       "bench_press": {
-        "weight": 19,
+        "weight": 38,
         "date": "2026-10-12"
       },
       "standing_face_pull": {
@@ -9450,11 +9450,11 @@
         "sets": [
           {
             "reps": 8,
-            "weight_lbs": 18
+            "weight_lbs": 36
           },
           {
             "reps": 20,
-            "weight_lbs": 19,
+            "weight_lbs": 38,
             "prs": [
               "strength"
             ]
@@ -9874,17 +9874,17 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 22,
+            "weight_lbs": 44,
             "duration_sec": 30
           },
           {
             "reps": 3,
-            "weight_lbs": 22,
+            "weight_lbs": 44,
             "duration_sec": 30
           },
           {
             "reps": 4,
-            "weight_lbs": 18,
+            "weight_lbs": 36,
             "duration_sec": 30
           }
         ]
@@ -9971,7 +9971,7 @@
     "time_under_tension": 10.15,
     "total_work_kj": 13.2,
     "tonal_activity_id": "6cf36c03-1f6a-4c15-bae6-d18dfbbc1022",
-    "notes": "\u2022 First session of \"20-in-20: Spiced-Up Sets\" (pre-fatigue structure).\n\u2022 Block 1: real early failure. Bench Press 6\u21923\u21924 reps, cut 22\u219218 lb.\n\u2022 Block 2 (rows) held up fine, full reps.\n\u2022 Glutes and quads protected, saved for tomorrow.\n\u2022 PRs: Strength PR (Rotational Row set 2), Volume PR (Rotational Row set 3), 1RM increase (Seated Row set 1, 26lb)."
+    "notes": "\u2022 First session of \"20-in-20: Spiced-Up Sets\" (pre-fatigue structure).\n\u2022 Block 1: real early failure. Bench Press 6\u21923\u21924 reps, cut 44\u219236 lb.\n\u2022 Block 2 (rows) held up fine, full reps.\n\u2022 Glutes and quads protected, saved for tomorrow.\n\u2022 PRs: Strength PR (Rotational Row set 2), Volume PR (Rotational Row set 3), 1RM increase (Seated Row set 1, 26lb)."
   },
   {
     "date": "2026-10-18",
@@ -10729,11 +10729,11 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 16
+            "weight_lbs": 32
           },
           {
             "reps": 12,
-            "weight_lbs": 15
+            "weight_lbs": 30
           }
         ]
       },
