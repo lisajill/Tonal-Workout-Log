@@ -93,7 +93,7 @@ The `/coach` skill (`.claude/commands/coach.md`) reads live health data from Obs
 - `Weight History.md` — current weight trend, DEXA lean mass baseline (106.9 lbs, Aug 2022)
 - `Zepbound Symptom Tracker.md` — current GLP-1 dose, titration history, triggers
 
-**Keep Obsidian notes current.** When the user changes supplements, doses, or goals mid-conversation, update the relevant Obsidian note via PUT so future `/coach` sessions have accurate context.
+**Keep Obsidian notes current.** When the user changes supplements, doses, or goals mid-conversation, update the relevant Obsidian note via PUT so future `/coach` sessions have accurate context. **Every Obsidian edit must also set the note's `updated:` frontmatter to today's date in the same PUT.** That's Claude's job, not the user's.
 
 ## Session Logging — Completeness Checklist (read this every time you log a session)
 
