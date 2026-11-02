@@ -1,3 +1,5 @@
+import MOVEMENT_MUSCLES from '../data/movement-muscles.json'
+
 const CAT_STRENGTH = '#a78bfa'
 
 // Region grouping — muscles only render if they appear in the data
@@ -14,9 +16,36 @@ const MUSCLE_LABELS = {
   shoulders: 'Shoulders', biceps: 'Biceps', triceps: 'Triceps', forearms: 'Forearms', grip: 'Grip',
 }
 
-// Manual sessions sometimes tag muscles as "Quads" / "Core" — normalize to snake_case
+// Manual sessions sometimes tag muscles as "Quads" / "Core" — normalize to snake_case.
 function normalizeMuscle(m) {
   return m.toLowerCase().replace(/\s+/g, '_')
+}
+
+// Tonal's catalog has no lats group (it files them under Back), so infer lats from the movement:
+// vertical pulls / straight-arm / pullovers are lat-primary; rows and straight-arm holds are secondary.
+function latsWeight(name) {
+  if (/upright row|face pull|reverse fly/i.test(name)) return 0
+  if (/pulldown|pull-?down|chin-?up|pull-?up|pullover|straight arm pulldown|lat /i.test(name)) return 1
+  if (/\brow\b|straight arm march/i.test(name)) return 0.5
+  return 0
+}
+
+// Per-session muscle weights: manual tags plus Tonal's muscleGroups for each movement done
+// (first-listed group = primary = 1, the rest = 0.5). Max per muscle, so a session counts once.
+function sessionMuscleWeights(s) {
+  const w = {}
+  const add = (raw, v) => { const m = normalizeMuscle(raw); w[m] = Math.max(w[m] ?? 0, v) }
+  for (const m of s.muscles_high_volume ?? []) add(m, 1)
+  for (const m of s.muscles_low_volume ?? []) add(m, 0.5)
+  for (const mv of s.movements ?? []) {
+    const worked = (mv.sets ?? []).some(st => (st.reps ?? 0) > 0 || (st.duration_sec ?? 0) > 0)
+    if (!worked) continue
+    const lats = latsWeight(mv.name)
+    if (lats) add('lats', lats)
+    const groups = MOVEMENT_MUSCLES[mv.name]
+    if (groups) groups.forEach((g, i) => add(g, i === 0 ? 1 : 0.5))
+  }
+  return w
 }
 
 function pad2(n) { return String(n).padStart(2, '0') }
@@ -83,16 +112,13 @@ export default function MuscleMatrix({ sessions }) {
   const seen = new Set()
   for (const s of sorted) {
     const week = getWeekStart(s.date)
-    const hit = (raw, w) => {
-      const m = normalizeMuscle(raw)
+    for (const [m, w] of Object.entries(sessionMuscleWeights(s))) {
       seen.add(m)
       const st = (stats[m] ??= { weekScores: {}, lastDate: null, totalSessions: 0 })
       st.weekScores[week] = (st.weekScores[week] ?? 0) + w
       if (!st.lastDate || s.date > st.lastDate) st.lastDate = s.date
       st.totalSessions += 1
     }
-    for (const m of s.muscles_high_volume ?? []) hit(m, 1)
-    for (const m of s.muscles_low_volume ?? []) hit(m, 0.5)
   }
 
   const regions = REGIONS

@@ -1,0 +1,544 @@
+{
+ "Alternating Bench Press": [
+  "Chest",
+  "Triceps",
+  "Obliques"
+ ],
+ "Alternating Biceps Curl": [
+  "Biceps",
+  "Forearms"
+ ],
+ "Assisted Reverse Lunge": [
+  "Glutes",
+  "Quads"
+ ],
+ "Barbell Bench Press": [
+  "Chest",
+  "Triceps",
+  "Abs"
+ ],
+ "Barbell Biceps Curl": [
+  "Biceps",
+  "Forearms"
+ ],
+ "Barbell Chinup": [
+  "Back",
+  "Biceps",
+  "Abs"
+ ],
+ "Barbell Deadlift": [
+  "Glutes",
+  "Hamstrings",
+  "Abs"
+ ],
+ "Barbell Front Squat": [
+  "Quads",
+  "Glutes",
+  "Abs"
+ ],
+ "Barbell Hip Thrust": [
+  "Glutes",
+  "Hamstrings"
+ ],
+ "Barbell Lateral Leg Raise": [
+  "Obliques",
+  "Abs"
+ ],
+ "Barbell Lying Glute Bridge": [
+  "Glutes",
+  "Hamstrings"
+ ],
+ "Barbell RDL": [
+  "Hamstrings",
+  "Glutes",
+  "Abs"
+ ],
+ "Barbell Seated Lat Pulldown": [
+  "Back",
+  "Biceps"
+ ],
+ "Barbell Single-Leg RDL": [
+  "Hamstrings",
+  "Glutes",
+  "Back"
+ ],
+ "Barbell Straight Arm March": [
+  "Abs",
+  "Obliques"
+ ],
+ "Barbell Straight Arm Pulldown": [
+  "Back",
+  "Shoulders"
+ ],
+ "Bear Hold": [
+  "Abs",
+  "Obliques",
+  "Shoulders"
+ ],
+ "Bench Chest Fly": [
+  "Chest",
+  "Shoulders"
+ ],
+ "Bench Press": [
+  "Chest",
+  "Triceps",
+  "Abs"
+ ],
+ "Bent Over Row": [
+  "Back",
+  "Biceps",
+  "Abs"
+ ],
+ "Biceps Curl": [
+  "Biceps",
+  "Forearms"
+ ],
+ "Bird Dog": [
+  "Obliques",
+  "Abs",
+  "Glutes"
+ ],
+ "Bird Dog with Row": [
+  "Obliques",
+  "Back",
+  "Abs"
+ ],
+ "Bodyweight Squat": [
+  "Glutes",
+  "Quads",
+  "Abs"
+ ],
+ "Bretzel Stretch": [
+  "Back",
+  "Quads"
+ ],
+ "Cat-Cow": [
+  "Back"
+ ],
+ "Clamshell": [
+  "Glutes"
+ ],
+ "Dead Bug": [
+  "Abs",
+  "Obliques",
+  "Shoulders"
+ ],
+ "Draw a Sword": [
+  "Shoulders"
+ ],
+ "Elevated Glute Bridge": [
+  "Glutes",
+  "Abs",
+  "Hamstrings"
+ ],
+ "Farmer March": [
+  "Obliques",
+  "Shoulders"
+ ],
+ "Feet in Straps Frog Press": [
+  "Glutes"
+ ],
+ "Floor Slide": [
+  "Shoulders",
+  "Chest"
+ ],
+ "Glute Bridge": [
+  "Glutes",
+  "Hamstrings"
+ ],
+ "Goblet Squat": [
+  "Glutes",
+  "Quads",
+  "Abs"
+ ],
+ "Goblet Squat to Bench": [
+  "Glutes",
+  "Hamstrings",
+  "Quads"
+ ],
+ "Half Kneeling Overhead Press": [
+  "Shoulders",
+  "Triceps"
+ ],
+ "Half Kneeling Pallof Press": [
+  "Obliques",
+  "Abs",
+  "Shoulders"
+ ],
+ "Half Kneeling Single-Arm Pulldown (Contralateral)": [
+  "Back",
+  "Biceps"
+ ],
+ "Half Roll Down with Wide Row": [
+  "Back"
+ ],
+ "Hammer Curl": [
+  "Biceps",
+  "Forearms"
+ ],
+ "Hamstring Walkout": [
+  "Glutes",
+  "Hamstrings"
+ ],
+ "Hip Lift": [
+  "Abs"
+ ],
+ "Hip Raise": [
+  "Abs"
+ ],
+ "Incline Chest Fly": [
+  "Chest",
+  "Shoulders"
+ ],
+ "Incline Pillar Bridge": [
+  "Abs",
+  "Obliques",
+  "Shoulders"
+ ],
+ "Inline Lift": [
+  "Obliques",
+  "Abs"
+ ],
+ "Iso Split Squat Lift": [
+  "Obliques",
+  "Abs"
+ ],
+ "Lateral Bridge with Row": [
+  "Obliques",
+  "Abs",
+  "Glutes"
+ ],
+ "Lateral Raise": [
+  "Shoulders"
+ ],
+ "Leg Circles": [
+  "Hamstrings"
+ ],
+ "Low Squat Walk Out": [
+  "Hamstrings",
+  "Quads",
+  "Glutes"
+ ],
+ "Lying Face Curl": [
+  "Biceps",
+  "Forearms"
+ ],
+ "Lying Hamstring Stretch": [
+  "Hamstrings"
+ ],
+ "Mini Sumo Squat": [
+  "Glutes",
+  "Quads",
+  "Hamstrings"
+ ],
+ "Neutral Grip Deadlift": [
+  "Hamstrings",
+  "Glutes",
+  "Abs"
+ ],
+ "Oblique Boat": [
+  "Obliques"
+ ],
+ "Overhead Triceps Extension": [
+  "Triceps"
+ ],
+ "Pillar Bridge": [
+  "Abs",
+  "Shoulders",
+  "Obliques"
+ ],
+ "Pillar Bridge with Row": [
+  "Abs",
+  "Back",
+  "Shoulders"
+ ],
+ "Plank Walk Out": [
+  "Abs",
+  "Shoulders",
+  "Hamstrings"
+ ],
+ "Prone Bench Hamstring Curl": [
+  "Hamstrings"
+ ],
+ "Prone Bench Single-Leg Hamstring Curl": [
+  "Hamstrings"
+ ],
+ "Prone Shoulder Sweep": [
+  "Shoulders",
+  "Chest"
+ ],
+ "Pull Through": [
+  "Hamstrings",
+  "Glutes",
+  "Abs"
+ ],
+ "Pulling Straps T-Pull": [
+  "Back"
+ ],
+ "Pulling Straps Triceps Extension": [
+  "Triceps"
+ ],
+ "Pushup": [
+  "Chest",
+  "Triceps",
+  "Abs"
+ ],
+ "Quadruped Leg Lift with Triceps Press": [
+  "Glutes",
+  "Triceps"
+ ],
+ "Quadruped Leg Press with External Rotation": [
+  "Glutes",
+  "Quads"
+ ],
+ "Quadruped Leg Sweep": [
+  "Hamstrings",
+  "Glutes"
+ ],
+ "RDL": [
+  "Glutes",
+  "Hamstrings",
+  "Back"
+ ],
+ "Racked Squat": [
+  "Glutes",
+  "Quads",
+  "Hamstrings"
+ ],
+ "Racked Squat to Bench": [
+  "Glutes",
+  "Hamstrings",
+  "Quads"
+ ],
+ "Resisted Calf Raise": [
+  "Calves"
+ ],
+ "Resisted DNS Star": [
+  "Abs",
+  "Glutes",
+  "Shoulders",
+  "Back",
+  "Obliques"
+ ],
+ "Resisted Dead Bug": [
+  "Abs",
+  "Obliques",
+  "Shoulders"
+ ],
+ "Resisted Glute Bridge": [
+  "Glutes",
+  "Abs",
+  "Hamstrings"
+ ],
+ "Resisted Leg Lowering": [
+  "Obliques",
+  "Abs",
+  "Shoulders"
+ ],
+ "Resisted Step Up": [
+  "Hamstrings",
+  "Glutes"
+ ],
+ "Reverse Grip Barbell Triceps Extension": [
+  "Triceps"
+ ],
+ "Roll Down": [
+  "Abs"
+ ],
+ "Rolling Pillar Bridge": [
+  "Abs",
+  "Obliques"
+ ],
+ "Rotational Lift": [
+  "Obliques",
+  "Glutes",
+  "Abs"
+ ],
+ "Rotational Row": [
+  "Back",
+  "Obliques"
+ ],
+ "Runners Lunge": [
+  "Hamstrings"
+ ],
+ "Scapular Pushup": [
+  "Shoulders",
+  "Chest"
+ ],
+ "Seated Alternating Biceps Curl": [
+  "Biceps",
+  "Forearms"
+ ],
+ "Seated Alternating Overhead Press": [
+  "Shoulders",
+  "Triceps"
+ ],
+ "Seated Alternating Row": [
+  "Back",
+  "Biceps"
+ ],
+ "Seated Biceps Curl": [
+  "Biceps",
+  "Forearms"
+ ],
+ "Seated Lat Pulldown": [
+  "Back",
+  "Biceps"
+ ],
+ "Seated Pallof Press": [
+  "Obliques"
+ ],
+ "Seated Row": [
+  "Back",
+  "Biceps",
+  "Abs"
+ ],
+ "Seated Single-Arm Lat Pulldown": [
+  "Back",
+  "Biceps"
+ ],
+ "Serve a Tray": [
+  "Chest"
+ ],
+ "Short Spine": [
+  "Abs",
+  "Hamstrings"
+ ],
+ "Side Lying Hip Abduction": [
+  "Glutes",
+  "Obliques"
+ ],
+ "Side Lying Leg Press": [
+  "Quads"
+ ],
+ "Side Lying Leg Sweep": [
+  "Glutes"
+ ],
+ "Single-Arm Deadlift": [
+  "Glutes",
+  "Hamstrings",
+  "Obliques"
+ ],
+ "Single-Arm Single-Leg RDL": [
+  "Hamstrings",
+  "Glutes",
+  "Obliques"
+ ],
+ "Single-Arm Squat with Row": [
+  "Glutes",
+  "Quads",
+  "Back"
+ ],
+ "Single-Leg Circles": [
+  "Hamstrings",
+  "Glutes"
+ ],
+ "Single-Leg Dead Bug": [
+  "Abs",
+  "Obliques",
+  "Shoulders"
+ ],
+ "Skull Crusher": [
+  "Triceps"
+ ],
+ "Sprinter Crunch": [
+  "Abs",
+  "Quads"
+ ],
+ "Squat with Row": [
+  "Glutes",
+  "Quads",
+  "Back"
+ ],
+ "Standing Bicycle": [
+  "Abs",
+  "Glutes",
+  "Obliques"
+ ],
+ "Standing Chest Press": [
+  "Chest",
+  "Triceps"
+ ],
+ "Standing Chop": [
+  "Obliques",
+  "Shoulders",
+  "Glutes"
+ ],
+ "Standing Diagonal Glute Kickback": [
+  "Glutes"
+ ],
+ "Standing Donkey Kick": [
+  "Glutes",
+  "Hamstrings"
+ ],
+ "Standing Face Pull": [
+  "Back",
+  "Shoulders"
+ ],
+ "Standing Hip Abduction": [
+  "Glutes"
+ ],
+ "Standing Leg Extension": [
+  "Quads"
+ ],
+ "Standing Overhead Press": [
+  "Shoulders",
+  "Triceps"
+ ],
+ "Standing Single-Arm Row": [
+  "Back",
+  "Biceps",
+  "Obliques"
+ ],
+ "Standing Single-Leg Hamstring Curl": [
+  "Hamstrings",
+  "Glutes"
+ ],
+ "Standing Straight Leg Glute Kickback": [
+  "Glutes"
+ ],
+ "Straight Arm Pulldown": [
+  "Back",
+  "Shoulders"
+ ],
+ "Suitcase Deadlift": [
+  "Glutes",
+  "Hamstrings",
+  "Obliques"
+ ],
+ "Suitcase March": [
+  "Obliques"
+ ],
+ "Supine Arms with C-Curve": [
+  "Abs"
+ ],
+ "Teaser": [
+  "Abs"
+ ],
+ "The Hundred": [
+  "Abs"
+ ],
+ "Triceps Extension": [
+  "Triceps"
+ ],
+ "Triceps Kickback": [
+  "Triceps"
+ ],
+ "Upright Row": [
+  "Shoulders",
+  "Biceps"
+ ],
+ "V-Up": [
+  "Abs",
+  "Obliques"
+ ],
+ "W-Hold": [
+  "Back",
+  "Abs",
+  "Biceps"
+ ],
+ "Y-Pull": [
+  "Shoulders",
+  "Back"
+ ]
+}
