@@ -10971,7 +10971,7 @@
     },
     "prs": {
       "barbell_bench_press": {
-        "weight": 37.0,
+        "weight": 37,
         "date": "2026-10-25"
       },
       "half_kneeling_overhead_press": {
@@ -11026,7 +11026,7 @@
         "sets": [
           {
             "reps": 8,
-            "weight_lbs": 35.0,
+            "weight_lbs": 35,
             "duration_sec": 30,
             "one_rep_max": 46.8,
             "prs": [
@@ -11035,7 +11035,7 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 37.0,
+            "weight_lbs": 37,
             "duration_sec": 30,
             "one_rep_max": 46,
             "prs": [
@@ -11044,7 +11044,7 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 37.0,
+            "weight_lbs": 37,
             "duration_sec": 30,
             "one_rep_max": 46,
             "prs": [
@@ -11500,13 +11500,13 @@
           },
           {
             "reps": 12,
-            "weight_lbs": 43.0,
+            "weight_lbs": 43,
             "one_rep_max": 60.6
           },
           {
             "reps": 9,
-            "weight_lbs": 41.0,
-            "one_rep_max": 53.0
+            "weight_lbs": 41,
+            "one_rep_max": 53
           }
         ]
       },
@@ -12051,5 +12051,145 @@
     "total_work_kj": 3.7,
     "tonal_activity_id": "a8ba64c1-1402-47cd-96c7-270ea169e489",
     "notes": "\u2022 Workout 7 of The Functional 5 (done out of order: W7 before W6 to spare back after 11/1 hinge day)\n\u2022 Bench (bar weight): 42 / 42 / 44 / 44 x 6, chains +11 (55 at top of rep) \u2014 44 is all-time heaviest bench (6/15/2023 peak was 41 lb w/ eccentric +10; the \"57\" from then was est 1RM 56.8)\n\u2022 Back readiness 41 going in; braced, no hard arch\n\u2022 Breakfast before: 2 eggs + Carb Balance tortilla, coffee\n\u2022 Bench not to failure, but last rep at 44 was very shaky (near-max)\n\u2022 Half-kneeling OHP: 1RM increase / strength PR on set 2 (working set after warm-up), 12 @ 10, est 1RM 15.3 (prev 14.4)\n\u2022 Resisted dead bug: 1RM increase on both sets (warm-up + working 10 @ 6)"
+  },
+  {
+    "date": "2026-11-04",
+    "workout": "20-in-20: The Functional 5 (Day 3, Week 2)",
+    "energy_level": 3,
+    "phase": null,
+    "subjective_rating": null,
+    "sweat": null,
+    "calories": null,
+    "avg_hr": null,
+    "max_hr": null,
+    "pre_readiness": {
+      "chest": 100,
+      "shoulders": 100,
+      "back": 98,
+      "triceps": 100,
+      "biceps": 100,
+      "abs": 100,
+      "obliques": 100,
+      "quads": 100,
+      "glutes": 100,
+      "hamstrings": 100,
+      "calves": 100
+    },
+    "post_readiness": {
+      "chest": 100,
+      "shoulders": 88,
+      "back": 97,
+      "triceps": 99,
+      "biceps": 100,
+      "abs": 89,
+      "obliques": 95,
+      "quads": 32,
+      "glutes": 48,
+      "hamstrings": 98,
+      "calves": 66
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Pillar Bridge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Goblet Squat to Bench",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 8,
+            "weight_lbs": 41,
+            "duration_sec": 30,
+            "one_rep_max": 51.4
+          },
+          {
+            "reps": 8,
+            "weight_lbs": 43,
+            "duration_sec": 30,
+            "one_rep_max": 53.9
+          }
+        ]
+      },
+      {
+        "name": "Resisted Calf Raise",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 12,
+            "weight_lbs": 20,
+            "duration_sec": 30,
+            "one_rep_max": 28.2
+          },
+          {
+            "reps": 12,
+            "weight_lbs": 25,
+            "duration_sec": 30,
+            "one_rep_max": 35.2
+          }
+        ]
+      },
+      {
+        "name": "Barbell Front Squat",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 16,
+            "duration_sec": 30,
+            "one_rep_max": 20
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 18,
+            "duration_sec": 30,
+            "one_rep_max": 22.6
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 20,
+            "duration_sec": 30,
+            "one_rep_max": 25.0
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 20,
+            "duration_sec": 30,
+            "one_rep_max": 25.0
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-11-04T17:48:03.252834-05:00",
+    "functional_strength": 89,
+    "movement_quality": 39,
+    "movement_quality_delta": -111,
+    "volume_score": 3832,
+    "work_score": 6987,
+    "strength_sets": 10,
+    "power_reps": 69,
+    "endurance_sets": 13,
+    "duration": 18.35,
+    "total_volume": 2234,
+    "total_reps": 64,
+    "time_under_tension": 4.55,
+    "total_work_kj": 3,
+    "tonal_activity_id": "b8fccda9-1996-4dc0-a27a-187c653e965c",
+    "notes": "\u2022 Day 3, Week 2 of The Functional 5 (app Workout 8). Split squat swapped for goblet squat to bench (knee: no lunges)\n\u2022 Front squat (bar weight): 16 / 18 / 20 / 20 x 6, chains on. Deliberately light: poor sleep, energy 3, day 1 post-shot, day after the 4x4 row\n\u2022 Goblet squat to bench 8 @ 41, 8 @ 43 (single handle)\n\u2022 Pre-readiness all ~100 at 17:05, but Tonal is blind to the 11/3 Hydrow 4x4. Estimated real pre: quads ~75-85, glutes ~85, back ~80\n\u2022 Pre-workout food: 0.8 microwave double-meat lasagna (bottom burnt) ~1h before"
   }
 ]
