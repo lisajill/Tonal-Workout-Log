@@ -53,13 +53,15 @@ export default function RowingTracker() {
   const chartData = sessions.map(s => ({
     label: shortDate(s.date),
     date: s.date,
-    // Interval rows with full stopped rests: the machine's avg split/spm average in
-    // the standing-still time, so they're not comparable to continuous rows. Skip them.
-    split_sec: s.rowing_format === 'intervals' ? null : parseSplitSecs(s.rowing_avg_split),
+    // Interval rows with full stopped rests: the machine's avg split/spm include the
+    // standing-still time, so use the work-interval split/spm instead (null if unknown).
+    split_sec: s.rowing_format === 'intervals'
+      ? (s.rowing_interval_split ? parseSplitSecs(s.rowing_interval_split) : null)
+      : parseSplitSecs(s.rowing_avg_split),
     watts: s.rowing_avg_watts ?? null,
     distance: s.rowing_distance_m ?? null,
     distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
-    spm: s.rowing_format === 'intervals' ? null : (s.rowing_stroke_rate_spm ?? null),
+    spm: s.rowing_format === 'intervals' ? (s.rowing_interval_spm ?? null) : (s.rowing_stroke_rate_spm ?? null),
   }))
 
   // Trendline over a trailing window — tracks the *current* trajectory rather
@@ -69,8 +71,9 @@ export default function RowingTracker() {
   chartData.forEach((d, i) => { d.split_trend = splitTrend[i]; d.watts_trend = wattsTrend[i] })
 
   const bestSplit = sessions.reduce((best, s) => {
-    if (s.rowing_format === 'intervals') return best
-    const sec = parseSplitSecs(s.rowing_avg_split)
+    const raw = s.rowing_format === 'intervals' ? s.rowing_interval_split : s.rowing_avg_split
+    if (!raw) return best
+    const sec = parseSplitSecs(raw)
     return (best === null || sec < best) ? sec : best
   }, null)
   const bestWatts = Math.max(...sessions.map(s => s.rowing_avg_watts ?? 0))
@@ -206,9 +209,9 @@ export default function RowingTracker() {
                 <td className="py-2.5 pl-5 pr-4 text-zinc-400 mono-stat text-xs">{s.date}</td>
                 <td className="py-2.5 pr-4 text-zinc-300">{s.rowing_program ?? '—'}</td>
                 <td className="py-2.5 pr-4 text-zinc-300 mono-stat text-right">{s.rowing_distance_m ? `${s.rowing_distance_m}m` : '—'}</td>
-                <td className="py-2.5 pr-4 mono-stat text-right text-base font-semibold" style={{ color: CAT_ROWING }}>{s.rowing_format === 'intervals' ? <span className="text-zinc-500 text-xs" title={`machine avg ${s.rowing_avg_split} incl. rests`}>intervals</span> : (s.rowing_avg_split ?? '—')}</td>
+                <td className="py-2.5 pr-4 mono-stat text-right text-base font-semibold" style={{ color: CAT_ROWING }}>{s.rowing_format === 'intervals' ? <span title={`interval split; machine avg ${s.rowing_avg_split} incl. rests`}>{s.rowing_interval_split ?? '—'}<span className="ml-1 text-[10px] text-zinc-500 font-normal">int</span></span> : (s.rowing_avg_split ?? '—')}</td>
                 <td className="py-2.5 pr-4 mono-stat text-right" style={{ color: POWER }}>{s.rowing_avg_watts ? `${s.rowing_avg_watts}W` : '—'}</td>
-                <td className="py-2.5 pr-4 mono-stat text-right text-zinc-400">{s.rowing_format === 'intervals' ? '—' : (s.rowing_stroke_rate_spm ?? '—')}</td>
+                <td className="py-2.5 pr-4 mono-stat text-right text-zinc-400">{s.rowing_format === 'intervals' ? (s.rowing_interval_spm ?? '—') : (s.rowing_stroke_rate_spm ?? '—')}</td>
                 <td className="py-2.5 pr-5 mono-stat text-right text-zinc-400">{s.avg_hr ?? '—'}</td>
               </tr>
             ))}

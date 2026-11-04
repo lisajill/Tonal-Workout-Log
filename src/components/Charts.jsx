@@ -142,8 +142,10 @@ export default function Charts({ sessions: rawSessions }) {
     .map(s => ({
       label: shortDate(s.date),
       date: s.date,
-      // Interval rows (full stopped rests) have a meaningless machine avg split — skip it.
-      split_sec: s.rowing_format === 'intervals' ? null : parseSplitSecs(s.rowing_avg_split),
+      // Interval rows (full stopped rests): machine avg split includes standing still — use the work-interval split.
+      split_sec: s.rowing_format === 'intervals'
+        ? (s.rowing_interval_split ? parseSplitSecs(s.rowing_interval_split) : null)
+        : parseSplitSecs(s.rowing_avg_split),
       watts: s.rowing_avg_watts ?? null,
       distance: s.rowing_distance_m ?? null,
       distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
