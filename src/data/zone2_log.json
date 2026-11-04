@@ -3810,8 +3810,10 @@
     "rowing_avg_watts": 58,
     "rowing_drag": 104,
     "rowing_piece": "work",
-    "notes": "\u2022 First VO2 session: RowAlong 4x4 video, did 3 x 4 min (first-time plan), full off-rower rests\n\u2022 Avg split/spm distorted by warmup + stopped rest time; live split ~2:20-2:30 on hard strokes\n\u2022 6.0 min zone 4, max HR 166 (vs 0 min Z4, max 139 on 11/1 Sweat class)\n\u2022 Back readiness 73 going in",
-    "rowing_format": "intervals"
+    "notes": "\u2022 First VO2 session: RowAlong 4x4 video, did 3 x 4 min (first-time plan), full off-rower rests\n\u2022 No warmup on the Hydrow; 23:07 = 3x4 min work + 2x5 min stopped rests + ~1 min. Est interval split 2:19 (2589 m / 12 min; ~2:20-2:28 if a little rest rowing), ~31 spm; matches live 2:20-2:30\n\u2022 6.0 min zone 4, max HR 166 (vs 0 min Z4, max 139 on 11/1 Sweat class)\n\u2022 Back readiness 73 going in",
+    "rowing_format": "intervals",
+    "rowing_interval_split": "2:19",
+    "rowing_interval_spm": 31
   },
   {
     "uuid": "915F8314-E326-4161-BCE5-847F22770FA7",
