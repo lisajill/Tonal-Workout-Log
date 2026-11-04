@@ -53,11 +53,13 @@ export default function RowingTracker() {
   const chartData = sessions.map(s => ({
     label: shortDate(s.date),
     date: s.date,
-    split_sec: parseSplitSecs(s.rowing_avg_split),
+    // Interval rows with full stopped rests: the machine's avg split/spm average in
+    // the standing-still time, so they're not comparable to continuous rows. Skip them.
+    split_sec: s.rowing_format === 'intervals' ? null : parseSplitSecs(s.rowing_avg_split),
     watts: s.rowing_avg_watts ?? null,
     distance: s.rowing_distance_m ?? null,
     distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
-    spm: s.rowing_stroke_rate_spm ?? null,
+    spm: s.rowing_format === 'intervals' ? null : (s.rowing_stroke_rate_spm ?? null),
   }))
 
   // Trendline over a trailing window — tracks the *current* trajectory rather
@@ -67,6 +69,7 @@ export default function RowingTracker() {
   chartData.forEach((d, i) => { d.split_trend = splitTrend[i]; d.watts_trend = wattsTrend[i] })
 
   const bestSplit = sessions.reduce((best, s) => {
+    if (s.rowing_format === 'intervals') return best
     const sec = parseSplitSecs(s.rowing_avg_split)
     return (best === null || sec < best) ? sec : best
   }, null)
@@ -126,7 +129,7 @@ export default function RowingTracker() {
                   <XAxis dataKey="label" {...AXIS} />
                   <YAxis {...AXIS} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
                   <Tooltip content={<ChartTip names={{ split_sec: 'Avg Split', split_trend: 'Trend' }} formats={{ split_sec: v => `${fmtSplit(v)} /500m`, split_trend: v => `${fmtSplit(v)} /500m` }} />} cursor={{ stroke: '#3f3f46' }} />
-                  <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradRowSplit)" dot={{ r: 3 }} activeDot={{ r: 4.5 }} />
+                  <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradRowSplit)" dot={{ r: 3 }} activeDot={{ r: 4.5 }} connectNulls />
                   <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} legendType="none" />
                 </ComposedChart>
               </ResponsiveContainer>
@@ -203,9 +206,9 @@ export default function RowingTracker() {
                 <td className="py-2.5 pl-5 pr-4 text-zinc-400 mono-stat text-xs">{s.date}</td>
                 <td className="py-2.5 pr-4 text-zinc-300">{s.rowing_program ?? '—'}</td>
                 <td className="py-2.5 pr-4 text-zinc-300 mono-stat text-right">{s.rowing_distance_m ? `${s.rowing_distance_m}m` : '—'}</td>
-                <td className="py-2.5 pr-4 mono-stat text-right text-base font-semibold" style={{ color: CAT_ROWING }}>{s.rowing_avg_split ?? '—'}</td>
+                <td className="py-2.5 pr-4 mono-stat text-right text-base font-semibold" style={{ color: CAT_ROWING }}>{s.rowing_format === 'intervals' ? <span className="text-zinc-500 text-xs" title={`machine avg ${s.rowing_avg_split} incl. rests`}>intervals</span> : (s.rowing_avg_split ?? '—')}</td>
                 <td className="py-2.5 pr-4 mono-stat text-right" style={{ color: POWER }}>{s.rowing_avg_watts ? `${s.rowing_avg_watts}W` : '—'}</td>
-                <td className="py-2.5 pr-4 mono-stat text-right text-zinc-400">{s.rowing_stroke_rate_spm ?? '—'}</td>
+                <td className="py-2.5 pr-4 mono-stat text-right text-zinc-400">{s.rowing_format === 'intervals' ? '—' : (s.rowing_stroke_rate_spm ?? '—')}</td>
                 <td className="py-2.5 pr-5 mono-stat text-right text-zinc-400">{s.avg_hr ?? '—'}</td>
               </tr>
             ))}

@@ -142,7 +142,8 @@ export default function Charts({ sessions: rawSessions }) {
     .map(s => ({
       label: shortDate(s.date),
       date: s.date,
-      split_sec: parseSplitSecs(s.rowing_avg_split),
+      // Interval rows (full stopped rests) have a meaningless machine avg split — skip it.
+      split_sec: s.rowing_format === 'intervals' ? null : parseSplitSecs(s.rowing_avg_split),
       watts: s.rowing_avg_watts ?? null,
       distance: s.rowing_distance_m ?? null,
       distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
@@ -512,7 +513,7 @@ export default function Charts({ sessions: rawSessions }) {
                   <XAxis dataKey="label" tick={AXIS_TICK} axisLine={false} tickLine={false} />
                   <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
                   <Tooltip content={<Tip meta={Object.fromEntries(rowingData.map(d => [d.label, d]))} />} cursor={{ stroke: '#3f3f46' }} />
-                  <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradSplit)" activeDot={{ r: 4 }} />
+                  <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradSplit)" activeDot={{ r: 4 }} connectNulls />
                   <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} />
                 </ComposedChart>
               </ResponsiveContainer>
