@@ -3873,7 +3873,15 @@
     "zone3_min": 8,
     "zone4_min": 0,
     "avg_hr": 136,
-    "distance_mi": null
+    "distance_mi": null,
+    "rowing_program": "October Race: Week 1 of 4",
+    "rowing_distance_m": 1768,
+    "rowing_duration_min": 10,
+    "rowing_avg_split": "2:49.6",
+    "rowing_stroke_rate_spm": 25,
+    "rowing_avg_watts": 76,
+    "rowing_drag": 104,
+    "rowing_piece": "work"
   },
   {
     "uuid": "4319F816-1CD6-4D92-874A-CF4AA691E270",
@@ -3886,6 +3894,14 @@
     "zone3_min": 0,
     "zone4_min": 0,
     "avg_hr": 107,
-    "distance_mi": null
+    "distance_mi": null,
+    "rowing_program": "Just Relax Cool-Down (James, Newport Beach)",
+    "rowing_distance_m": 587,
+    "rowing_duration_min": 5,
+    "rowing_avg_split": "4:15.3",
+    "rowing_stroke_rate_spm": 17,
+    "rowing_avg_watts": 22,
+    "rowing_drag": 104,
+    "rowing_piece": "cooldown"
   }
 ]
