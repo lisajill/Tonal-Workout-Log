@@ -108,7 +108,11 @@ for (const file of files) {
   if (!data.uuid || allSeen.has(data.uuid)) continue
   allSeen.add(data.uuid)
 
-  const date = data.startDate?.slice(0, 10) ?? 'unknown'
+  // Local (Eastern) calendar date, not the UTC slice: evening sessions after ~7–8pm ET
+  // are already the next day in UTC, and GitHub Actions runs in UTC.
+  const date = data.startDate
+    ? new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(new Date(data.startDate))
+    : 'unknown'
   const toMin = (sec: number) => Math.round((sec / 60) * 10) / 10
   const rawActivity = data.source === 'Tonal' ? classifyTonalActivity(date, data.startDate ?? null) : (data.activity?.name ?? data.name ?? 'Unknown')
   const activity = rawActivity === 'Indoor Walk' ? 'Treadmill'
