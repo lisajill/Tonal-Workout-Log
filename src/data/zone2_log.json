@@ -3817,7 +3817,7 @@
     "rowing_format": "intervals",
     "rowing_interval_split": "2:19",
     "rowing_interval_spm": 30,
-    "rowing_category": "Just Row"
+    "rowing_category": "Drive+"
   },
   {
     "uuid": "915F8314-E326-4161-BCE5-847F22770FA7",
@@ -3885,7 +3885,8 @@
     "rowing_stroke_rate_spm": 25,
     "rowing_avg_watts": 76,
     "rowing_drag": 104,
-    "rowing_piece": "work"
+    "rowing_piece": "work",
+    "rowing_category": "Drive"
   },
   {
     "uuid": "4319F816-1CD6-4D92-874A-CF4AA691E270",

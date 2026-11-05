@@ -58,7 +58,7 @@ Add the schema below to the main entry AND to the cooldown entry (each with its 
 "rowing_avg_watts": <number>,
 "rowing_drag": 104,
 "rowing_piece": "work",
-"rowing_category": "Breathe | Sweat | Drive | Just Row"
+"rowing_category": "Breathe | Sweat | Drive | Drive+ | Just Row"
 ```
 Use `"rowing_piece": "cooldown"` on the cooldown entry instead of `"work"`. `rowing_category` is the Hydrow class type, shown as a colored badge on the Cardio tab. Ask her if it isn't obvious from the class name; omit it on cooldowns (they show as Cool-Down automatically). **This field is required, not optional** — `Charts.jsx`'s split/watts/power trend charts filter on `rowing_piece !== 'cooldown'` to exclude cooldowns from performance trends. Omitting it makes a cooldown's slow recovery-pace split plot as if it were a real effort data point, showing a fake performance crash on that date.
 

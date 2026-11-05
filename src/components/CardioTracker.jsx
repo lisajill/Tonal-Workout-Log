@@ -46,7 +46,7 @@ function weekLabel(weekStart) {
 // Hydrow class type (Breathe / Sweat / Drive, plus Just Row / Cool-Down) from `rowing_category`;
 // cooldown pieces are always Cool-Down.
 const ROW_TYPE_COLORS = {
-  Breathe: '#4ade80', Sweat: '#fbbf24', Drive: '#f87171',
+  Breathe: '#4ade80', Sweat: '#fbbf24', Drive: '#f87171', 'Drive+': '#f43f5e',
   'Just Row': '#38bdf8', 'Cool-Down': '#a1a1aa',
 }
 function rowingType(s) {
