@@ -505,7 +505,7 @@ export default function Charts({ sessions: rawSessions }) {
           </div>
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-            <ChartCard title="Split /500m" subtitle="Line = continuous rows · purple dots = interval pace (4x4) · axis flipped so up = faster · dashed = trend">
+            <ChartCard title="Split /500m" subtitle="Line = continuous rows · purple line = interval pace (4x4) · axis flipped so up = faster · dashed = trend">
               <ResponsiveContainer width="100%" height={200}>
                 <ComposedChart data={rowingData} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
                   <defs>
@@ -520,7 +520,7 @@ export default function Charts({ sessions: rawSessions }) {
                   <Tooltip content={<Tip meta={Object.fromEntries(rowingData.map(d => [d.label, d]))} />} cursor={{ stroke: '#3f3f46' }} />
                   <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradSplit)" activeDot={{ r: 4 }} connectNulls />
                   <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} connectNulls />
-                  <Line isAnimationActive={false} dataKey="interval_split_sec" stroke="none" dot={{ r: 4.5, fill: '#c4b5fd', stroke: '#c4b5fd' }} activeDot={{ r: 5.5 }} legendType="none" />
+                  <Line isAnimationActive={false} type="monotone" dataKey="interval_split_sec" stroke={'#c4b5fd'} strokeWidth={2} connectNulls dot={{ r: 4.5, fill: '#c4b5fd', stroke: '#c4b5fd' }} activeDot={{ r: 5.5 }} legendType="none" />
                 </ComposedChart>
               </ResponsiveContainer>
             </ChartCard>

@@ -116,7 +116,7 @@ export default function RowingTracker() {
               <div className="section-header">
                 <div>
                   <h2 className="label">Split /500m</h2>
-                  <p className="text-xs text-zinc-500 mt-1">Line = continuous rows · purple dots = interval pace (4x4) · axis flipped so up = faster · dashed = trend</p>
+                  <p className="text-xs text-zinc-500 mt-1">Line = continuous rows · purple line = interval pace (4x4) · axis flipped so up = faster · dashed = trend</p>
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={180}>
@@ -133,7 +133,7 @@ export default function RowingTracker() {
                   <Tooltip content={<ChartTip names={{ split_sec: 'Avg Split', split_trend: 'Trend', interval_split_sec: 'Interval split' }} formats={{ split_sec: v => `${fmtSplit(v)} /500m`, split_trend: v => `${fmtSplit(v)} /500m`, interval_split_sec: v => `${fmtSplit(v)} /500m` }} />} cursor={{ stroke: '#3f3f46' }} />
                   <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradRowSplit)" dot={{ r: 3 }} activeDot={{ r: 4.5 }} connectNulls />
                   <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} legendType="none" connectNulls />
-                  <Line isAnimationActive={false} dataKey="interval_split_sec" stroke="none" dot={{ r: 4.5, fill: INTERVAL, stroke: INTERVAL }} activeDot={{ r: 5.5 }} legendType="none" />
+                  <Line isAnimationActive={false} type="monotone" dataKey="interval_split_sec" stroke={INTERVAL} strokeWidth={2} connectNulls dot={{ r: 4.5, fill: INTERVAL, stroke: INTERVAL }} activeDot={{ r: 5.5 }} legendType="none" />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
