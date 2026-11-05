@@ -1801,7 +1801,8 @@
     "rowing_drag": 104,
     "notes": "First Hydrow session in ~11 weeks (last: May 13, 2026) and first since carpal tunnel + ulnar neuropathy diagnosis (Jun 12). Deliberate grip-tolerance test at 22-24 spm (mostly 23), HR 111-117 bpm. Hands felt great throughout, no problem opening them afterward \u2014 noticeably lighter grip demand than the hand bike. Session did not sync to Hydrow activity/Zones (subscription is paused, so Just Row mode does not save) \u2014 metrics manually transcribed from console screenshot + user report. Next time: start a Row workout in Apple Fitness to capture HR/activity properly.",
     "rowing_piece": "work",
-    "rowing_effort": "test"
+    "rowing_effort": "test",
+    "rowing_category": "Just Row"
   },
   {
     "uuid": "5A354EBE-177B-498D-8589-4653543CABC3",
@@ -2837,7 +2838,8 @@
     "rowing_stroke_rate_spm": 22,
     "rowing_avg_watts": 46,
     "rowing_drag": 104,
-    "rowing_piece": "work"
+    "rowing_piece": "work",
+    "rowing_category": "Breathe"
   },
   {
     "uuid": "CE2D28FA-8D67-4113-BA92-3AA5485A6235",
@@ -3740,7 +3742,8 @@
     "rowing_avg_watts": 51,
     "rowing_drag": 104,
     "rowing_piece": "work",
-    "notes": "\u2022 4x4 interval class, stroke rate capped at 26 spm; HR never reached zone 4 (max 139)\n\u2022 Back readiness 26 going in (after AM hip thrust/RDL session) \u2014 effort held back"
+    "notes": "\u2022 4x4 interval class, stroke rate capped at 26 spm; HR never reached zone 4 (max 139)\n\u2022 Back readiness 26 going in (after AM hip thrust/RDL session) \u2014 effort held back",
+    "rowing_category": "Sweat"
   },
   {
     "uuid": "0207C4F5-8621-4DAC-A35A-D9AC32946E04",
@@ -3813,7 +3816,8 @@
     "notes": "\u2022 First VO2 session: RowAlong 4x4 video, did 3 x 4 min (first-time plan), full off-rower rests\n\u2022 No warmup on the Hydrow; 23:07 = 3x4 min work + 2x5 min stopped rests + ~1 min. Est interval split 2:19 (2589 m / 12 min; ~2:20-2:28 if a little rest rowing), ~30 spm (28-32 per user); matches live 2:20-2:30\n\u2022 6.0 min zone 4, max HR 166 (vs 0 min Z4, max 139 on 11/1 Sweat class)\n\u2022 Back readiness 73 going in\n\u2022 Quads pretty sore afterward; absolutely gassed",
     "rowing_format": "intervals",
     "rowing_interval_split": "2:19",
-    "rowing_interval_spm": 30
+    "rowing_interval_spm": 30,
+    "rowing_category": "Just Row"
   },
   {
     "uuid": "915F8314-E326-4161-BCE5-847F22770FA7",

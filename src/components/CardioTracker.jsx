@@ -43,6 +43,18 @@ function weekLabel(weekStart) {
   return `${fmt(sun)} – ${fmt(sat)}`
 }
 
+// Hydrow class type (Breathe / Sweat / Drive, plus Just Row / Cool-Down) from `rowing_category`;
+// cooldown pieces are always Cool-Down.
+const ROW_TYPE_COLORS = {
+  Breathe: '#4ade80', Sweat: '#fbbf24', Drive: '#f87171',
+  'Just Row': '#38bdf8', 'Cool-Down': '#a1a1aa',
+}
+function rowingType(s) {
+  if (s.activity !== 'Rowing') return null
+  if (s.rowing_category) return s.rowing_category
+  return s.rowing_piece === 'cooldown' ? 'Cool-Down' : null
+}
+
 function activityIcon(activity) {
   const a = activity.toLowerCase()
   if (a.includes('walk')) return '🚶'
@@ -283,6 +295,13 @@ export default function CardioTracker() {
                         <td className="py-2.5 pl-5 pr-4 text-zinc-400 mono-stat text-xs">{s.date}</td>
                         <td className="py-2.5 pr-4 text-zinc-200">
                           {activityIcon(s.activity)} {s.activity}
+                          {s.rowing_program && <span className="ml-1.5 text-zinc-400">· {s.rowing_program}</span>}
+                          {rowingType(s) && (
+                            <span className="ml-1.5 rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide"
+                              style={{ color: ROW_TYPE_COLORS[rowingType(s)] ?? '#a1a1aa', backgroundColor: `${ROW_TYPE_COLORS[rowingType(s)] ?? '#a1a1aa'}1f` }}>
+                              {rowingType(s)}
+                            </span>
+                          )}
                           {s.notes && <span className="ml-1.5 text-[11px] text-amber-400/80">· {s.notes}</span>}
                         </td>
                         <td className="py-2.5 pr-4 text-zinc-400 mono-stat text-right">{s.duration_min}m</td>
