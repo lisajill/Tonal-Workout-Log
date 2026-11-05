@@ -3941,6 +3941,7 @@
     "rowing_stroke_rate_spm": 24,
     "rowing_avg_watts": 63,
     "rowing_drag": 104,
-    "rowing_piece": "work"
+    "rowing_piece": "work",
+    "rowing_category": "Sweat"
   }
 ]
