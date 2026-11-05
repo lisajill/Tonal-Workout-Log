@@ -83,6 +83,7 @@ const FMT = {
   avgVolume:   v => `${Math.round(v).toLocaleString()} lbs avg`,
   split_sec:   v => `${fmtSplit(v)} /500m`,
   split_trend: v => `${fmtSplit(v)} /500m`,
+  interval_split_sec: v => `${fmtSplit(v)} /500m`,
   watts:       v => `${v} W`,
   watts_trend: v => `${Math.round(v)} W`,
   distance:    v => `${v} m`,
@@ -95,7 +96,7 @@ const NAMES = {
   volume: 'Volume', ma3: 'Trend', prVol: 'PR', vol_per_min: 'Density',
   avg_hr: 'Avg HR', max_hr: 'Max HR', rating: 'Rating', reps: 'Reps',
   calories: 'Calories', kj: 'Work', duration: 'Duration', tut: 'TUT',
-  avgVolume: 'Avg volume', split_sec: 'Split', split_trend: 'Trend', watts: 'Watts',
+  avgVolume: 'Avg volume', split_sec: 'Split', split_trend: 'Trend', interval_split_sec: 'Interval split', watts: 'Watts',
   watts_trend: 'Trend', distance: 'Distance', distance_total: 'Distance',
   weight: 'Top set', trend: 'Trend',
 }
@@ -142,10 +143,12 @@ export default function Charts({ sessions: rawSessions }) {
     .map(s => ({
       label: shortDate(s.date),
       date: s.date,
-      // Interval rows (full stopped rests): machine avg split includes standing still — use the work-interval split.
-      split_sec: s.rowing_format === 'intervals'
-        ? (s.rowing_interval_split ? parseSplitSecs(s.rowing_interval_split) : null)
-        : parseSplitSecs(s.rowing_avg_split),
+      // Continuous rows draw the line; interval rows (full stopped rests, e.g. the 4x4)
+      // are separate dots at their work-interval pace — a sprint pace on the same line
+      // would make the next continuous row look like a regression.
+      split_sec: s.rowing_format === 'intervals' ? null : parseSplitSecs(s.rowing_avg_split),
+      interval_split_sec: s.rowing_format === 'intervals' && s.rowing_interval_split
+        ? parseSplitSecs(s.rowing_interval_split) : null,
       watts: s.rowing_avg_watts ?? null,
       distance: s.rowing_distance_m ?? null,
       distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
@@ -502,7 +505,7 @@ export default function Charts({ sessions: rawSessions }) {
           </div>
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-            <ChartCard title="Split /500m" subtitle="Lower is faster — axis flipped so up = improving · dashed = trend">
+            <ChartCard title="Split /500m" subtitle="Line = continuous rows · purple dots = interval pace (4x4) · axis flipped so up = faster · dashed = trend">
               <ResponsiveContainer width="100%" height={200}>
                 <ComposedChart data={rowingData} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
                   <defs>
@@ -516,7 +519,8 @@ export default function Charts({ sessions: rawSessions }) {
                   <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
                   <Tooltip content={<Tip meta={Object.fromEntries(rowingData.map(d => [d.label, d]))} />} cursor={{ stroke: '#3f3f46' }} />
                   <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradSplit)" activeDot={{ r: 4 }} connectNulls />
-                  <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} />
+                  <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} connectNulls />
+                  <Line isAnimationActive={false} dataKey="interval_split_sec" stroke="none" dot={{ r: 4.5, fill: '#c4b5fd', stroke: '#c4b5fd' }} activeDot={{ r: 5.5 }} legendType="none" />
                 </ComposedChart>
               </ResponsiveContainer>
             </ChartCard>

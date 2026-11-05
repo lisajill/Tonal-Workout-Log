@@ -8,6 +8,7 @@ import { AXIS, GRID, ChartTip, trailingFit } from './chartTheme.jsx'
 
 const CAT_ROWING = '#38bdf8' // sky-400 — rowing category color (design.md)
 const POWER = '#f59e0b'
+const INTERVAL = '#c4b5fd' // interval-pace dots (4x4), kept off the continuous line
 
 function shortDate(d) {
   const [, m, day] = d.split('-')
@@ -53,11 +54,12 @@ export default function RowingTracker() {
   const chartData = sessions.map(s => ({
     label: shortDate(s.date),
     date: s.date,
-    // Interval rows with full stopped rests: the machine's avg split/spm include the
-    // standing-still time, so use the work-interval split/spm instead (null if unknown).
-    split_sec: s.rowing_format === 'intervals'
-      ? (s.rowing_interval_split ? parseSplitSecs(s.rowing_interval_split) : null)
-      : parseSplitSecs(s.rowing_avg_split),
+    // Continuous rows draw the split line. Interval rows (full stopped rests) plot as
+    // separate dots at the work-interval pace: the machine avg includes standing still,
+    // and a sprint pace on the line would make the next continuous row look like a dip.
+    split_sec: s.rowing_format === 'intervals' ? null : parseSplitSecs(s.rowing_avg_split),
+    interval_split_sec: s.rowing_format === 'intervals' && s.rowing_interval_split
+      ? parseSplitSecs(s.rowing_interval_split) : null,
     watts: s.rowing_avg_watts ?? null,
     distance: s.rowing_distance_m ?? null,
     distance_total: (s.rowing_distance_m ?? 0) + (cooldownDistByDate[s.date] ?? 0),
@@ -70,12 +72,9 @@ export default function RowingTracker() {
   const wattsTrend = trailingFit(chartData.map(d => d.watts)).fit
   chartData.forEach((d, i) => { d.split_trend = splitTrend[i]; d.watts_trend = wattsTrend[i] })
 
-  const bestSplit = sessions.reduce((best, s) => {
-    const raw = s.rowing_format === 'intervals' ? s.rowing_interval_split : s.rowing_avg_split
-    if (!raw) return best
-    const sec = parseSplitSecs(raw)
-    return (best === null || sec < best) ? sec : best
-  }, null)
+  const minOf = xs => { const v = xs.filter(x => x != null); return v.length ? Math.min(...v) : null }
+  const bestSplit = minOf(chartData.map(d => d.split_sec))
+  const bestIntervalSplit = minOf(chartData.map(d => d.interval_split_sec))
   const bestWatts = Math.max(...sessions.map(s => s.rowing_avg_watts ?? 0))
   const totalDist = chartData.reduce((t, d) => t + d.distance_total, 0)
 
@@ -100,7 +99,7 @@ export default function RowingTracker() {
           <span className="label">Best Split</span>
           {/* split is the primary performance metric — large mono (design.md) */}
           <span className="mono-stat text-3xl font-bold" style={{ color: CAT_ROWING }}>{fmtSplit(bestSplit)}</span>
-          <span className="text-xs text-zinc-500">per 500m · lower is faster</span>
+          <span className="text-xs text-zinc-500">continuous · lower is faster{bestIntervalSplit != null && <> · intervals <span className="mono-stat" style={{ color: INTERVAL }}>{fmtSplit(bestIntervalSplit)}</span></>}</span>
         </div>
         <div className="stat-card flex flex-col gap-1" style={{ borderLeftColor: CAT_ROWING }}>
           <span className="label">Best Watts</span>
@@ -117,7 +116,7 @@ export default function RowingTracker() {
               <div className="section-header">
                 <div>
                   <h2 className="label">Split /500m</h2>
-                  <p className="text-xs text-zinc-500 mt-1">Goal: below 3:00 — axis flipped so up = improving · dashed = trend</p>
+                  <p className="text-xs text-zinc-500 mt-1">Line = continuous rows · purple dots = interval pace (4x4) · axis flipped so up = faster · dashed = trend</p>
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={180}>
@@ -131,9 +130,10 @@ export default function RowingTracker() {
                   <CartesianGrid {...GRID} />
                   <XAxis dataKey="label" {...AXIS} />
                   <YAxis {...AXIS} reversed tickFormatter={v => fmtSplit(v)} domain={['auto', 'auto']} />
-                  <Tooltip content={<ChartTip names={{ split_sec: 'Avg Split', split_trend: 'Trend' }} formats={{ split_sec: v => `${fmtSplit(v)} /500m`, split_trend: v => `${fmtSplit(v)} /500m` }} />} cursor={{ stroke: '#3f3f46' }} />
+                  <Tooltip content={<ChartTip names={{ split_sec: 'Avg Split', split_trend: 'Trend', interval_split_sec: 'Interval split' }} formats={{ split_sec: v => `${fmtSplit(v)} /500m`, split_trend: v => `${fmtSplit(v)} /500m`, interval_split_sec: v => `${fmtSplit(v)} /500m` }} />} cursor={{ stroke: '#3f3f46' }} />
                   <Area isAnimationActive={false} type="monotone" dataKey="split_sec" stroke={CAT_ROWING} strokeWidth={2} fill="url(#gradRowSplit)" dot={{ r: 3 }} activeDot={{ r: 4.5 }} connectNulls />
-                  <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} legendType="none" />
+                  <Line isAnimationActive={false} type="linear" dataKey="split_trend" stroke={CAT_ROWING} strokeWidth={1.5} strokeDasharray="4 4" strokeOpacity={0.7} dot={false} activeDot={false} legendType="none" connectNulls />
+                  <Line isAnimationActive={false} dataKey="interval_split_sec" stroke="none" dot={{ r: 4.5, fill: INTERVAL, stroke: INTERVAL }} activeDot={{ r: 5.5 }} legendType="none" />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
