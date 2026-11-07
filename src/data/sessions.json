@@ -12303,7 +12303,7 @@
             "reps": 8,
             "weight_lbs": 28,
             "duration_sec": 30,
-            "one_rep_max": 35.0
+            "one_rep_max": 35
           }
         ]
       },
@@ -12358,5 +12358,151 @@
     "strength_upper": 519,
     "strength_core": 464,
     "strength_lower": 602
+  },
+  {
+    "date": "2026-11-07",
+    "workout": "20-in-20: The Functional 5 (Day 1, Week 2)",
+    "energy_level": 5,
+    "phase": null,
+    "subjective_rating": 5,
+    "sweat": "medium",
+    "calories": 79,
+    "avg_hr": 127,
+    "max_hr": 153,
+    "pre_readiness": {
+      "glutes": 100,
+      "hamstrings": 100,
+      "quads": 98,
+      "calves": 100,
+      "abs": 100,
+      "obliques": 100,
+      "back": 85,
+      "chest": 100,
+      "shoulders": 100,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "post_readiness": {
+      "glutes": 35,
+      "hamstrings": 51,
+      "quads": 71,
+      "calves": 100,
+      "abs": 86,
+      "obliques": 91,
+      "back": 63,
+      "chest": 100,
+      "shoulders": 95,
+      "biceps": 100,
+      "triceps": 100
+    },
+    "prs": {},
+    "muscles_high_volume": [],
+    "muscles_low_volume": [],
+    "movements": [
+      {
+        "name": "Low Squat Walk Out",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 36,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 40,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Suitcase March",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 42,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 42,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 42,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 42,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Glute Bridge",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          },
+          {
+            "reps": 0,
+            "weight_lbs": 5,
+            "duration_sec": 30
+          }
+        ]
+      },
+      {
+        "name": "Barbell RDL",
+        "warmup_sets": 0,
+        "sets": [
+          {
+            "reps": 6,
+            "weight_lbs": 61.0,
+            "duration_sec": 30,
+            "one_rep_max": 76
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 65.0,
+            "duration_sec": 30,
+            "one_rep_max": 81.0
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 70,
+            "duration_sec": 30,
+            "one_rep_max": 87.4
+          },
+          {
+            "reps": 6,
+            "weight_lbs": 73.0,
+            "duration_sec": 30,
+            "one_rep_max": 91.0
+          }
+        ]
+      }
+    ],
+    "timestamp": "2026-11-07T09:31:36.207-05:00",
+    "functional_strength": 174,
+    "movement_quality": 123,
+    "movement_quality_delta": -26,
+    "volume_score": 7512,
+    "work_score": 18103,
+    "strength_sets": 19,
+    "power_reps": 124,
+    "endurance_sets": 20,
+    "duration": 17.78,
+    "total_volume": 1748,
+    "total_reps": 24,
+    "time_under_tension": 6.53,
+    "total_work_kj": 3.9,
+    "tonal_activity_id": "7c2fc09c-0a73-42cf-a0e1-177dec142cd1",
+    "notes": "\u2022 Day 1, Week 2 of The Functional 5 (app Workout 6, RDL). Done Sat after a full rest day Fri (felt like crud; tick doctor visit + single doxy PEP dose)\n\u2022 Pre-readiness all 100 except back 85, quads 98\n\u2022 Barbell RDL 61 / 65 / 70 / 73 x 6 (week 1: 59 x 7, 61 x 6 x 3); est 1RM 91, up from 76.2; ties the 73 lb heaviest (Oct 11, x5)\n\u2022 Low squat walk out 36 / 40 (week 1: 36 / 36)\n\u2022 Suitcase march 42 x 4 (same as week 1)\n\u2022 Fuel: coffee + 1 packet oatmeal pre-lift\n\u2022 Energy 5, vibes 5, sweat medium\n\u2022 HR from Zones: avg 127, max 153 (7.5 min Z3)"
   }
 ]
