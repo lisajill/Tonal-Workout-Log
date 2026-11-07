@@ -12463,13 +12463,13 @@
         "sets": [
           {
             "reps": 6,
-            "weight_lbs": 61.0,
+            "weight_lbs": 61,
             "duration_sec": 30,
             "one_rep_max": 76
           },
           {
             "reps": 6,
-            "weight_lbs": 65.0,
+            "weight_lbs": 65,
             "duration_sec": 30,
             "one_rep_max": 81.0,
             "prs": [
@@ -12487,7 +12487,7 @@
           },
           {
             "reps": 6,
-            "weight_lbs": 73.0,
+            "weight_lbs": 73,
             "duration_sec": 30,
             "one_rep_max": 91.0
           }
